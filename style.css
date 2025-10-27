@@ -110,32 +110,22 @@ nav li {
     position: relative; /* Define o "pai" para o submenu */
 }
 
-nav a {
+nav > ul > li > a,
+nav > ul > li > span {
     display: block;
     padding: 15px 25px;
     text-decoration: none;
     color: #e0e0e0;
     font-weight: 400;
-
-    /* Transição suave para o efeito de hover */
     transition: all 0.3s ease;
 }
 
-/* Efeito ao passar o mouse */
-nav a:hover {
+/* Efeito ao passar o mouse (AGORA SÓ EM LINKS) */
+nav > ul > li > a:hover {
     background-color: #6f00ff; /* Roxo vibrante */
     color: #ffffff;
     text-shadow: 0 0 10px #ffffff; /* Brilho branco ao passar o mouse */
 }
-
-/* Estilo do link ativo (página atual) */
-nav a.active {
-    background-color: #6f00ff;
-    color: #ffffff;
-    /* Efeito de "pressionado" */
-    box-shadow: inset 0 0 10px rgba(0,0,0,0.5);
-}
-
 
 /* --- 6. REGRAS NOVAS PARA O DROPDOWN --- */
 
@@ -172,6 +162,10 @@ nav .dropdown a {
     font-size: 0.95em;
     font-family: 'EB Garamond', serif; /* Usamos a fonte de texto */
     font-weight: 500;
+
+    /* --- ADICIONE ESTAS DUAS LINHAS --- */
+    color: #e0e0e0;           /* Cor do texto clara (igual ao menu) */
+    text-decoration: none;  /* Remove o sublinhado azul */
 }
 
 /* O "truque" para mostrar o menu */
@@ -206,6 +200,13 @@ main h2 {
     text-shadow: 0 0 8px #9f50ff; /* Brilho roxo nos subtítulos */
     border-bottom: 1px solid #4a008c;
     padding-bottom: 10px;
+    text-align: center;
+}
+
+/* Regra para justificar os parágrafos dentro do <main> */
+main p {
+    text-align: justify;
+    hyphens: auto; /* Ajuda o navegador a quebrar palavras longas */
 }
 
 /* --- 8. Rodapé --- */
@@ -215,4 +216,204 @@ footer {
     font-size: 0.9em;
     color: #777;
     opacity: 0.7; /* Opacidade para não chamar atenção */
+}
+
+/* --- 9. Estilos do Conteúdo (Adicional) --- */
+
+/* Estilo para a última frase da página inicial */
+main .chamada-final {
+    font-family: 'Cinzel', serif; /* Fonte épica, igual aos títulos */
+    font-size: 1.3em;
+    font-weight: 700;
+    text-align: center;
+    color: #ffffff;
+    text-shadow: 0 0 8px #9f50ff; /* Brilho roxo */
+    margin-top: 40px; /* Mais espaço acima */
+}
+
+/* --- 10. REGRAS PARA CELULAR (Design Responsivo) --- */
+
+/* @media (max-width: 768px) { ... }
+   Significa: "Aplique as regras abaixo APENAS se a tela
+   tiver 768 pixels de largura ou MENOS."
+*/
+@media (max-width: 768px) {
+
+    /* 1. FAZ O MENU PRINCIPAL MUDAR DE HORIZONTAL PARA VERTICAL */
+    nav ul {
+        flex-direction: column; /* Empilha os itens do menu */
+        align-items: stretch;   /* Faz os itens ocuparem a largura total */
+    }
+
+    /* 2. AJUSTA OS LINKS PRINCIPAIS */
+    nav a {
+        text-align: center; /* Centraliza o texto dentro de cada link */
+        padding: 15px 10px; /* Ajusta o preenchimento */
+    }
+
+    /* 3. TRANSFORMA OS SUBMENUS (DROPDOWNS) */
+    nav .dropdown {
+        position: relative; /* Deixa de "flutuar" */
+        width: 100%;        /* Ocupa a largura total do pai */
+        top: 0;             /* Reseta a posição */
+        left: 0;
+        box-shadow: none;   /* Remove a sombra flutuante */
+        border-radius: 0;
+        border: none;
+
+        /* Fundo mais sutil para mostrar que é um submenu */
+        background-color: rgba(0, 0, 0, 0.2);
+    }
+
+    /* Faz os links do submenu terem um "recuo" */
+    nav .dropdown a {
+        padding-left: 40px; /* Adiciona recuo à esquerda */
+        text-align: left;   /* Alinha o texto do submenu à esquerda */
+        font-size: 0.9em;
+    }
+
+    /* 4. AJUSTA OS TÍTULOS GRANDES */
+    header h1 {
+        font-size: 2.2em; /* Reduz o "ALTERNUM" (de 3.5em) */
+    }
+
+    main h2 {
+        font-size: 1.5em; /* Reduz o "BEM-VINDO A ALTERNUM!" */
+    }
+
+    /* 5. AJUSTA O ALINHAMENTO DO TEXTO */
+    /* Texto justificado (text-align: justify) é péssimo em telas pequenas.
+       Vamos mudar para alinhado à esquerda. */
+    main p {
+        text-align: left; /* Muda de 'justify' para 'left' */
+        hyphens: none;    /* Desativa a hifenização */
+    }
+
+    /* Garante que a chamada final continue centralizada */
+    main .chamada-final {
+        text-align: center;
+    }
+
+}
+
+/* --- 11. AJUSTES NO HEADER (Link do Título) --- */
+
+/* Remove o sublinhado e a cor azul do link do título */
+header .home-link {
+    text-decoration: none; /* Remove sublinhado */
+    color: inherit;      /* Faz o link herdar a cor do pai (branco) */
+}
+
+/* (Opcional) Adiciona um brilho extra ao passar o mouse no título */
+header .home-link:hover h1 {
+    /* Brilho branco mais intenso e roxo mais espalhado */
+    text-shadow: 0 0 15px #ffffff,
+    0 0 10px #9f50ff;
+}
+
+/* --- 12. AJUSTES FINAIS (Hover SUTIL do Dropdown) --- */
+
+/* Adiciona um efeito de BRILHO SUTIL no texto (sem o bloco roxo) */
+nav .dropdown a:hover {
+    /* background-color: #6f00ff; <-- REMOVIDO */
+
+    color: #ffffff; /* Texto fica branco puro para se destacar */
+
+    /* Um brilho branco sutil com um toque de roxo */
+    text-shadow: 0 0 10px #ffffff,
+    0 0 4px #cda4ff;
+}
+
+/* --- 13. ESTILOS DE PÁGINA DE CONTEÚDO (Economia) --- */
+
+/* Títulos de Seção (Moedas, Banco Dimensional) */
+main h3 {
+    font-family: 'Cinzel', serif;
+    font-weight: 700;
+    font-size: 1.8em;
+    color: #f0f0f0;
+    text-shadow: 0 0 6px #9f50ff;
+    border-bottom: 1px solid #4a008c;
+    padding-bottom: 8px;
+    margin-top: 40px; /* Mais espaço entre seções */
+}
+
+/* Sub-Títulos (Vintém, Talento) */
+main h4 {
+    font-family: 'Cinzel', serif;
+    font-weight: 500;
+    font-size: 1.4em;
+    color: #e0e0e0;
+    margin-bottom: 10px;
+    margin-top: 30px;
+}
+
+/* Nota de subtítulo (ex: 5 Vinténs...) */
+.sub-note {
+    font-family: 'EB Garamond', serif;
+    font-size: 0.8em;
+    font-weight: 400;
+    color: #aaa;
+    font-style: italic;
+}
+
+/* Cores das Moedas */
+.moeda-cobre {
+    color: #e67e22; /* Laranja (Cobre) */
+    font-weight: bold;
+}
+.moeda-prata {
+    color: #bdc3c7; /* Cinza (Prata) */
+    font-weight: bold;
+}
+.moeda-ouro {
+    color: #f1c40f; /* Amarelo (Ouro) */
+    font-weight: bold;
+}
+
+/* Caixa de Informação (Anel Dimensional) */
+.info-box {
+    background-color: rgba(0, 0, 0, 0.3); /* Fundo escuro sutil */
+    border-left: 4px solid #6f00ff; /* Borda roxa à esquerda */
+    padding: 15px 20px;
+    margin: 25px 0;
+    border-radius: 4px;
+}
+
+/* Título dentro da caixa de info */
+.info-box h4 {
+    margin-top: 0;
+    font-size: 1.2em;
+}
+
+/* Lista dentro da caixa de info */
+.info-box ul {
+    padding-left: 20px;
+    margin: 10px 0 0 0;
+}
+
+.info-box li {
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+/* Divisor de Seção */
+.section-divider {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right,
+    rgba(110, 0, 255, 0),
+    rgba(110, 0, 255, 0.5),
+    rgba(110, 0, 255, 0)
+    );
+    margin: 50px 0;
+}
+
+/* Estilo para o link "ativo" no submenu */
+nav .dropdown a.active-sub {
+    color: #ffffff;
+    font-weight: bold;
+    /* Brilho sutil para mostrar que é a página ativa */
+    text-shadow: 0 0 10px #ffffff,
+    0 0 4px #cda4ff;
 }
