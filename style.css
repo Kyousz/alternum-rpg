@@ -1,77 +1,218 @@
-/* Configurações Globais */
+/* --- 1. Importação de Fontes Fantasia --- */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=EB+Garamond:wght@400;500&display=swap');
+
+/* --- 2. Configurações Globais (O Fundo Místico BASE) --- */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #1a1a1a; /* Fundo escuro */
-    color: #e0e0e0; /* Texto claro */
+    font-family: 'EB Garamond', serif;
+
+    /* MANTÉM o fundo preto escuro para preencher onde não tem imagem */
+    background-color: #0a0014;
+
+    /* APENAS O SPOTLIGHT (Remover o gradiente roxo fixo) */
+    background-image:
+            radial-gradient(
+                    circle 300px at
+                    var(--mouse-x, 50%) var(--mouse-y, 50%),
+                    rgba(159, 80, 255, 0.15) 0%,
+                    rgba(159, 80, 255, 0) 100%
+            );
+
+    background-attachment: fixed;
+    background-size: cover;
+
+    color: #e0e0e0;
     margin: 0;
     padding: 0;
-    line-height: 1.6;
+    line-height: 1.7;
 }
 
-/* Container principal para centralizar o conteúdo */
+/* --- 3. Containers Principais --- */
 header, nav, main, footer {
     max-width: 960px;
     margin: 0 auto;
     padding: 20px;
 }
 
-/* Cabeçalho */
+/* --- 4. Cabeçalho (Título Épico COM IMAGEM) --- */
 header {
     text-align: center;
-    border-bottom: 2px solid #444;
+    border-bottom: none;
+    padding-bottom: 10px;
+    padding-top: 50px; /* Adiciona um espaço no topo para a imagem respirar */
+    min-height: 300px; /* Altura mínima para a imagem aparecer bem */
+
+    /* --- ADICIONANDO A IMAGEM DE FUNDO --- */
+    background-image: url('imagens/vortex-roxo.jpg'); /* O caminho para sua imagem */
+    background-size: cover; /* Faz a imagem cobrir toda a área do header */
+    background-position: center 20%; /* Centraliza a imagem */
+    background-repeat: no-repeat; /* Não repete a imagem */
+
+    /* Um overlay escuro para o texto ficar mais legível */
+    background-blend-mode: multiply; /* Mistura a imagem com a cor de fundo */
+    background-color: rgba(0, 0, 0, 0.4); /* Fundo preto semi-transparente */
+
+    /* Efeito de vidro sutil para combinar com o resto */
+    -webkit-backdrop-filter: blur(2px);
+    backdrop-filter: blur(2px);
+    border-radius: 8px 8px 0 0; /* Arredonda só os cantos superiores */
+    box-shadow: 0 0 20px rgba(110, 0, 255, 0.5); /* Brilho mais forte */
 }
 
 header h1 {
+    font-family: 'Cinzel', serif; /* Fonte épica para o título */
+    font-weight: 700;
+    font-size: 3.5em; /* Tamanho maior */
     color: #ffffff;
-    margin-bottom: 5px;
+    margin-bottom: 0;
+
+    /* O EFEITO MÍSTICO: Sombra de texto roxa para dar um "brilho" */
+    text-shadow: 0 0 12px #9f50ff,  /* Brilho roxo principal */
+    0 0 5px #ffffff;   /* Brilho branco sutil no centro */
 }
 
-/* Menu de Navegação */
+header p {
+    font-size: 1.2em;
+    color: #c0c0c0;
+    opacity: 0.8;
+}
+
+/* --- 5. Menu de Navegação (Vidro Fosco) --- */
+nav {
+    /* AQUI A OPACIDADE: Fundo preto com 40% de opacidade */
+    background-color: rgba(0, 0, 0, 0.4);
+
+    border-radius: 8px;
+    border: 1px solid #4a008c; /* Borda roxa sutil */
+
+    /* EFEITO DE BRILHO: Uma sombra roxa suave */
+    box-shadow: 0 0 15px rgba(110, 0, 255, 0.3);
+
+    /* EFEITO DE VIDRO: Desfoca o que está atrás do menu */
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+
+    /* --- CORREÇÃO Z-INDEX --- */
+    position: relative; /* Essencial para o z-index funcionar */
+    z-index: 10;        /* Coloca a nav inteira "acima" do main */
+}
+
 nav ul {
-    list-style: none; /* Remove bolinhas da lista */
+    list-style: none;
     padding: 0;
     margin: 0;
-    display: flex; /* Coloca os itens lado a lado */
-    justify-content: center; /* Centraliza o menu */
-    background-color: #333;
-    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    font-family: 'Cinzel', serif; /* Fonte épica no menu */
 }
 
 nav li {
-    margin: 0 5px;
+    margin: 0;
+    position: relative; /* Define o "pai" para o submenu */
 }
 
 nav a {
     display: block;
-    padding: 15px 20px;
+    padding: 15px 25px;
     text-decoration: none;
     color: #e0e0e0;
-    font-weight: bold;
+    font-weight: 400;
+
+    /* Transição suave para o efeito de hover */
+    transition: all 0.3s ease;
 }
 
 /* Efeito ao passar o mouse */
 nav a:hover {
-    background-color: #555;
+    background-color: #6f00ff; /* Roxo vibrante */
+    color: #ffffff;
+    text-shadow: 0 0 10px #ffffff; /* Brilho branco ao passar o mouse */
 }
 
 /* Estilo do link ativo (página atual) */
 nav a.active {
-    background-color: #c0392b; /* Um vermelho escuro */
+    background-color: #6f00ff;
     color: #ffffff;
+    /* Efeito de "pressionado" */
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.5);
 }
 
-/* Conteúdo Principal */
+
+/* --- 6. REGRAS NOVAS PARA O DROPDOWN --- */
+
+/* O submenu (a lista <ul>) */
+nav .dropdown {
+    display: none; /* Escondido por padrão */
+    position: absolute; /* "Flutua" abaixo do item pai */
+    top: 100%; /* Começa exatamente abaixo do link principal */
+    left: 0;
+
+    /* Estilo místico/vidro, igual ao menu principal */
+    background-color: rgba(15, 0, 30, 0.8); /* Um pouco mais escuro para ler melhor */
+    border: 1px solid #4a008c;
+    box-shadow: 0 5px 15px rgba(110, 0, 255, 0.3);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+
+    border-radius: 0 0 8px 8px; /* Cantos arredondados só embaixo */
+    padding: 0;
+    margin: 0;
+    min-width: 250px; /* Largura mínima do submenu */
+    z-index: 100; /* Garante que fique acima do conteúdo da página */
+}
+
+/* Os itens <li> dentro do submenu */
+nav .dropdown li {
+    /* Faz os itens ficarem um abaixo do outro */
+    display: block;
+}
+
+/* Os links <a> dentro do submenu */
+nav .dropdown a {
+    padding: 12px 20px;
+    font-size: 0.95em;
+    font-family: 'EB Garamond', serif; /* Usamos a fonte de texto */
+    font-weight: 500;
+}
+
+/* O "truque" para mostrar o menu */
+/* Quando passar o mouse (hover) em um 'nav li' ... */
+/* ... o '.dropdown' que está dentro dele ... */
+/* ... muda de 'display: none' para 'display: block' */
+nav li:hover > .dropdown {
+    display: block;
+}
+
+
+/* --- 7. Conteúdo Principal (Painel Flutuante) --- */
 main {
-    background-color: #2a2a2a;
-    border-radius: 5px;
-    margin-top: 20px;
-    min-height: 300px; /* Garante uma altura mínima para o conteúdo */
+    /* OPACIDADE: Um painel roxo bem escuro e semi-transparente */
+    background-color: rgba(15, 0, 30, 0.5);
+    border: 1px solid #4a008c; /* Borda roxa sutil */
+    box-shadow: 0 0 15px rgba(110, 0, 255, 0.3); /* Brilho roxo */
+
+    border-radius: 8px;
+    margin-top: 25px;
+    min-height: 300px;
+
+    /* Efeito de vidro mais sutil */
+    -webkit-backdrop-filter: blur(3px);
+    backdrop-filter: blur(3px);
 }
 
-/* Rodapé */
+main h2 {
+    font-family: 'Cinzel', serif;
+    font-weight: 700;
+    color: #ffffff;
+    text-shadow: 0 0 8px #9f50ff; /* Brilho roxo nos subtítulos */
+    border-bottom: 1px solid #4a008c;
+    padding-bottom: 10px;
+}
+
+/* --- 8. Rodapé --- */
 footer {
     text-align: center;
     margin-top: 30px;
     font-size: 0.9em;
     color: #777;
+    opacity: 0.7; /* Opacidade para não chamar atenção */
 }
