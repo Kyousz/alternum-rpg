@@ -417,3 +417,149 @@ nav .dropdown a.active-sub {
     text-shadow: 0 0 10px #ffffff,
     0 0 4px #cda4ff;
 }
+
+/* --- 14. ESTILOS DE GALERIA DE CARTÕES (Planos) --- */
+
+.galeria-planos {
+    display: grid; /* Usa o sistema de grade do CSS */
+
+    /* Cria colunas responsivas:
+       - Tenta encaixar o máximo de colunas que puder
+       - Cada coluna tem no MÍNIMO 300px
+       - Cada coluna tem no MÁXIMO 1 fração (1fr) do espaço
+    */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+
+    gap: 25px; /* Espaço entre os cartões */
+    margin-top: 30px;
+}
+
+.card-plano {
+    background-color: rgba(0, 0, 0, 0.3); /* Fundo sutil */
+    border: 1px solid #4a008c; /* Borda roxa */
+    border-radius: 8px;
+    overflow: hidden; /* Garante que a imagem obedeça o border-radius */
+    box-shadow: 0 0 10px rgba(110, 0, 255, 0.2); /* Brilho roxo */
+
+    /* Transição suave para o efeito de hover */
+    transition: all 0.3s ease;
+}
+
+/* Efeito de "levantar" o cartão ao passar o mouse */
+.card-plano:hover {
+    transform: translateY(-5px); /* Move o cartão 5px para cima */
+    box-shadow: 0 5px 20px rgba(110, 0, 255, 0.4); /* Brilho mais forte */
+}
+
+/* A Imagem do Cartão */
+.card-plano img {
+    width: 100%; /* Imagem preenche a largura do cartão */
+    height: 200px; /* Altura fixa para todas as imagens */
+    object-fit: cover; /* ESSENCIAL: Faz a imagem cobrir a área sem esticar */
+    border-bottom: 1px solid #4a008c; /* Linha roxa separando img do texto */
+}
+
+/* O Corpo de Texto do Cartão */
+.card-plano-corpo {
+    padding: 20px;
+}
+
+/* Título dentro do cartão */
+.card-plano-corpo h3 {
+    font-family: 'Cinzel', serif;
+    font-weight: 700;
+    font-size: 1.5em;
+    color: #f0f0f0;
+    text-shadow: 0 0 6px #9f50ff;
+    margin-top: 0; /* Remove a margem padrão */
+    margin-bottom: 15px;
+}
+
+/* Lista de sub-itens (ex: continentes) */
+.card-plano-corpo ul {
+    font-size: 0.9em;
+    padding-left: 20px;
+    color: #c0c0c0;
+}
+
+/* --- 15. CLASSES DE POSIÇÃO DE IMAGEM (Helper) --- */
+
+/* Para imagens onde o foco está EM CIMA */
+.img-pos-topo {
+    object-position: center top; /* (Horizontal: centro, Vertical: topo) */
+}
+
+/* Para imagens onde o foco está EM BAIXO */
+.img-pos-base {
+    object-position: center bottom; /* (Horizontal: centro, Vertical: base) */
+}
+
+/* % do topo */
+.img-pos-15 {
+    object-position: center 15%;
+}
+
+.img-pos-25 {
+    object-position: center 25%;
+}
+
+.img-pos-40 {
+    object-position: center 40%;
+}
+
+.img-pos-75 {
+    object-position: center 75%;
+}
+
+/* --- 16. ESTILO SUTIL (Metadados do Card) --- */
+
+.card-meta-info {
+    list-style: none; /* Remove bolinhas */
+    padding: 0;
+    margin: -10px 0 15px 0; /* Puxa para perto do título */
+
+    font-family: 'EB Garamond', serif;
+    font-size: 0.95em; /* Um pouco menor */
+    color: #bbb; /* Cor sutil para o valor */
+
+    line-height: 1.7;
+
+    border-bottom: 1px dashed #4a008c; /* Linha tracejada roxa */
+    padding-bottom: 10px;
+}
+
+.card-meta-info li {
+    margin-bottom: 2px;
+}
+
+/* O "rótulo" (Capital:, Regente:) */
+.card-meta-info li strong {
+    font-family: 'Cinzel', serif; /* Fonte épica para o rótulo */
+    font-style: normal;
+    font-weight: 500;
+    color: #cda4ff; /* Roxo místico */
+    margin-right: 8px; /* Espaço entre o rótulo e o valor */
+
+    /* Truque para alinhar os rótulos verticalmente */
+    display: inline-block;
+    min-width: 70px;
+}
+
+/* --- 17. ESTILO REGENTE PÓS-VIDA (mundo_planos.html) --- */
+/* Este bloco corrige o estilo dos Regentes Divinos */
+
+.card-plano-regente {
+    font-family: 'Cinzel', serif; /* Fonte épica para o nome */
+    font-size: 0.9em;       /* Um pouco maior */
+    font-style: normal;   /* Tira o itálico do nome */
+    font-weight: 500;
+    color: #cda4ff;      /* Roxo claro para o nome */
+
+    line-height: 1.4;     /* Espaçamento */
+
+    /* Ajustes de espaçamento */
+    margin-top: -10px;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px dashed #4a008c; /* Linha tracejada roxa */
+}
