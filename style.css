@@ -563,3 +563,25 @@ nav .dropdown a.active-sub {
     padding-bottom: 10px;
     border-bottom: 1px dashed #4a008c; /* Linha tracejada roxa */
 }
+
+/* --- 18. ESTILO PÁGINA "EM CONSTRUÇÃO" --- */
+
+.pagina-em-construcao {
+    text-align: center;
+    padding: 80px 40px; /* Mais preenchimento (vertical, horizontal) */
+    min-height: 250px; /* Garante que o bloco main não fique muito pequeno */
+    opacity: 0.6; /* Deixa o conteúdo sutil, como se estivesse "oculto" */
+}
+
+/* O 'h2' dentro desta página já pega o estilo de 'main h2',
+   mas podemos ajustar se quisermos */
+.pagina-em-construcao h2 {
+    font-size: 2em; /* Um pouco maior que o h2 normal */
+}
+
+.pagina-em-construcao p {
+    font-size: 1.2em;
+    color: #bbb;
+    font-style: italic;
+    text-align: center; /* Garante que o parágrafo também fique centralizado */
+}
