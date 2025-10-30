@@ -1,14 +1,10 @@
 /* --- 1. Importação de Fontes Fantasia --- */
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=EB+Garamond:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=EB+Garamond:wght@400;500&family=Megrim&display=swap');
 
 /* --- 2. Configurações Globais (O Fundo Místico BASE) --- */
 body {
     font-family: 'EB Garamond', serif;
-
-    /* MANTÉM o fundo preto escuro para preencher onde não tem imagem */
     background-color: #0a0014;
-
-    /* APENAS O SPOTLIGHT (Remover o gradiente roxo fixo) */
     background-image:
             radial-gradient(
                     circle 300px at
@@ -16,10 +12,8 @@ body {
                     rgba(159, 80, 255, 0.15) 0%,
                     rgba(159, 80, 255, 0) 100%
             );
-
     background-attachment: fixed;
     background-size: cover;
-
     color: #e0e0e0;
     margin: 0;
     padding: 0;
@@ -38,36 +32,28 @@ header {
     text-align: center;
     border-bottom: none;
     padding-bottom: 10px;
-    padding-top: 50px; /* Adiciona um espaço no topo para a imagem respirar */
-    min-height: 300px; /* Altura mínima para a imagem aparecer bem */
-
-    /* --- ADICIONANDO A IMAGEM DE FUNDO --- */
-    background-image: url('imagens/vortex-roxo.jpg'); /* O caminho para sua imagem */
-    background-size: cover; /* Faz a imagem cobrir toda a área do header */
-    background-position: center 20%; /* Centraliza a imagem */
-    background-repeat: no-repeat; /* Não repete a imagem */
-
-    /* Um overlay escuro para o texto ficar mais legível */
-    background-blend-mode: multiply; /* Mistura a imagem com a cor de fundo */
-    background-color: rgba(0, 0, 0, 0.4); /* Fundo preto semi-transparente */
-
-    /* Efeito de vidro sutil para combinar com o resto */
+    padding-top: 50px;
+    min-height: 300px;
+    background-image: url('imagens/vortex-roxo.jpg');
+    background-size: cover;
+    background-position: center 20%;
+    background-repeat: no-repeat;
+    background-blend-mode: multiply;
+    background-color: rgba(0, 0, 0, 0.4);
     -webkit-backdrop-filter: blur(2px);
     backdrop-filter: blur(2px);
-    border-radius: 8px 8px 0 0; /* Arredonda só os cantos superiores */
-    box-shadow: 0 0 20px rgba(110, 0, 255, 0.5); /* Brilho mais forte */
+    border-radius: 8px 8px 0 0;
+    box-shadow: 0 0 20px rgba(110, 0, 255, 0.5);
 }
 
 header h1 {
-    font-family: 'Cinzel', serif; /* Fonte épica para o título */
+    font-family: 'Cinzel', serif;
     font-weight: 700;
-    font-size: 3.5em; /* Tamanho maior */
+    font-size: 3.5em;
     color: #ffffff;
     margin-bottom: 0;
-
-    /* O EFEITO MÍSTICO: Sombra de texto roxa para dar um "brilho" */
-    text-shadow: 0 0 12px #9f50ff,  /* Brilho roxo principal */
-    0 0 5px #ffffff;   /* Brilho branco sutil no centro */
+    text-shadow: 0 0 12px #9f50ff,
+    0 0 5px #ffffff;
 }
 
 header p {
@@ -78,22 +64,14 @@ header p {
 
 /* --- 5. Menu de Navegação (Vidro Fosco) --- */
 nav {
-    /* AQUI A OPACIDADE: Fundo preto com 40% de opacidade */
     background-color: rgba(0, 0, 0, 0.4);
-
     border-radius: 8px;
-    border: 1px solid #4a008c; /* Borda roxa sutil */
-
-    /* EFEITO DE BRILHO: Uma sombra roxa suave */
+    border: 1px solid #4a008c;
     box-shadow: 0 0 15px rgba(110, 0, 255, 0.3);
-
-    /* EFEITO DE VIDRO: Desfoca o que está atrás do menu */
     -webkit-backdrop-filter: blur(5px);
     backdrop-filter: blur(5px);
-
-    /* --- CORREÇÃO Z-INDEX --- */
-    position: relative; /* Essencial para o z-index funcionar */
-    z-index: 10;        /* Coloca a nav inteira "acima" do main */
+    position: relative;
+    z-index: 10;
 }
 
 nav ul {
@@ -102,12 +80,12 @@ nav ul {
     margin: 0;
     display: flex;
     justify-content: center;
-    font-family: 'Cinzel', serif; /* Fonte épica no menu */
+    font-family: 'Cinzel', serif;
 }
 
 nav li {
     margin: 0;
-    position: relative; /* Define o "pai" para o submenu */
+    position: relative;
 }
 
 nav > ul > li > a,
@@ -120,58 +98,44 @@ nav > ul > li > span {
     transition: all 0.3s ease;
 }
 
-/* Efeito ao passar o mouse (AGORA SÓ EM LINKS) */
 nav > ul > li > a:hover {
-    background-color: #6f00ff; /* Roxo vibrante */
+    background-color: #6f00ff;
     color: #ffffff;
-    text-shadow: 0 0 10px #ffffff; /* Brilho branco ao passar o mouse */
+    text-shadow: 0 0 10px #ffffff;
 }
 
 /* --- 6. REGRAS NOVAS PARA O DROPDOWN --- */
 
-/* O submenu (a lista <ul>) */
 nav .dropdown {
-    display: none; /* Escondido por padrão */
-    position: absolute; /* "Flutua" abaixo do item pai */
-    top: 100%; /* Começa exatamente abaixo do link principal */
+    display: none;
+    position: absolute;
+    top: 100%;
     left: 0;
-
-    /* Estilo místico/vidro, igual ao menu principal */
-    background-color: rgba(15, 0, 30, 0.8); /* Um pouco mais escuro para ler melhor */
+    background-color: rgba(15, 0, 30, 0.8);
     border: 1px solid #4a008c;
     box-shadow: 0 5px 15px rgba(110, 0, 255, 0.3);
     -webkit-backdrop-filter: blur(5px);
     backdrop-filter: blur(5px);
-
-    border-radius: 0 0 8px 8px; /* Cantos arredondados só embaixo */
+    border-radius: 0 0 8px 8px;
     padding: 0;
     margin: 0;
-    min-width: 250px; /* Largura mínima do submenu */
-    z-index: 100; /* Garante que fique acima do conteúdo da página */
+    min-width: 250px;
+    z-index: 100;
 }
 
-/* Os itens <li> dentro do submenu */
 nav .dropdown li {
-    /* Faz os itens ficarem um abaixo do outro */
     display: block;
 }
 
-/* Os links <a> dentro do submenu */
 nav .dropdown a {
     padding: 12px 20px;
     font-size: 0.95em;
-    font-family: 'EB Garamond', serif; /* Usamos a fonte de texto */
+    font-family: 'EB Garamond', serif;
     font-weight: 500;
-
-    /* --- ADICIONE ESTAS DUAS LINHAS --- */
-    color: #e0e0e0;           /* Cor do texto clara (igual ao menu) */
-    text-decoration: none;  /* Remove o sublinhado azul */
+    color: #e0e0e0;
+    text-decoration: none;
 }
 
-/* O "truque" para mostrar o menu */
-/* Quando passar o mouse (hover) em um 'nav li' ... */
-/* ... o '.dropdown' que está dentro dele ... */
-/* ... muda de 'display: none' para 'display: block' */
 nav li:hover > .dropdown {
     display: block;
 }
@@ -179,16 +143,12 @@ nav li:hover > .dropdown {
 
 /* --- 7. Conteúdo Principal (Painel Flutuante) --- */
 main {
-    /* OPACIDADE: Um painel roxo bem escuro e semi-transparente */
     background-color: rgba(15, 0, 30, 0.5);
-    border: 1px solid #4a008c; /* Borda roxa sutil */
-    box-shadow: 0 0 15px rgba(110, 0, 255, 0.3); /* Brilho roxo */
-
+    border: 1px solid #4a008c;
+    box-shadow: 0 0 15px rgba(110, 0, 255, 0.3);
     border-radius: 8px;
     margin-top: 25px;
     min-height: 300px;
-
-    /* Efeito de vidro mais sutil */
     -webkit-backdrop-filter: blur(3px);
     backdrop-filter: blur(3px);
 }
@@ -197,16 +157,15 @@ main h2 {
     font-family: 'Cinzel', serif;
     font-weight: 700;
     color: #ffffff;
-    text-shadow: 0 0 8px #9f50ff; /* Brilho roxo nos subtítulos */
+    text-shadow: 0 0 8px #9f50ff;
     border-bottom: 1px solid #4a008c;
     padding-bottom: 10px;
     text-align: center;
 }
 
-/* Regra para justificar os parágrafos dentro do <main> */
 main p {
     text-align: justify;
-    hyphens: auto; /* Ajuda o navegador a quebrar palavras longas */
+    hyphens: auto;
 }
 
 /* --- 8. Rodapé --- */
@@ -215,111 +174,77 @@ footer {
     margin-top: 30px;
     font-size: 0.9em;
     color: #777;
-    opacity: 0.7; /* Opacidade para não chamar atenção */
+    opacity: 0.7;
 }
 
 /* --- 9. Estilos do Conteúdo (Adicional) --- */
 
-/* Estilo para a última frase da página inicial */
 main .chamada-final {
-    font-family: 'Cinzel', serif; /* Fonte épica, igual aos títulos */
+    font-family: 'Cinzel', serif;
     font-size: 1.3em;
     font-weight: 700;
     text-align: center;
     color: #ffffff;
-    text-shadow: 0 0 8px #9f50ff; /* Brilho roxo */
-    margin-top: 40px; /* Mais espaço acima */
+    text-shadow: 0 0 8px #9f50ff;
+    margin-top: 40px;
 }
 
 /* --- 10. REGRAS PARA CELULAR (Design Responsivo) --- */
 
-/* @media (max-width: 768px) { ... }
-   Significa: "Aplique as regras abaixo APENAS se a tela
-   tiver 768 pixels de largura ou MENOS."
-*/
 @media (max-width: 768px) {
-
-    /* 1. FAZ O MENU PRINCIPAL MUDAR DE HORIZONTAL PARA VERTICAL */
     nav ul {
-        flex-direction: column; /* Empilha os itens do menu */
-        align-items: stretch;   /* Faz os itens ocuparem a largura total */
+        flex-direction: column;
+        align-items: stretch;
     }
-
-    /* 2. AJUSTA OS LINKS PRINCIPAIS */
     nav a {
-        text-align: center; /* Centraliza o texto dentro de cada link */
-        padding: 15px 10px; /* Ajusta o preenchimento */
+        text-align: center;
+        padding: 15px 10px;
     }
-
-    /* 3. TRANSFORMA OS SUBMENUS (DROPDOWNS) */
     nav .dropdown {
-        position: relative; /* Deixa de "flutuar" */
-        width: 100%;        /* Ocupa a largura total do pai */
-        top: 0;             /* Reseta a posição */
+        position: relative;
+        width: 100%;
+        top: 0;
         left: 0;
-        box-shadow: none;   /* Remove a sombra flutuante */
+        box-shadow: none;
         border-radius: 0;
         border: none;
-
-        /* Fundo mais sutil para mostrar que é um submenu */
         background-color: rgba(0, 0, 0, 0.2);
     }
-
-    /* Faz os links do submenu terem um "recuo" */
     nav .dropdown a {
-        padding-left: 40px; /* Adiciona recuo à esquerda */
-        text-align: left;   /* Alinha o texto do submenu à esquerda */
+        padding-left: 40px;
+        text-align: left;
         font-size: 0.9em;
     }
-
-    /* 4. AJUSTA OS TÍTULOS GRANDES */
     header h1 {
-        font-size: 2.2em; /* Reduz o "ALTERNUM" (de 3.5em) */
+        font-size: 2.2em;
     }
-
     main h2 {
-        font-size: 1.5em; /* Reduz o "BEM-VINDO A ALTERNUM!" */
+        font-size: 1.5em;
     }
-
-    /* 5. AJUSTA O ALINHAMENTO DO TEXTO */
-    /* Texto justificado (text-align: justify) é péssimo em telas pequenas.
-       Vamos mudar para alinhado à esquerda. */
     main p {
-        text-align: left; /* Muda de 'justify' para 'left' */
-        hyphens: none;    /* Desativa a hifenização */
+        text-align: left;
+        hyphens: none;
     }
-
-    /* Garante que a chamada final continue centralizada */
     main .chamada-final {
         text-align: center;
     }
-
 }
 
 /* --- 11. AJUSTES NO HEADER (Link do Título) --- */
 
-/* Remove o sublinhado e a cor azul do link do título */
 header .home-link {
-    text-decoration: none; /* Remove sublinhado */
-    color: inherit;      /* Faz o link herdar a cor do pai (branco) */
+    text-decoration: none;
+    color: inherit;
 }
-
-/* (Opcional) Adiciona um brilho extra ao passar o mouse no título */
 header .home-link:hover h1 {
-    /* Brilho branco mais intenso e roxo mais espalhado */
     text-shadow: 0 0 15px #ffffff,
     0 0 10px #9f50ff;
 }
 
 /* --- 12. AJUSTES FINAIS (Hover SUTIL do Dropdown) --- */
 
-/* Adiciona um efeito de BRILHO SUTIL no texto (sem o bloco roxo) */
 nav .dropdown a:hover {
-    /* background-color: #6f00ff; <-- REMOVIDO */
-
-    color: #ffffff; /* Texto fica branco puro para se destacar */
-
-    /* Um brilho branco sutil com um toque de roxo */
+    color: #ffffff;
     text-shadow: 0 0 10px #ffffff,
     0 0 4px #cda4ff;
 }
@@ -348,7 +273,6 @@ main h4 {
     margin-top: 30px;
 }
 
-/* Nota de subtítulo (ex: 5 Vinténs...) */
 .sub-note {
     font-family: 'EB Garamond', serif;
     font-size: 0.8em;
@@ -357,47 +281,42 @@ main h4 {
     font-style: italic;
 }
 
-/* Cores das Moedas */
 .moeda-cobre {
-    color: #e67e22; /* Laranja (Cobre) */
+    color: #e67e22;
     font-weight: bold;
 }
 .moeda-prata {
-    color: #bdc3c7; /* Cinza (Prata) */
+    color: #bdc3c7;
     font-weight: bold;
 }
 .moeda-ouro {
-    color: #f1c40f; /* Amarelo (Ouro) */
+    color: #f1c40f;
     font-weight: bold;
 }
 
-/* Caixa de Informação (Anel Dimensional) */
 .info-box {
-    background-color: rgba(0, 0, 0, 0.3); /* Fundo escuro sutil */
-    border-left: 4px solid #6f00ff; /* Borda roxa à esquerda */
+    background-color: rgba(0, 0, 0, 0.3);
+    border-left: 4px solid #6f00ff;
     padding: 15px 20px;
     margin: 25px 0;
     border-radius: 4px;
 }
 
-/* Título dentro da caixa de info */
-.info-box h4 {
+/* CORREÇÃO DE ESPECIFICIDADE */
+main .info-box h4 {
     margin-top: 0;
     font-size: 1.2em;
 }
 
-/* Lista dentro da caixa de info */
 .info-box ul {
     padding-left: 20px;
     margin: 10px 0 0 0;
 }
-
 .info-box li {
     margin-bottom: 10px;
     line-height: 1.6;
 }
 
-/* Divisor de Seção */
 .section-divider {
     border: 0;
     height: 1px;
@@ -409,11 +328,9 @@ main h4 {
     margin: 50px 0;
 }
 
-/* Estilo para o link "ativo" no submenu */
 nav .dropdown a.active-sub {
     color: #ffffff;
     font-weight: bold;
-    /* Brilho sutil para mostrar que é a página ativa */
     text-shadow: 0 0 10px #ffffff,
     0 0 4px #cda4ff;
 }
@@ -421,61 +338,45 @@ nav .dropdown a.active-sub {
 /* --- 14. ESTILOS DE GALERIA DE CARTÕES (Planos) --- */
 
 .galeria-planos {
-    display: grid; /* Usa o sistema de grade do CSS */
-
-    /* Cria colunas responsivas:
-       - Tenta encaixar o máximo de colunas que puder
-       - Cada coluna tem no MÍNIMO 300px
-       - Cada coluna tem no MÁXIMO 1 fração (1fr) do espaço
-    */
+    display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-
-    gap: 25px; /* Espaço entre os cartões */
+    gap: 25px;
     margin-top: 30px;
 }
 
 .card-plano {
-    background-color: rgba(0, 0, 0, 0.3); /* Fundo sutil */
-    border: 1px solid #4a008c; /* Borda roxa */
+    background-color: rgba(0, 0, 0, 0.3);
+    border: 1px solid #4a008c;
     border-radius: 8px;
-    overflow: hidden; /* Garante que a imagem obedeça o border-radius */
-    box-shadow: 0 0 10px rgba(110, 0, 255, 0.2); /* Brilho roxo */
-
-    /* Transição suave para o efeito de hover */
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(110, 0, 255, 0.2);
     transition: all 0.3s ease;
 }
-
-/* Efeito de "levantar" o cartão ao passar o mouse */
 .card-plano:hover {
-    transform: translateY(-5px); /* Move o cartão 5px para cima */
-    box-shadow: 0 5px 20px rgba(110, 0, 255, 0.4); /* Brilho mais forte */
+    transform: translateY(-5px);
+    box-shadow: 0 5px 20px rgba(110, 0, 255, 0.4);
 }
-
-/* A Imagem do Cartão */
 .card-plano img {
-    width: 100%; /* Imagem preenche a largura do cartão */
-    height: 200px; /* Altura fixa para todas as imagens */
-    object-fit: cover; /* ESSENCIAL: Faz a imagem cobrir a área sem esticar */
-    border-bottom: 1px solid #4a008c; /* Linha roxa separando img do texto */
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 1px solid #4a008c;
 }
-
-/* O Corpo de Texto do Cartão */
 .card-plano-corpo {
     padding: 20px;
 }
 
-/* Título dentro do cartão */
-.card-plano-corpo h3 {
+/* CORREÇÃO DE ESPECIFICIDADE */
+main .card-plano-corpo h3 {
     font-family: 'Cinzel', serif;
     font-weight: 700;
     font-size: 1.5em;
     color: #f0f0f0;
     text-shadow: 0 0 6px #9f50ff;
-    margin-top: 0; /* Remove a margem padrão */
+    margin-top: 0;
     margin-bottom: 15px;
 }
 
-/* Lista de sub-itens (ex: continentes) */
 .card-plano-corpo ul {
     font-size: 0.9em;
     padding-left: 20px;
@@ -484,104 +385,926 @@ nav .dropdown a.active-sub {
 
 /* --- 15. CLASSES DE POSIÇÃO DE IMAGEM (Helper) --- */
 
-/* Para imagens onde o foco está EM CIMA */
-.img-pos-topo {
-    object-position: center top; /* (Horizontal: centro, Vertical: topo) */
-}
-
-/* Para imagens onde o foco está EM BAIXO */
-.img-pos-base {
-    object-position: center bottom; /* (Horizontal: centro, Vertical: base) */
-}
-
-/* % do topo */
-.img-pos-15 {
-    object-position: center 15%;
-}
-
-.img-pos-25 {
-    object-position: center 25%;
-}
-
-.img-pos-40 {
-    object-position: center 40%;
-}
-
-.img-pos-75 {
-    object-position: center 75%;
-}
+.img-pos-topo { object-position: center top; }
+.img-pos-base { object-position: center bottom; }
+.img-pos-15 { object-position: center 15%; }
+.img-pos-25 { object-position: center 25%; }
+.img-pos-40 { object-position: center 40%; }
+.img-pos-75 { object-position: center 75%; }
 
 /* --- 16. ESTILO SUTIL (Metadados do Card) --- */
 
 .card-meta-info {
-    list-style: none; /* Remove bolinhas */
+    list-style: none;
     padding: 0;
-    margin: -10px 0 15px 0; /* Puxa para perto do título */
-
+    margin: -10px 0 15px 0;
     font-family: 'EB Garamond', serif;
-    font-size: 0.95em; /* Um pouco menor */
-    color: #bbb; /* Cor sutil para o valor */
-
+    font-size: 0.95em;
+    color: #bbb;
     line-height: 1.7;
-
-    border-bottom: 1px dashed #4a008c; /* Linha tracejada roxa */
+    border-bottom: 1px dashed #4a008c;
     padding-bottom: 10px;
 }
-
 .card-meta-info li {
     margin-bottom: 2px;
 }
-
-/* O "rótulo" (Capital:, Regente:) */
 .card-meta-info li strong {
-    font-family: 'Cinzel', serif; /* Fonte épica para o rótulo */
+    font-family: 'Cinzel', serif;
     font-style: normal;
     font-weight: 500;
-    color: #cda4ff; /* Roxo místico */
-    margin-right: 8px; /* Espaço entre o rótulo e o valor */
-
-    /* Truque para alinhar os rótulos verticalmente */
+    color: #cda4ff;
+    margin-right: 8px;
     display: inline-block;
     min-width: 70px;
 }
 
 /* --- 17. ESTILO REGENTE PÓS-VIDA (mundo_planos.html) --- */
-/* Este bloco corrige o estilo dos Regentes Divinos */
 
 .card-plano-regente {
-    font-family: 'Cinzel', serif; /* Fonte épica para o nome */
-    font-size: 0.9em;       /* Um pouco maior */
-    font-style: normal;   /* Tira o itálico do nome */
+    font-family: 'Cinzel', serif;
+    font-size: 0.9em;
+    font-style: normal;
     font-weight: 500;
-    color: #cda4ff;      /* Roxo claro para o nome */
-
-    line-height: 1.4;     /* Espaçamento */
-
-    /* Ajustes de espaçamento */
+    color: #cda4ff;
+    line-height: 1.4;
     margin-top: -10px;
     margin-bottom: 15px;
     padding-bottom: 10px;
-    border-bottom: 1px dashed #4a008c; /* Linha tracejada roxa */
+    border-bottom: 1px dashed #4a008c;
 }
 
 /* --- 18. ESTILO PÁGINA "EM CONSTRUÇÃO" --- */
 
 .pagina-em-construcao {
     text-align: center;
-    padding: 80px 40px; /* Mais preenchimento (vertical, horizontal) */
-    min-height: 250px; /* Garante que o bloco main não fique muito pequeno */
-    opacity: 0.6; /* Deixa o conteúdo sutil, como se estivesse "oculto" */
+    padding: 80px 40px;
+    min-height: 250px;
+    opacity: 0.6;
 }
 
-/* O 'h2' dentro desta página já pega o estilo de 'main h2',
-   mas podemos ajustar se quisermos */
-.pagina-em-construcao h2 {
-    font-size: 2em; /* Um pouco maior que o h2 normal */
+/* CORREÇÃO DE ESPECIFICIDADE */
+main .pagina-em-construcao h2 {
+    font-size: 2em;
+    font-family: 'Cinzel', serif;
+    font-weight: 700;
+    color: #ffffff;
+    text-shadow: 0 0 8px #9f50ff;
+    border-bottom: 1px solid #4a008c;
+    padding-bottom: 10px;
+    text-align: center;
 }
 
 .pagina-em-construcao p {
     font-size: 1.2em;
     color: #bbb;
     font-style: italic;
-    text-align: center; /* Garante que o parágrafo também fique centralizado */
+    text-align: center;
+}
+
+/* --- 19. ESTILOS DE CONTEÚDO (Listas e Citações) --- */
+
+.citacao-lore {
+    font-family: 'Cinzel', serif;
+    font-size: 1.2em;
+    font-style: italic;
+    text-align: center;
+    color: #cda4ff;
+    margin: 30px 10%;
+    padding: 20px;
+    border-top: 1px dashed #4a008c;
+    border-bottom: 1px dashed #4a008c;
+    opacity: 0.9;
+}
+
+.lista-custom {
+    list-style: none;
+    padding-left: 20px;
+    margin-bottom: 25px;
+}
+.lista-custom li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 15px;
+    line-height: 1.7;
+}
+.lista-custom li::before {
+    content: '◈';
+    color: #cda4ff;
+    font-size: 1.2em;
+    position: absolute;
+    left: 0;
+    top: 0px;
+    opacity: 0.8;
+}
+.lista-custom ul {
+    list-style: none;
+    padding-left: 15px;
+    margin-top: 15px;
+}
+.lista-custom ul li::before {
+    content: '›';
+    color: #aaa;
+    left: 2px;
+}
+
+/* --- 20. ESTILOS DE TEXTO ESPECIAIS (Lore) --- */
+
+.termo-lore {
+    color: #cda4ff;
+    font-weight: bold;
+    font-style: italic;
+    text-shadow: 0 0 5px #cda4ff;
+}
+
+.magia-nome {
+    font-family: 'Megrim', sans-serif;
+    font-size: 1.1em;
+    color: #e0e0e0;
+    font-weight: bold;
+    text-shadow: 0 0 5px #cda4ff;
+    display: inline-block;
+    margin-left: 4px;
+}
+
+/* --- 21. ESTILOS PÁGINA MAGIAS (Artes, Técnicas e Formas) --- */
+/* ATENÇÃO: As regras aqui são GLOBAIS para #magias-page */
+
+#magias-page h2 {
+    font-family: 'Megrim', sans-serif;
+    font-size: 2.5em;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #e0e0e0;
+    text-shadow: 0 0 10px #9f50ff;
+    border-bottom: 1px dashed #4a008c;
+    padding-bottom: 10px;
+    margin-top: 10px;
+    text-align: left;
+}
+
+#magias-page h3 {
+    font-family: 'Megrim', sans-serif;
+    font-size: 1.8em;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #e0e0e0;
+    text-shadow: 0 0 10px #9f50ff;
+    border-bottom: none;
+    padding-bottom: 5px; /* CORRIGIDO (de 10px) */
+    margin-top: 50px;
+    margin-bottom: 0; /* CORRIGIDO (de 10px) */
+    text-align: left;
+}
+
+#magias-page h4 {
+    font-family: 'EB Garamond', serif;
+    font-weight: bold;
+    font-size: 1.3em;
+    color: #f0f0f0;
+    text-shadow: none;
+    margin-top: 40px;
+}
+
+.tecnica-item {
+    margin-bottom: 15px;
+    line-height: 1.5;
+    font-size: 1.1em;
+}
+.tecnica-item strong {
+    color: #ffffff;
+    font-size: 1.1em;
+    letter-spacing: 0.5px;
+}
+
+.lista-formas {
+    font-size: 1.1em;
+    line-height: 2.2;
+    text-align: left;
+    color: #aaa;
+}
+.lista-formas span {
+    font-weight: bold;
+    text-shadow: 0 0 5px rgba(255,255,255,0.2);
+    white-space: nowrap;
+}
+
+/* CORES DAS FORMAS (Conforme screenshots) */
+.form-rawvis { color: #ffffff; }
+.form-anima { color: #e0e0e0; }
+.form-animalis { color: #e67e22; }
+.form-aqua { color: #3498db; }
+.form-arcane { color: #9b59b6; }
+.form-arena { color: #f1c40f; }
+.form-auran { color: #ecf0f1; }
+.form-biotic { color: #2ecc71; }
+.form-corpus { color: #e74c3c; }
+.form-crystallo { color: #1abc9c; }
+.form-daemonium { color: #c0392b; }
+.form-fulgur { color: #f3d779; }
+.form-glacies { color: #3498db; }
+.form-gravitas { color: #4a008c; }
+.form-herbam { color: #27ae60; }
+.form-ignis { color: #e67e22; }
+.form-imaginem { color: #9b59b6; }
+.form-lux { color: #f1c40f; }
+.form-magmum { color: #e67e22; }
+.form-mentem { color: #9b59b6; }
+.form-metallum { color: #95a5a6; }
+.form-mortem { color: #7f8c8d; }
+.form-naturae { color: #2ecc71; }
+.form-object { color: #95a5a6; }
+.form-psychica { color: #9b59b6; }
+.form-sana { color: #ecf0f1; }
+.form-sanguis { color: #c0392b; }
+.form-tempus { color: #f1c40f; }
+.form-terram { color: #a1887f; }
+.form-umbra { color: #7f8c8d; }
+.form-vacuum { color: #ecf0f1; }
+.form-venenum { color: #27ae60; }
+.form-vita { color: #e74c3c; }
+
+/* --- 23. NOVO ESTILO (Grade de Formas) --- */
+
+.formas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+    text-align: left;
+}
+
+.forma-item {
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 12px 18px;
+    border-radius: 4px;
+    border-left: 3px solid #4a008c;
+    font-size: 1.1em;
+    color: #aaa;
+    transition: all 0.2s ease-in-out;
+}
+.forma-item:hover {
+    background-color: rgba(110, 0, 255, 0.1);
+    border-left-color: #6f00ff;
+    transform: translateX(5px);
+}
+.forma-item span {
+    font-family: 'Megrim', sans-serif;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-right: 8px;
+    display: block;
+    font-size: 1.4em;
+    margin-bottom: 3px;
+}
+
+/* --- 24. ESTILOS DE MAGIAS DE EXEMPLO (Layout Compacto em Grid) --- */
+
+.magias-exemplos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px 25px;
+    margin-top: 30px;
+}
+
+.magia-exemplo-item {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-left: 3px solid #6f00ff;
+    padding: 18px 22px;
+    border-radius: 4px;
+    box-shadow: 0 0 8px rgba(110, 0, 255, 0.1);
+    transition: all 0.2s ease-in-out;
+}
+.magia-exemplo-item:hover {
+    background-color: rgba(110, 0, 255, 0.1);
+    border-left-color: #9f50ff;
+    transform: translateY(-3px);
+}
+
+/* CORREÇÃO DE ESPECIFICIDADE */
+#magias-page .magia-exemplo-item h4 {
+    font-family: 'Cinzel', serif;
+    font-size: 1.4em;
+    color: #ffffff;
+    text-shadow: 0 0 6px #9f50ff;
+    margin-top: 0;
+    margin-bottom: 3px;
+    line-height: 1.2;
+}
+
+.magia-exemplo-item .spell-meta {
+    font-family: 'EB Garamond', serif;
+    font-style: italic;
+    color: #bbb;
+    font-size: 0.9em;
+    margin: 0 0 12px 0;
+}
+.magia-exemplo-item .spell-formula {
+    font-family: 'Megrim', sans-serif;
+    font-weight: bold;
+    font-size: 1.0em;
+    letter-spacing: 0.8px;
+    color: #e0e0e0;
+    border-bottom: 1px dashed #4a008c;
+    padding-bottom: 10px;
+    margin-bottom: 12px;
+    line-height: 1.2;
+}
+.magia-exemplo-item .spell-desc {
+    line-height: 1.6;
+    font-size: 1.0em;
+}
+.magia-exemplo-item .spell-desc p {
+    margin: 0;
+    padding-left: 0.8em;
+    text-indent: -0.8em;
+    text-align: left; /* CORRIGIDO: Garante que não justifique */
+    hyphens: none;
+}
+
+/* --- 25. ESTILO P/ MAGIAS FULL-WIDTH (c/ Stat Block) --- */
+
+.spell-card-full {
+    background-color: rgba(0, 0, 0, 0.3);
+    border-left: 4px solid #6f00ff;
+    padding: 20px 25px;
+    margin: 35px 0;
+    border-radius: 4px;
+    box-shadow: 0 0 10px rgba(110, 0, 255, 0.1);
+}
+
+/* CORREÇÃO DE ESPECIFICIDADE */
+#magias-page .spell-card-full h4 {
+    font-family: 'Cinzel', serif;
+    font-size: 1.6em;
+    color: #ffffff;
+    text-shadow: 0 0 8px #9f50ff;
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+.spell-card-full .spell-meta {
+    font-family: 'EB Garamond', serif;
+    font-style: italic;
+    color: #aaa;
+    font-size: 0.95em;
+    margin: 0 0 15px 0;
+}
+.spell-card-full .spell-formula {
+    font-family: 'Megrim', sans-serif;
+    font-weight: bold;
+    font-size: 1.4em;
+    letter-spacing: 1px;
+    color: #e0e0e0;
+    border-bottom: 1px dashed #4a008c;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+}
+.spell-card-full .spell-desc {
+    line-height: 1.7;
+    font-size: 1.1em;
+}
+
+/* CORREÇÃO: Regra base para parágrafos justificados */
+.spell-card-full .spell-desc p {
+    margin: 0 0 10px 0;
+    padding-left: 0; /* Limpo */
+    text-indent: 0; /* Limpo */
+    text-align: justify; /* JUSTIFICADO */
+    hyphens: auto;
+}
+.spell-card-full .spell-desc p:last-child {
+    margin-bottom: 0;
+}
+
+/* --- 26. ESTILO DE BLOCO DE ESTATÍSTICAS --- */
+.stat-block {
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 1px solid #4a008c;
+    padding: 20px 25px;
+    margin: 25px 0 10px 0;
+    border-radius: 8px;
+    font-size: 0.95em;
+    line-height: 1.6;
+}
+
+/* CORREÇÃO DE ESPECIFICIDADE */
+#magias-page .stat-block h4 {
+    font-family: 'Cinzel', serif;
+    color: #cda4ff;
+    font-size: 1.4em;
+    margin-top: 0;
+    text-shadow: 0 0 5px #cda4ff;
+    border-bottom: 1px solid #4a008c;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+.stat-block .stat-meta {
+    font-style: italic;
+    color: #aaa;
+    margin-top: -5px;
+    display: block;
+    margin-bottom: 10px;
+}
+.stat-block ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+}
+.stat-block .stat-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 10px;
+    border-radius: 4px;
+}
+.stat-block .stat-list li {
+    text-align: center;
+    padding: 5px 10px;
+    font-family: 'Cinzel', serif;
+}
+.stat-block .stat-details {
+    border-top: 1px dashed #4a008c;
+    border-bottom: 1px dashed #4a008c;
+    padding: 10px 0;
+}
+.stat-block .stat-details li {
+    margin-bottom: 5px;
+}
+.stat-block .stat-abilities {
+    margin: 15px 0;
+}
+.stat-block .stat-abilities p {
+    margin-bottom: 10px;
+}
+.stat-block .stat-actions h5 {
+    font-family: 'Cinzel', serif;
+    font-size: 1.2em;
+    color: #cda4ff;
+    margin: 15px 0 10px 0;
+    border-bottom: 1px solid #4a008c;
+    padding-bottom: 5px;
+}
+.stat-block .stat-actions p {
+    margin-bottom: 5px;
+}
+
+/* --- 27. ESTILOS DE TABELA (Com Wrapper) --- */
+
+.tabela-wrapper {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    margin: 10px 0 0 0;
+}
+.tabela-magia {
+    width: 100%;
+    margin: 0 0 10px 0;
+    border-collapse: collapse;
+    background-color: rgba(0, 0, 0, 0.2);
+    font-size: 0.95em;
+    border: 1px solid #4a008c;
+}
+.tabela-magia th,
+.tabela-magia td {
+    border: 1px solid #4a008c;
+    padding: 12px 15px;
+    white-space: nowrap;
+    text-align: center;
+}
+.tabela-magia th {
+    font-family: 'Cinzel', serif;
+    color: #cda4ff;
+    background-color: rgba(15, 0, 30, 0.5);
+}
+.tabela-magia tbody tr:hover {
+    background-color: rgba(110, 0, 255, 0.1);
+}
+.nota-tabela {
+    font-size: 0.9em;
+    font-style: italic;
+    color: #999;
+    text-align: center;
+    margin: 5px 0 20px 0; /* CORRIGIDO (Espaçamento) */
+}
+
+/* --- 28. ESTILOS DA SEÇÃO DE RUNAS --- */
+
+/* CORREÇÃO DE ESPECIFICIDADE */
+#magias-page .lista-runas h4 {
+    margin-bottom: 20px;
+}
+
+.lista-runas {
+    list-style: none;
+    padding-left: 10px;
+    margin: 25px 0;
+}
+.lista-runas li {
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 18px;
+    line-height: 1.7;
+    font-size: 1.1em;
+}
+.lista-runas li strong {
+    color: #ffffff;
+    letter-spacing: 0.5px;
+}
+.lista-runas li::before {
+    content: '◈';
+    font-size: 1.5em;
+    position: absolute;
+    left: 0;
+    top: -2px;
+}
+.lista-runas .runa-polida::before {
+    color: #cda4ff;
+}
+.lista-runas .runa-selvagem::before {
+    color: #e74c3c;
+}
+.lista-runas .runa-dorthok::before {
+    color: #7f8c8d;
+}
+
+/* --- 29. ESTILOS DOS EXEMPLOS DE RUNAS (Simples) --- */
+
+/* CORREÇÃO DE ESPECIFICIDADE */
+#magias-page .spell-card-full h4 .runa-icone-titulo {
+    font-size: 0.8em;
+    margin-left: 8px;
+    text-shadow: none;
+    color: #cda4ff;
+}
+#magias-page .runa-selvagem-card h4 .runa-icone-titulo {
+    color: #e74c3c;
+}
+
+/* CORREÇÃO: Parágrafo de perigo */
+.runa-perigo {
+    margin-top: 25px !important;
+    color: #e0e0e0;
+    font-style: italic;
+    font-size: 1.1em;
+    background-color: rgba(231, 76, 60, 0.05);
+    border-top: 1px dashed #c0392b;
+    border-bottom: 1px dashed #c0392b;
+    padding: 15px 20px !important;
+    text-align: left !important;
+    hyphens: none !important;
+    text-indent: 0 !important;
+    padding-left: 20px !important;
+}
+
+.runa-efeitos {
+    list-style: none;
+    padding-left: 20px;
+    margin: 20px 0;
+}
+.runa-efeitos li {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    line-height: 1.6;
+    padding-left: 0 !important;
+    text-indent: 0 !important;
+}
+.runa-efeitos li strong {
+    font-weight: bold;
+}
+.runa-efeitos .form-ignis,
+.runa-efeitos .form-ignis strong {
+    color: #e67e22;
+}
+.runa-efeitos .form-glacies,
+.runa-efeitos .form-glacies strong {
+    color: #3498db;
+}
+
+/* --- 30. ESTILOS DE ARTEFATOS MÁGICOS --- */
+
+.rarity-list {
+    font-family: 'Cinzel', serif;
+    font-size: 0.9em;
+    text-align: center;
+    line-height: 1.8;
+    margin-bottom: 25px;
+    word-spacing: 3px;
+}
+.rarity-comum { color: #aaa; }
+.rarity-incomum { color: #2ecc71; }
+.rarity-raro { color: #3498db; }
+.rarity-mitico { color: #9b59b6; }
+.rarity-epico { color: #e67e22; }
+.rarity-lendario { color: #f1c40f; }
+.rarity-reliquia { color: #e91e63; }
+.rarity-amaldicoado { color: #c0392b; }
+.rarity-tecno { color: #1abc9c; }
+.rarity-inteligente { color: #ffffff; }
+
+.item-box {
+    background-color: rgba(0, 0, 0, 0.2);
+    border: 1px solid #777;
+    padding: 10px 25px 15px 25px;
+    margin: 25px 0 5px 0;
+    border-radius: 4px;
+}
+
+/* CORREÇÃO DE ESPECIFICIDADE */
+#magias-page .item-box h4 {
+    font-family: 'Cinzel', serif;
+    font-size: 1.5em;
+    color: #ffffff;
+    text-shadow: 0 0 6px #9f50ff;
+    margin-top: 15px;
+    margin-bottom: 3px;
+}
+.item-box h4 span {
+    font-family: 'EB Garamond', serif;
+    font-size: 1.2em;
+}
+.item-box .item-formula {
+    font-family: 'Megrim', sans-serif;
+    font-weight: bold;
+    font-size: 1.2em;
+    letter-spacing: 0.8px;
+    margin: 0 0 10px 0;
+}
+.item-box .item-desc {
+    font-style: italic;
+    color: #bbb;
+    margin: 0 0 10px 0;
+    font-size: 0.95em;
+}
+.item-box .item-effects-list {
+    list-style: disc;
+    padding-left: 20px;
+    margin-left: 10px;
+}
+.item-box .item-effects-list li {
+    font-size: 1.1em;
+    line-height: 1.6;
+    padding-left: 5px;
+    margin-bottom: 10px;
+}
+.item-divider {
+    border: 0;
+    height: 1px;
+    background-color: #444;
+    margin: 25px 0;
+}
+.item-divider-footer {
+    border: 0;
+    height: 1px;
+    background-color: #777;
+    margin: 20px 0 15px 0;
+}
+.item-footnote {
+    font-style: italic;
+    color: #999;
+    text-align: center;
+    font-size: 0.9em;
+    margin: 0;
+}
+
+/* --- 31. ESTILO DE LISTA DE BENEFÍCIOS (Familiares) --- */
+
+.lista-beneficios {
+    list-style: none;
+    padding-left: 20px;
+    margin-bottom: 25px;
+}
+.lista-beneficios li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 15px;
+    line-height: 1.7;
+}
+.lista-beneficios li::before {
+    content: '✧';
+    color: #9f50ff;
+    font-size: 1.3em;
+    position: absolute;
+    left: 0;
+    top: -1px;
+    opacity: 0.9;
+}
+
+/* --- 32. ESTILO DE LISTA DE DETALHES (Magias) --- */
+
+/* CORREÇÃO DE ESPECIFICIDADE */
+#magias-page .detalhes-titulo {
+    font-family: 'EB Garamond', serif;
+    font-size: 1.4em;
+    font-weight: bold;
+    color: #ffffff;
+    text-shadow: none;
+    border-bottom: 1px solid #4a008c;
+    padding-bottom: 5px;
+    margin-top: 40px;
+    margin-bottom: 15px;
+}
+
+.lista-detalhes {
+    list-style: none;
+    padding-left: 10px;
+    margin-bottom: 25px;
+}
+.lista-detalhes li {
+    margin-bottom: 15px;
+    line-height: 1.6;
+    font-size: 1.05em;
+    color: #bbb;
+}
+.lista-detalhes strong {
+    font-family: 'Cinzel', serif;
+    font-weight: 500;
+    color: #ffffff;
+    font-size: 1.1em;
+    margin-right: 8px;
+}
+
+/* --- 33. ESTILOS DE TABELA DE TIPOS DE MAGIA --- */
+
+.tabela-tipos-magia {
+    width: 100%;
+    margin: 30px 0 10px 0;
+    border-collapse: collapse;
+    background-color: rgba(0, 0, 0, 0.2);
+    border: 1px solid #777;
+}
+.tabela-tipos-magia .tipo-label {
+    font-family: 'Cinzel', serif;
+    font-weight: bold;
+    font-size: 1.2em;
+    color: #ffffff;
+    text-align: center;
+    vertical-align: top;
+    padding: 20px;
+    border: 1px solid #777;
+    width: 150px;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+.tabela-tipos-magia .tipo-card {
+    border: 1px solid #777;
+    padding: 20px 25px;
+    vertical-align: top;
+}
+
+/* CORREÇÃO DE ESPECIFICIDADE */
+#magias-page .tipo-card h4 {
+    font-family: 'Cinzel', serif;
+    font-size: 1.4em;
+    color: #ffffff;
+    text-shadow: 0 0 6px #9f50ff;
+    margin-top: 0;
+    margin-bottom: 3px;
+}
+
+.tipo-card .spell-meta {
+    font-family: 'EB Garamond', serif;
+    font-style: italic;
+    color: #bbb;
+    font-size: 0.9em;
+    margin: 0 0 12px 0;
+}
+.tipo-card .spell-formula {
+    font-family: 'Megrim', sans-serif;
+    font-weight: bold;
+    font-size: 1.2em;
+    letter-spacing: 0.8px;
+    color: #e0e0e0;
+    margin-bottom: 12px;
+    line-height: 1.2;
+}
+.tipo-card .formula-interna {
+    margin-top: 25px;
+    border-top: 1px dashed #4a008c;
+    padding-top: 15px;
+}
+.tipo-card .spell-desc {
+    line-height: 1.6;
+    font-size: 1.0em;
+}
+.tipo-card .spell-desc p {
+    margin: 0 0 10px 0;
+    padding-left: 0.8em;
+    text-indent: -0.8em;
+    text-align: left;
+    hyphens: none;
+}
+.tipo-card .spell-desc p:last-child {
+    margin-bottom: 0;
+}
+.tipo-card .stat-block {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 0.9em;
+}
+.tipo-card .desc-italica {
+    font-style: italic;
+    color: #bbb;
+    text-align: left;
+    padding-left: 0;
+    text-indent: 0;
+    margin-bottom: 5px;
+    margin-top: 10px;
+}
+/* Bloco de Aprimoramento Divino (Dourado) */
+.tipo-card .spell-desc p.aprimoramento {
+    color: #f1c40f;
+    font-size: 0.95em;
+    background-color: rgba(241, 196, 15, 0.05);
+    border-left: 3px solid #f1c40f;
+    padding: 10px 15px; /* Define o padding correto */
+    margin-top: 15px;
+    text-align: left; /* Garante alinhamento */
+    text-indent: 0; /* Remove a bolinha */
+    line-height: 1.6;
+}
+.tipo-card .aprimoramento strong {
+    color: #f3d779;
+}
+.tipo-card .item-formula {
+    font-family: 'Megrim', sans-serif;
+    font-weight: bold;
+    font-size: 1.2em;
+    letter-spacing: 0.8px;
+    margin: -10px 0 10px 0;
+    color: #3498db;
+    text-shadow: 0 0 5px #3498db;
+}
+.tipo-card .item-desc {
+    font-style: italic;
+    color: #bbb;
+    margin: 0 0 10px 0;
+    font-size: 0.95em;
+    text-align: left;
+    padding-left: 0;
+    text-indent: 0;
+}
+
+/* --- Substituições de Cor (Overrides) --- */
+
+.tabela-tipos-magia .form-ignis {
+    color: #e67e22 !important;
+}
+.tabela-tipos-magia .tipo-pergaminho h4,
+.tabela-tipos-magia .tipo-pergaminho .spell-formula {
+    color: #1abc9c;
+    text-shadow: 0 0 5px #1abc9c;
+}
+.tabela-tipos-magia .tipo-pergaminho .form-glacies {
+    color: #1abc9c !important;
+}
+.tabela-tipos-magia .tipo-grimorio h4,
+.tabela-tipos-magia .tipo-grimorio .spell-formula {
+    color: #bdc3c7;
+    text-shadow: 0 0 5px #bdc3c7;
+}
+.tabela-tipos-magia .tipo-grimorio .form-mortem {
+    color: #bdc3c7 !important;
+}
+.tabela-tipos-magia .tipo-tatuagem h4,
+.tabela-tipos-magia .tipo-tatuagem .spell-formula {
+    color: #f1c40f;
+    text-shadow: 0 0 5px #f1c40f;
+}
+.tabela-tipos-magia .tipo-tatuagem .form-fulgur {
+    color: #f1c40f !important;
+}
+.tabela-tipos-magia .tipo-musica h4 {
+    color: #ffffff;
+    text-shadow: 0 0 5px #ffffff;
+}
+.tabela-tipos-magia .tipo-musica .spell-formula {
+    color: #3498db;
+    text-shadow: 0 0 5px #3498db;
+}
+.tabela-tipos-magia .tipo-musica .form-aqua {
+    color: #3498db !important;
+}
+.tabela-tipos-magia .tipo-divina h4,
+.tabela-tipos-magia .tipo-divina .spell-formula {
+    color: #f1c40f;
+    text-shadow: 0 0 5px #f1c40f;
+}
+.tabela-tipos-magia .tipo-divina .form-lux {
+    color: #f1c40f !important;
+}
+.tabela-tipos-magia .tipo-pacto h4,
+.tabela-tipos-magia .tipo-pacto .spell-formula {
+    color: #e74c3c;
+    text-shadow: 0 0 5px #e74c3c;
+}
+.tabela-tipos-magia .tipo-pacto .form-sanguis {
+    color: #e74c3c !important;
+}
+.tabela-tipos-magia .tipo-item h4 {
+    color: #3498db;
+    text-shadow: 0 0 5px #3498db;
+}
+.tabela-tipos-magia .tipo-item .form-auran {
+    color: #3498db !important;
 }
