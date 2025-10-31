@@ -1308,3 +1308,225 @@ main .pagina-em-construcao h2 {
 .tabela-tipos-magia .tipo-item .form-auran {
     color: #3498db !important;
 }
+
+/* --- 34. ESTILOS DE CARTÃO DE LOCAL (Imagem + Nome) --- */
+
+.card-local {
+    /* Reutiliza o visual do .card-plano */
+    background-color: rgba(0, 0, 0, 0.3);
+    border: 1px solid #4a008c;
+    border-radius: 8px;
+    overflow: hidden; /* Para o nome não vazar */
+    box-shadow: 0 0 10px rgba(110, 0, 255, 0.2);
+    transition: all 0.3s ease;
+
+    /* Remove o padding do .card-plano-corpo que não existe aqui */
+    padding: 0;
+}
+
+.card-local:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 20px rgba(110, 0, 255, 0.4);
+}
+
+.card-local img {
+    width: 100%;
+    height: 220px; /* Altura da imagem do local */
+    object-fit: cover;
+    display: block; /* Remove espaço extra da imagem */
+}
+
+/* O título (nome do local) */
+.card-local h4 {
+    font-family: 'Cinzel', serif;
+    font-weight: 700;
+    font-size: 1.3em;
+    color: #ffffff;
+    text-shadow: 0 0 6px #9f50ff;
+
+    /* Fundo sutil para o texto */
+    background-color: rgba(15, 0, 30, 0.7); /* Fundo roxo escuro */
+    -webkit-backdrop-filter: blur(3px);
+    backdrop-filter: blur(3px);
+
+    text-align: center;
+    padding: 15px;
+    margin: 0; /* Remove margens padrão */
+
+    /* Borda para separar do topo (imagem) */
+    border-top: 1px solid #4a008c;
+}
+
+/* --- 35. ESTILO DE GALERIA DE LOCAIS (Não-elástica) --- */
+/* Esta galeria NÃO estica os cards para preencher o espaço */
+
+.galeria-locais {
+    display: flex; /* Usamos Flexbox em vez de Grid */
+    flex-wrap: wrap; /* Permite que os cards quebrem a linha */
+    gap: 25px; /* O mesmo espaço entre os cards */
+    margin-top: 20px; /* Um espaço menor abaixo do título h4 */
+
+    /* Esta é a mágica: */
+    /* Centraliza os cards horizontalmente */
+    justify-content: flex-start;
+}
+
+/* * Define um tamanho FIXO para os cards dentro desta galeria.
+ * Eles não podem crescer (grow: 0).
+*/
+.galeria-locais .card-local {
+    width: 280px;  /* O mesmo tamanho que calculamos para 3 colunas */
+    flex-grow: 0;  /* Proíbe o card de esticar (o 1fr) */
+    flex-shrink: 0; /* Proíbe o card de encolher */
+}
+
+/* --- 36. ESTILO DE LISTA DE LINKS (Página Extras) --- */
+
+.lista-links {
+    list-style: none; /* Remove bolinhas */
+    padding: 0;
+    margin-top: 20px;
+}
+
+.lista-links li {
+    margin-bottom: 15px; /* Espaço entre os links */
+}
+
+/* O "card" do link */
+.lista-links a {
+    display: block;
+    padding: 18px 25px;
+
+    background-color: rgba(0, 0, 0, 0.2);
+    border: 1px solid #4a008c;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(110, 0, 255, 0.1);
+
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+}
+
+.lista-links a:hover {
+    background-color: rgba(110, 0, 255, 0.1);
+    border-color: #6f00ff;
+    transform: translateY(-3px); /* Efeito de elevação */
+    box-shadow: 0 5px 15px rgba(110, 0, 255, 0.3);
+}
+
+/* Título do Link */
+.lista-links a strong {
+    font-family: 'Cinzel', serif;
+    font-size: 1.3em;
+    color: #cda4ff; /* Roxo místico */
+    display: block; /* Linha própria */
+    margin-bottom: 5px;
+}
+
+/* Descrição do Link */
+.lista-links a span {
+    font-family: 'EB Garamond', serif;
+    font-size: 1.0em;
+    color: #bbb;
+    font-style: italic;
+}
+
+/* --- 37. ESTILO PARA H5 (SUBTÍTULOS DE SEÇÃO) --- */
+/* Usado em "Para qualquer espécie", "Para qualquer origem" */
+
+main h5 {
+    font-family: 'Cinzel', serif; /* Fonte épica, mas sutil */
+    font-weight: 500;
+    font-size: 1.2em; /* Menor que o h4 (1.4em) */
+    color: #ffffff; /* Branco */
+
+    margin-top: 25px;
+    margin-bottom: 15px;
+    padding-bottom: 5px;
+
+    /* Linha sutil para separar */
+    border-bottom: 1px dashed #4a008c;
+}
+
+/* --- 38. ESTILOS DA PÁGINA DE GUILDAS (Selos) --- */
+
+/* Títulos dos Selos (h5) */
+h5.selo-civico,
+h5.selo-dourado,
+h5.selo-proeza {
+    font-family: 'Cinzel', serif;
+    font-weight: 700;
+    font-size: 1.3em;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.2);
+}
+
+/* Estilo para a sub-lista (ex: "Registro Oficial") */
+.lista-detalhes ul {
+    list-style: none; /* Remove bolinhas */
+    padding-left: 15px;
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+
+/* O item da sub-lista */
+.lista-detalhes ul li {
+    position: relative;
+    padding-left: 25px;
+    font-size: 0.95em; /* Um pouco menor */
+    color: #bbb;
+    margin-bottom: 10px;
+}
+
+/* O ícone ↳ para a sub-lista */
+.lista-detalhes ul li::before {
+    content: '↳'; /* Seta de sub-item */
+    position: absolute;
+    left: 0;
+    top: -2px;
+    font-size: 1.2em;
+    color: #9f50ff; /* Roxo místico */
+}
+
+/* --- 39. ESTILO DE CARD DE GUILDA --- */
+
+/* O "card" que envolve a guilda */
+.guild-card {
+    background-color: rgba(0, 0, 0, 0.2);
+    border: 1px solid #777; /* Borda cinza como na imagem */
+    padding: 20px 25px 25px 25px; /* Mais padding embaixo */
+    margin: 25px 0;
+    border-radius: 4px;
+}
+
+/* Título da Guilda (h5) */
+.guild-card h5 {
+    font-family: 'Cinzel', serif;
+    font-size: 1.5em; /* Tamanho do título da guilda */
+    color: #ffffff;
+    text-shadow: 0 0 6px #9f50ff; /* Brilho místico */
+    margin-top: 0;
+    margin-bottom: 15px;
+    padding-bottom: 15px; /* Espaço para a linha */
+    border-bottom: 1px solid #777; /* Linha divisória como na imagem */
+}
+
+/* Remove a margem extra da lista de detalhes quando dentro de um card */
+.guild-card .lista-detalhes {
+    margin-bottom: 0;
+    padding-left: 0; /* Remove o recuo da lista */
+}
+
+/* Ajusta o espaçamento dos itens da lista dentro do card */
+.guild-card .lista-detalhes li {
+    margin-bottom: 18px;
+}
+.guild-card .lista-detalhes li:last-child {
+    margin-bottom: 0; /* Remove margem do último item */
+}
+
+/* Ajusta o tamanho da fonte dos "Termos" (Sede, Foco, Símbolo) */
+.guild-card .lista-detalhes strong {
+    font-size: 1.1em;
+    min-width: 70px; /* Alinhamento (igual ao de Origens) */
+}
