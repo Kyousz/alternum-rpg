@@ -1530,3 +1530,175 @@ h5.selo-proeza {
     font-size: 1.1em;
     min-width: 70px; /* Alinhamento (igual ao de Origens) */
 }
+
+/* --- 40. ESTILOS DA PÁGINA DE DEUSES --- */
+
+/* Título "Panteão" (dourado) */
+.titulo-panteao {
+    font-family: 'Cinzel', serif; /* Fonte épica */
+    font-weight: 700;
+    font-size: 1.8em;
+    color: #f1c40f; /* Dourado */
+    text-shadow: 0 0 6px #f1c40f; /* Brilho dourado */
+
+    border-bottom: 1px solid #4a008c;
+    padding-bottom: 8px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+/* Ajustes nas listas de detalhes (Símbolo, Foco) DENTRO de um card */
+.card-plano-corpo .lista-detalhes {
+    margin-top: 20px;
+    padding-left: 0; /* Remove o recuo padrão */
+}
+
+/* Ajusta os itens da lista (Símbolo, Foco) */
+.card-plano-corpo .lista-detalhes li {
+    font-size: 1.05em;
+    color: #bbb;
+    margin-bottom: 18px; /* Mais espaço entre os itens */
+}
+
+/* Ajusta o "Termo" (Símbolo, Sobre) */
+.card-plano-corpo .lista-detalhes strong {
+    font-size: 1.1em;
+    min-width: 140px; /* Alinha "Símbolo", "Formas", "Sobre" */
+    color: #cda4ff; /* Roxo místico */
+    margin-right: 8px;
+    display: inline-block; /* Garante o alinhamento */
+}
+
+/* Ajustes na lista de mandamentos (benefícios) */
+.card-plano-corpo .lista-beneficios {
+    margin: 20px 0 0 0;
+    padding-left: 10px;
+}
+
+/* --- 41. ESTILO EXCLUSIVO (Galeria de Deuses) --- */
+/* Substitui o .galeria-planos nesta página */
+
+/* A galeria (grid) */
+.galeria-deuses {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+/* O card exclusivo do Deus */
+.card-deus {
+    background-color: rgba(0, 0, 0, 0.3);
+    border: 1px solid #4a008c;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(110, 0, 255, 0.2);
+    transition: all 0.3s ease;
+    margin-bottom: 20px;
+}
+.card-deus:hover {
+    box-shadow: 0 5px 20px rgba(110, 0, 255, 0.4);
+}
+
+/* A imagem clicável */
+.card-deus img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-bottom: 1px solid #4a008c;
+    cursor: zoom-in;
+    transition: opacity 0.2s ease;
+}
+.card-deus img:hover {
+    opacity: 0.8;
+}
+
+/* O corpo do card */
+.card-deus-corpo {
+    padding: 20px;
+}
+
+/* Título Principal do Deus (ex: Aavaros) */
+main .card-deus-corpo h4 {
+    font-family: 'Cinzel', serif;
+    font-weight: 700;
+    font-size: 1.6em;
+    color: #f0f0f0;
+    text-shadow: 0 0 6px #9f50ff;
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: 1.2;
+}
+
+/* Subtítulo do Deus (ex: O Abismo) */
+.deus-subtitulo {
+    font-family: 'EB Garamond', serif;
+    font-size: 1.1em;
+    font-style: italic;
+    color: #cda4ff;
+    margin-top: 2px;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px dashed #4a008c;
+}
+
+/* Título de seção interna (Símbolo, Formas, Sobre, Mandamentos) */
+.deus-info-titulo {
+    font-family: 'Cinzel', serif;
+    font-size: 1.1em;
+    font-weight: 700;
+    color: #ffffff;
+    margin-top: 20px; /* Espaço entre as seções */
+    margin-bottom: 8px; /* Espaço até o texto */
+}
+
+/* Parágrafo de descrição (para "Sobre") */
+.deus-info-texto {
+    margin: 0;
+    color: #bbb;
+    font-style: italic;
+    text-align: justify;
+    hyphens: auto;
+    line-height: 1.6;
+}
+
+/* Parágrafo de informação (para "Símbolo" e "Formas") */
+.deus-info-item {
+    margin: 0;
+    color: #bbb;
+    font-size: 1.05em;
+    line-height: 1.6;
+}
+
+/* Ajuste na lista de mandamentos (benefícios) */
+.card-deus-corpo .lista-beneficios {
+    margin: 10px 0 0 0;
+    padding-left: 10px;
+}
+
+/* --- 42. ESTILO DO LIGHTBOX (Pop-up da Imagem) --- */
+
+.lightbox-overlay {
+    position: fixed; /* Cobre a tela inteira */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9); /* Fundo preto 90% opaco */
+
+    display: none; /* Escondido por padrão */
+    align-items: center;
+    justify-content: center;
+
+    z-index: 1000; /* Fica acima de tudo */
+    cursor: zoom-out;
+}
+
+/* A imagem dentro do pop-up */
+.lightbox-imagem {
+    max-width: 90%;
+    max-height: 90vh; /* 90% da altura da tela */
+    object-fit: contain;
+    box-shadow: 0 0 50px #9f50ff; /* Brilho místico */
+    border-radius: 4px;
+}

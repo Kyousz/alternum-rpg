@@ -75,3 +75,35 @@ document.addEventListener("mousemove", function(e) {
     document.documentElement.style.setProperty('--mouse-x', mouseX + 'px');
     document.documentElement.style.setProperty('--mouse-y', mouseY + 'px');
 });
+
+/* --- LÓGICA DO LIGHTBOX (POP-UP DE IMAGEM) --- */
+
+// Ouve quando a página inteira carregar
+document.addEventListener("DOMContentLoaded", function() {
+
+    // Encontra os elementos do lightbox no HTML
+    const lightboxOverlay = document.getElementById("lightbox-overlay");
+    const lightboxImage = document.getElementById("lightbox-imagem");
+
+    // Se não encontrar os elementos, não faz nada
+    if (!lightboxOverlay || !lightboxImage) {
+        return;
+    }
+
+    // Encontra TODAS as imagens que devem abrir o pop-up
+    const imagensParaAbrir = document.querySelectorAll(".js-lightbox-trigger");
+
+    // Adiciona um "ouvinte" de clique em cada imagem
+    imagensParaAbrir.forEach(function(imagem) {
+        imagem.addEventListener("click", function() {
+            const imgSrc = imagem.getAttribute("src"); // Pega o link da imagem clicada
+            lightboxImage.setAttribute("src", imgSrc); // Coloca esse link na imagem do pop-up
+            lightboxOverlay.style.display = "flex"; // Mostra o pop-up
+        });
+    });
+
+    // Adiciona um "ouvinte" de clique no fundo preto para FECHAR
+    lightboxOverlay.addEventListener("click", function() {
+        lightboxOverlay.style.display = "none"; // Esconde o pop-up
+    });
+});
