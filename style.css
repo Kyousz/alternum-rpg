@@ -1533,15 +1533,16 @@ h5.selo-proeza {
 
 /* --- 40. ESTILOS DA PÁGINA DE DEUSES --- */
 
-/* Título "Panteão" (dourado) */
-.titulo-panteao {
+/* Estilo unificado para "Panteão" e "Mortos e Esquecidos" */
+.titulo-panteao,
+.titulo-mortos {
     font-family: 'Cinzel', serif; /* Fonte épica */
     font-weight: 700;
-    font-size: 1.8em;
-    color: #f1c40f; /* Dourado */
-    text-shadow: 0 0 6px #f1c40f; /* Brilho dourado */
+    font-size: 1.4em;
+    color: #f0f0f0; /* Cor padrão (branco-cinza) */
+    text-shadow: 0 0 6px #9f50ff; /* Brilho roxo padrão */
 
-    border-bottom: 1px solid #4a008c;
+    border-bottom: 1px solid #4a008c; /* Linha sólida */
     padding-bottom: 8px;
     margin-top: 40px;
     margin-bottom: 20px;
