@@ -623,7 +623,7 @@ main .pagina-em-construcao h2 {
 .form-venenum { color: #27ae60; }
 .form-vita { color: #e74c3c; }
 
-/* --- 23. NOVO ESTILO (Grade de Formas) --- */
+/* --- 22. NOVO ESTILO (Grade de Formas) --- */
 
 .formas-grid {
     display: grid;
@@ -657,7 +657,7 @@ main .pagina-em-construcao h2 {
     margin-bottom: 3px;
 }
 
-/* --- 24. ESTILOS DE MAGIAS DE EXEMPLO (Layout Compacto em Grid) --- */
+/* --- 23. ESTILOS DE MAGIAS DE EXEMPLO (Layout Compacto em Grid) --- */
 
 .magias-exemplos-grid {
     display: grid;
@@ -721,7 +721,7 @@ main .pagina-em-construcao h2 {
     hyphens: none;
 }
 
-/* --- 25. ESTILO P/ MAGIAS FULL-WIDTH (c/ Stat Block) --- */
+/* --- 24. ESTILO P/ MAGIAS FULL-WIDTH (c/ Stat Block) --- */
 
 .spell-card-full {
     background-color: rgba(0, 0, 0, 0.3);
@@ -776,7 +776,7 @@ main .pagina-em-construcao h2 {
     margin-bottom: 0;
 }
 
-/* --- 26. ESTILO DE BLOCO DE ESTATÍSTICAS --- */
+/* --- 25. ESTILO DE BLOCO DE ESTATÍSTICAS --- */
 .stat-block {
     background-color: rgba(0, 0, 0, 0.5);
     border: 1px solid #4a008c;
@@ -850,7 +850,7 @@ main .pagina-em-construcao h2 {
     margin-bottom: 5px;
 }
 
-/* --- 27. ESTILOS DE TABELA (Com Wrapper) --- */
+/* --- 26. ESTILOS DE TABELA (Com Wrapper) --- */
 
 .tabela-wrapper {
     display: block;
@@ -889,7 +889,7 @@ main .pagina-em-construcao h2 {
     margin: 5px 0 20px 0; /* CORRIGIDO (Espaçamento) */
 }
 
-/* --- 28. ESTILOS DA SEÇÃO DE RUNAS --- */
+/* --- 27. ESTILOS DA SEÇÃO DE RUNAS --- */
 
 /* CORREÇÃO DE ESPECIFICIDADE */
 #magias-page .lista-runas h4 {
@@ -929,7 +929,7 @@ main .pagina-em-construcao h2 {
     color: #7f8c8d;
 }
 
-/* --- 29. ESTILOS DOS EXEMPLOS DE RUNAS (Simples) --- */
+/* --- 28. ESTILOS DOS EXEMPLOS DE RUNAS (Simples) --- */
 
 /* CORREÇÃO DE ESPECIFICIDADE */
 #magias-page .spell-card-full h4 .runa-icone-titulo {
@@ -955,7 +955,6 @@ main .pagina-em-construcao h2 {
     text-align: left !important;
     hyphens: none !important;
     text-indent: 0 !important;
-    padding-left: 20px !important;
 }
 
 .runa-efeitos {
@@ -982,7 +981,7 @@ main .pagina-em-construcao h2 {
     color: #3498db;
 }
 
-/* --- 30. ESTILOS DE ARTEFATOS MÁGICOS --- */
+/* --- 29. ESTILOS DE ARTEFATOS MÁGICOS --- */
 
 .rarity-list {
     font-family: 'Cinzel', serif;
@@ -1068,7 +1067,7 @@ main .pagina-em-construcao h2 {
     margin: 0;
 }
 
-/* --- 31. ESTILO DE LISTA DE BENEFÍCIOS (Familiares) --- */
+/* --- 30. ESTILO DE LISTA DE BENEFÍCIOS (Familiares) --- */
 
 .lista-beneficios {
     list-style: none;
@@ -1091,7 +1090,7 @@ main .pagina-em-construcao h2 {
     opacity: 0.9;
 }
 
-/* --- 32. ESTILO DE LISTA DE DETALHES (Magias) --- */
+/* --- 31. ESTILO DE LISTA DE DETALHES (Magias) --- */
 
 /* CORREÇÃO DE ESPECIFICIDADE */
 #magias-page .detalhes-titulo {
@@ -1125,7 +1124,7 @@ main .pagina-em-construcao h2 {
     margin-right: 8px;
 }
 
-/* --- 33. ESTILOS DE TABELA DE TIPOS DE MAGIA --- */
+/* --- 32. ESTILOS DE TABELA DE TIPOS DE MAGIA --- */
 
 .tabela-tipos-magia {
     width: 100%;
@@ -1309,7 +1308,7 @@ main .pagina-em-construcao h2 {
     color: #3498db !important;
 }
 
-/* --- 34. ESTILOS DE CARTÃO DE LOCAL (Imagem + Nome) --- */
+/* --- 33. ESTILOS DE CARTÃO DE LOCAL (Imagem + Nome) --- */
 
 .card-local {
     /* Reutiliza o visual do .card-plano */
@@ -1357,7 +1356,7 @@ main .pagina-em-construcao h2 {
     border-top: 1px solid #4a008c;
 }
 
-/* --- 35. ESTILO DE GALERIA DE LOCAIS (Não-elástica) --- */
+/* --- 34. ESTILO DE GALERIA DE LOCAIS (Não-elástica) --- */
 /* Esta galeria NÃO estica os cards para preencher o espaço */
 
 .galeria-locais {
@@ -1380,7 +1379,7 @@ main .pagina-em-construcao h2 {
     flex-shrink: 0; /* Proíbe o card de encolher */
 }
 
-/* --- 36. ESTILO DE LISTA DE LINKS (Página Extras) --- */
+/* --- 35. ESTILO DE LISTA DE LINKS (Página Extras) --- */
 
 .lista-links {
     list-style: none; /* Remove bolinhas */
@@ -1430,7 +1429,7 @@ main .pagina-em-construcao h2 {
     font-style: italic;
 }
 
-/* --- 37. ESTILO PARA H5 (SUBTÍTULOS DE SEÇÃO) --- */
+/* --- 36. ESTILO PARA H5 (SUBTÍTULOS DE SEÇÃO) --- */
 /* Usado em "Para qualquer espécie", "Para qualquer origem" */
 
 main h5 {
@@ -1447,7 +1446,7 @@ main h5 {
     border-bottom: 1px dashed #4a008c;
 }
 
-/* --- 38. ESTILOS DA PÁGINA DE GUILDAS (Selos) --- */
+/* --- 37. ESTILOS DA PÁGINA DE GUILDAS (Selos) --- */
 
 /* Títulos dos Selos (h5) */
 h5.selo-civico,
@@ -1488,7 +1487,7 @@ h5.selo-proeza {
     color: #9f50ff; /* Roxo místico */
 }
 
-/* --- 39. ESTILO DE CARD DE GUILDA --- */
+/* --- 38. ESTILO DE CARD DE GUILDA --- */
 
 /* O "card" que envolve a guilda */
 .guild-card {
@@ -1531,21 +1530,21 @@ h5.selo-proeza {
     min-width: 70px; /* Alinhamento (igual ao de Origens) */
 }
 
-/* --- 40. ESTILOS DA PÁGINA DE DEUSES --- */
+/* --- 39. ESTILOS DA PÁGINA DE DEUSES --- */
 
 /* Estilo unificado para "Panteão" e "Mortos e Esquecidos" */
-.titulo-panteao,
-.titulo-mortos {
-    font-family: 'Cinzel', serif; /* Fonte épica */
+h2.titulo-panteao,
+h2.titulo-mortos {
+    font-family: 'Cinzel', serif;
     font-weight: 700;
-    font-size: 1.4em;
-    color: #f0f0f0; /* Cor padrão (branco-cinza) */
-    text-shadow: 0 0 6px #9f50ff; /* Brilho roxo padrão */
+    font-size: 2em; /* Tamanho de H2 */
+    color: #f0f0f0;
+    text-shadow: 0 0 6px #9f50ff;
 
-    border-bottom: 1px solid #4a008c; /* Linha sólida */
+    border-bottom: 1px solid #4a008c;
     padding-bottom: 8px;
-    margin-top: 40px;
     margin-bottom: 20px;
+    text-align: center; /* Mantém o padrão de h2 */
 }
 
 /* Ajustes nas listas de detalhes (Símbolo, Foco) DENTRO de um card */
@@ -1576,7 +1575,7 @@ h5.selo-proeza {
     padding-left: 10px;
 }
 
-/* --- 41. ESTILO EXCLUSIVO (Galeria de Deuses) --- */
+/* --- 40. ESTILO EXCLUSIVO (Galeria de Deuses) --- */
 /* Substitui o .galeria-planos nesta página */
 
 /* A galeria (grid) */
@@ -1677,7 +1676,7 @@ main .card-deus-corpo h4 {
     padding-left: 10px;
 }
 
-/* --- 42. ESTILO DO LIGHTBOX (Pop-up da Imagem) --- */
+/* --- 41. ESTILO DO LIGHTBOX (Pop-up da Imagem) --- */
 
 .lightbox-overlay {
     position: fixed; /* Cobre a tela inteira */
@@ -1702,4 +1701,43 @@ main .card-deus-corpo h4 {
     object-fit: contain;
     box-shadow: 0 0 50px #9f50ff; /* Brilho místico */
     border-radius: 4px;
+}
+
+/* --- 42. ESTILOS DA PÁGINA DE ENTIDADES --- */
+
+/* Título "Entidades" (vermelho/perigo) */
+h2.titulo-entidades {
+    font-family: 'Cinzel', serif;
+    font-weight: 700;
+    font-size: 2em; /* Tamanho de H2 */
+    color: #f0f0f0;
+    text-shadow: 0 0 6px #9f50ff;
+
+    border-bottom: 1px solid #4a008c;
+    padding-bottom: 8px;
+    margin-bottom: 20px;
+    text-align: center; /* Mantém o padrão de h2 */
+}
+
+/* Título do Grupo (ex: "As Máscaras de Ayleth") */
+.grupo-titulo {
+    font-family: 'Cinzel', serif;
+    font-weight: 700;
+    font-size: 1.5em; /* Um pouco maior que h4 normal */
+    color: #f0f0f0;
+    text-shadow: 0 0 6px #9f50ff;
+    margin-top: 40px;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #4a008c;
+}
+
+/* Descrição do Grupo */
+.grupo-descricao {
+    font-style: italic;
+    color: #bbb;
+    font-size: 1.1em;
+    text-align: center;
+    margin-bottom: 30px;
+    line-height: 1.6;
 }
