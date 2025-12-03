@@ -107,3 +107,35 @@ document.addEventListener("DOMContentLoaded", function() {
         lightboxOverlay.style.display = "none"; // Esconde o pop-up
     });
 });
+
+/* --- LÓGICA DOS MODAIS DE CONTEÚDO (Pedras da Alma) --- */
+
+document.addEventListener("DOMContentLoaded", function() {
+    // Abrir Modal
+    const triggers = document.querySelectorAll(".js-open-modal");
+
+    triggers.forEach(trigger => {
+        trigger.addEventListener("click", function() {
+            const modalId = this.getAttribute("data-modal"); // Pega o ID do alvo (ex: modal-edrian)
+            const modal = document.getElementById(modalId);
+            if (modal) {
+                modal.style.display = "flex";
+                document.body.style.overflow = "hidden"; // Impede rolagem da página de fundo
+            }
+        });
+    });
+
+    // Fechar Modal (Botão X ou Clicar fora)
+    const closeButtons = document.querySelectorAll(".modal-close, .modal-overlay");
+
+    closeButtons.forEach(btn => {
+        btn.addEventListener("click", function(e) {
+            // Garante que só fecha se clicar no X ou no fundo escuro (não no conteúdo)
+            if (this === e.target || this.classList.contains("modal-close")) {
+                const overlay = this.closest(".modal-overlay") || this;
+                overlay.style.display = "none";
+                document.body.style.overflow = "auto"; // Libera rolagem
+            }
+        });
+    });
+});

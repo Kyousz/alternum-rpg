@@ -1741,3 +1741,241 @@ h2.titulo-entidades {
     margin-bottom: 30px;
     line-height: 1.6;
 }
+
+/* --- 43. ESTILOS PARA PEDRAS DA ALMA E MODAIS --- */
+
+/* O Grid das Pedras (3 colunas centralizadas) */
+.pedras-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+/* O Item da Pedra (Imagem Clicável) */
+.pedra-item {
+    width: 250px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+.pedra-item:hover {
+    transform: translateY(-10px);
+}
+.pedra-item img {
+    width: 100%;
+    height: 250px;
+    object-fit: contain; /* Mantém a proporção da pedra (sem cortar) */
+    filter: drop-shadow(0 0 10px rgba(110, 0, 255, 0.3)); /* Brilho roxo */
+    transition: filter 0.3s ease;
+}
+.pedra-item:hover img {
+    filter: drop-shadow(0 0 20px rgba(110, 0, 255, 0.6));
+}
+.pedra-item h4 {
+    font-family: 'Cinzel', serif;
+    margin-top: 15px;
+    color: #f0f0f0;
+}
+
+/* --- O MODAL (Pop-up de Texto) --- */
+
+.modal-overlay {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    z-index: 2000; /* Acima de tudo */
+    display: none; /* Escondido por padrão */
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(5px);
+}
+
+/* A caixa de conteúdo do modal */
+.modal-content {
+    background-color: #1a1a1a;
+    border: 2px solid #4a008c;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 800px;
+    max-height: 90vh;
+    overflow-y: auto; /* Rolagem se o texto for longo */
+    padding: 30px;
+    position: relative;
+    box-shadow: 0 0 30px rgba(110, 0, 255, 0.3);
+}
+
+/* Botão de fechar (X) */
+.modal-close {
+    position: absolute;
+    top: 15px; right: 20px;
+    font-size: 2em;
+    color: #aaa;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+.modal-close:hover { color: #fff; }
+
+/* Estilos Internos do Modal (Títulos Coloridos) */
+.pedra-titulo {
+    font-family: 'Megrim', sans-serif;
+    font-size: 2.2em;
+    font-weight: bold;
+    margin-top: 0;
+    margin-bottom: 5px;
+    line-height: 1.1;
+}
+.pedra-subtitulo {
+    font-family: 'EB Garamond', serif;
+    font-style: italic;
+    font-size: 1.1em;
+    color: #ccc;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #444;
+    padding-bottom: 10px;
+}
+
+/* Citação dentro do modal */
+.pedra-quote {
+    font-family: 'Cinzel', serif;
+    color: #f0f0f0; /* A cor será sobrescrita pela classe específica */
+    font-weight: bold;
+    margin-bottom: 15px;
+    display: block;
+}
+
+/* --- 44. ESTILOS PARA REGALIAS E MALDIÇÕES --- */
+
+/* O card base */
+.card-rc {
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 20px 25px;
+    margin: 30px 0;
+    border-radius: 4px;
+    border: 1px solid #444; /* Borda sutil padrão */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.2s ease;
+}
+
+.card-rc:hover {
+    transform: translateX(5px); /* Move levemente para a direita ao passar o mouse */
+}
+
+/* Título do card */
+.card-rc h4 {
+    font-family: 'Cinzel', serif;
+    font-size: 1.5em;
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+/* Metadados (Concedida por, Portador) */
+.rc-meta {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 15px 0;
+    font-family: 'EB Garamond', serif;
+    font-size: 1.05em;
+    color: #bbb;
+    line-height: 1.6;
+    border-bottom: 1px dashed #444;
+    padding-bottom: 10px;
+}
+
+.rc-meta strong {
+    color: #e0e0e0;
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+/* Descrição */
+.rc-desc {
+    line-height: 1.7;
+    font-size: 1.1em;
+    text-align: justify;
+    hyphens: auto;
+}
+
+/* --- ESTILO ESPECÍFICO: REGALIA (Dourado) --- */
+.style-regalia {
+    border-left: 4px solid #f1c40f; /* Barra lateral Dourada */
+}
+.style-regalia h4 {
+    text-shadow: 0 0 8px #f1c40f; /* Brilho Dourado */
+}
+.style-regalia .rc-meta strong {
+    color: #f1c40f;
+}
+
+/* --- ESTILO ESPECÍFICO: MALDIÇÃO (Vermelho) --- */
+.style-maldicao {
+    border-left: 4px solid #c0392b; /* Barra lateral Vermelha */
+}
+.style-maldicao h4 {
+    text-shadow: 0 0 8px #c0392b; /* Brilho Vermelho */
+}
+.style-maldicao .rc-meta strong {
+    color: #c0392b;
+}
+
+/* --- 45. ESTILOS DA ACADEMIA ARCANA (Professores) --- */
+
+/* Grid de Professores (Cards menores) */
+.professores-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 15px;
+    margin-top: 30px;
+    margin-bottom: 40px;
+}
+
+/* O Card do Professor */
+.prof-card {
+    background-color: rgba(0, 0, 0, 0.3);
+    border: 1px solid #4a008c;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center; /* Centralizado */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.prof-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(110, 0, 255, 0.2);
+    border-color: #6f00ff;
+}
+
+/* Imagem do Professor (Avatar) */
+.prof-card img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%; /* Formato circular */
+    border: 2px solid #9f50ff;
+    margin-bottom: 15px;
+    cursor: zoom-in; /* Indica que é clicável */
+}
+
+/* Nome do Professor */
+.prof-card h5 {
+    font-family: 'Cinzel', serif;
+    font-size: 1.2em;
+    color: #ffffff;
+    margin: 5px 0;
+    text-shadow: none;
+    border: none;
+    padding: 0;
+}
+
+/* Matéria */
+.prof-card span {
+    display: block;
+    font-family: 'EB Garamond', serif;
+    font-size: 1em;
+    color: #cda4ff; /* Roxo claro */
+    font-style: italic;
+}
+
