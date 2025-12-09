@@ -588,40 +588,56 @@ main .pagina-em-construcao h2 {
     white-space: nowrap;
 }
 
-/* CORES DAS FORMAS (Conforme screenshots) */
-.form-rawvis { color: #ffffff; }
-.form-anima { color: #e0e0e0; }
-.form-animalis { color: #e67e22; }
-.form-aqua { color: #3498db; }
-.form-arcane { color: #9b59b6; }
-.form-arena { color: #f1c40f; }
-.form-auran { color: #ecf0f1; }
-.form-biotic { color: #2ecc71; }
-.form-corpus { color: #e74c3c; }
-.form-crystallo { color: #1abc9c; }
-.form-daemonium { color: #c0392b; }
-.form-fulgur { color: #f3d779; }
-.form-glacies { color: #3498db; }
-.form-gravitas { color: #4a008c; }
-.form-herbam { color: #27ae60; }
-.form-ignis { color: #e67e22; }
-.form-imaginem { color: #9b59b6; }
-.form-lux { color: #f1c40f; }
-.form-magmum { color: #e67e22; }
-.form-mentem { color: #9b59b6; }
-.form-metallum { color: #95a5a6; }
-.form-mortem { color: #7f8c8d; }
-.form-naturae { color: #2ecc71; }
-.form-object { color: #95a5a6; }
-.form-psychica { color: #9b59b6; }
-.form-sana { color: #ecf0f1; }
-.form-sanguis { color: #c0392b; }
-.form-tempus { color: #f1c40f; }
-.form-terram { color: #a1887f; }
-.form-umbra { color: #7f8c8d; }
-.form-vacuum { color: #ecf0f1; }
-.form-venenum { color: #27ae60; }
-.form-vita { color: #e74c3c; }
+/* --- 20. CORES DAS FORMAS (Diferenciadas) --- */
+
+/* BRANCOS E CINZAS */
+.form-rawvis { color: #ffffff; } /* Branco Puro */
+.form-anima { color: #bdc3c7; } /* Cinza Prateado (Alma) */
+.form-auran { color: #ecf0f1; } /* Branco Nuvem (Ar) */
+.form-sana { color: #dfe6e9; } /* Cinza Claro Clínico (Cura) */
+.form-vacuum { color: #636e72; } /* Cinza Escuro (Vácuo/Nada) - Mudei para escuro pois Vazio sugere ausência de luz */
+
+/* AMARELOS E DOURADOS */
+.form-lux { color: #f1c40f; } /* Amarelo Puro (Luz) */
+.form-arena { color: #e5c07b; } /* Amarelo Areia Desaturado */
+.form-tempus { color: #d4ac0d; } /* Dourado Envelhecido (Tempo) */
+.form-fulgur { color: #f3d779; } /* Amarelo Elétrico Pálido */
+
+/* LARANJAS */
+.form-ignis { color: #e67e22; } /* Laranja Padrão (Fogo) */
+.form-animalis { color: #d35400; } /* Laranja Ferrugem/Marrom (Bestial) */
+.form-magmum { color: #ff4500; } /* Laranja Avermelhado Intenso (Magma) */
+
+/* VERDES */
+.form-biotic { color: #2ecc71; } /* Verde Esmeralda (Vida biológica) */
+.form-naturae { color: #27ae60; } /* Verde Floresta Escuro */
+.form-herbam { color: #16a085; } /* Verde Azulado (Plantas/Ervas) */
+.form-venenum { color: #a2d149; } /* Verde Lima Ácido (Veneno) */
+
+/* AZUIS E CIANOS */
+.form-aqua { color: #3498db; } /* Azul Oceano */
+.form-glacies { color: #81ecec; } /* Ciano Pálido (Gelo) - Bem mais claro que Aqua */
+.form-crystallo { color: #00cec9; } /* Turquesa Brilhante (Cristal) */
+
+/* ROXOS E LILÁS (A maior repetição estava aqui) */
+.form-arcane { color: #9b59b6; } /* Roxo Padrão (Magia Pura) */
+.form-imaginem { color: #d2b4de; } /* Lilás Claro (Sonho/Ilusão) */
+.form-mentem { color: #8e44ad; } /* Roxo Profundo (Mente) */
+.form-psychica { color: #6c5ce7; } /* Índigo/Azularroxeado (Psíquico) */
+.form-gravitas { color: #4834d4; } /* Roxo/Azul Escuro Pesado (Gravidade) */
+
+/* VERMELHOS */
+.form-vita { color: #e74c3c; } /* Vermelho Vivo (Vida) */
+.form-corpus { color: #f1948a; } /* Rosa/Vermelho Carne (Corpo) */
+.form-daemonium { color: #c0392b; } /* Vermelho Escuro (Demônio) */
+.form-sanguis { color: #800000; } /* Vinho/Bordô (Sangue Seco) */
+
+/* TERRA E METAL */
+.form-terram { color: #a1887f; } /* Marrom Terra */
+.form-metallum { color: #95a5a6; } /* Cinza Metálico Azulado */
+.form-object { color: #7f8c8d; } /* Cinza Concreto */
+.form-mortem { color: #2c3e50; } /* Azul Quase Preto (Morte) */
+.form-umbra { color: #57606f; } /* Cinza Chumbo (Sombra) */
 
 /* --- 22. NOVO ESTILO (Grade de Formas) --- */
 
@@ -1979,3 +1995,244 @@ h2.titulo-entidades {
     font-style: italic;
 }
 
+/* --- 46. ESTILOS DO ACERVO E MAGIAS (Completo) --- */
+
+/* --- PARTE 1: REGRAS E LISTAS --- */
+
+/* Caixa de Regras de Leitura */
+.regras-leitura {
+    background-color: rgba(0, 0, 0, 0.4);
+    border-left: 3px solid #9f50ff;
+    padding: 15px 20px;
+    margin-bottom: 30px;
+    border-radius: 0 5px 5px 0;
+}
+.regras-leitura h4 {
+    color: #cda4ff;
+    margin-top: 0;
+    font-family: 'Cinzel', serif;
+}
+.lista-tempos li {
+    margin-bottom: 5px;
+    color: #ccc;
+}
+
+/* Estilo para Itens de Lore (Livros) */
+.livro-item {
+    margin-bottom: 25px;
+    border-bottom: 1px dashed #444;
+    padding-bottom: 15px;
+}
+.livro-item:last-child { border-bottom: none; }
+.livro-item h5 {
+    font-family: 'Cinzel', serif;
+    font-size: 1.2em;
+    color: #fff;
+    margin: 0 0 5px 0;
+}
+.livro-tipo {
+    font-style: italic;
+    color: #888;
+    font-size: 0.9em;
+    display: block;
+    margin-bottom: 8px;
+}
+
+/* Lista de Definições (Limpa) */
+.lista-definicao {
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+.lista-definicao dt {
+    font-family: 'Cinzel', serif;
+    color: #f0f0f0;
+    font-size: 1em;
+    font-weight: 700;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+.lista-definicao dd {
+    margin-left: 0;
+    color: #bbb;
+    font-size: 1em;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+
+/* --- PARTE 2: CONTROLES DO ACERVO (Busca e Filtros) --- */
+/* (Isso aqui que faltou na última mensagem) */
+
+.controles-acervo {
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #4a008c;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/* Input de Busca */
+#buscaMagia {
+    width: 100%;
+    max-width: 500px;
+    padding: 12px;
+    margin-bottom: 20px;
+    background-color: #1a1a1a;
+    border: 1px solid #555;
+    color: #fff;
+    font-family: 'EB Garamond', serif;
+    font-size: 1.1em;
+    border-radius: 4px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+#buscaMagia:focus {
+    border-color: #9f50ff; /* Roxo ao clicar */
+}
+
+/* Container dos Botões */
+.botoes-filtro {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+/* Estilo do Botão */
+.btn-filtro {
+    background-color: transparent;
+    border: 1px solid #555;
+    color: #bbb;
+    padding: 8px 16px;
+    font-family: 'Cinzel', serif;
+    font-size: 0.9em;
+    cursor: pointer;
+    border-radius: 20px; /* Botões arredondados */
+    transition: all 0.3s ease;
+}
+
+.btn-filtro:hover {
+    border-color: #fff;
+    color: #fff;
+}
+
+/* Botão Ativo (Selecionado) */
+.btn-filtro.ativo {
+    background-color: #4a008c;
+    border-color: #9f50ff;
+    color: #fff;
+    box-shadow: 0 0 10px rgba(159, 80, 255, 0.4);
+}
+
+
+/* --- PARTE 3: CARDS DE MAGIA (Ajuste Hover com Cores Estritas) --- */
+
+/* Container */
+.magias-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Card Individual (Base Neutra) */
+.magia-card {
+    background-color: rgba(20, 20, 20, 0.6);
+    border: 1px solid #444; /* Borda padrão cinza (apagada) */
+    border-radius: 6px;
+    padding: 20px;
+    position: relative;
+    transition: all 0.3s ease; /* Suaviza a transição da cor */
+}
+
+/* Título da Magia */
+.magia-card h4 {
+    font-family: 'Cinzel', serif;
+    font-size: 1.4em;
+    color: #f0f0f0;
+    margin: 0 0 5px 0;
+}
+
+/* Escola / Tipo */
+.magia-meta {
+    font-family: 'Megrim', sans-serif;
+    font-size: 1.1em;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    display: block;
+    letter-spacing: 1px;
+}
+
+/* Descrição da Magia */
+.magia-desc {
+    font-family: 'EB Garamond', serif;
+    font-size: 1.1em;
+    color: #bbb;
+    line-height: 1.6;
+    margin: 0;
+    text-align: justify;
+}
+
+/* --- EFEITO HOVER (Acende a cor EXATA da forma) --- */
+
+/* BRANCOS E CINZAS */
+.magia-card[data-tipo="rawvis"]:hover { border-color: #ffffff; box-shadow: 0 0 15px #ffffff; }
+.magia-card[data-tipo="anima"]:hover { border-color: #bdc3c7; box-shadow: 0 0 15px #bdc3c7; }
+.magia-card[data-tipo="auran"]:hover { border-color: #ecf0f1; box-shadow: 0 0 15px #ecf0f1; }
+.magia-card[data-tipo="sana"]:hover { border-color: #dfe6e9; box-shadow: 0 0 15px #dfe6e9; }
+.magia-card[data-tipo="vacuum"]:hover { border-color: #636e72; box-shadow: 0 0 15px #636e72; }
+
+/* AMARELOS E DOURADOS */
+.magia-card[data-tipo="lux"]:hover { border-color: #f1c40f; box-shadow: 0 0 15px #f1c40f; }
+.magia-card[data-tipo="arena"]:hover { border-color: #e5c07b; box-shadow: 0 0 15px #e5c07b; }
+.magia-card[data-tipo="tempus"]:hover { border-color: #d4ac0d; box-shadow: 0 0 15px #d4ac0d; }
+.magia-card[data-tipo="fulgur"]:hover { border-color: #f3d779; box-shadow: 0 0 15px #f3d779; }
+
+/* LARANJAS E MAGMA */
+.magia-card[data-tipo="ignis"]:hover { border-color: #e67e22; box-shadow: 0 0 15px #e67e22; }
+.magia-card[data-tipo="animalis"]:hover { border-color: #d35400; box-shadow: 0 0 15px #d35400; }
+.magia-card[data-tipo="magmum"]:hover { border-color: #ff4500; box-shadow: 0 0 15px #ff4500; }
+
+/* VERDES */
+.magia-card[data-tipo="biotic"]:hover { border-color: #2ecc71; box-shadow: 0 0 15px #2ecc71; }
+.magia-card[data-tipo="naturae"]:hover { border-color: #27ae60; box-shadow: 0 0 15px #27ae60; }
+.magia-card[data-tipo="herbam"]:hover { border-color: #16a085; box-shadow: 0 0 15px #16a085; }
+.magia-card[data-tipo="venenum"]:hover { border-color: #a2d149; box-shadow: 0 0 15px #a2d149; }
+
+/* AZUIS E CIANOS */
+.magia-card[data-tipo="aqua"]:hover { border-color: #3498db; box-shadow: 0 0 15px #3498db; }
+.magia-card[data-tipo="glacies"]:hover { border-color: #81ecec; box-shadow: 0 0 15px #81ecec; }
+.magia-card[data-tipo="crystallo"]:hover { border-color: #00cec9; box-shadow: 0 0 15px #00cec9; }
+
+/* ROXOS E LILÁS */
+.magia-card[data-tipo="arcane"]:hover { border-color: #9b59b6; box-shadow: 0 0 15px #9b59b6; }
+.magia-card[data-tipo="imaginem"]:hover { border-color: #d2b4de; box-shadow: 0 0 15px #d2b4de; }
+.magia-card[data-tipo="mentem"]:hover { border-color: #8e44ad; box-shadow: 0 0 15px #8e44ad; }
+.magia-card[data-tipo="psychica"]:hover { border-color: #6c5ce7; box-shadow: 0 0 15px #6c5ce7; }
+.magia-card[data-tipo="gravitas"]:hover { border-color: #4834d4; box-shadow: 0 0 15px #4834d4; }
+
+/* VERMELHOS */
+.magia-card[data-tipo="vita"]:hover { border-color: #e74c3c; box-shadow: 0 0 15px #e74c3c; }
+.magia-card[data-tipo="corpus"]:hover { border-color: #f1948a; box-shadow: 0 0 15px #f1948a; }
+.magia-card[data-tipo="daemonium"]:hover { border-color: #c0392b; box-shadow: 0 0 15px #c0392b; }
+.magia-card[data-tipo="sanguis"]:hover { border-color: #800000; box-shadow: 0 0 15px #800000; }
+
+/* TERRA E METAL */
+.magia-card[data-tipo="terram"]:hover { border-color: #a1887f; box-shadow: 0 0 15px #a1887f; }
+.magia-card[data-tipo="metallum"]:hover { border-color: #95a5a6; box-shadow: 0 0 15px #95a5a6; }
+.magia-card[data-tipo="object"]:hover { border-color: #7f8c8d; box-shadow: 0 0 15px #7f8c8d; }
+.magia-card[data-tipo="mortem"]:hover { border-color: #2c3e50; box-shadow: 0 0 15px #2c3e50; }
+.magia-card[data-tipo="umbra"]:hover { border-color: #57606f; box-shadow: 0 0 15px #57606f; }
+
+/* Detalhes da Magia (Tempo, Alcance, Duração) */
+.magia-info {
+    display: block; /* Garante que fique em linha própria */
+    font-family: 'EB Garamond', serif;
+    font-size: 0.95em; /* Levemente menor que o texto normal */
+    color: #999; /* Cinza mais apagado para hierarquia */
+    font-style: italic;
+    margin-top: -2px; /* Aproxima do título */
+    margin-bottom: 8px; /* Separa da Forma (Creo Ignis...) */
+}

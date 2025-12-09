@@ -139,3 +139,61 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 });
+
+/* --- SISTEMA DE FILTRO DO ACERVO --- */
+
+function filtrarMagias() {
+    // 1. Pega o texto da busca
+    let input = document.getElementById('buscaMagia');
+    let filter = input.value.toUpperCase();
+
+    // 2. Pega todos os cards
+    let container = document.querySelector('.magias-container');
+    let cards = container.getElementsByClassName('magia-card');
+
+    // 3. Loop em cada card para ver se o nome bate com a busca
+    for (let i = 0; i < cards.length; i++) {
+        let h4 = cards[i].getElementsByTagName("h4")[0];
+        let txtValue = h4.textContent || h4.innerText;
+
+        // Se o texto bater, mostra. Senão, esconde.
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            cards[i].style.display = "";
+        } else {
+            cards[i].style.display = "none";
+        }
+    }
+}
+
+function filtrarPorTipo(tipo) {
+    let cards = document.querySelectorAll('.magia-card');
+    let botoes = document.querySelectorAll('.btn-filtro');
+
+    // 1. Gerenciar visual dos botões (quem está ativo)
+    botoes.forEach(btn => {
+        btn.classList.remove('ativo');
+        // Se o texto do botão for igual ao tipo (Ignis/Ignis), ativa
+        if(btn.innerText.toLowerCase() === tipo) {
+            btn.classList.add('ativo');
+        }
+        // Se for 'todos', ativa o botão 'Todos'
+        if(tipo === 'todos' && btn.innerText.toLowerCase() === 'todos') {
+            btn.classList.add('ativo');
+        }
+    });
+
+    // 2. Mostrar/Esconder Cards
+    cards.forEach(card => {
+        // Se o filtro for 'todos', mostra tudo
+        if (tipo === 'todos') {
+            card.style.display = 'block';
+        } else {
+            // Se o card tiver o data-tipo igual ao filtro, mostra
+            if (card.getAttribute('data-tipo') === tipo) {
+                card.style.display = 'block';
+            } else {
+                card.style.display = 'none';
+            }
+        }
+    });
+}

@@ -3,11 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Alternum - Acervo</title>
-
     <link rel="stylesheet" href="style.css">
-
     <link rel="icon" type="image/png" href="imagens/favicon.png">
 </head>
 <body>
@@ -22,9 +19,156 @@
 <div id="nav-placeholder"></div>
 
 <main>
-    <section class="pagina-em-construcao">
-        <h2>Acervo</h2>
-        <p>Este conteúdo ainda está sendo forjado em Alternum. Volte em breve!</p>
+    <section id="conhecimento-page">
+
+        <h2>Acervo Arcano</h2>
+        <p>A biblioteca de conhecimentos, regras mágicas e registros históricos de Alternum.</p>
+
+        <hr class="section-divider">
+
+        <h3>LIVROS E PERGAMINHOS</h3>
+
+        <div class="regras-leitura">
+            <h4>Tempo de Leitura</h4>
+            <ul class="lista-tempos">
+                <li><strong>Pergaminhos:</strong> Menos de 1 hora.</li>
+                <li><strong>Livros Pequenos:</strong> 1 a 12 horas.</li>
+                <li><strong>Livros Médios:</strong> 24 a 72 horas.</li>
+                <li><strong>Livros Grandes/Enciclopédia:</strong> 72 horas ou mais.</li>
+            </ul>
+        </div>
+
+        <div class="regras-leitura">
+            <h4>Tipos de Registro</h4>
+            <dl class="lista-definicao" style="margin-top: 10px; margin-bottom: 0;">
+
+                <dt>Pergaminho de Magia</dt>
+                <dd>Contém uma única magia que pode ser aprendida.</dd>
+
+                <dt>Livro de Magia</dt>
+                <dd>Contém uma ou mais magias que podem ser aprendidas.</dd>
+
+                <dt>Pergaminho Mágico</dt>
+                <dd>Contém uma única magia que não pode ser aprendida. Pode ser utilizado uma única vez, fazendo com que o pergaminho se desfaça após o uso.</dd>
+
+                <dt>Grimório</dt>
+                <dd>Livro Mágico. Contém uma ou mais magias que não podem ser aprendidas, mas podem ser lançadas inúmeras vezes em posse do livro.</dd>
+
+            </dl>
+        </div>
+
+        <hr class="section-divider">
+
+        <h3>OBRAS CATALOGADAS</h3>
+
+        <div class="livro-item">
+            <h5>A Jóia do Milagre</h5>
+            <span class="livro-tipo">Livro Pequeno</span>
+            <p>Um conto sobre o Ninho Dourado, cidade costeira situada em Solaries. O livro relata as aventuras da Águia Dourada, um navio de exploradores que colecionava tesouros e adquiriam recursos para o governo da cidade. Especificamente fala sobre uma jóia com brilho azulado capaz de rejuvenescer o portador através de um ritual. O livro foi escrito por um tripulante do navio.</p>
+        </div>
+
+        <div class="livro-item">
+            <h5>Olhos no Abismo</h5>
+            <span class="livro-tipo">Pergaminho</span>
+            <p>Contém um breve relato de uma presença que observa os navegadores que viajam ao sul do continente de Alternum.</p>
+        </div>
+
+        <hr class="section-divider">
+
+        <h3>COMPÊNDIO DE MAGIAS</h3>
+        <p>Registros de feitiços conhecidos. Use os filtros para encontrar formas específicas.</p>
+
+        <div class="controles-acervo">
+            <input type="text" id="buscaMagia" placeholder="Digite o nome da magia..." onkeyup="filtrarMagias()">
+
+            <div class="botoes-filtro">
+                <button class="btn-filtro ativo" onclick="filtrarPorTipo('todos')">Todos</button>
+                <button class="btn-filtro" onclick="filtrarPorTipo('rawvis')">Raw Vis</button>
+                <button class="btn-filtro" onclick="filtrarPorTipo('anima')">Anima</button>
+                <button class="btn-filtro" onclick="filtrarPorTipo('aqua')">Aqua</button>
+                <button class="btn-filtro" onclick="filtrarPorTipo('arcane')">Arcane</button>
+                <button class="btn-filtro" onclick="filtrarPorTipo('arena')">Arena</button>
+                <button class="btn-filtro" onclick="filtrarPorTipo('auran')">Auran</button>
+                <button class="btn-filtro" onclick="filtrarPorTipo('biotic')">Biotic</button>
+                <button class="btn-filtro" onclick="filtrarPorTipo('corpus')">Corpus</button>
+                <button class="btn-filtro" onclick="filtrarPorTipo('crystallo')">Crystallo</button>
+                <button class="btn-filtro" onclick="filtrarPorTipo('fulgur')">Fulgur</button>
+                <button class="btn-filtro" onclick="filtrarPorTipo('glacies')">Glacies</button>
+                <button class="btn-filtro" onclick="filtrarPorTipo('gravitas')">Gravitas</button>
+                <button class="btn-filtro" onclick="filtrarPorTipo('herbam')">Herbam</button>
+                <button class="btn-filtro" onclick="filtrarPorTipo('ignis')">Ignis</button>
+                <button class="btn-filtro" onclick="filtrarPorTipo('imaginem')">Imaginem</button>
+                <button class="btn-filtro" onclick="filtrarPorTipo('lux')">Lux</button>
+                <button class="btn-filtro" onclick="filtrarPorTipo('mentem')">Mentem</button>
+                <button class="btn-filtro" onclick="filtrarPorTipo('metallum')">Metallum</button>
+                <button class="btn-filtro" onclick="filtrarPorTipo('mortem')">Mortem</button>
+                <button class="btn-filtro" onclick="filtrarPorTipo('naturae')">Naturae</button>
+                <button class="btn-filtro" onclick="filtrarPorTipo('object')">Object</button>
+                <button class="btn-filtro" onclick="filtrarPorTipo('psychica')">Psychica</button>
+                <button class="btn-filtro" onclick="filtrarPorTipo('sana')">Sana</button>
+                <button class="btn-filtro" onclick="filtrarPorTipo('sanguis')">Sanguis</button>
+                <button class="btn-filtro" onclick="filtrarPorTipo('tempus')">Tempus</button>
+                <button class="btn-filtro" onclick="filtrarPorTipo('terram')">Terram</button>
+                <button class="btn-filtro" onclick="filtrarPorTipo('umbra')">Umbra</button>
+                <button class="btn-filtro" onclick="filtrarPorTipo('vacuum')">Vacuum</button>
+                <button class="btn-filtro" onclick="filtrarPorTipo('venenum')">Venenum</button>
+                <button class="btn-filtro" onclick="filtrarPorTipo('vita')">Vita</button>
+            </div>
+        </div>
+
+        <div class="magias-container">
+
+            <div class="magia-card" data-tipo="ignis">
+                <h4>Bola de Fogo</h4>
+                <span class="magia-info">Ação - Instantâneo - 18 metros</span>
+                <span class="magia-meta form-ignis">Creo Ignis</span>
+                <p class="magia-desc">O conjurador lança uma bola de fogo que causa um dano de <strong>1d10</strong> em um único alvo a até 18 metros de distância. Aumenta em 1d10 de dano nos níveis 4/8/12.</p>
+            </div>
+
+            <div class="magia-card" data-tipo="ignis">
+                <h4>Manipulação Ígnea</h4>
+                <span class="magia-info">Ação - Instantâneo - 45 metros</span>
+                <span class="magia-meta form-ignis">Rego Ignis de 1º Círculo</span>
+                <p class="magia-desc">Pode controlar uma pequena quantidade de fogo dentro do alcance de 45 metros. Caso queira utilizar ofensivamente, o dano será de <strong>2d10</strong> em alvo único ou <strong>2d6</strong> em múltiplos alvos num raio de 6 metros.</p>
+            </div>
+
+            <div class="magia-card" data-tipo="vita">
+                <h4>Purificar</h4>
+                <span class="magia-info">Ação - Instantâneo - 18 metros</span>
+                <span class="magia-meta form-vita">Creo Vita de 1º Círculo</span>
+                <p class="magia-desc">O conjurador remove uma condição negativa de uma criatura que pode ser vista a até 18 metros de distância. Para cada círculo de magia acima, poderá remover uma condição a mais.</p>
+            </div>
+
+            <div class="magia-card" data-tipo="vita">
+                <h4>Cura Leve</h4>
+                <span class="magia-info">Ação - Instantâneo - Toque</span>
+                <span class="magia-meta form-vita">Creo Vita de 1º Círculo</span>
+                <p class="magia-desc">Restaura <strong>1d8 + Modificador</strong> de Pontos de Vida de uma criatura tocada.</p>
+            </div>
+
+            <div class="magia-card" data-tipo="glacies">
+                <h4>Estilhaço Gélido</h4>
+                <span class="magia-info">Ação - Instantâneo - 18 metros</span>
+                <span class="magia-meta form-glacies">Creo Glacies de 1º Círculo</span>
+                <p class="magia-desc">O conjurador lança um estilhaço enorme na direção de um alvo causando <strong>1d10</strong> de dano e em seguida explodindo, dando <strong>2d6</strong> de dano no mesmo alvo e em todos que estiverem em uma área de 1,5 metros dele.</p>
+            </div>
+
+            <div class="magia-card" data-tipo="glacies">
+                <h4>Armadura de Gelo</h4>
+                <span class="magia-info">Ação - 1 Hora - Toque</span>
+                <span class="magia-meta form-glacies">Muto Glacies de 1º Círculo</span>
+                <p class="magia-desc">Cobre o alvo com uma camada de gelo protetora, concedendo <strong>+2 na CA</strong> por 1 hora.</p>
+            </div>
+
+            <div class="magia-card" data-tipo="fulgur">
+                <h4>Mãos Eletrizantes</h4>
+                <span class="magia-info">Ação - Instantâneo - Toque</span>
+                <span class="magia-meta form-fulgur">Creo Fulgur de 1º Círculo</span>
+                <p class="magia-desc">Energiza as mãos do conjurador e libera uma rajada elétrica no alvo tocado, dando um dano de <strong>4d6</strong>. Para cada círculo de magia acima, aumenta o dano em 2d6.</p>
+            </div>
+
+        </div>
+
     </section>
 </main>
 
