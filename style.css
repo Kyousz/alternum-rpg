@@ -488,7 +488,7 @@ main .pagina-em-construcao h2 {
     line-height: 1.7;
 }
 .lista-custom li::before {
-    content: '◈';
+    content: '•';
     color: #cda4ff;
     font-size: 1.2em;
     position: absolute;
@@ -901,7 +901,7 @@ main .pagina-em-construcao h2 {
     font-size: 0.9em;
     font-style: italic;
     color: #999;
-    text-align: center;
+    text-align: justify;
     margin: 5px 0 20px 0; /* CORRIGIDO (Espaçamento) */
 }
 
@@ -2235,4 +2235,277 @@ h2.titulo-entidades {
     font-style: italic;
     margin-top: -2px; /* Aproxima do título */
     margin-bottom: 8px; /* Separa da Forma (Creo Ignis...) */
+}
+
+/* --- 47. ESTILOS DE TECNOLOGIA (MAGITECH) --- */
+
+/* Container Principal com visual de "Planta Técnica" */
+.tech-container {
+    border: 1px solid #1abc9c; /* Cor Crystallo/Ciano */
+    background: linear-gradient(135deg, rgba(26, 188, 156, 0.05) 0%, rgba(0, 0, 0, 0.6) 100%);
+    padding: 25px;
+    border-radius: 8px;
+    margin-bottom: 40px;
+    position: relative;
+    box-shadow: 0 0 15px rgba(26, 188, 156, 0.1);
+}
+
+/* Títulos das Seções Tecnológicas */
+.tech-titulo {
+    font-family: 'Megrim', sans-serif; /* Fonte futurista que já usamos */
+    font-size: 1.8em;
+    color: #1abc9c;
+    border-bottom: 1px solid #1abc9c;
+    padding-bottom: 10px;
+    margin-top: 0;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Regras em Lista "Digital" */
+.tech-regras-lista li {
+    margin-bottom: 12px;
+    color: #ccc;
+    font-family: 'EB Garamond', serif;
+    font-size: 1.05em;
+    padding-left: 20px;
+    border-left: 2px solid #555; /* Linha lateral cinza */
+    transition: all 0.3s;
+}
+.tech-regras-lista li:hover {
+    border-left-color: #1abc9c; /* Acende ao passar o mouse */
+    color: #fff;
+}
+.tech-destaque {
+    color: #1abc9c;
+    font-weight: bold;
+}
+
+/* --- TABELAS TÉCNICAS --- */
+.tech-tabela-container {
+    overflow-x: auto;
+    margin-bottom: 30px;
+}
+.tech-tabela {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: 'Courier New', monospace; /* Fonte técnica para números */
+    font-size: 0.95em;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+.tech-tabela th {
+    background-color: rgba(26, 188, 156, 0.2);
+    color: #1abc9c;
+    padding: 12px;
+    text-align: center;
+    border: 1px solid #333;
+    text-transform: uppercase;
+}
+.tech-tabela td {
+    padding: 10px;
+    border: 1px solid #333;
+    color: #bbb;
+    text-align: center;
+}
+.tech-tabela tr:hover td {
+    background-color: rgba(26, 188, 156, 0.05);
+    color: #fff;
+}
+
+/* --- STAT BLOCKS (Fichas de Itens/Criaturas) --- */
+.tech-blueprint {
+    background-color: rgba(10, 10, 15, 0.8);
+    border: 1px dashed #1abc9c; /* Borda pontilhada estilo planta */
+    padding: 20px;
+    margin-bottom: 25px;
+    position: relative;
+}
+
+/* O "Prego" ou "Parafuso" nos cantos da planta */
+.tech-blueprint::before {
+    content: '+';
+    position: absolute;
+    top: 5px; right: 5px;
+    color: #1abc9c;
+    font-family: monospace;
+}
+
+.blueprint-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #444;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+.blueprint-nome {
+    font-family: 'Cinzel', serif;
+    color: #fff;
+    font-size: 1.3em;
+    margin: 0;
+}
+.blueprint-stats {
+    font-family: 'Courier New', monospace;
+    font-size: 0.9em;
+    color: #3498db; /* Azul Aqua para stats vitais */
+}
+.blueprint-body p {
+    margin: 5px 0;
+    font-size: 0.95em;
+    color: #ccc;
+    line-height: 1.5;
+}
+.blueprint-label {
+    color: #1abc9c;
+    font-weight: bold;
+    font-family: 'Megrim', sans-serif;
+    font-size: 1.1em;
+}
+
+/* --- 48. ESTILOS DAS CLASSES (HERO CARDS) --- */
+
+.classes-grid {
+    display: grid;
+    /* Ajusta colunas automaticamente (min 280px garante cards largos) */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-top: 40px;
+    margin-bottom: 60px;
+}
+
+/* O Card da Classe (Estilo Retrato) */
+.class-card {
+    position: relative;
+    height: 450px; /* Altura fixa para uniformidade */
+    border-radius: 12px;
+    overflow: hidden; /* Garante que a imagem não saia da borda */
+    border: 2px solid #333;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+    transition: all 0.4s ease;
+    cursor: pointer;
+    background-color: #000;
+}
+
+/* Efeito Hover no Card */
+.class-card:hover {
+    transform: translateY(-10px); /* Sobe um pouco */
+    border-color: #9f50ff; /* Borda roxa brilhante */
+    box-shadow: 0 15px 30px rgba(159, 80, 255, 0.3);
+}
+
+/* A Imagem de Fundo */
+.class-bg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+    filter: brightness(0.7); /* Um pouco escurecida para ler o texto */
+}
+
+.class-card:hover .class-bg {
+    transform: scale(1.1); /* Zoom suave na imagem */
+    filter: brightness(1); /* Fica clara ao passar o mouse */
+}
+
+/* O Conteúdo (Texto na parte inferior) */
+.class-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.95), rgba(0,0,0,0)); /* Degradê preto */
+    padding: 20px;
+    box-sizing: border-box;
+    transform: translateY(10px); /* Levemente deslocado */
+    transition: transform 0.4s ease;
+}
+
+.class-card:hover .class-content {
+    transform: translateY(0);
+}
+
+/* Nome da Classe */
+.class-nome {
+    font-family: 'Cinzel', serif;
+    font-size: 1.8em;
+    color: #fff;
+    margin: 0;
+    text-shadow: 0 2px 5px rgba(0,0,0,0.8);
+    letter-spacing: 1px;
+}
+
+/* Arquétipo/Papel (ex: Combatente, Arcano) */
+.class-role {
+    display: block;
+    font-family: 'Megrim', sans-serif;
+    color: #cda4ff; /* Roxo claro */
+    font-size: 1.1em;
+    font-weight: bold;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+
+/* Pequena descrição (opcional, aparece ao passar o mouse) */
+.class-resumo {
+    font-family: 'EB Garamond', serif;
+    color: #ccc;
+    font-size: 1em;
+    margin-top: 10px;
+    opacity: 0; /* Escondido por padrão */
+    max-height: 0; /* Não ocupa espaço */
+    transition: all 0.4s ease;
+}
+
+.class-card:hover .class-resumo {
+    opacity: 1;
+    max-height: 100px; /* Aparece suavemente */
+}
+
+/* --- ESTILOS DENTRO DO MODAL DE CLASSE --- */
+
+/* Título Principal do Modal (Nome da Classe) */
+.modal-content .class-modal-title {
+    font-family: 'Megrim', sans-serif;
+    font-size: 2.2em;
+    font-weight: bold;
+    color: #9f50ff; /* Roxo */
+    border-bottom: 2px solid #4a008c;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+/* Subtítulos de Seção (Habilidades, Proficiências) */
+.modal-content h4 {
+    font-family: 'Cinzel', serif;
+    color: #f0f0f0;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+/* --- ESTILO PARA TABELAS DE COMBATE/FÚRIA (Vermelho/Selvagem) --- */
+.feral-tabela {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: 'Cinzel', serif; /* Fonte mais agressiva */
+    font-size: 0.95em;
+    background-color: rgba(60, 0, 0, 0.3); /* Fundo avermelhado */
+}
+.feral-tabela th {
+    background-color: rgba(192, 57, 43, 0.4); /* Vermelho Daemonium/Sanguis */
+    color: #e74c3c; /* Vermelho Vita */
+    padding: 12px;
+    text-align: center;
+    border: 1px solid #7c0000;
+    text-transform: uppercase;
+}
+.feral-tabela td {
+    padding: 10px;
+    border: 1px solid #444;
+    color: #bbb;
+    text-align: center;
+}
+.feral-tabela tr:hover td {
+    background-color: rgba(192, 57, 43, 0.1);
+    color: #fff;
 }
