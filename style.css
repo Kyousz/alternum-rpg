@@ -2252,7 +2252,7 @@ h2.titulo-entidades {
 
 /* Títulos das Seções Tecnológicas */
 .tech-titulo {
-    font-family: 'Megrim', sans-serif; /* Fonte futurista que já usamos */
+    font-family: 'Cinzel', serif;
     font-size: 1.8em;
     color: #1abc9c;
     border-bottom: 1px solid #1abc9c;
@@ -2359,7 +2359,7 @@ h2.titulo-entidades {
 .blueprint-label {
     color: #1abc9c;
     font-weight: bold;
-    font-family: 'Megrim', sans-serif;
+    font-family: 'EB Garamond', serif;
     font-size: 1.1em;
 }
 
@@ -2438,7 +2438,7 @@ h2.titulo-entidades {
 /* Arquétipo/Papel (ex: Combatente, Arcano) */
 .class-role {
     display: block;
-    font-family: 'Megrim', sans-serif;
+    font-family: 'Cinzel', serif;
     color: #cda4ff; /* Roxo claro */
     font-size: 1.1em;
     font-weight: bold;
@@ -2466,7 +2466,7 @@ h2.titulo-entidades {
 
 /* Título Principal do Modal (Nome da Classe) */
 .modal-content .class-modal-title {
-    font-family: 'Megrim', sans-serif;
+    font-family: 'Cinzel', serif;
     font-size: 2.2em;
     font-weight: bold;
     color: #9f50ff; /* Roxo */
