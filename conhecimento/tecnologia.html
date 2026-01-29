@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alternum - Tecnologia</title>
+
+    <base href="../">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="imagens/favicon.png">
+</head>
+<body>
+
+<header>
+    <a href="index.html" class="home-link">
+        <h1>Alternum</h1>
+        <p>Role-Playing Game</p>
+    </a>
+</header>
+
+<div id="nav-placeholder"></div>
+
+<main>
+    <section id="conhecimento-page">
+
+        <h2>Tecnologia & Artifícios</h2>
+        <p>A união entre a engenharia mecânica e o poder arcano.</p>
+
+        <hr class="section-divider">
+
+        <div class="tech-container">
+            <h3 class="tech-titulo">O Progresso Tecnológico</h3>
+            <p>Após a descoberta dos cristais de Arcanum, a tecnologia teve um grande avanço e posteriormente esses cristais foram estudados e explorados ao máximo, expandindo as possibilidades de criação.</p>
+            <p>Existem mecanismos que tiveram a menor influência mágica possível (barcos voadores, armas de pólvora), mas também itens complexos que necessitam das implementações mágicas que os cristais de Arcanum podem oferecer.</p>
+        </div>
+
+        <div class="tech-container">
+            <h3 class="tech-titulo">Protocolos de Criação</h3>
+            <p>A classificação para toda criação é <strong style="color: #3498db;">Tecno •</strong>.</p>
+            <p>Uma criação de um artífice pode ser ofensiva, defensiva, uma criatura ou um utilitário. As criações devem ser discutidas com o mestre para ver a possibilidade e checar limitações.</p>
+
+            <h4 style="color: #fff; font-family: 'Cinzel', serif; margin-top: 20px;">Regras de Manutenção</h4>
+            <ul class="tech-regras-lista" style="list-style: none; padding: 0;">
+                <li><span class="tech-destaque">Durabilidade:</span> É reduzida pela metade do dano crítico recebido ou em 5 pontos a cada falha crítica. Se chegar a 0, o item torna-se inutilizável.</li>
+                <li><span class="tech-destaque">Reparo:</span> O reparo completo dura no mínimo metade do tempo utilizado para a produção da criação.</li>
+                <li><span class="tech-destaque">Recuperação (Criaturas):</span> PV e PM recuperam com Descanso. Se PV chegar a 0, exige reparo de no mínimo 1 hora.</li>
+                <li><span class="tech-destaque">Implementos:</span> Inicialmente 2 espaços livres. Para cada espaço extra desbloqueado: +1 hora de produção e +2 vinténs. Cada implementação adicionada: +2 horas e +4 vinténs.</li>
+                <li><span class="tech-destaque">Modificações:</span> É possível remover implementos (mínimo 30 min) e colocá-los em outra criação.</li>
+            </ul>
+        </div>
+
+        <h3 class="tech-titulo">Tabelas de Limites e Custos</h3>
+
+        <div class="tech-tabela-container">
+            <table class="tech-tabela">
+                <thead>
+                <tr>
+                    <th>Nível do Artífice</th>
+                    <th>Limites (CA / PV e PM / Durabilidade)</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr><td>1</td><td>CA: 4~10 / PV e PM: 5~10 / Dur: 10~20</td></tr>
+                <tr><td>4</td><td>CA: 6~12 / PV e PM: 10~20 / Dur: 20~40</td></tr>
+                <tr><td>8</td><td>CA: 8~14 / PV e PM: 15~30 / Dur: 30~60</td></tr>
+                <tr><td>12</td><td>CA: 10~16 / PV e PM: 25~50 / Dur: 40~80</td></tr>
+                <tr><td>16</td><td>CA: 12~18 / PV e PM: 30~60 / Dur: 50~100</td></tr>
+                <tr><td>20</td><td>CA: 14~20 / PV e PM: 40~80 / Dur: 60~120</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="tech-tabela-container">
+            <table class="tech-tabela">
+                <thead>
+                <tr>
+                    <th>Nível Artífice</th>
+                    <th>Nível Criação</th>
+                    <th>Implementos</th>
+                    <th>Pontos (Tipo CRIATURA)</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr><td>1</td><td>1</td><td>1</td><td>0 Pontos</td></tr>
+                <tr><td>1</td><td>2</td><td>2</td><td>8 Pontos</td></tr>
+                <tr><td>3</td><td>3</td><td>4</td><td>10 Pontos</td></tr>
+                <tr><td>6</td><td>4</td><td>6</td><td>12 Pontos</td></tr>
+                <tr><td>12</td><td>5</td><td>8</td><td>14 Pontos</td></tr>
+                <tr><td>15</td><td>6</td><td>10</td><td>16 Pontos</td></tr>
+                <tr><td>18</td><td>7</td><td>12</td><td>18 Pontos</td></tr>
+                <tr><td>20</td><td>8</td><td>14</td><td>20 Pontos</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <hr class="section-divider">
+
+        <h3 class="tech-titulo">Catálogo de Protótipos</h3>
+
+        <div class="tech-blueprint">
+            <div class="blueprint-header">
+                <h4 class="blueprint-nome">XLN-32 (Guerreiro)</h4>
+                <span class="blueprint-stats">[PV: 12/12] [PM: 10/10] • Nível 2</span>
+            </div>
+            <div class="blueprint-body">
+                <p><strong>CA:</strong> 12 | <strong>Deslocamento:</strong> 9m</p>
+                <p><strong>Atributos:</strong> FOR +2, DES +1, CON +2, INT +1, SAB 0, CAR +2</p>
+                <p><strong>Durabilidade:</strong> <span style="color: #3498db;">40/40</span></p>
+                <br>
+                <span class="blueprint-label">[Implementos]</span>
+                <p>🔩 Visão no Escuro: 18 metros.</p>
+                <br>
+                <span class="blueprint-label">[Ações]</span>
+                <p>⚔️ <strong>Espada Curta:</strong> +2 para acertar, causa o dano de 1d6+2.</p>
+            </div>
+        </div>
+
+        <div class="tech-blueprint">
+            <div class="blueprint-header">
+                <h4 class="blueprint-nome">Espada Serrilhada</h4>
+                <span class="blueprint-stats">[Dano: 1d10] • Nível 2</span>
+            </div>
+            <div class="blueprint-body">
+                <p><strong>Tipo:</strong> Espada Longa</p>
+                <p><strong>Durabilidade:</strong> <span style="color: #3498db;">30/30</span></p>
+                <br>
+                <span class="blueprint-label">[Implementos]</span>
+                <p>⚙️ <strong>Serra:</strong> +1d4 no dano base.</p>
+                <p>⚙️ <strong>Sangramento:</strong> Ao dar um dano crítico, faz o alvo sangrar 1d6 por duas rodadas.</p>
+            </div>
+        </div>
+
+        <div class="tech-blueprint">
+            <div class="blueprint-header">
+                <h4 class="blueprint-nome">Luva Flamejante XXL</h4>
+                <span class="blueprint-stats">[Magia Simulada] • Nível 2</span>
+            </div>
+            <div class="blueprint-body">
+                <p><strong>Durabilidade:</strong> <span style="color: #3498db;">20/20</span></p>
+                <br>
+                <span class="blueprint-label">[Implementos]</span>
+                <p>🔮 <strong>Bola de Fogo (Ignis):</strong> Causa 2d8 de dano de fogo em um único alvo a até 18 metros. [Custo: 4 PM]</p>
+                <p>🛡️ <strong>Absorção:</strong> Dissipa o fogo em uma área de até 3 metros de raio.</p>
+            </div>
+        </div>
+
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2025 Kyous. Todos os direitos reservados.</p>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>

@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", function() {
  * correspondente à página que está sendo visualizada.
  */
 function ativarLinkAtual() {
-    // Pega o nome do arquivo da URL (ex: "mundo_planos.html")
+    // Pega o nome do arquivo da URL (ex: "planos.html")
     const nomePagina = window.location.pathname.split("/").pop();
 
     // Se estiver na página inicial, não faz nada
