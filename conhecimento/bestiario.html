@@ -3,13 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Alternum - Bestiário</title>
-
     <base href="../">
-
     <link rel="stylesheet" href="style.css">
-
     <link rel="icon" type="image/png" href="imagens/favicon.png">
 </head>
 <body>
@@ -24,16 +20,215 @@
 <div id="nav-placeholder"></div>
 
 <main>
-    <section class="pagina-em-construcao">
-        <h2>Bestiário</h2>
-        <p>Este conteúdo ainda está sendo forjado em Alternum. Volte em breve!</p>
+    <section>
+        <h2 class="beast-header">Bestiário de Alternum</h2>
+        <p style="text-align: center; color: #ccc; margin-bottom: 30px;">
+            Arquivo alfabético das criaturas conhecidas.
+        </p>
+
+        <div class="search-container">
+            <input type="text" id="searchInput" class="beast-search" placeholder="Buscar criatura..." onkeyup="filterBeasts()">
+            <span class="search-icon">🔍</span>
+        </div>
+
+        <div class="letter-section" id="letter-A">
+            <h3 class="letter-title">A</h3>
+            <div class="beast-grid">
+
+                <div class="beast-card"
+                     data-name="Aranha Gigante"
+                     data-type="Fera"
+                     data-image="imagens/monstros/aranha.jpg"
+                     data-desc="Aracnídeos colossais que tecem teias em florestas densas e cavernas. Seu veneno paralisa a vítima para ser devorada posteriormente.">
+                    <div class="beast-top"><span class="beast-type">Fera</span></div>
+                    <div class="beast-content">
+                        <h4 class="beast-name">Aranha Gigante</h4>
+                    </div>
+                </div>
+
+                <div class="beast-card"
+                     data-name="Aparição"
+                     data-type="Morto-Vivo"
+                     data-image="imagens/monstros/aparicao.jpg"
+                     data-desc="O espírito maligno de alguém que morreu cheio de ódio. Eles drenam a vitalidade dos vivos com um simples toque.">
+                    <div class="beast-top"><span class="beast-type">Morto-Vivo</span></div>
+                    <div class="beast-content">
+                        <h4 class="beast-name">Aparição</h4>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="letter-section" id="letter-C">
+            <h3 class="letter-title">C</h3>
+            <div class="beast-grid">
+
+                <div class="beast-card"
+                     data-name="Cavaleiro da Tumba"
+                     data-type="Morto-Vivo"
+                     data-image="imagens/monstros/cavaleiro.jpg"
+                     data-desc="Antigos guerreiros que recusaram a morte. Sua armadura é fundida aos ossos e sua espada drena a vitalidade dos vivos.">
+                    <div class="beast-top"><span class="beast-type">Morto-Vivo</span></div>
+                    <div class="beast-content">
+                        <h4 class="beast-name">Cavaleiro da Tumba</h4>
+                    </div>
+                </div>
+
+                <div class="beast-card"
+                     data-name="Constructo de Ferro"
+                     data-type="Constructo"
+                     data-image="imagens/monstros/constructo.jpg"
+                     data-desc="Um autômato de guerra criado por anões antigos. Obedece ordens literalmente e não sente dor ou medo.">
+                    <div class="beast-top"><span class="beast-type">Constructo</span></div>
+                    <div class="beast-content">
+                        <h4 class="beast-name">Constructo de Ferro</h4>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="letter-section" id="letter-D">
+            <h3 class="letter-title">D</h3>
+            <div class="beast-grid">
+
+                <div class="beast-card"
+                     data-name="Dragão Vermelho"
+                     data-type="Dragão"
+                     data-image="imagens/monstros/dragao.jpg"
+                     data-desc="A personificação da ganância e do fogo. Habitam vulcões e montanhas altas, exigindo tributos de cidades vizinhas.">
+                    <div class="beast-top"><span class="beast-type">Dragão</span></div>
+                    <div class="beast-content">
+                        <h4 class="beast-name">Dragão Vermelho</h4>
+                    </div>
+                </div>
+
+                <div class="beast-card"
+                     data-name="Demônio das Sombras"
+                     data-type="Demônio"
+                     data-image="imagens/monstros/demonio_sombra.jpg"
+                     data-desc="Criaturas formadas na escuridão do abismo. São quase invisíveis em ambientes escuros e atacam a mente de suas vítimas.">
+                    <div class="beast-top"><span class="beast-type">Demônio</span></div>
+                    <div class="beast-content">
+                        <h4 class="beast-name">Demônio das Sombras</h4>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="letter-section" id="letter-E">
+            <h3 class="letter-title">E</h3>
+            <div class="beast-grid">
+
+                <div class="beast-card"
+                     data-name="Ent"
+                     data-type="Planta"
+                     data-image="imagens/monstros/ent.jpg"
+                     data-desc="Guardiões antigos das florestas. Árvores que despertaram para proteger a natureza contra o avanço da civilização.">
+                    <div class="beast-top"><span class="beast-type">Planta</span></div>
+                    <div class="beast-content">
+                        <h4 class="beast-name">Ent</h4>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="letter-section" id="letter-L">
+            <h3 class="letter-title">L</h3>
+            <div class="beast-grid">
+
+                <div class="beast-card"
+                     data-name="Lobo das Cinzas"
+                     data-type="Fera"
+                     data-image="imagens/monstros/lobo.jpg"
+                     data-desc="Lobos com pelagem cinzenta que caçam em matilhas nas florestas de Varya.">
+                    <div class="beast-top"><span class="beast-type">Fera</span></div>
+                    <div class="beast-content">
+                        <h4 class="beast-name">Lobo das Cinzas</h4>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
     </section>
 </main>
 
-<footer>
-    <p>&copy; 2026 Kyous. Todos os direitos reservados.</p>
-</footer>
+<div id="beastModal" class="modal-overlay">
+    <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <div class="modal-body">
+            <div class="modal-image-container">
+                <img id="modalImg" src="" alt="Imagem da Criatura" onerror="this.src='https://via.placeholder.com/400x400?text=Sem+Imagem'">
+            </div>
+            <div class="modal-text">
+                <div class="modal-header-info">
+                    <span id="modalType" class="beast-type-tag">Tipo</span>
+                </div>
+                <h3 id="modalTitle">Nome da Criatura</h3>
+                <hr class="modal-divider">
+                <p id="modalDesc">Descrição completa aqui...</p>
+            </div>
+        </div>
+    </div>
+</div>
 
+<footer><p>&copy; 2026 Kyous. Todos os direitos reservados.</p></footer>
 <script src="main.js"></script>
+
+<script>
+    // --- LÓGICA DO MODAL ---
+    const modal = document.getElementById("beastModal");
+    const closeBtn = document.querySelector(".close-btn");
+    const mTitle = document.getElementById("modalTitle");
+    const mType = document.getElementById("modalType");
+    const mDesc = document.getElementById("modalDesc");
+    const mImg = document.getElementById("modalImg");
+
+    document.querySelectorAll('.beast-card').forEach(card => {
+        card.addEventListener('click', () => {
+            mTitle.innerText = card.getAttribute('data-name');
+            mType.innerText = card.getAttribute('data-type');
+            mDesc.innerText = card.getAttribute('data-desc');
+            mImg.src = card.getAttribute('data-image');
+            modal.style.display = "flex";
+        });
+    });
+
+    closeBtn.onclick = function() { modal.style.display = "none"; }
+    window.onclick = function(event) { if (event.target == modal) { modal.style.display = "none"; } }
+
+    // --- LÓGICA DE BUSCA (FILTRO) ---
+    function filterBeasts() {
+        let input = document.getElementById('searchInput').value.toUpperCase();
+        let sections = document.getElementsByClassName('letter-section');
+
+        for (let i = 0; i < sections.length; i++) {
+            let cards = sections[i].getElementsByClassName('beast-card');
+            let hasVisibleCard = false;
+
+            for (let j = 0; j < cards.length; j++) {
+                let name = cards[j].getAttribute('data-name');
+                if (name.toUpperCase().indexOf(input) > -1) {
+                    cards[j].style.display = "";
+                    hasVisibleCard = true;
+                } else {
+                    cards[j].style.display = "none";
+                }
+            }
+
+            // Esconde a letra inteira se não houver monstros nela
+            if (hasVisibleCard) {
+                sections[i].style.display = "";
+            } else {
+                sections[i].style.display = "none";
+            }
+        }
+    }
+</script>
+
 </body>
 </html>
