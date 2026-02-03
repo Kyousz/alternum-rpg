@@ -68,9 +68,74 @@
         <hr class="section-divider">
 
         <h3>HABILIDADES DE CLASSE</h3>
-        <section class="pagina-em-construcao">
-            <p>As manipulações sanguíneas, pactos de linhagem e o uso de Pontos de Vice do Vinculado ao Sangue serão detalhados em breve.</p>
-        </section>
+
+        <div class="info-box" style="border-left-color: var(--class-color); background: rgba(138, 3, 3, 0.05);">
+            <h4 style="color: var(--class-color);">Pacto de Sangue</h4>
+            <p>Você selou um acordo com uma entidade, atrelando a maldição dela à sua própria alma.</p>
+            <ul class="lista-custom">
+                <li><strong>Magias de Pacto:</strong> A criatura lhe concede duas magias iniciais. Você aprende uma nova magia a cada dois níveis.</li>
+                <li><strong>Coletar Vices:</strong> A cada abate realizado, você coleta um <strong>"Vice"</strong>. Quanto mais Vices, maior sua afinidade com o vínculo e mais forte a maldição se torna.</li>
+            </ul>
+        </div>
+
+        <div class="info-box" style="border-left-color: var(--class-color); background: rgba(138, 3, 3, 0.05);">
+            <h4 style="color: var(--class-color);">Tesouro Amaldiçoado</h4>
+            <p>Seu pacto se manifesta fisicamente em um item vinculado magicamente a você. Você começa o jogo com um <strong>Tesouro Amaldiçoado</strong> (Arma, Armadura ou Amuleto).</p>
+            <ul class="lista-custom">
+                <li><strong>Benefício Passivo:</strong> O item concede um bônus constante (ex: dano necrótico extra ou punição a atacantes).</li>
+                <li><strong>Evolução:</strong> O benefício se torna mais poderoso ao atingir marcos de Vices coletados (10, 25 e 50 Vices totais).</li>
+            </ul>
+        </div>
+
+        <div class="info-box" style="border-left-color: var(--class-color); background: rgba(138, 3, 3, 0.05);">
+            <h4 style="color: var(--class-color);">Maldições</h4>
+            <p>Com uma <strong>Ação Bônus</strong>, gaste <span style="color: var(--class-color); font-weight: bold;">1 Ponto de Vice</span> para afligir uma criatura a até 18 metros.</p>
+            <p>O alvo deve fazer um Teste de Resistência. Se falhar, sofre o efeito por <strong>uma rodada</strong> (até o final do seu próximo turno).</p>
+
+            <div style="margin-top: 10px; padding: 10px; border-left: 3px solid var(--class-color); background: rgba(255, 255, 255, 0.05);">
+                <strong style="color: var(--class-color);">🩸 Aprimorar Maldição (Custo Extra):</strong>
+                <ul style="margin: 0; padding-left: 20px; font-size: 0.9em; color: #eee; margin-bottom: 10px;">
+                    <li><strong>(1 Vice):</strong> Aumenta a duração em +1 rodada.</li>
+                    <li><strong>(2 Vices):</strong> Impõe <strong>Desvantagem</strong> no teste de resistência inicial.</li>
+                    <li><strong>(3 Vices):</strong> A maldição se espalha para uma criatura adicional a até 3m.</li>
+                </ul>
+
+                <strong style="color: var(--class-color);">💀 Lista de Efeitos:</strong>
+                <div style="display: flex; flex-direction: column; gap: 5px; font-size: 0.9em; margin-top: 5px;">
+                    <span>• <strong>Cegado</strong> (TR Constituição)</span>
+                    <span>• <strong>Ensurdecido</strong> (TR Constituição)</span>
+                    <span>• <strong>Intimidado</strong> (TR Sabedoria)</span>
+                    <span>• <strong>Envenenado</strong> (TR Constituição)</span>
+                    <span>• <strong>Restringido</strong> (TR Força)</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="info-box" style="border-left-color: var(--class-color); background: rgba(138, 3, 3, 0.05);">
+            <h4 style="color: var(--class-color);">Consumir Essência</h4>
+            <p>Você drena a energia dos Vices coletados para se fortalecer. Com uma <strong>Ação Bônus</strong>, escolha um efeito:</p>
+
+            <div style="margin-top: 10px; display: flex; flex-direction: column; gap: 10px;">
+                <div style="border: 1px dashed rgba(138, 3, 3, 0.4); padding: 8px; border-radius: 4px;">
+                    <strong style="color: var(--class-color);">❤ Curar Feridas</strong>
+                    <p style="font-size: 0.9em; margin: 5px 0;">Gaste qualquer número de Vices. Recupere <span style="color: var(--class-color); font-weight: bold;">1d8 PV</span> por ponto gasto.</p>
+                </div>
+
+                <div style="border: 1px dashed rgba(138, 3, 3, 0.4); padding: 8px; border-radius: 4px;">
+                    <strong style="color: var(--class-color);">⚔️ Arma Voraz</strong>
+                    <p style="font-size: 0.9em; margin: 5px 0;">Gaste de 1 a 3 Vices. Por 1 minuto, sua arma causa <span style="color: var(--class-color); font-weight: bold;">+1d6 de dano extra</span> (da forma da entidade) por ponto gasto.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="info-box" style="border-left-color: var(--class-color); background: rgba(138, 3, 3, 0.05);">
+            <h4 style="color: var(--class-color);">Resiliência Profana</h4>
+            <p>O poder profano altera sua fisiologia, tornando-o anormalmente resistente.</p>
+            <ul class="lista-custom">
+                <li><strong>Vantagem</strong> em Testes de Resistência contra <strong>Veneno</strong> e <strong>Doenças</strong>.</li>
+                <li><strong>Resistência</strong> a dano das duas formas de magia principais da sua entidade.</li>
+            </ul>
+        </div>
 
     </section>
 </main>

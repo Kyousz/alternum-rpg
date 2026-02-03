@@ -22,7 +22,7 @@
 <div id="nav-placeholder"></div>
 
 <main>
-    <section class="class-page-content" style="--class-color: #81d4fa;">
+    <section class="class-page-content" style="--class-color: #d4ac0d;">
         <h2 class="class-title">PALADINO</h2>
         <p>Guerreiro sagrado vinculado a um juramento, combinando maestria em combate pesado com poderes divinos de auxílio e punição.</p>
 
@@ -68,9 +68,65 @@
         <hr class="section-divider">
 
         <h3>HABILIDADES DE CLASSE</h3>
-        <section class="pagina-em-construcao">
-            <p>Os juramentos sagrados, o Sentido Divino e o Golpe Divino do Paladino serão detalhados em breve.</p>
-        </section>
+
+        <div class="info-box" style="border-left-color: var(--class-color); background: rgba(212, 172, 13, 0.05);">
+            <h4 style="color: var(--class-color);">Juramento Sagrado</h4>
+            <p>Sua força emana de um juramento inabalável que define três mandamentos guias.</p>
+
+            <div style="margin-top: 10px; padding: 10px; border-left: 3px solid var(--class-color); background: rgba(255, 255, 255, 0.05);">
+                <strong style="color: var(--class-color);">🛡️ Canalizar Vontade</strong>
+                <p style="font-size: 0.9em; margin: 5px 0;">Você gera <span style="color: var(--class-color); font-weight: bold;">1 Ponto de Fé</span> ao realizar um dos seguintes atos:</p>
+                <ul class="lista-custom" style="font-size: 0.9em;">
+                    <li>Cumprir um mandamento de forma exemplar (a critério do Mestre).</li>
+                    <li>Passar em um Teste de Resistência contra uma magia ou efeito hostil.</li>
+                    <li>Reduzir uma criatura a 0 Pontos de Vida com um <strong>acerto crítico</strong>.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="info-box" style="border-left-color: var(--class-color); background: rgba(212, 172, 13, 0.05);">
+            <h4 style="color: var(--class-color);">Punição Divina</h4>
+            <p>Ao acertar um ataque corpo a corpo, você pode imbuir seu golpe com poder divino.</p>
+            <ul class="lista-custom">
+                <li><strong>Custo Base:</strong> Gaste <strong>1 Ponto de Fé</strong> para causar <span style="color: var(--class-color); font-weight: bold;">2d8 de dano radiante</span> adicional.</li>
+                <li><strong>Potencialização:</strong> Você pode gastar pontos adicionais. Cada ponto extra adiciona <strong>+1d8</strong> de dano.</li>
+                <li><strong>Limite:</strong> O dano máximo desta habilidade é <strong>8d8</strong>.</li>
+            </ul>
+        </div>
+
+        <div class="info-box" style="border-left-color: var(--class-color); background: rgba(212, 172, 13, 0.05);">
+            <h4 style="color: var(--class-color);">Toque Restaurador</h4>
+            <p>Sua fé é um bálsamo. Com uma <strong>Ação</strong>, toque uma criatura e gaste qualquer quantidade de Pontos de Fé.</p>
+            <p class="nota-tabela">↳ <strong>Cura:</strong> Para cada ponto gasto, o alvo recupera <strong>1d8 + Modificador de Carisma</strong> PV.</p>
+            <p style="font-size: 0.8em; color: #aaa; margin-top: 5px;">*Não afeta mortos-vivos ou construtos.</p>
+        </div>
+
+        <div class="info-box" style="border-left-color: var(--class-color); background: rgba(212, 172, 13, 0.05);">
+            <h4 style="color: var(--class-color);">Mandato Celestial</h4>
+            <p>Você é um instrumento escolhido, garantindo favores constantes.</p>
+
+            <div style="margin-top: 10px; display: flex; flex-direction: column; gap: 10px;">
+                <div style="border: 1px dashed rgba(212, 172, 13, 0.4); padding: 8px; border-radius: 4px;">
+                    <strong style="color: var(--class-color);">Favor Latente</strong>
+                    <p style="font-size: 0.9em; margin: 5px 0;"><strong>Vantagem</strong> em Sabedoria (Intuição) para discernir intenções e Inteligência (Investigação) para localizar objetos/locais sagrados.</p>
+                </div>
+
+                <div style="border: 1px dashed rgba(212, 172, 13, 0.4); padding: 8px; border-radius: 4px;">
+                    <strong style="color: var(--class-color);">Favor Manifesto</strong>
+                    <p style="font-size: 0.9em; margin: 5px 0;">Ao completar uma tarefa divina direta, você entra em <em>estado de graça</em> por <strong>3 dias</strong>:</p>
+                    <ul style="margin: 0; padding-left: 20px; font-size: 0.9em; color: #eee;">
+                        <li>Seu máximo de Pontos de Fé aumenta em <strong>+2</strong>.</li>
+                        <li>Uma vez por dia, pode <strong>rolar novamente</strong> um Ataque ou Teste de Resistência falho.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="info-box" style="border-left-color: var(--class-color); background: rgba(212, 172, 13, 0.05);">
+            <h4 style="color: var(--class-color);">Presença Inabalável</h4>
+            <p>Sua convicção é um farol contra a escuridão. Você e aliados a até <strong>3 metros</strong> de você possuem:</p>
+            <p class="nota-tabela">↳ <span style="color: var(--class-color); font-weight: bold;">Vantagem</span> em Testes de Resistência contra efeitos de <strong>Medo</strong> e <strong>Charme</strong>.</p>
+        </div>
 
     </section>
 </main>

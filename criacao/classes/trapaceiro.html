@@ -22,7 +22,7 @@
 <div id="nav-placeholder"></div>
 
 <main>
-    <section class="class-page-content" style="--class-color: #3f51b5;">
+    <section class="class-page-content" style="--class-color: #4169e1;">
         <h2 class="class-title">TRAPACEIRO</h2>
         <p>Mestre da sorte e do engano, o trapaceiro utiliza jogos de azar e agilidade mental para manipular o destino a seu favor.</p>
 
@@ -60,9 +60,63 @@
         <hr class="section-divider">
 
         <h3>HABILIDADES DE CLASSE</h3>
-        <section class="pagina-em-construcao">
-            <p>Os truques de cartas, manipulação de probabilidades e jogos mentais do Trapaceiro serão detalhados em breve.</p>
-        </section>
+
+        <div class="info-box" style="border-left-color: var(--class-color); background: rgba(192, 57, 43, 0.05);">
+            <h4 style="color: var(--class-color);">Mestre do Baralho</h4>
+            <p>Você transforma um simples baralho em uma arma letal.</p>
+            <ul class="lista-custom">
+                <li><strong>Arma Proficiente:</strong> O baralho conta como arma de acuidade e arremesso (alcance 9/36m), causando <strong>1d6</strong> de dano.</li>
+                <li><strong>Ataque Surpresa (Ação Bônus):</strong> Você arremessa uma carta de forma inesperada. Este ataque tem <strong>Vantagem</strong> e causa <span style="color: var(--class-color); font-weight: bold;">+1d6 de dano adicional</span>.</li>
+            </ul>
+        </div>
+
+        <div class="info-box" style="border-left-color: var(--class-color); background: rgba(192, 57, 43, 0.05);">
+            <h4 style="color: var(--class-color);">Mão de Truques</h4>
+            <p>A sorte embaralha, mas você joga. Ao final de cada Descanso, você saca sua "mão" rolando <strong>1d20 três vezes</strong> na tabela abaixo (sem repetir). Estas cartas ficam guardadas até serem usadas ou até o próximo descanso.</p>
+            <p>Com uma <strong>Ação</strong>, você "joga" uma carta da mão para ativar seu efeito. A carta é descartada após o uso.</p>
+            <p class="nota-tabela">↳ <strong>Evolução:</strong> Você saca uma carta adicional nos níveis 4, 8, 12, 16 e 20.</p>
+
+            <div style="background: rgba(0,0,0,0.2); padding: 15px; border-radius: 4px; margin-top: 10px; font-size: 0.9em; border: 1px solid rgba(192, 57, 43, 0.3);">
+                <strong style="color: var(--class-color); display: block; margin-bottom: 10px; text-transform: uppercase; border-bottom: 1px dashed rgba(192, 57, 43, 0.3); padding-bottom: 5px;">🃏 Tabela de Efeitos (d20)</strong>
+                <div style="display: flex; flex-direction: column; gap: 6px;">
+                    <p><strong>1-2 (Carta de Fogo):</strong> 2d6 de dano de fogo no alvo + 1d6 em raio de 3m.</p>
+                    <p><strong>3-4 (Carta de Gelo):</strong> Reduz velocidade do alvo pela metade (1 min) e pode paralisar por 1 turno.</p>
+                    <p><strong>5-6 (Carta de Ilusão):</strong> Duplicata ilusória impõe Desvantagem em ataques contra você (1 min).</p>
+                    <p><strong>7-8 (Carta de Cura):</strong> Cura 2d6 PV de um aliado e garante metade da cura como PV temporário (1 min).</p>
+                    <p><strong>9-10 (Carta de Sombra):</strong> Vantagem em Furtividade (1 min) e Invisibilidade por 1 turno.</p>
+                    <p><strong>11-12 (Carta de Correntes):</strong> Teste de Resistência de Força ou alvo fica Agarrado/Restringido (1 min).</p>
+                    <p><strong>13-14 (Carta da Fraqueza):</strong> O próximo ataque que acertar o alvo é um Crítico garantido.</p>
+                    <p><strong>15-16 (Carta da Avareza):</strong> Teste de Resistência de Sabedoria ou alvo gasta a Ação admirando um item (sem agir).</p>
+                    <p><strong>17-18 (Carta do Bobo):</strong> Teste de Resistência de Destreza ou cai (Caído) e tem Desvantagem em testes sociais (1h).</p>
+                    <p><strong>19-20 (Carta da Transferência):</strong> Troca de lugar com aliado voluntário a até 18m.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="info-box" style="border-left-color: var(--class-color); background: rgba(192, 57, 43, 0.05);">
+            <h4 style="color: var(--class-color);">Jogada de Risco</h4>
+            <p>Uma vez por Descanso, teste sua sorte rolando <strong>1d6</strong> para obter um efeito especial:</p>
+            <ul class="lista-custom">
+                <li><strong>1-2 (Aposta Baixa):</strong> Recupera a última carta jogada para sua mão.</li>
+                <li><strong>3-4 (Aposta Média):</strong> Por 10 min, a primeira vez que você ou aliado a 9m rolar com Desvantagem, ela é anulada.</li>
+                <li><strong>5-6 (Aposta Alta):</strong> Por 10 min, sempre que jogar uma carta, role 1d6. Se cair 5 ou 6, a carta não é consumida.</li>
+            </ul>
+        </div>
+
+        <div class="info-box" style="border-left-color: var(--class-color); background: rgba(192, 57, 43, 0.05);">
+            <h4 style="color: var(--class-color);">Embaralhar a Sorte</h4>
+            <p>Não aceite uma mão ruim. Com uma <strong>Ação Bônus</strong>, você pode descartar uma carta da mão para sacar uma nova aleatoriamente (rolando 1d20 na tabela).</p>
+            <p class="nota-tabela">↳ <strong>Uso:</strong> Número de vezes igual ao seu bônus de Proficiência por Descanso.</p>
+        </div>
+
+        <div class="info-box" style="border-left-color: var(--class-color); background: rgba(192, 57, 43, 0.05);">
+            <h4 style="color: var(--class-color);">Carta Trajeto</h4>
+            <p>Uma vez por Cena, gaste uma <strong>Ação</strong> para posicionar ou arremessar uma carta em local desocupado a até 18 metros.</p>
+            <ul class="lista-custom">
+                <li><strong>Teleporte:</strong> Use uma <strong>Ação Bônus</strong> (no mesmo turno ou subsequentes) para se teleportar instantaneamente para o local da carta.</li>
+                <li><strong>Efeito:</strong> Após o teleporte, a carta é queimada e desaparece.</li>
+            </ul>
+        </div>
 
     </section>
 </main>
