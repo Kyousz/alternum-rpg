@@ -22,9 +22,102 @@
 <div id="nav-placeholder"></div>
 
 <main>
-    <section class="pagina-em-construcao">
-        <h2>Artífice</h2>
-        <p>Este conteúdo ainda está sendo forjado em Alternum. Volte em breve!</p>
+    <section class="class-page-content" style="--class-color: #1abc9c;">
+        <h2 class="class-title">ARTÍFICE</h2>
+        <p>Mestre em criar e utilizar dispositivos mágicos e mecânicos. O artífice utiliza sua inteligência superior para manifestar maravilhas tecnomânticas.</p>
+
+        <hr class="section-divider">
+
+        <h3>ATRIBUTOS VITAIS</h3>
+        <div class="class-stats-wrapper">
+            <div class="stat-box-inner">
+                <strong>Dado de Vida</strong>
+                <span>D8</span>
+                <p class="sub-note">1º Nível: 8 + CON</p>
+                <p class="sub-note">Posterior: 1d8 (ou 5) + CON</p>
+            </div>
+
+            <div class="stat-box-inner">
+                <strong>Dado de Mana</strong>
+                <span>D12</span>
+                <p class="sub-note">1º Nível: 12 + INT</p>
+                <p class="sub-note">Posterior: 1d12 (ou 7) + INT</p>
+            </div>
+        </div>
+
+        <hr class="section-divider">
+
+        <h3>PROFICIÊNCIAS E EQUIPAMENTO</h3>
+        <div class="proficiencias-lista" style="border-left-color: var(--class-color);">
+            <div><strong>Armaduras:</strong> Leves, Médias e Escudos.</div>
+            <div><strong>Armas:</strong> Simples.</div>
+            <div><strong>Ferramentas:</strong> Engenheiro, Ferreiro e Ladrão.</div>
+            <div><strong>Testes de Resistência:</strong> Constituição e Inteligência.</div>
+            <div><strong>Atributo de Conjuração:</strong> Inteligência.</div>
+            <div><strong>Equipamento Inicial:</strong> Ferramentas de Engenheiro.</div>
+        </div>
+
+        <hr class="section-divider">
+
+        <h3>HABILIDADES DE CLASSE</h3>
+
+        <div class="info-box" style="border-left-color: var(--class-color); background: rgba(26, 188, 156, 0.05);">
+            <h4 style="color: var(--class-color);">Projeto Inicial</h4>
+            <p style="font-style: italic; color: #81ecec; font-size: 0.9em; margin-bottom: 10px;">Ao iniciar sua jornada, foque em uma das vertentes da tecnomancia abaixo:</p>
+
+            <div style="display: flex; flex-direction: column; gap: 15px;">
+                <div style="border: 1px dashed rgba(26, 188, 156, 0.4); padding: 10px; border-radius: 4px;">
+                    <strong style="color: var(--class-color);">A. Núcleo Experimental:</strong>
+                    <p style="font-size: 0.95em; margin: 5px 0;">Você constrói um <strong>Autômato Experimental (Nível 2)</strong> com um Núcleo Lif. Ele obedece ordens e age no seu turno.</p>
+                </div>
+
+                <div style="border: 1px dashed rgba(26, 188, 156, 0.4); padding: 10px; border-radius: 4px;">
+                    <strong style="color: var(--class-color);">B. Engenharia Prodigiosa:</strong>
+                    <p style="font-size: 0.95em; margin: 5px 0;">Você projeta um <strong>Item Tecno (Nível 2)</strong> funcional. Requer 6h de trabalho e 10 vinténs/hora para novas criações.</p>
+                </div>
+            </div>
+
+            <p class="nota-tabela" style="margin-top: 15px;">
+                ↳ <strong>Evolução:</strong> A opção não escolhida é adquirida no 2º nível como um <em>projeto incompleto</em>.
+            </p>
+        </div>
+
+        <div class="info-box" style="border-left-color: var(--class-color); background: rgba(26, 188, 156, 0.05);">
+            <h4 style="color: var(--class-color);">Estabilização Aprimorada</h4>
+            <p>Reparos de 1h concedem benefícios até o próximo Descanso (não acumulativos):</p>
+            <ul class="lista-custom">
+                <li><strong>Durabilidade/Vida:</strong> Recebem <span style="color: var(--class-color);">1d6 por nível</span> temporário.</li>
+                <li><strong>Resistência:</strong> Concede <span style="color: var(--class-color);">Vantagem</span> em um Teste de Resistência à escolha.</li>
+                <li><strong>Potencialização (Itens):</strong> <span style="color: var(--class-color);">+1 em Dano ou CA</span> a cada nível par.</li>
+            </ul>
+        </div>
+
+        <div class="info-box" style="border-left-color: var(--class-color); background: rgba(26, 188, 156, 0.05);">
+            <h4 style="color: var(--class-color);">Análise Técnica</h4>
+            <p>Com uma <strong>Ação</strong> (ou 10 min de observação), você identifica em máquinas ou artificiais:</p>
+            <ul class="lista-custom">
+                <li>Nível da criação e componentes usados.</li>
+                <li>Dano e <span style="color: var(--class-color); font-weight: bold;">Pontos Fracos Estruturais</span> (concede Vantagem no próximo ataque/teste contra o alvo).</li>
+            </ul>
+        </div>
+
+        <div class="info-box" style="border-left-color: var(--class-color); background: rgba(26, 188, 156, 0.05);">
+            <h4 style="color: var(--class-color);">Oficina Dimensional</h4>
+            <p>Você acessa uma dimensão de bolso de <span style="color: var(--class-color); font-weight: bold;">20 m²</span> para guardar ferramentas e projetos.</p>
+            <p class="nota-tabela">↳ Itens são invocados/recolhidos com uma <strong>Ação</strong>. Aumenta +20 m² a cada 4 níveis.</p>
+        </div>
+
+        <div class="info-box" style="border-left-color: var(--class-color); background: rgba(26, 188, 156, 0.05);">
+            <h4 style="color: var(--class-color);">Engenharia de Campo</h4>
+            <p>Durante um descanso, prepare <span style="color: var(--class-color); font-weight: bold;">2 dispositivos</span> para aliados (Ativação por Ação):</p>
+            <div style="column-count: 2; font-size: 0.85em; margin-top: 10px; color: #eee;">
+                • <strong>Estimulante:</strong> +1d4 dano (1 min).<br>
+                • <strong>Restaurador:</strong> Cura 1d8 + INT.<br>
+                • <strong>Blindagem:</strong> +2 CA (2 rodadas).<br>
+                • <strong>Propulsor:</strong> +6m e ignora AdO.<br>
+                • <strong>Detector:</strong> Vantagem Percepção/Inic.
+            </div>
+        </div>
     </section>
 </main>
 

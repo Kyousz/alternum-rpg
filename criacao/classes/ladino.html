@@ -22,14 +22,107 @@
 <div id="nav-placeholder"></div>
 
 <main>
-    <section class="pagina-em-construcao">
-        <h2>Ladino</h2>
-        <p>Este conteúdo ainda está sendo forjado em Alternum. Volte em breve!</p>
+    <section class="class-page-content" style="--class-color: #416485;">
+        <h2 class="class-title">LADINO</h2>
+        <p>Perito em furtividade e ataques precisos no ponto fraco, o ladino utiliza sua astúcia para resolver problemas que a força bruta não consegue.</p>
+
+        <hr class="section-divider">
+
+        <h3>ATRIBUTOS VITAIS</h3>
+        <div class="class-stats-wrapper">
+            <div class="stat-box-inner">
+                <strong>Dado de Vida</strong>
+                <span>D8</span>
+                <p class="sub-note">1º Nível: 8 + Modificador de Constituição</p>
+                <p class="sub-note">Posterior: 1d8 (ou 5) + Modificador de Constituição</p>
+            </div>
+
+            <div class="stat-box-inner">
+                <strong>Dado de Mana</strong>
+                <span>D12</span>
+                <p class="sub-note">1º Nível: 12 + Modificador de Inteligência</p>
+                <p class="sub-note">Posterior: 1d12 (ou 7) + Modificador de Inteligência</p>
+            </div>
+        </div>
+
+        <hr class="section-divider">
+
+        <h3>PROFICIÊNCIAS E EQUIPAMENTO</h3>
+        <div class="proficiencias-lista" style="border-left-color: var(--class-color);">
+            <div><strong>Armaduras:</strong> Leves.</div>
+            <div><strong>Armas:</strong> Simples e Marciais.</div>
+            <div><strong>Ferramentas:</strong> Ferramentas de Ladrão.</div>
+            <div><strong>Testes de Resistência:</strong> Destreza e Inteligência.</div>
+            <div><strong>Atributo de Conjuração:</strong> Inteligência.</div>
+            <div><strong>Equipamento Inicial:</strong> Ferramentas de Ladrão.</div>
+        </div>
+
+        <hr class="section-divider">
+
+        <h3>HABILIDADES DE CLASSE</h3>
+
+        <div class="info-box" style="border-left-color: var(--class-color); background: rgba(44, 62, 80, 0.05);">
+            <h4 style="color: var(--class-color);">Ataque Furtivo</h4>
+            <p>Você sabe onde golpear para causar o maior dano possível. Uma vez por turno, ao acertar uma criatura com uma arma de acuidade ou à distância:</p>
+            <ul class="lista-custom">
+                <li><strong>Dano Extra:</strong> Adiciona <span style="color: var(--class-color); font-weight: bold;">1d6</span> ao dano se tiver <strong>Vantagem</strong> na jogada de ataque.</li>
+                <li><strong>Sem Vantagem:</strong> Você não precisa de vantagem se outro inimigo do alvo estiver a até 1,5m dele (e não estiver incapacitado).</li>
+            </ul>
+            <p class="nota-tabela">↳ <strong>Evolução:</strong> O dano aumenta em +1d6 nos níveis 4, 8, 12, 16 e 20.</p>
+        </div>
+
+        <div class="info-box" style="border-left-color: var(--class-color); background: rgba(44, 62, 80, 0.05);">
+            <h4 style="color: var(--class-color);">Gíria de Ladrão</h4>
+            <p>Você domina um dialeto secreto de códigos e jargões.</p>
+            <ul class="lista-custom">
+                <li><strong>Comunicação Oculta:</strong> Permite passar mensagens secretas em conversas normais (leva 4x mais tempo). Apenas quem conhece a gíria entende.</li>
+                <li><strong>Sinais:</strong> Você identifica símbolos secretos que indicam perigo, território de guildas ou esconderijos seguros.</li>
+            </ul>
+        </div>
+
+        <div class="info-box" style="border-left-color: var(--class-color); background: rgba(44, 62, 80, 0.05);">
+            <h4 style="color: var(--class-color);">Abertura Decisiva</h4>
+            <p>Seu instinto explora falhas na defesa, acumulando <strong>Pontos de Manobra</strong> (Máximo 3).</p>
+            <ul class="lista-custom">
+                <li><strong>Gerar Pontos:</strong> Ganhe <strong>1 Ponto</strong> ao causar dano de <em>Ataque Furtivo</em> ou ao terminar seu turno <em>Escondido</em> em combate.</li>
+                <li><strong>Golpe Decisivo:</strong> Ao acumular <strong>3 Pontos</strong>, eles são consumidos automaticamente no seu próximo acerto com arma. Esse ataque se torna um <span style="color: var(--class-color); font-weight: bold;">Acerto Crítico</span> garantido.</li>
+            </ul>
+        </div>
+
+        <div class="info-box" style="border-left-color: var(--class-color); background: rgba(44, 62, 80, 0.05);">
+            <h4 style="color: var(--class-color);">Movimentação Sobrenatural</h4>
+            <p>Sua agilidade permite feitos defensivos e de mobilidade quase sobre-humanos.</p>
+
+            <div style="margin-top: 10px; padding: 10px; border-left: 3px solid var(--class-color); background: rgba(255, 255, 255, 0.05);">
+                <p style="margin: 0 0 8px 0;"><strong>• Ação Ardilosa (Bônus):</strong> Você pode usar uma Ação Bônus para <strong>Correr</strong>, <strong>Desengajar</strong> ou <strong>Esconder-se</strong>.</p>
+                <p style="margin: 0;"><strong>• Evasão (Reação):</strong> Quando sujeito a um efeito que exige teste de Destreza para metade do dano, você não sofre <strong>nenhum dano</strong> se passar, e apenas metade se falhar.</p>
+            </div>
+        </div>
+
+        <div class="info-box" style="border-left-color: var(--class-color); background: rgba(44, 62, 80, 0.05);">
+            <h4 style="color: var(--class-color);">Arsenal Improvisado</h4>
+            <p>Como uma <strong>Ação Bônus</strong>, use truques sujos em um ponto/criatura a até 9m (Usos: Bônus de Proficiência por Descanso):</p>
+            <div style="display: flex; flex-direction: column; gap: 8px; margin-top: 10px;">
+                <div style="border: 1px dashed rgba(44, 62, 80, 0.4); padding: 8px; border-radius: 4px;">
+                    <strong style="color: var(--class-color);">💨 Bomba de Fumaça</strong>
+                    <p style="font-size: 0.9em; margin: 5px 0;">Cria esfera de 3m de raio densamente obscurecida até o início do seu próximo turno.</p>
+                </div>
+                <div style="border: 1px dashed rgba(44, 62, 80, 0.4); padding: 8px; border-radius: 4px;">
+                    <strong style="color: var(--class-color);">👁️ Pó Cegante</strong>
+                    <p style="font-size: 0.9em; margin: 5px 0;">Arremessa pó no rosto de uma criatura. Teste de Constituição ou fica <strong>Cego</strong> até o final do próximo turno dela.</p>
+                </div>
+                <div style="border: 1px dashed rgba(44, 62, 80, 0.4); padding: 8px; border-radius: 4px;">
+                    <strong style="color: var(--class-color);">💧 Óleo Escorregadio</strong>
+                    <p style="font-size: 0.9em; margin: 5px 0;">Cobre área de 1,5m². Terreno difícil. Criaturas que entram ou iniciam turno devem passar em teste de Destreza ou ficam <strong>Caídos</strong>.</p>
+                </div>
+            </div>
+        </div>
+
     </section>
 </main>
 
 <footer>
-    <p>&copy; 2025 Kyous. Todos os direitos reservados.</p>
+    <p>&copy; 2026 Kyous. Todos os direitos reservados.</p>
 </footer>
 
 <script src="main.js"></script>

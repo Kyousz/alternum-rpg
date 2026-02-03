@@ -22,14 +22,127 @@
 <div id="nav-placeholder"></div>
 
 <main>
-    <section class="pagina-em-construcao">
-        <h2>Mago</h2>
-        <p>Este conteúdo ainda está sendo forjado em Alternum. Volte em breve!</p>
+    <section class="class-page-content" style="--class-color: #9b59b6;">
+        <h2 class="class-title">MAGO</h2>
+        <p>Especialista em diversas formas de magia e estudos arcanos, capaz de moldar a realidade através de fórmulas e grimórios antigos.</p>
+
+        <hr class="section-divider">
+
+        <h3>ATRIBUTOS VITAIS</h3>
+        <div class="class-stats-wrapper">
+            <div class="stat-box-inner">
+                <strong>Dado de Vida</strong>
+                <span>D6</span>
+                <p class="sub-note">1º Nível: 6 + Modificador de Constituição</p>
+                <p class="sub-note">Posterior: 1d6 (ou 4) + Modificador de Constituição</p>
+            </div>
+
+            <div class="stat-box-inner">
+                <strong>Dado de Mana</strong>
+                <span>D20</span>
+                <p class="sub-note">1º Nível: 20 + Modificador de Inteligência</p>
+                <p class="sub-note">Posterior: 1d20 (ou 11) + Modificador de Inteligência</p>
+            </div>
+        </div>
+
+        <hr class="section-divider">
+
+        <h3>PROFICIÊNCIAS E EQUIPAMENTO</h3>
+        <div class="proficiencias-lista" style="border-left-color: var(--class-color);">
+            <div><strong>Armaduras:</strong> Leves.</div>
+            <div><strong>Armas:</strong> Simples.</div>
+            <div><strong>Ferramentas:</strong> Nenhuma.</div>
+            <div><strong>Testes de Resistência:</strong> Inteligência e Sabedoria.</div>
+            <div><strong>Atributo de Conjuração:</strong> Inteligência.</div>
+            <div><strong>Equipamento Inicial:</strong> Foco Arcano e Grimório.</div>
+        </div>
+
+        <hr class="section-divider">
+
+        <h3>HABILIDADES DE CLASSE</h3>
+
+        <div class="info-box" style="border-left-color: var(--class-color); background: rgba(155, 89, 182, 0.05);">
+            <h4 style="color: var(--class-color);">Especialização em Magia</h4>
+            <p>Seu estudo foca em uma afinidade específica.</p>
+            <ul class="lista-custom">
+                <li><strong>Forma Principal:</strong> Escolha uma forma de magia. Você tem acesso a 8 magias específicas dessa forma.</li>
+                <li><strong>Estudos Gerais:</strong> Selecione mais 4 magias distribuídas entre as demais formas (exceto a principal).</li>
+            </ul>
+        </div>
+
+        <div class="info-box" style="border-left-color: var(--class-color); background: rgba(155, 89, 182, 0.05);">
+            <h4 style="color: var(--class-color);">Eco Arcano</h4>
+            <p>Sempre que conjura uma magia, você gera <strong>1 Eco</strong> (fragmento de mana residual). Eles duram 1 minuto.</p>
+            <p><strong>Limite:</strong> Máximo de 2 Ecos (+1 a cada nível par de Mago).</p>
+
+            <div style="margin-top: 10px; padding: 10px; border-left: 3px solid var(--class-color); background: rgba(255, 255, 255, 0.05);">
+                <p style="margin: 0 0 5px 0;"><strong>⚡ Usar Ecos (Reação):</strong></p>
+                <ul style="margin: 0; padding-left: 20px; font-size: 0.9em; color: #eee;">
+                    <li><strong>(1+ Eco):</strong> +1d6 de dano na magia conjurada (por eco).</li>
+                    <li><strong>(1+ Eco):</strong> Reduzir dano recebido em 1d6 (por eco).</li>
+                    <li><strong>(2 Ecos):</strong> Conjurar magia da forma principal <em>sem círculo</em>.</li>
+                </ul>
+            </div>
+
+            <p class="nota-tabela" style="color: #ff5252; margin-top: 10px;">
+                ⚠️ <strong>Erupção Mágica:</strong> Se atingir o máximo de Ecos e não gastar até o início do próximo turno, eles explodem. Inimigos a 3m sofrem <strong>2d10</strong> de dano e você sofre <strong>1d6</strong> de dano bruto.
+            </p>
+        </div>
+
+        <div class="info-box" style="border-left-color: var(--class-color); background: rgba(155, 89, 182, 0.05);">
+            <h4 style="color: var(--class-color);">Recuperação Arcana</h4>
+            <p>Uma vez por Descanso, com uma <strong>Ação Bônus</strong>, reconecte-se com sua essência para gerar um efeito:</p>
+            <ul class="lista-custom">
+                <li><strong>Mana:</strong> Recupere 50% da mana gasta desde o último descanso.</li>
+                <li><strong>Poder:</strong> Crie <strong>2 Ecos</strong> da forma principal imediatamente. Estes ecos podem ultrapassar seu limite máximo temporariamente e <span style="color: var(--class-color);">não causam erupção automática</span>.</li>
+            </ul>
+        </div>
+
+        <div class="info-box" style="border-left-color: var(--class-color); background: rgba(155, 89, 182, 0.05);">
+            <h4 style="color: var(--class-color);">Sobrecarga Arcana</h4>
+            <p>Uma vez por Descanso, você libera toda a energia em uma única conjuração devastadora da sua forma principal.</p>
+            <ul class="lista-custom">
+                <li><strong>Efeito:</strong> A magia causa <span style="color: var(--class-color); font-weight: bold;">dano máximo</span>, ignora Resistência, transforma Imunidade em Resistência e tem <strong>Vantagem</strong> no acerto (ou impõe <strong>Desvantagem</strong> aos alvos contra a CD).</li>
+            </ul>
+            <p class="nota-tabela" style="color: #ff5252;">
+                ⚠️ <strong>Fragilizado:</strong> Após o uso, você não pode conjurar magias da forma principal e sofre <strong>1d6 de dano psíquico</strong> ao conjurar qualquer outra magia até o fim do Descanso.
+            </p>
+        </div>
+
+        <div class="info-box" style="border-left-color: var(--class-color); background: rgba(155, 89, 182, 0.05);">
+            <h4 style="color: var(--class-color);">Domínio</h4>
+            <p>Você é capaz de invocar seu plano pessoal como uma <strong>Ação Bônus</strong>, criando uma zona mágica onde a realidade curva-se à sua vontade por até 1 minuto. (1/Descanso).</p>
+            <p style="font-size: 0.9em; margin-bottom: 10px;">Sua manifestação divide-se em dois estágios, evoluindo conforme seu domínio sobre a forma mágica cresce:</p>
+
+            <div style="margin-bottom: 15px; border-left: 2px solid var(--class-color); padding-left: 10px;">
+                <strong style="color: var(--class-color);">Estado Ativo (Raio 9m)</strong>
+                <p style="font-size: 0.9em; margin: 5px 0;">Você projeta parte do seu Domínio no mundo físico.</p>
+                <ul class="lista-custom" style="font-size: 0.9em; margin-top: 5px;">
+                    <li>Conjure magias a partir de qualquer ponto da área.</li>
+                    <li>Inimigos têm <strong>deslocamento reduzido à metade</strong>.</li>
+                    <li>Aliados ganham <strong>+3m de deslocamento</strong>.</li>
+                </ul>
+            </div>
+
+            <div style="border-left: 2px solid var(--class-color); padding-left: 10px;">
+                <strong style="color: var(--class-color);">Despertar Total (Requer 16 Magias Conhecidas)</strong>
+                <p style="font-size: 0.9em; margin: 5px 0;">Como uma <strong>Ação Bônus</strong>, todas as criaturas em um raio de 18m são transportadas para sua Dimensão de Domínio.</p>
+                <p style="font-size: 0.9em; margin: 5px 0;">Além dos efeitos do Estado Ativo, você recebe:</p>
+                <ul class="lista-custom" style="font-size: 0.9em; margin-top: 5px;">
+                    <li><span style="color: var(--class-color); font-weight: bold;">+10 de dano</span> em magias da forma do Domínio.</li>
+                    <li><span style="color: var(--class-color); font-weight: bold;">+5 no acerto</span> de ataques mágicos.</li>
+                    <li><span style="color: var(--class-color); font-weight: bold;">+5 na CD</span> das suas magias.</li>
+                </ul>
+            </div>
+
+            <p class="nota-tabela" style="margin-top: 10px;">↳ Cada Domínio possui estética e atmosfera únicas, refletindo a essência da forma mágica escolhida.</p>
+        </div>
+
     </section>
 </main>
 
 <footer>
-    <p>&copy; 2025 Kyous. Todos os direitos reservados.</p>
+    <p>&copy; 2026 Kyous. Todos os direitos reservados.</p>
 </footer>
 
 <script src="main.js"></script>

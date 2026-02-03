@@ -22,14 +22,108 @@
 <div id="nav-placeholder"></div>
 
 <main>
-    <section class="pagina-em-construcao">
-        <h2>Bardo</h2>
-        <p>Este conteúdo ainda está sendo forjado em Alternum. Volte em breve!</p>
+    <section class="class-page-content" style="--class-color: #ff00ea;">
+        <h2 class="class-title">BARDO</h2>
+        <p>Versátil artista e contador de histórias que utiliza magias e canções para inspirar aliados e confundir inimigos.</p>
+
+        <hr class="section-divider">
+
+        <h3>ATRIBUTOS VITAIS</h3>
+        <div class="class-stats-wrapper">
+            <div class="stat-box-inner">
+                <strong>Dado de Vida</strong>
+                <span>D8</span>
+                <p class="sub-note">1º Nível: 8 + CON</p>
+                <p class="sub-note">Posterior: 1d8 (ou 5) + CON</p>
+            </div>
+
+            <div class="stat-box-inner">
+                <strong>Dado de Mana</strong>
+                <span>D12</span>
+                <p class="sub-note">1º Nível: 12 + CAR</p>
+                <p class="sub-note">Posterior: 1d12 (ou 7) + CAR</p>
+            </div>
+        </div>
+
+        <hr class="section-divider">
+
+        <h3>PROFICIÊNCIAS E EQUIPAMENTO</h3>
+        <div class="proficiencias-lista" style="border-left-color: var(--class-color);">
+            <div><strong>Armaduras:</strong> Leves.</div>
+            <div><strong>Armas:</strong> Simples e Marciais.</div>
+            <div><strong>Ferramentas:</strong> Escolha três instrumentos musicais.</div>
+            <div><strong>Testes de Resistência:</strong> Destreza e Carisma.</div>
+            <div><strong>Atributo de Conjuração:</strong> Carisma.</div>
+            <div><strong>Equipamento Inicial:</strong> Um instrumento musical.</div>
+        </div>
+
+        <hr class="section-divider">
+
+        <h3>HABILIDADES DE CLASSE</h3>
+
+        <div class="info-box" style="border-left-color: var(--class-color); background: rgba(255, 0, 234, 0.05);">
+            <h4 style="color: var(--class-color);">Performance de Batalha</h4>
+            <p>Você transforma sua arte em arma e inspiração, tecendo melodias que alteram a realidade do campo de batalha. Sua performance é composta por duas partes:</p>
+
+            <ul class="lista-custom">
+                <li><strong>Melodia de Batalha:</strong> Com uma <strong>Ação Bônus</strong>, você cria uma aura de 9 metros ao seu redor com um efeito passivo contínuo. Requer concentração e apenas uma melodia pode estar ativa por vez.</li>
+                <li><strong>Crescendo:</strong> Enquanto uma melodia estiver ativa, use sua <strong>Reação</strong> para criar um pulso de poder em um único alvo. Pode ser usado um número de vezes igual ao seu bônus de Proficiência por Descanso.</li>
+            </ul>
+
+            <h5 style="color: var(--class-color); margin-top: 15px;">Melodias Conhecidas:</h5>
+
+            <div style="border: 1px dashed rgba(255, 0, 234, 0.4); padding: 10px; margin-bottom: 10px; border-radius: 4px;">
+                <strong style="color: var(--class-color);">♪ Melodia do Heroísmo</strong>
+                <p style="font-size: 0.9em; margin: 5px 0;"><strong>Passivo:</strong> Aliados na aura causam +1 de dano em ataques.</p>
+                <p style="font-size: 0.9em; margin: 5px 0;"><strong>Crescendo:</strong> Um aliado prestes a atacar ou fazer um teste adiciona <strong>1d6</strong> ao resultado. O dado aumenta para d8/d10/d12 nos níveis 6/12/18.</p>
+            </div>
+
+            <div style="border: 1px dashed rgba(255, 0, 234, 0.4); padding: 10px; margin-bottom: 10px; border-radius: 4px;">
+                <strong style="color: var(--class-color);">♪ Melodia da Dissonância</strong>
+                <p style="font-size: 0.9em; margin: 5px 0;"><strong>Passivo:</strong> Inimigos na aura têm penalidade de -1 nas rolagens de dano (mínimo 1).</p>
+                <p style="font-size: 0.9em; margin: 5px 0;"><strong>Crescendo:</strong> Um inimigo prestes a atacar ou fazer um teste subtrai <strong>1d6</strong> do resultado. O dado aumenta para d8/d10/d12 nos níveis 6/12/18.</p>
+            </div>
+
+            <div style="border: 1px dashed rgba(255, 0, 234, 0.4); padding: 10px; border-radius: 4px;">
+                <strong style="color: var(--class-color);">♪ Melodia do Alento</strong>
+                <p style="font-size: 0.9em; margin: 5px 0;"><strong>Passivo:</strong> Aliados na aura que terminam o turno recuperam 1 PV.</p>
+                <p style="font-size: 0.9em; margin: 5px 0;"><strong>Crescendo:</strong> Um aliado ferido recupera imediatamente <strong>1d6 + Carisma</strong> PV. O dado aumenta para d8/d10/d12 nos níveis 6/12/18.</p>
+            </div>
+        </div>
+
+        <div class="info-box" style="border-left-color: var(--class-color); background: rgba(255, 0, 234, 0.05);">
+            <h4 style="color: var(--class-color);">Repertório</h4>
+            <p>Sua arte é vasta e sua memória, uma biblioteca de canções e contos. Você começa conhecendo duas <strong>composições</strong> de sua escolha, que podem ser <span style="color: var(--class-color); font-weight: bold;">Magias</span> ou novas <span style="color: var(--class-color); font-weight: bold;">Melodias de Batalha</span>.</p>
+            <ul class="lista-custom">
+                <li><strong>Evolução:</strong> A cada nível que você ganha nesta classe, você aprende uma nova composição.</li>
+                <li><strong>Melodias:</strong> Podem ser usadas com sua habilidade Performance de Batalha.</li>
+                <li><strong>Formas:</strong> Aqua, Arcane, Auran, Fulgur, Glacies, Herbam, Ignis, Imaginem, Lux, Metallum, Mortem, Psychica, Sana, Terram, Umbra.</li>
+            </ul>
+        </div>
+
+        <div class="info-box" style="border-left-color: var(--class-color); background: rgba(255, 0, 234, 0.05);">
+            <h4 style="color: var(--class-color);">Paródia</h4>
+            <p>Uma vez por cena, ao ver alguém lançando uma magia em alcance médio, você pode tentar replicá-la.</p>
+            <p class="nota-tabela">↳ <strong>Teste:</strong> Atuação (CD 15 + Custo de Pontos de Mana da magia). Se passar, poderá conjurar a magia uma única vez até o final da cena.</p>
+        </div>
+
+        <div class="info-box" style="border-left-color: var(--class-color); background: rgba(255, 0, 234, 0.05);">
+            <h4 style="color: var(--class-color);">Harmonia Social</h4>
+            <p>Sua música influencia corações e mentes fora do combate.</p>
+            <p>Uma vez por Descanso, após uma performance de 1 minuto, você e até cinco aliados ganham <span style="color: var(--class-color); font-weight: bold;">Vantagem</span> em todos os testes de Carisma (Persuasão, Enganação, Intimidação e Atuação) pela próxima hora.</p>
+        </div>
+
+        <div class="info-box" style="border-left-color: var(--class-color); background: rgba(255, 0, 234, 0.05);">
+            <h4 style="color: var(--class-color);">Versatilidade do Artista</h4>
+            <p>Conhecimentos superficiais adquiridos em viagens permitem que você se destaque em diversas áreas.</p>
+            <p class="nota-tabela">↳ <strong>Efeito:</strong> Adicione <span style="color: var(--class-color); font-weight: bold;">metade do seu bônus de Proficiência</span> (arredondado para cima) a qualquer Teste de Perícia em que você <strong>não</strong> seja proficiente.</p>
+        </div>
+
     </section>
 </main>
 
 <footer>
-    <p>&copy; 2025 Kyous. Todos os direitos reservados.</p>
+    <p>&copy; 2026 Kyous. Todos os direitos reservados.</p>
 </footer>
 
 <script src="main.js"></script>

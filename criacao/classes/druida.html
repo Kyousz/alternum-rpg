@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alternum - Druída</title>
+    <title>Alternum - Druida</title>
 
     <base href="../../">
 
@@ -22,14 +22,99 @@
 <div id="nav-placeholder"></div>
 
 <main>
-    <section class="pagina-em-construcao">
-        <h2>Druída</h2>
-        <p>Este conteúdo ainda está sendo forjado em Alternum. Volte em breve!</p>
+    <section class="class-page-content" style="--class-color: #2ecc71;">
+        <h2 class="class-title">DRUIDA</h2>
+        <p>Guardião da natureza capaz de canalizar energias elementais, realizar transformações e utilizar a própria essência do mundo natural como arma.</p>
+
+        <hr class="section-divider">
+
+        <h3>ATRIBUTOS VITAIS</h3>
+        <div class="class-stats-wrapper">
+            <div class="stat-box-inner">
+                <strong>Dado de Vida</strong>
+                <span>D8</span>
+                <p class="sub-note">1º Nível: 8 + Modificador de Constituição</p>
+                <p class="sub-note">Posterior: 1d8 (ou 5) + Modificador de Constituição</p>
+            </div>
+
+            <div class="stat-box-inner">
+                <strong>Dado de Mana</strong>
+                <span>D12</span>
+                <p class="sub-note">1º Nível: 12 + Modificador de Sabedoria</p>
+                <p class="sub-note">Posterior: 1d12 (ou 7) + Modificador de Sabedoria</p>
+            </div>
+        </div>
+
+        <hr class="section-divider">
+
+        <h3>PROFICIÊNCIAS E EQUIPAMENTO</h3>
+        <div class="proficiencias-lista" style="border-left-color: var(--class-color);">
+            <div><strong>Armaduras:</strong> Leves, Médias e Escudos (não usam armadura ou escudo de metal).</div>
+            <div><strong>Armas:</strong> Simples.</div>
+            <div><strong>Ferramentas:</strong> Kit de Herbalismo.</div>
+            <div><strong>Testes de Resistência:</strong> Inteligência e Sabedoria.</div>
+            <div><strong>Atributo de Conjuração:</strong> Sabedoria.</div>
+            <div><strong>Equipamento Inicial:</strong> Foco Druídico.</div>
+        </div>
+
+        <hr class="section-divider">
+
+        <h3>HABILIDADES DE CLASSE</h3>
+
+        <div class="info-box" style="border-left-color: var(--class-color); background: rgba(56, 142, 60, 0.05);">
+            <h4 style="color: var(--class-color);">Druídico</h4>
+            <p>Você conhece o idioma secreto dos druidas. Você pode falar e deixar mensagens ocultas que apenas outros druidas compreendem.</p>
+            <ul class="lista-custom">
+                <li><strong>Comunicação:</strong> Permite comunicação simples com bestas e plantas.</li>
+                <li><strong>Detecção:</strong> Não-druidas podem notar a mensagem com um teste de Percepção (CD 15), mas não conseguem decifrá-la sem magia.</li>
+            </ul>
+        </div>
+
+        <div class="info-box" style="border-left-color: var(--class-color); background: rgba(56, 142, 60, 0.05);">
+            <h4 style="color: var(--class-color);">Semente da Vida</h4>
+            <p>Com uma <strong>Ação</strong>, toque o corpo de uma besta ou humanoide morto há menos de 1 minuto. O corpo se decompõe e dele brota instantaneamente uma <span style="color: var(--class-color); font-weight: bold;">planta benéfica</span> à sua escolha:</p>
+            <div style="margin-top: 10px; font-size: 0.9em;">
+                <p><strong>• Frutos Curativos:</strong> Gera 1d4 frutos. Consumir um (Ação) restaura PV igual a dois Dados de Vida da criatura que consumiu.</p>
+                <p><strong>• Pólen Calmante:</strong> Libera uma nuvem (raio 3m) que remove uma condição negativa de todos os aliados na área.</p>
+                <p><strong>• Vinhas Resistentes:</strong> Gera 15 metros de vinhas duráveis que funcionam como corda de seda.</p>
+            </div>
+        </div>
+
+        <div class="info-box" style="border-left-color: var(--class-color); background: rgba(56, 142, 60, 0.05);">
+            <h4 style="color: var(--class-color);">Harmonia Natural</h4>
+            <p>Com uma <strong>Ação</strong>, peça um favor à natureza em um ponto a até 18 metros. (Usos: Bônus de Proficiência por Descanso).</p>
+            <ul class="lista-custom">
+                <li><strong>Vinhas Prendedoras:</strong> Área de 6m de raio se torna terreno difícil por 1 minuto. Criaturas devem passar em teste de Força ou têm deslocamento reduzido a 0.</li>
+                <li><strong>Névoa Ocultadora:</strong> Esfera de 6m de raio de névoa densa (área densamente obscurecida) por 1 minuto.</li>
+                <li><strong>Ponte de Galhos:</strong> Cria uma ponte entrelaçada de até 12 metros de comprimento que dura 10 minutos.</li>
+            </ul>
+        </div>
+
+        <div class="info-box" style="border-left-color: var(--class-color); background: rgba(56, 142, 60, 0.05);">
+            <h4 style="color: var(--class-color);">Forma Selvagem</h4>
+            <p>Com uma <strong>Ação Bônus</strong>, assuma a forma de uma besta que já viu.</p>
+            <ul class="lista-custom">
+                <li><strong>Vínculos Espirituais:</strong> Você prepara um número de formas igual a <span style="color: var(--class-color); font-weight: bold;">1 + Mod. Sabedoria</span> por dia.</li>
+                <li><strong>Regras:</strong> Mantém atributos mentais e perícias. Se chegar a 0 PV na forma, reverte ao normal e o vínculo com aquela criatura quebra até o próximo descanso.</li>
+                <li><strong>Evolução:</strong> Ataques tornam-se mágicos no 8º nível. Vínculos tornam-se ilimitados no 16º nível.</li>
+            </ul>
+        </div>
+
+        <div class="info-box" style="border-left-color: var(--class-color); background: rgba(56, 142, 60, 0.05);">
+            <h4 style="color: var(--class-color);">Forma Arbórea</h4>
+            <p>Com uma <strong>Ação Bônus</strong>, gaste um <em>Vínculo Espiritual</em> para se tornar um avatar da flora (como um ente).</p>
+            <ul class="lista-custom">
+                <li><strong>Defesa:</strong> Ganha PV Temporários iguais ao <span style="color: var(--class-color); font-weight: bold;">dobro do nível de Druida + Mod. Sabedoria</span>.</li>
+                <li><strong>Poder:</strong> Tamanho aumenta, alcance sobe para 3m e ataques desarmados tornam-se mágicos.</li>
+                <li><strong>Raízes (Ação Bônus):</strong> Irrompe raízes em raio de 4,5m (terreno difícil para inimigos).</li>
+            </ul>
+        </div>
+
     </section>
 </main>
 
 <footer>
-    <p>&copy; 2025 Kyous. Todos os direitos reservados.</p>
+    <p>&copy; 2026 Kyous. Todos os direitos reservados.</p>
 </footer>
 
 <script src="main.js"></script>

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alternum - Artífice</title>
+    <title>Alternum - Cavaleiro</title>
 
     <base href="../../">
 
@@ -22,14 +22,93 @@
 <div id="nav-placeholder"></div>
 
 <main>
-    <section class="pagina-em-construcao">
-        <h2>Artífice</h2>
-        <p>Este conteúdo ainda está sendo forjado em Alternum. Volte em breve!</p>
+    <section class="class-page-content" style="--class-color: #c0c0c0;">
+        <h2 class="class-title">CAVALEIRO</h2>
+        <p>Guerreiro com espírito de liderança, especializado em combate pesado e na defesa de seus aliados.</p>
+
+        <hr class="section-divider">
+
+        <h3>ATRIBUTOS VITAIS</h3>
+        <div class="class-stats-wrapper">
+            <div class="stat-box-inner">
+                <strong>Dado de Vida</strong>
+                <span>D12</span>
+                <p class="sub-note">1º Nível: 12 + Modificador de Constituição</p>
+                <p class="sub-note">Posterior: 1d12 (ou 7) + Modificador de Constituição</p>
+            </div>
+
+            <div class="stat-box-inner">
+                <strong>Dado de Mana</strong>
+                <span>D8</span>
+                <p class="sub-note">1º Nível: 8 + Modificador de Carisma</p>
+                <p class="sub-note">Posterior: 1d8 (ou 5) + Modificador de Carisma</p>
+            </div>
+        </div>
+
+        <hr class="section-divider">
+
+        <h3>PROFICIÊNCIAS E EQUIPAMENTO</h3>
+        <div class="proficiencias-lista" style="border-left-color: var(--class-color);">
+            <div><strong>Armaduras:</strong> Leves, Médias, Pesadas e Escudos.</div>
+            <div><strong>Armas:</strong> Simples e Marciais.</div>
+            <div><strong>Ferramentas:</strong> Nenhuma.</div>
+            <div><strong>Testes de Resistência:</strong> Força e Constituição.</div>
+            <div><strong>Atributo de Conjuração:</strong> Carisma.</div>
+            <div><strong>Equipamento Inicial:</strong> -</div>
+        </div>
+
+        <hr class="section-divider">
+
+        <h3>HABILIDADES DE CLASSE</h3>
+
+        <div class="info-box" style="border-left-color: var(--class-color); background: rgba(192, 192, 192, 0.05);">
+            <h4 style="color: var(--class-color);">Escudo Vivo</h4>
+            <p>Com uma <strong>Reação</strong>, você invoca um escudo de até 6 metros de altura/largura em um ponto visível a até 18 metros.</p>
+            <ul class="lista-custom">
+                <li><strong>Pontos de Vida:</strong> O escudo possui <span style="color: var(--class-color); font-weight: bold;">1d8 + Modificador de Carisma</span>.</li>
+                <li><strong>Evolução:</strong> Aumenta em +1d8 nos níveis 5, 10, 15 e 20.</li>
+                <li><strong>Uso:</strong> Número de vezes igual ao bônus de Proficiência por Descanso.</li>
+            </ul>
+        </div>
+
+        <div class="info-box" style="border-left-color: var(--class-color); background: rgba(192, 192, 192, 0.05);">
+            <h4 style="color: var(--class-color);">Presença Tática</h4>
+            <p>Usando uma <strong>Ação Bônus</strong>, emita uma ordem para um aliado a até 18 metros que possa vê-lo ou ouvi-lo. O aliado usa a <strong>Reação</strong> dele para executar uma das seguintes ordens:</p>
+            <div style="column-count: 2; font-size: 0.9em; margin-top: 10px; color: #eee;">
+                • <strong>Atacar!:</strong> Realiza um ataque com arma imediatamente.<br>
+                • <strong>Reposicionar!:</strong> Move-se até metade do deslocamento sem provocar ataques de oportunidade.<br>
+                • <strong>Proteger-se!:</strong> Ganha +2 na CA até o início do próximo turno.
+            </div>
+            <p class="nota-tabela">↳ <strong>Uso:</strong> Igual ao seu bônus de Proficiência por Descanso.</p>
+        </div>
+
+        <div class="info-box" style="border-left-color: var(--class-color); background: rgba(192, 192, 192, 0.05);">
+            <h4 style="color: var(--class-color);">Baluarte do Cavaleiro</h4>
+            <p>Com uma <strong>Ação Bônus</strong>, conjura um estandarte em um espaço a até 9 metros, irradiando uma aura por 1 minuto. Escolha uma aura ao conjurar (pode trocar com Ação Bônus nos turnos seguintes):</p>
+            <ul class="lista-custom">
+                <li><strong>Aura de Vigor:</strong> Aliados ganham 10 PV Temporários ao entrar na aura; o valor é restaurado para 10 no início de cada segundo turno seu.</li>
+                <li><strong>Aura de Retaliação:</strong> Escolha um dano elemental. Inimigos que atingirem aliados na aura sofrem 1d6 desse dano (Reação do aliado). Aumenta para 2d6 no nível 10.</li>
+                <li><strong>Aura de Determinação:</strong> Aliados ganham bônus em Resistência contra medo e encantamento igual à sua Proficiência.</li>
+            </ul>
+            <p class="nota-tabela">↳ <strong>Uso:</strong> Igual ao seu bônus de Proficiência por Descanso.</p>
+        </div>
+
+        <div class="info-box" style="border-left-color: var(--class-color); background: rgba(192, 192, 192, 0.05);">
+            <h4 style="color: var(--class-color);">Guarda Resoluta</h4>
+            <p>Quando uma criatura visível ataca um aliado adjacente a você, você pode usar sua <strong>Reação</strong> para se tornar o alvo do ataque em seu lugar. Você recebe <span style="color: var(--class-color); font-weight: bold;">resistência ao dano</span> desse ataque específico.</p>
+        </div>
+
+        <div class="info-box" style="border-left-color: var(--class-color); background: rgba(192, 192, 192, 0.05);">
+            <h4 style="color: var(--class-color);">Postura Inabalável</h4>
+            <p>Com uma <strong>Ação Bônus</strong>, você finca os pés no chão. Enquanto nesta postura, se um inimigo a até 1,5m atacar um aliado (que não seja você), use sua <strong>Reação</strong> para um ataque de oportunidade contra ele.</p>
+            <p class="nota-tabela">↳ A postura termina se você se mover, for movido à força, derrubado ou decidir encerrá-la.</p>
+        </div>
+
     </section>
 </main>
 
 <footer>
-    <p>&copy; 2025 Kyous. Todos os direitos reservados.</p>
+    <p>&copy; 2026 Kyous. Todos os direitos reservados.</p>
 </footer>
 
 <script src="main.js"></script>

@@ -22,14 +22,123 @@
 <div id="nav-placeholder"></div>
 
 <main>
-    <section class="pagina-em-construcao">
-        <h2>Clérigo</h2>
-        <p>Este conteúdo ainda está sendo forjado em Alternum. Volte em breve!</p>
+    <section class="class-page-content" style="--class-color: #fff176;">
+        <h2 class="class-title">CLÉRIGO</h2>
+        <p>Devoto de uma ou mais divindades, servindo como um canal para o poder divino para curar ferimentos ou punir os infiéis.</p>
+
+        <hr class="section-divider">
+
+        <h3>ATRIBUTOS VITAIS</h3>
+        <div class="class-stats-wrapper">
+            <div class="stat-box-inner">
+                <strong>Dado de Vida</strong>
+                <span>D8</span>
+                <p class="sub-note">1º Nível: 8 + Modificador de Constituição</p>
+                <p class="sub-note">Posterior: 1d8 (ou 5) + Modificador de Constituição</p>
+            </div>
+
+            <div class="stat-box-inner">
+                <strong>Dado de Mana</strong>
+                <span>D12</span>
+                <p class="sub-note">1º Nível: 12 + Modificador de Sabedoria</p>
+                <p class="sub-note">Posterior: 1d12 (ou 7) + Modificador de Sabedoria</p>
+            </div>
+        </div>
+
+        <div class="info-box" style="border-left-color: var(--class-color);">
+            <h4 style="margin-top: 0; color: var(--class-color);">Pontos de Fé</h4>
+            <p>Sua conexão divina concede uma reserva de energia sagrada.</p>
+            <ul class="lista-custom">
+                <li><strong>Valor Máximo:</strong> Igual ao quádruplo do seu nível de Clérigo.</li>
+            </ul>
+        </div>
+
+        <hr class="section-divider">
+
+        <h3>PROFICIÊNCIAS E EQUIPAMENTO</h3>
+        <div class="proficiencias-lista" style="border-left-color: var(--class-color);">
+            <div><strong>Armaduras:</strong> Leves, Médias e Escudos.</div>
+            <div><strong>Armas:</strong> Simples.</div>
+            <div><strong>Ferramentas:</strong> Nenhuma.</div>
+            <div><strong>Testes de Resistência:</strong> Sabedoria e Carisma.</div>
+            <div><strong>Atributo de Conjuração:</strong> Sabedoria.</div>
+            <div><strong>Equipamento Inicial:</strong> Símbolo Divino.</div>
+        </div>
+
+        <hr class="section-divider">
+
+        <hr class="section-divider">
+
+        <h3>HABILIDADES DE CLASSE</h3>
+
+        <div class="info-box" style="border-left-color: var(--class-color); background: rgba(241, 196, 15, 0.05);">
+            <h4 style="color: var(--class-color);">Voto Divino</h4>
+            <p>Sua fé define seu poder. No 1º nível, sua escolha de divindade concede afinidades com Formas de Magia.</p>
+            <ul class="lista-custom">
+                <li><strong>Único Deus:</strong> Ganha afinidade automática com as duas Formas de Magia dele.</li>
+                <li><strong>Panteão:</strong> Ganha acesso ao conjunto de todos os deuses, devendo escolher duas Formas de Magia desse conjunto.</li>
+                <li><strong>Conhecimento:</strong> Começa com duas magias e aprende uma nova a cada dois níveis.</li>
+            </ul>
+            <p class="nota-tabela" style="margin-top: 15px; border-top: 1px dashed rgba(241, 196, 15, 0.3); padding-top: 10px;">
+                ↳ <strong style="color: var(--class-color);">Canalizar Fé:</strong> Você é um canal divino. Sempre que usar uma magia divina para <strong>curar um aliado</strong> ou <strong>causar dano a um inimigo</strong>, você gera <span style="color: var(--class-color); font-weight: bold;">1 Ponto de Fé</span>.
+            </p>
+        </div>
+
+        <div class="info-box" style="border-left-color: var(--class-color); background: rgba(241, 196, 15, 0.05);">
+            <h4 style="color: var(--class-color);">Canalizar Milagre</h4>
+            <p>Com uma <strong>Ação</strong>, você pode gastar seus Pontos de Fé para manifestar um milagre de poder bruto. Escolha um dos efeitos:</p>
+
+            <div style="display: flex; flex-direction: column; gap: 10px; margin-top: 10px;">
+                <div style="border: 1px dashed rgba(241, 196, 15, 0.4); padding: 8px; border-radius: 4px;">
+                    <strong style="color: var(--class-color);">Rajada Divina (Custo: 2 Fé):</strong> Cone de 9m. Criaturas fazem teste de Destreza ou sofrem <strong>3d8</strong> de dano.
+                </div>
+                <div style="border: 1px dashed rgba(241, 196, 15, 0.4); padding: 8px; border-radius: 4px;">
+                    <strong style="color: var(--class-color);">Arma Abençoada (Custo: 1 Fé):</strong> Toque uma arma. Por 1 minuto, ela causa <strong>+1d8</strong> de dano adicional.
+                </div>
+                <div style="border: 1px dashed rgba(241, 196, 15, 0.4); padding: 8px; border-radius: 4px;">
+                    <strong style="color: var(--class-color);">Solo Sagrado (Custo: 2 Fé):</strong> Aura de 9m ao seu redor por 1 minuto. Aliados na área ganham <strong>+2 na CA</strong> e Vantagem em resistência contra magias.
+                </div>
+                <div style="border: 1px dashed rgba(241, 196, 15, 0.4); padding: 8px; border-radius: 4px;">
+                    <strong style="color: var(--class-color);">Cura Amplificada (Custo: 1+ Fé):</strong> Cura <strong>2d8</strong> PV ao toque. Para cada ponto extra gasto, cura +1d8 ou escolhe um novo alvo.
+                </div>
+            </div>
+        </div>
+
+        <div class="info-box" style="border-left-color: var(--class-color); background: rgba(241, 196, 15, 0.05);">
+            <h4 style="color: var(--class-color);">Audiência Divina</h4>
+            <p>Uma vez por dia, faça uma oferenda e ore. Você sempre recebe <span style="color: var(--class-color); font-weight: bold;">1 Ponto de Fé</span> ao realizar esta audiência.</p>
+        </div>
+
+        <div class="info-box" style="border-left-color: var(--class-color); background: rgba(241, 196, 15, 0.05);">
+            <h4 style="color: var(--class-color);">Égide Divina</h4>
+            <p>A fé é sua armadura. Quando você ou um aliado a até 9m sofrer dano, use sua <strong>Reação</strong> e gaste <strong>1 Ponto de Fé</strong> para reduzir o dano em:</p>
+            <div style="text-align: center; padding: 10px; font-weight: bold; font-size: 1.1em; color: var(--class-color);">
+                1d10 + Modificador de Sabedoria
+            </div>
+        </div>
+
+        <div class="info-box" style="border-left-color: var(--class-color); background: rgba(241, 196, 15, 0.05);">
+            <h4 style="color: var(--class-color);">Intervenção Divina</h4>
+            <p>Com uma <strong>Ação Completa</strong>, consuma <strong>todos</strong> os Pontos de Fé para fazer um pedido desesperado (Recarga: 3 dias). Role <strong>1d100</strong>:</p>
+
+            <ul class="lista-custom" style="font-size: 0.9em;">
+                <li><strong>Sucesso (Rolagem ≤ Nível):</strong> Pedido atendido plenamente, talvez com bônus extra.</li>
+                <li><strong>Ajuda Parcial (Entre Nível e 75):</strong> O deus ouve, mas o efeito é pela metade ou traz uma consequência negativa/custo.</li>
+                <li><strong>Reação Divina (> 75):</strong> O pedido não é atendido como esperado; o deus envia uma ajuda diferente e inesperada.</li>
+            </ul>
+
+            <div style="margin-top: 15px; padding: 10px; background: rgba(0, 0, 0, 0.2); border-radius: 4px; font-size: 0.9em;">
+                <p style="margin: 0; margin-bottom: 5px;"><strong>🎲 Casos Extremos:</strong></p>
+                <p style="margin: 0;"><strong>• 1 (Crítico):</strong> Milagre espetacular e avassalador.</p>
+                <p style="margin: 0;"><strong>• 100 (Fracasso):</strong> Silêncio total. A habilidade fica bloqueada por tempo indeterminado até ser restaurada.</p>
+            </div>
+        </div>
+
     </section>
 </main>
 
 <footer>
-    <p>&copy; 2025 Kyous. Todos os direitos reservados.</p>
+    <p>&copy; 2026 Kyous. Todos os direitos reservados.</p>
 </footer>
 
 <script src="main.js"></script>

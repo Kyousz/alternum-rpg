@@ -22,14 +22,109 @@
 <div id="nav-placeholder"></div>
 
 <main>
-    <section class="pagina-em-construcao">
-        <h2>Guerreiro</h2>
-        <p>Este conteúdo ainda está sendo forjado em Alternum. Volte em breve!</p>
+    <section class="class-page-content" style="--class-color: #d35400;">
+        <h2 class="class-title">GUERREIRO</h2>
+        <p>Especialista em combate corpo a corpo e táticas de batalha, o guerreiro domina quase todas as formas de armamento e proteção.</p>
+
+        <hr class="section-divider">
+
+        <h3>ATRIBUTOS VITAIS</h3>
+        <div class="class-stats-wrapper">
+            <div class="stat-box-inner">
+                <strong>Dado de Vida</strong>
+                <span>D10</span>
+                <p class="sub-note">1º Nível: 10 + Modificador de Constituição</p>
+                <p class="sub-note">Posterior: 1d10 (ou 6) + Modificador de Constituição</p>
+            </div>
+
+            <div class="stat-box-inner">
+                <strong>Dado de Mana</strong>
+                <span>D10</span>
+                <p class="sub-note">1º Nível: 10 + Modificador de Inteligência</p>
+                <p class="sub-note">Posterior: 1d10 (ou 6) + Modificador de Inteligência</p>
+            </div>
+        </div>
+
+        <hr class="section-divider">
+
+        <h3>PROFICIÊNCIAS E EQUIPAMENTO</h3>
+        <div class="proficiencias-lista" style="border-left-color: var(--class-color);">
+            <div><strong>Armaduras:</strong> Leves, Médias, Pesadas e Escudos.</div>
+            <div><strong>Armas:</strong> Simples e Marciais.</div>
+            <div><strong>Ferramentas:</strong> Nenhuma.</div>
+            <div><strong>Testes de Resistência:</strong> Força e Constituição.</div>
+            <div><strong>Atributo de Conjuração:</strong> Inteligência.</div>
+            <div><strong>Equipamento Inicial:</strong> -</div>
+        </div>
+
+        <hr class="section-divider">
+
+        <h3>HABILIDADES DE CLASSE</h3>
+
+        <div class="info-box" style="border-left-color: var(--class-color); background: rgba(211, 84, 0, 0.05);">
+            <h4 style="color: var(--class-color);">Estilo de Combate</h4>
+            <p>Você adota uma especialização marcial. Escolha uma entre as seguintes opções:</p>
+            <div style="column-count: 2; column-gap: 20px; font-size: 0.9em; margin-top: 10px; color: #eee;">
+                <p style="margin-bottom: 8px;"><strong>• Arquearia:</strong> +2 em ataques com armas à distância.</p>
+                <p style="margin-bottom: 8px;"><strong>• Defesa:</strong> +1 na CA quando usando armadura.</p>
+                <p style="margin-bottom: 8px;"><strong>• Duelo:</strong> +2 dano com uma arma em uma mão (sem outra).</p>
+                <p style="margin-bottom: 8px;"><strong>• Duas Armas:</strong> Adiciona Mod. Habilidade ao dano do segundo ataque.</p>
+                <p style="margin-bottom: 8px;"><strong>• Armas Grandes:</strong> Rola novamente dados 1 ou 2 de dano (deve usar o novo).</p>
+                <p style="margin-bottom: 8px;"><strong>• Proteção:</strong> Reação para impor Desvantagem em ataque contra aliado adjacente (requer escudo).</p>
+                <p style="margin-bottom: 8px;"><strong>• Interceptação:</strong> Reação para reduzir dano em aliado adjacente (1d10 + Prof).</p>
+                <p style="margin-bottom: 8px;"><strong>• Desarmado:</strong> Dano base 1d6 (ou 1d8 se livre). Causa 1d4 automático em quem agarrar.</p>
+                <p style="margin-bottom: 8px;"><strong>• Arremesso:</strong> Pode sacar como parte do ataque e ganha +2 de dano.</p>
+                <p style="margin-bottom: 8px;"><strong>• Luta às Cegas:</strong> Visão às cegas de 3 metros.</p>
+            </div>
+        </div>
+
+        <div class="info-box" style="border-left-color: var(--class-color); background: rgba(211, 84, 0, 0.05);">
+            <h4 style="color: var(--class-color);">Posturas de Batalha</h4>
+            <p>Você controla o fluxo do combate. No início de cada turno (sem custo), entre em uma postura para gerar <strong>Pontos de Foco</strong> (Máximo 6):</p>
+
+            <div style="margin-top: 10px; display: flex; flex-direction: column; gap: 10px;">
+                <div style="border: 1px dashed rgba(211, 84, 0, 0.4); padding: 8px; border-radius: 4px;">
+                    <strong style="color: var(--class-color);">⚔️ Postura de Assalto</strong>
+                    <p style="font-size: 0.9em; margin: 5px 0;">Seus ataques com arma causam <span style="color: var(--class-color); font-weight: bold;">+1d6 de dano</span> neste turno. Sempre que você <strong>acerta</strong> um ataque, gera <strong>1 Ponto de Foco</strong>.</p>
+                </div>
+
+                <div style="border: 1px dashed rgba(211, 84, 0, 0.4); padding: 8px; border-radius: 4px;">
+                    <strong style="color: var(--class-color);">🛡️ Postura de Guarda</strong>
+                    <p style="font-size: 0.9em; margin: 5px 0;">Você ganha <span style="color: var(--class-color); font-weight: bold;">+2 na CA</span> até o próximo turno. Sempre que um inimigo <strong>erra</strong> um ataque corpo a corpo contra você, gera <strong>1 Ponto de Foco</strong>.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="info-box" style="border-left-color: var(--class-color); background: rgba(211, 84, 0, 0.05);">
+            <h4 style="color: var(--class-color);">Técnicas Marciais</h4>
+            <p>Você gasta seu Foco acumulado para executar manobras devastadoras:</p>
+            <ul class="lista-custom">
+                <li><strong>Surto de Ação (2 Foco):</strong> Ganha uma <strong>Ação Adicional</strong> no seu turno.</li>
+                <li><strong>Retomada (1 Foco):</strong> Com uma <strong>Ação Bônus</strong>, recupera PV igual a <strong>1d10 + Nível de Guerreiro</strong>.</li>
+                <li><strong>Guarda Perfeita (2 Foco):</strong> Com uma <strong>Reação</strong>, impõe Desvantagem no ataque contra você ou aliado a 1,5m.</li>
+                <li><strong>Golpe Avassalador (1+ Foco):</strong> Ao acertar, adiciona <strong>um dado de dano da arma</strong> extra por ponto gasto.</li>
+            </ul>
+        </div>
+
+        <div class="info-box" style="border-left-color: var(--class-color); background: rgba(211, 84, 0, 0.05);">
+            <h4 style="color: var(--class-color);">Olho do Estrategista</h4>
+            <p>Sua experiência revela fraquezas. Com uma <strong>Ação Bônus</strong>, analise uma criatura visível para descobrir quais são suas <strong>resistências, vulnerabilidades e imunidades</strong> a dano.</p>
+        </div>
+
+        <div class="info-box" style="border-left-color: var(--class-color); background: rgba(211, 84, 0, 0.05);">
+            <h4 style="color: var(--class-color);">Desafio do Campeão</h4>
+            <p>No seu primeiro turno de combate, use uma <strong>Ação Bônus</strong> para marcar o inimigo mais perigoso como seu <strong>Alvo Desafiado</strong>.</p>
+            <ul class="lista-custom">
+                <li><strong>Foco Inabalável:</strong> Acertar ataques no alvo gera <span style="color: var(--class-color); font-weight: bold;">+1 Ponto de Foco</span> adicional.</li>
+                <li><strong>Mente de Aço:</strong> Você tem <strong>Vantagem</strong> em Testes de Resistência contra efeitos originados pelo alvo.</li>
+            </ul>
+        </div>
+
     </section>
 </main>
 
 <footer>
-    <p>&copy; 2025 Kyous. Todos os direitos reservados.</p>
+    <p>&copy; 2026 Kyous. Todos os direitos reservados.</p>
 </footer>
 
 <script src="main.js"></script>

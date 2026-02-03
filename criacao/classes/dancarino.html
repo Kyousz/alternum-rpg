@@ -22,14 +22,118 @@
 <div id="nav-placeholder"></div>
 
 <main>
-    <section class="pagina-em-construcao">
-        <h2>Dançarino</h2>
-        <p>Este conteúdo ainda está sendo forjado em Alternum. Volte em breve!</p>
+    <section class="class-page-content" style="--class-color: #f48fb1;">
+        <h2 class="class-title">DANÇARINO</h2>
+        <p>Lutador ágil que utiliza movimentos graciosos e rítmicos em combate para desorientar oponentes e inspirar aliados.</p>
+
+        <hr class="section-divider">
+
+        <h3>ATRIBUTOS VITAIS</h3>
+        <div class="class-stats-wrapper">
+            <div class="stat-box-inner">
+                <strong>Dado de Vida</strong>
+                <span>D8</span>
+                <p class="sub-note">1º Nível: 8 + Modificador de Constituição</p>
+                <p class="sub-note">Posterior: 1d8 (ou 5) + Modificador de Constituição</p>
+            </div>
+
+            <div class="stat-box-inner">
+                <strong>Dado de Mana</strong>
+                <span>D12</span>
+                <p class="sub-note">1º Nível: 12 + Modificador de Carisma</p>
+                <p class="sub-note">Posterior: 1d12 (ou 7) + Modificador de Carisma</p>
+            </div>
+        </div>
+
+        <div class="info-box" style="border-left-color: var(--class-color);">
+            <h4 style="margin-top: 0; color: var(--class-color);">Fluxo</h4>
+            <p>Sua maestria no movimento gera uma reserva de energia rítmica para suas técnicas.</p>
+            <ul class="lista-custom">
+                <li><strong>Valor Máximo:</strong> Igual ao dobro do seu Nível de Dançarino.</li>
+            </ul>
+        </div>
+
+        <hr class="section-divider">
+
+        <h3>PROFICIÊNCIAS E EQUIPAMENTO</h3>
+        <div class="proficiencias-lista" style="border-left-color: var(--class-color);">
+            <div><strong>Armaduras:</strong> Leves.</div>
+            <div><strong>Armas:</strong> Simples.</div>
+            <div><strong>Ferramentas:</strong> Kit de Disfarce e Kit de Falsificação.</div>
+            <div><strong>Testes de Resistência:</strong> Destreza e Carisma.</div>
+            <div><strong>Atributo de Conjuração:</strong> Carisma.</div>
+            <div><strong>Equipamento Inicial:</strong> -</div>
+        </div>
+
+        <hr class="section-divider">
+
+        <h3>HABILIDADES DE CLASSE</h3>
+
+        <div class="info-box" style="border-left-color: var(--class-color); background: rgba(233, 30, 99, 0.05);">
+            <h4 style="color: var(--class-color);">Fluxo da Dança</h4>
+            <p>Sua movimentação graciosa gera uma energia rítmica chamada <strong>Fluxo</strong>. Você começa o combate com 1 Ponto de Fluxo (todos somem 1 minuto após o fim do combate).</p>
+
+            <p style="margin-top: 10px;"><strong>Gerar Fluxo:</strong> Você ganha <span style="color: var(--class-color); font-weight: bold;">1 ponto</span> (até seu máximo) quando:</p>
+            <ul class="lista-custom">
+                <li>Você se move, no mínimo, 9 metros em seu turno.</li>
+                <li>Você desvia com sucesso de um ataque usando a habilidade <em>Evasão Acrobática</em>.</li>
+                <li>Uma criatura falha no Teste de Resistência contra seu <em>Chicote Anímico</em>.</li>
+            </ul>
+        </div>
+
+        <div class="info-box" style="border-left-color: var(--class-color); background: rgba(233, 30, 99, 0.05);">
+            <h4 style="color: var(--class-color);">Passos de Batalha</h4>
+            <p>Sua dança é seu deslocamento. Você ignora terreno difícil.</p>
+
+            <div style="margin-top: 10px; padding: 10px; border-left: 3px solid rgba(233, 30, 99, 0.3); background: rgba(255, 255, 255, 0.05);">
+                <p style="margin: 0; font-size: 0.95em;">
+                    <strong style="color: var(--class-color);">↳ Gastar Fluxo:</strong> Como uma <strong>Ação Bônus</strong>, gaste <strong>1 ponto</strong> para usar a ação de <strong>Disparada</strong> ou <strong>Desengajar</strong>.
+                </p>
+            </div>
+        </div>
+
+        <div class="info-box" style="border-left-color: var(--class-color); background: rgba(233, 30, 99, 0.05);">
+            <h4 style="color: var(--class-color);">Evasão Acrobática</h4>
+            <p>Quando for alvo de um ataque, use sua <strong>Reação</strong> para fazer um Teste de Destreza contra a rolagem de ataque do inimigo. Se o seu resultado for maior, você fica ileso.</p>
+
+            <div style="margin-top: 10px; padding: 10px; border-left: 3px solid rgba(233, 30, 99, 0.3); background: rgba(255, 255, 255, 0.05);">
+                <p style="margin: 0; font-size: 0.95em;">
+                    <strong style="color: var(--class-color);">↳ Gastar Fluxo:</strong> Gaste <strong>2 pontos</strong> para adicionar seu Modificador de <strong>Carisma</strong> ao resultado do seu teste.
+                </p>
+            </div>
+        </div>
+
+        <div class="info-box" style="border-left-color: var(--class-color); background: rgba(233, 30, 99, 0.05);">
+            <h4 style="color: var(--class-color);">Chicote Anímico</h4>
+            <p>Com uma <strong>Ação</strong>, manifeste um chicote de energia psíquica (alcance 18m). Ao atacar, causa <span style="color: var(--class-color); font-weight: bold;">1d8 de dano psíquico</span> e aplica um efeito:</p>
+            <ul class="lista-custom">
+                <li><strong>Deslumbrar:</strong> Teste de Sabedoria. Falha = Amedrontada ou Encantada (sua escolha) por 1 minuto (repete teste no fim dos turnos).</li>
+                <li><strong>Restringir:</strong> Teste de Força. Falha = Agarrada e Restringida até o início do seu próximo turno.</li>
+            </ul>
+
+            <div style="margin-top: 15px; padding: 10px; border-left: 3px solid rgba(233, 30, 99, 0.3); background: rgba(255, 255, 255, 0.05);">
+                <p style="margin: 0 0 5px 0; font-weight: bold; color: var(--class-color);">↳ Gastar Fluxo (ao acertar):</p>
+                <ul style="margin: 0; padding-left: 20px; font-size: 0.9em; color: #eee;">
+                    <li><strong>(1 ponto):</strong> +1d8 de dano psíquico por ponto gasto.</li>
+                    <li><strong>(2 pontos):</strong> Alvo tem Desvantagem no teste de resistência inicial.</li>
+                    <li><strong>(2 pontos):</strong> Atinge uma criatura adicional a até 3m do alvo.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="info-box" style="border-left-color: var(--class-color); background: rgba(233, 30, 99, 0.05);">
+            <h4 style="color: var(--class-color);">Mestre Sedutor</h4>
+            <p>Seus movimentos graciosos o protegem. Enquanto não usar armadura ou escudo, sua CA é:</p>
+            <div style="text-align: center; padding: 10px; font-weight: bold; font-size: 1.1em; color: #fff;">
+                10 + <span style="color: var(--class-color);">DEX</span> + <span style="color: var(--class-color);">CAR</span>
+            </div>
+        </div>
+
     </section>
 </main>
 
 <footer>
-    <p>&copy; 2025 Kyous. Todos os direitos reservados.</p>
+    <p>&copy; 2026 Kyous. Todos os direitos reservados.</p>
 </footer>
 
 <script src="main.js"></script>

@@ -22,14 +22,160 @@
 <div id="nav-placeholder"></div>
 
 <main>
-    <section class="pagina-em-construcao">
-        <h2>Monge</h2>
-        <p>Este conteúdo ainda está sendo forjado em Alternum. Volte em breve!</p>
+    <section class="class-page-content" style="--class-color: #00bcd4;">
+        <h2 class="class-title">MONGE</h2>
+        <p>Lutador disciplinado que utiliza a energia do Ki para realizar feitos físicos extraordinários e ataques marciais precisos.</p>
+
+        <hr class="section-divider">
+
+        <h3>ATRIBUTOS VITAIS</h3>
+        <div class="class-stats-wrapper">
+            <div class="stat-box-inner">
+                <strong>Dado de Vida</strong>
+                <span>D8</span>
+                <p class="sub-note">1º Nível: 8 + Modificador de Constituição</p>
+                <p class="sub-note">Posterior: 1d8 (ou 5) + Modificador de Constituição</p>
+            </div>
+
+            <div class="stat-box-inner">
+                <strong>Dado de Mana</strong>
+                <span>D12</span>
+                <p class="sub-note">1º Nível: 12 + Modificador de Sabedoria</p>
+                <p class="sub-note">Posterior: 1d12 (ou 7) + Modificador de Sabedoria</p>
+            </div>
+        </div>
+
+        <div class="info-box" style="border-left-color: var(--class-color);">
+            <h4 style="margin-top: 0; color: var(--class-color);">Pontos de Ki</h4>
+            <p>Sua disciplina interior permite canalizar energia vital para suas técnicas marciais.</p>
+            <ul class="lista-custom">
+                <li><strong>Valor Máximo:</strong> Igual ao dobro do seu Nível de Monge.</li>
+            </ul>
+        </div>
+
+        <hr class="section-divider">
+
+        <h3>PROFICIÊNCIAS E EQUIPAMENTO</h3>
+        <div class="proficiencias-lista" style="border-left-color: var(--class-color);">
+            <div><strong>Armaduras:</strong> Leves.</div>
+            <div><strong>Armas:</strong> Simples e Marciais com propriedade Leve.</div>
+            <div><strong>Ferramentas:</strong> Escolha entre uma Ferramenta ou um Instrumento Musical.</div>
+            <div><strong>Testes de Resistência:</strong> Força e Destreza.</div>
+            <div><strong>Atributo de Conjuração:</strong> Sabedoria.</div>
+            <div><strong>Equipamento Inicial:</strong> -</div>
+        </div>
+
+        <hr class="section-divider">
+
+        <h3>HABILIDADES DE CLASSE</h3>
+
+        <div class="info-box" style="border-left-color: var(--class-color); background: rgba(0, 188, 212, 0.05);">
+            <h4 style="color: var(--class-color);">Disciplina Corporal</h4>
+            <p>Seu corpo é templo e armadura. Enquanto não estiver usando armadura média, pesada ou escudo, sua CA é:</p>
+            <div style="text-align: center; padding: 10px; font-weight: bold; font-size: 1.1em; color: #fff;">
+                10 + <span style="color: var(--class-color);">DEX</span> + <span style="color: var(--class-color);">SAB</span>
+            </div>
+        </div>
+
+        <div class="info-box" style="border-left-color: var(--class-color); background: rgba(0, 188, 212, 0.05);">
+            <h4 style="color: var(--class-color);">Artes Marciais</h4>
+            <p>Você transforma seu corpo em uma arma letal.</p>
+            <ul class="lista-custom">
+                <li><strong>Dano Marcial:</strong> Ataques desarmados ou com armas de monge causam <strong>1d6</strong> (escala com Destreza se for maior que Força). Aumenta para d8/d10/d12 nos níveis 8/12/16.</li>
+                <li><strong>Golpe Extra (Ação Bônus):</strong> Ao usar a Ação de Ataque, você pode fazer um ataque desarmado como bônus.</li>
+                <li><strong>Rajada de Golpes (1 Ki):</strong> Após realizar um ataque desarmado, gaste 1 Ki para fazer <strong>dois ataques desarmados adicionais</strong>.</li>
+            </ul>
+        </div>
+
+        <div class="info-box" style="border-left-color: var(--class-color); background: rgba(0, 188, 212, 0.05);">
+            <h4 style="color: var(--class-color);">Caminho do Vento</h4>
+            <p>Você aprende a canalizar a leveza do vento em seus passos.</p>
+            <ul class="lista-custom">
+                <li><strong>Passo do Vento (1 Ki):</strong> Com uma <strong>Ação Bônus</strong>, você pode realizar a ação de <strong>Correr</strong> ou <strong>Desengajar</strong>, e seu salto é dobrado neste turno.</li>
+                <li><strong>Queda Suave:</strong> Com uma <strong>Reação</strong>, você reduz o dano de queda em um valor igual a <span style="color: var(--class-color); font-weight: bold;">5 x seu Nível de Monge</span>.</li>
+            </ul>
+
+            <h5 style="color: var(--class-color); margin-top: 15px;">Movimento Sem Fronteiras</h5>
+            <p>Seu deslocamento aumenta conforme você evolui na classe, permitindo feitos sobrenaturais:</p>
+
+            <div class="tabela-wrapper">
+                <table class="tabela-magia">
+                    <thead>
+                    <tr>
+                        <th>Nível de Monge</th>
+                        <th>Bônus de Deslocamento</th>
+                        <th>Capacidade Adicional</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>2º Nível</td>
+                        <td>+3 m</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td>6º Nível</td>
+                        <td>+4,5 m</td>
+                        <td>Mover-se sobre líquidos e superfícies verticais (sem cair).</td>
+                    </tr>
+                    <tr>
+                        <td>10º Nível</td>
+                        <td>+6 m</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td>14º Nível</td>
+                        <td>+7,5 m</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td>18º Nível</td>
+                        <td>+9 m</td>
+                        <td>Tornar-se invisível enquanto se move (se não atacar).</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="info-box" style="border-left-color: var(--class-color); background: rgba(0, 188, 212, 0.05);">
+            <h4 style="color: var(--class-color);">Fluxo Impetuoso</h4>
+            <p>Quando atingido por um ataque, use sua <strong>Reação</strong> para reduzir o dano em <strong>1d10 + DEX + Nível de Monge</strong>. Se reduzir a 0, você pode gastar <strong>1 Ki</strong> para contra-atacar conforme a origem:</p>
+
+            <div style="margin-top: 10px; display: flex; flex-direction: column; gap: 8px;">
+                <div style="border: 1px dashed rgba(0, 188, 212, 0.4); padding: 8px; border-radius: 4px;">
+                    <strong style="color: var(--class-color);">🏹 Ataque à Distância</strong>
+                    <p style="font-size: 0.9em; margin: 5px 0;">Você apanha o projétil e o arremessa de volta. Causa dano igual a <strong>dois dados</strong> de Artes Marciais.</p>
+                </div>
+                <div style="border: 1px dashed rgba(0, 188, 212, 0.4); padding: 8px; border-radius: 4px;">
+                    <strong style="color: var(--class-color);">⚔️ Ataque Corpo a Corpo</strong>
+                    <p style="font-size: 0.9em; margin: 5px 0;">Você aproveita a guarda aberta para desferir um ataque desarmado imediato.</p>
+                </div>
+                <div style="border: 1px dashed rgba(0, 188, 212, 0.4); padding: 8px; border-radius: 4px;">
+                    <strong style="color: var(--class-color);">✨ Ataque Mágico</strong>
+                    <p style="font-size: 0.9em; margin: 5px 0;">Você dispersa a energia (sem contra-ataque), mas absorve o fluxo, <strong>recuperando 1 Ponto de Ki</strong>.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="info-box" style="border-left-color: var(--class-color); background: rgba(0, 188, 212, 0.05);">
+            <h4 style="color: var(--class-color);">Rompante de Ki</h4>
+            <p>Com uma <strong>Ação Bônus</strong>, force seu corpo além do limite gastando de <strong>1 a 5 Pontos de Ki</strong>. Para cada ponto, escolha um benefício (acumulativos) até o próximo turno:</p>
+            <ul class="lista-custom">
+                <li>Ataques desarmados causam <strong>um dado de dano adicional</strong>.</li>
+                <li>Deslocamento aumenta em <strong>+3 metros</strong>.</li>
+                <li>Bônus de <strong>+1 na CA</strong>.</li>
+            </ul>
+            <p class="nota-tabela" style="color: #ff5252; margin-top: 10px;">
+                ⚠️ <strong>Preço do Poder:</strong> Ao final do próximo turno, você sofre <strong>1d4 de dano inevitável</strong> para cada Ponto de Ki gasto.
+            </p>
+        </div>
+
     </section>
 </main>
 
 <footer>
-    <p>&copy; 2025 Kyous. Todos os direitos reservados.</p>
+    <p>&copy; 2026 Kyous. Todos os direitos reservados.</p>
 </footer>
 
 <script src="main.js"></script>

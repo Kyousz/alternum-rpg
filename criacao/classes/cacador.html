@@ -22,14 +22,93 @@
 <div id="nav-placeholder"></div>
 
 <main>
-    <section class="pagina-em-construcao">
-        <h2>Caçador</h2>
-        <p>Este conteúdo ainda está sendo forjado em Alternum. Volte em breve!</p>
+    <section class="class-page-content" style="--class-color: #8bc34a;">
+        <h2 class="class-title">CAÇADOR</h2>
+        <p>Especialista em rastreamento, sobrevivência e combate à distância, capaz de abater presas com precisão letal.</p>
+
+        <hr class="section-divider">
+
+        <h3>ATRIBUTOS VITAIS</h3>
+        <div class="class-stats-wrapper">
+            <div class="stat-box-inner">
+                <strong>Dado de Vida</strong>
+                <span>D10</span>
+                <p class="sub-note">1º Nível: 10 + Modificador de Constituição</p>
+                <p class="sub-note">Posterior: 1d10 (ou 6) + Modificador de Constituição</p>
+            </div>
+
+            <div class="stat-box-inner">
+                <strong>Dado de Mana</strong>
+                <span>D10</span>
+                <p class="sub-note">1º Nível: 10 + Modificador de Sabedoria</p>
+                <p class="sub-note">Posterior: 1d10 (ou 6) + Modificador de Sabedoria</p>
+            </div>
+        </div>
+
+        <hr class="section-divider">
+
+        <h3>PROFICIÊNCIAS E EQUIPAMENTO</h3>
+        <div class="proficiencias-lista" style="border-left-color: var(--class-color);">
+            <div><strong>Armaduras:</strong> Leves, Médias e Escudos.</div>
+            <div><strong>Armas:</strong> Simples e Marciais.</div>
+            <div><strong>Ferramentas:</strong> Nenhuma.</div>
+            <div><strong>Testes de Resistência:</strong> Força e Destreza.</div>
+            <div><strong>Atributo de Conjuração:</strong> Sabedoria.</div>
+            <div><strong>Equipamento Inicial:</strong> -</div>
+        </div>
+
+        <hr class="section-divider">
+
+        <h3>HABILIDADES DE CLASSE</h3>
+
+        <div class="info-box" style="border-left-color: var(--class-color); background: rgba(46, 204, 113, 0.05);">
+            <h4 style="color: var(--class-color);">Aliado Selvagem</h4>
+            <p>Você forma um vínculo profundo e inquebrável com uma criatura da natureza, que se torna seu companheiro leal. Em vez de dividir seu vínculo com várias criaturas, você o concentra em um único aliado, que se torna mais poderoso conforme você avança em sua jornada.</p>
+            <ul class="lista-custom">
+                <li><strong>Turno:</strong> Seu companheiro age no seu turno, seguindo seus comandos.</li>
+                <li><strong>Essência Espiritual:</strong> Quando ele chega a 0 Pontos de Vida, ele desaparece em uma essência espiritual e só pode ser convocado novamente após um Descanso.</li>
+                <li><strong>Convocação:</strong> Com uma <strong>Ação</strong>, você pode dispensar seu companheiro temporariamente, podendo invocá-lo novamente com outra <strong>Ação</strong> com os mesmos Pontos de Vida que possuía.</li>
+            </ul>
+            <p class="nota-tabela">↳ <strong>Evolução:</strong> A cada marco de nível (como 6, 12 e 18), seu companheiro se fortalece, ganhando novas habilidades, aumentos de atributos ou até mesmo magias próprias, refletindo o crescimento do seu vínculo.</p>
+        </div>
+
+        <div class="info-box" style="border-left-color: var(--class-color); background: rgba(46, 204, 113, 0.05);">
+            <h4 style="color: var(--class-color);">Marca do Caçador</h4>
+            <p>Com uma <strong>Ação Bônus</strong>, você escolhe uma criatura em cena para ser sua presa marcada.</p>
+            <ul class="lista-custom">
+                <li><strong>Dano Extra:</strong> Toda vez que <strong>você ou seu Aliado Selvagem</strong> causarem dano a essa criatura com um ataque, ela receberá um dano adicional de <span style="color: var(--class-color); font-weight: bold;">1d6</span>.</li>
+                <li><strong>Transferência:</strong> Caso a criatura seja derrotada, você pode transferir a marca para um novo alvo com uma <strong>Ação Bônus</strong> no mesmo turno, sem custo adicional.</li>
+            </ul>
+            <p class="nota-tabela">↳ <strong>Uso:</strong> Número de vezes igual ao seu bônus de Proficiência por Descanso.</p>
+            <p class="nota-tabela">↳ <strong>Evolução:</strong> O dano adicional aumenta em <strong>1d6</strong> nos níveis 6, 12 e 18.</p>
+        </div>
+
+        <div class="info-box" style="border-left-color: var(--class-color); background: rgba(46, 204, 113, 0.05);">
+            <h4 style="color: var(--class-color);">Táticas de Matilha</h4>
+            <p>Você e seu companheiro são uma unidade de caça letal, movendo-se em perfeita sincronia.</p>
+            <p>Quando você e seu Aliado Selvagem estão adjacentes a uma mesma criatura inimiga, ambos ganham <span style="color: var(--class-color); font-weight: bold;">vantagem</span> nas rolagens de ataque corpo a corpo contra ela.</p>
+        </div>
+
+        <div class="info-box" style="border-left-color: var(--class-color); background: rgba(46, 204, 113, 0.05);">
+            <h4 style="color: var(--class-color);">Camuflagem</h4>
+            <p>Com uma <strong>Ação Bônus</strong>, quando estiver em terrenos naturais, você pode se mesclar ao ambiente, usando folhas, sombras e o próprio terreno para quebrar sua silhueta.</p>
+            <ul class="lista-custom">
+                <li><strong>Efeito:</strong> Você aumenta sua Classe de Armadura em <span style="color: var(--class-color); font-weight: bold;">+2</span> por 1 minuto ou até se mover do local.</li>
+            </ul>
+            <p class="nota-tabela">↳ <strong>Uso:</strong> Número de vezes igual ao seu bônus de Proficiência por Descanso.</p>
+        </div>
+
+        <div class="info-box" style="border-left-color: var(--class-color); background: rgba(46, 204, 113, 0.05);">
+            <h4 style="color: var(--class-color);">Golpe do Predador</h4>
+            <p>Você é um mestre da emboscada, atacando no momento de maior vulnerabilidade da sua presa.</p>
+            <p>Se você atacar uma criatura que ainda não agiu no combate, seu primeiro ataque bem-sucedido contra ela nesta rodada causa <span style="color: var(--class-color); font-weight: bold;">2d8 de dano adicional</span>.</p>
+        </div>
+
     </section>
 </main>
 
 <footer>
-    <p>&copy; 2025 Kyous. Todos os direitos reservados.</p>
+    <p>&copy; 2026 Kyous. Todos os direitos reservados.</p>
 </footer>
 
 <script src="main.js"></script>

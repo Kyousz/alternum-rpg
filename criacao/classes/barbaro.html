@@ -22,14 +22,141 @@
 <div id="nav-placeholder"></div>
 
 <main>
-    <section class="pagina-em-construcao">
-        <h2>Bárbaro</h2>
-        <p>Este conteúdo ainda está sendo forjado em Alternum. Volte em breve!</p>
+    <section class="class-page-content" style="--class-color: #ff4d4d;">
+        <h2 class="class-title">BÁRBARO</h2>
+        <p>Guerreiro selvagem que canaliza fúria para aumentar sua força e resistência em combate.</p>
+
+        <hr class="section-divider">
+
+        <h3>ATRIBUTOS VITAIS</h3>
+        <div class="class-stats-wrapper">
+            <div class="stat-box-inner">
+                <strong>Dado de Vida</strong>
+                <span>D12</span>
+                <p class="sub-note">1º Nível: 12 + CON</p>
+                <p class="sub-note">Posterior: 1d12 (ou 7) + CON</p>
+            </div>
+
+            <div class="stat-box-inner">
+                <strong>Dado de Mana</strong>
+                <span>D8</span>
+                <p class="sub-note">1º Nível: 8 + SAB</p>
+                <p class="sub-note">Posterior: 1d8 (ou 5) + SAB</p>
+            </div>
+        </div>
+
+        <div class="info-box" style="border-left-color: var(--class-color);">
+            <h4 style="margin-top: 0; color: var(--class-color);">Fúria</h4>
+            <p>Seu instinto de batalha permite acumular pontos de Fúria.</p>
+            <ul class="lista-custom">
+                <li><strong>Limite:</strong> Até o máximo de <span class="stat-focus">3 pontos</span>.</li>
+            </ul>
+        </div>
+
+        <hr class="section-divider">
+
+        <h3>PROFICIÊNCIAS E EQUIPAMENTO</h3>
+        <div class="proficiencias-lista" style="border-left-color: var(--class-color);">
+            <div><strong>Armaduras:</strong> Leves, Médias e Escudos.</div>
+            <div><strong>Armas:</strong> Simples e Marciais.</div>
+            <div><strong>Ferramentas:</strong> Nenhuma.</div>
+            <div><strong>Testes de Resistência:</strong> Força e Constituição.</div>
+            <div><strong>Atributo de Conjuração:</strong> Sabedoria.</div>
+            <div><strong>Equipamento Inicial:</strong> -</div>
+        </div>
+
+        <hr class="section-divider">
+
+        <h3>HABILIDADES DE CLASSE</h3>
+
+        <div class="info-box" style="border-left-color: var(--class-color); background: rgba(255, 77, 77, 0.05);">
+            <h4 style="color: var(--class-color);">Fúria</h4>
+            <p><strong>Pré-requisito:</strong> Não estar usando armadura pesada.</p>
+            <p>Com uma <strong>Ação Bônus</strong>, você libera seus instintos. Enquanto estiver em Fúria, você recebe:</p>
+            <ul class="lista-custom">
+                <li>Vantagem em Testes de Força e Testes de Resistência de Força.</li>
+                <li>Resistência a dano de concussão, cortante e perfurante.</li>
+                <li>Incapacidade de conjurar ou manter concentração em magias.</li>
+            </ul>
+
+            <h5 style="color: var(--class-color); margin-top: 15px;">Estágios e Dano Extra</h5>
+            <p>A fúria intensifica seus ataques. A cada 5 rodadas em combate, você avança um estágio:</p>
+
+            <div class="tabela-wrapper">
+                <table class="tabela-magia">
+                    <thead>
+                    <tr>
+                        <th>Estágio</th>
+                        <th>Dano Extra (Nível 1-9)</th>
+                        <th>Dano Extra (Nível 10+)</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>1º Estágio</td>
+                        <td>+2</td>
+                        <td>+5</td>
+                    </tr>
+                    <tr>
+                        <td>2º Estágio</td>
+                        <td>+4</td>
+                        <td>+10</td>
+                    </tr>
+                    <tr>
+                        <td>3º Estágio</td>
+                        <td>+8</td>
+                        <td>+15</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div style="margin-top: 15px; padding: 10px; border-top: 1px dashed rgba(255, 77, 77, 0.3);">
+                <p class="nota-tabela"><strong>⚠️ Regras de Descontrole:</strong></p>
+                <ul class="sub-note" style="list-style: none; padding-left: 0;">
+                    <li>• <strong>Controle Mental:</strong> Antes do 10º nível, se você ultrapassar o 3º Estágio, perde o controle de suas ações (o Mestre assume o personagem) até a fúria terminar.</li>
+                    <li>• <strong>Exaustão:</strong> Ao encerrar uma fúria que atingiu o 3º Estágio, você sofre <strong>1 nível de Exaustão</strong>.</li>
+                    <li>• <strong>Evolução:</strong> No 15º nível, você passa a ignorar a exaustão causada pela Fúria.</li>
+                </ul>
+
+                <p class="nota-tabela" style="margin-top: 10px;">
+                    <strong>⏱ Manutenção:</strong> A fúria termina se você não atacar uma criatura hostil ou sofrer dano desde o seu último turno.
+                </p>
+            </div>
+        </div>
+
+        <div class="info-box" style="border-left-color: var(--class-color); background: rgba(255, 77, 77, 0.05);">
+            <h4 style="color: var(--class-color);">Resiliência Feroz</h4>
+            <p>Sua fúria torna seus golpes inevitáveis. Enquanto estiver em <strong>Fúria</strong>, sempre que rolar um dado de dano que resulte em 1 ou 2, você pode jogar novamente esse dado (deve usar o novo resultado).</p>
+            <p class="nota-tabela">↳ <strong>Uso:</strong> Número de vezes igual ao bônus de Proficiência por Descanso.</p>
+        </div>
+
+        <div class="info-box" style="border-left-color: var(--class-color); background: rgba(255, 77, 77, 0.05);">
+            <h4 style="color: var(--class-color);">Defesa Desarmada</h4>
+            <p>Sua pele é tão dura quanto o aço. Enquanto não estiver usando armadura, sua Classe de Armadura (CA) é:</p>
+            <div style="text-align: center; padding: 10px; font-family: 'Cinzel', serif; font-size: 1.2em; color: #fff;">
+                10 + <span style="color: var(--class-color);">DEX</span> + <span style="color: var(--class-color);">CON</span>
+            </div>
+            <p class="nota-tabela">↳ Você pode usar um escudo e ainda manter este benefício.</p>
+        </div>
+
+        <div class="info-box" style="border-left-color: var(--class-color); background: rgba(255, 77, 77, 0.05);">
+            <h4 style="color: var(--class-color);">Instinto Selvagem</h4>
+            <p>Seus sentidos são aguçados como os de um predador. Você adiciona seu modificador de <strong>Constituição</strong> aos testes de <strong>Iniciativa</strong>.</p>
+            <p>No primeiro turno do combate, seus ataques corpo a corpo (FOR) causam <span style="color: var(--class-color); font-weight: bold;">+2 de dano adicional</span>.</p>
+        </div>
+
+        <div class="info-box" style="border-left-color: var(--class-color); background: rgba(255, 77, 77, 0.05);">
+            <h4 style="color: var(--class-color);">Sede de Sangue</h4>
+            <p>Abater um inimigo renova suas forças. Ao reduzir uma criatura a 0 PV, você recupera <span style="color: var(--class-color); font-weight: bold;">5 PV</span>.</p>
+            <p><strong>Bônus de Fúria:</strong> Além da cura, você recebe Pontos de Vida Temporários iguais à metade do dano excedente do golpe fatal.</p>
+        </div>
+
     </section>
 </main>
 
 <footer>
-    <p>&copy; 2025 Kyous. Todos os direitos reservados.</p>
+    <p>&copy; 2026 Kyous. Todos os direitos reservados.</p>
 </footer>
 
 <script src="main.js"></script>
