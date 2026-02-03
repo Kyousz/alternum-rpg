@@ -9,8 +9,21 @@
     <base href="../">
 
     <link rel="stylesheet" href="style.css">
-
     <link rel="icon" type="image/png" href="imagens/favicon.png">
+
+    <style>
+        /* Pequeno ajuste local se quiser ícones de link externo */
+        .chapter-link::after {
+            content: '↗'; /* Símbolo discreto de link externo */
+            float: right;
+            color: var(--story-color);
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        .chapter-link:hover::after {
+            opacity: 1;
+        }
+    </style>
 </head>
 <body>
 
@@ -24,9 +37,58 @@
 <div id="nav-placeholder"></div>
 
 <main>
-    <section class="pagina-em-construcao">
-        <h2>A Lenda de Ouroboros</h2>
-        <p>Este conteúdo ainda está sendo forjado em Alternum. Volte em breve!</p>
+    <section>
+        <h2 class="legend-header">A Lenda de Ouroboros</h2>
+
+        <div class="act-box">
+            <h3 class="act-title">Ato I - O Despertar das Sombras</h3>
+            <div class="chapter-grid">
+
+                <a href="LINK_DO_SEU_DOC_AQUI" target="_blank" rel="noopener noreferrer" class="chapter-link">
+                    <span class="cap-number">Capítulo 1</span>
+                    <span class="cap-title">O Chamado do Abismo</span>
+                </a>
+
+                <a href="LINK_DO_SEU_DOC_AQUI" target="_blank" rel="noopener noreferrer" class="chapter-link">
+                    <span class="cap-number">Capítulo 2</span>
+                    <span class="cap-title">Ecos na Montanha</span>
+                </a>
+
+                <a href="LINK_DO_SEU_DOC_AQUI" target="_blank" rel="noopener noreferrer" class="chapter-link">
+                    <span class="cap-number">Capítulo 3</span>
+                    <span class="cap-title">A Primeira Marca</span>
+                </a>
+
+            </div>
+        </div>
+
+        <div class="act-box">
+            <h3 class="act-title">Ato II - A Guerra Silenciosa</h3>
+            <div class="chapter-grid">
+
+                <a href="LINK_DO_SEU_DOC_AQUI" target="_blank" rel="noopener noreferrer" class="chapter-link">
+                    <span class="cap-number">Capítulo 4</span>
+                    <span class="cap-title">O Exílio</span>
+                </a>
+
+                <a href="LINK_DO_SEU_DOC_AQUI" target="_blank" rel="noopener noreferrer" class="chapter-link">
+                    <span class="cap-number">Capítulo 5</span>
+                    <span class="cap-title">Alianças Improváveis</span>
+                </a>
+
+            </div>
+        </div>
+
+        <div class="act-box" style="opacity: 0.7;">
+            <h3 class="act-title">Ato III - O Ciclo Eterno</h3>
+            <div class="chapter-grid">
+                <div class="chapter-link" style="cursor: default; border-color: transparent;">
+                    <span class="cap-number">Em Breve</span>
+                    <span class="cap-title">Ainda não revelado...</span>
+                </div>
+            </div>
+        </div>
+
     </section>
 </main>
 

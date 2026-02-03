@@ -2703,3 +2703,347 @@ h2.titulo-entidades {
 .legacy-content {
     padding: 20px;
 }
+
+/* --- 51. ESTILOS DA LENDA DE OUROBOROS (Versão Neon & Branco) --- */
+
+:root {
+    /* Roxo Elétrico/Neon para brilhar no escuro */
+    --story-color: #b026ff;
+}
+
+/* Título Principal */
+.legend-header {
+    color: #ffffff;
+    text-align: center;
+    font-family: 'Cinzel', serif;
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid var(--story-color);
+    text-shadow:
+            0 0 10px var(--story-color),
+            0 0 20px var(--story-color),
+            0 0 40px rgba(176, 38, 255, 0.6);
+
+    /* Brilho também na linha de baixo (borda) */
+    box-shadow: 0 15px 15px -10px rgba(176, 38, 255, 0.3);
+}
+
+/* Caixa do Ato */
+.act-box {
+    border: 1px solid color-mix(in srgb, var(--story-color), transparent 50%);
+
+    /* Fundo mais escuro para contrastar com o neon */
+    background: linear-gradient(180deg,
+    rgba(176, 38, 255, 0.1) 0%,
+    rgba(0,0,0,0.9) 100%);
+
+    border-radius: 8px;
+    margin-bottom: 40px;
+    padding: 20px;
+    box-shadow: 0 0 20px rgba(176, 38, 255, 0.1); /* Glow leve na caixa inteira */
+    position: relative;
+    overflow: hidden;
+}
+
+/* Barra lateral decorativa brilhante */
+.act-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: var(--story-color);
+    box-shadow: 0 0 15px var(--story-color); /* Brilho intenso na lateral */
+}
+
+/* Título do Ato */
+.act-title {
+    color: #ffffff; /* Branco */
+    font-family: 'Cinzel', serif;
+    font-size: 1.8em;
+    margin-top: 0;
+    margin-bottom: 20px;
+    padding-left: 15px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 0 0 10px var(--story-color); /* Brilho roxo no texto branco */
+}
+
+/* Grid */
+.chapter-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 15px;
+}
+
+/* Botão do Capítulo */
+.chapter-link {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+
+    /* Fundo escuro leve */
+    background-color: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(176, 38, 255, 0.3); /* Borda roxa sutil */
+
+    padding: 15px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    border-left: 2px solid transparent;
+}
+
+.chapter-link:hover {
+    background-color: rgba(176, 38, 255, 0.15); /* Fundo acende ao passar o mouse */
+    border-color: var(--story-color);
+    border-left: 4px solid var(--story-color);
+    transform: translateX(5px);
+    box-shadow: 0 0 20px rgba(176, 38, 255, 0.4); /* Glow forte no hover */
+}
+
+.chapter-link::after {
+    content: '↗';
+    float: right;
+    color: var(--story-color);
+    opacity: 0.7;
+    transition: opacity 0.3s;
+    font-size: 1.2em;
+    margin-top: -20px;
+    text-shadow: 0 0 5px var(--story-color);
+}
+
+.chapter-link:hover::after {
+    opacity: 1;
+    color: #fff;
+}
+
+/* Número do Capítulo (ex: Cap 1) */
+.cap-number {
+    font-family: 'Cinzel', serif;
+    color: var(--story-color); /* Roxo Neon */
+    font-size: 0.9em;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+    text-shadow: 0 0 5px rgba(176, 38, 255, 0.5);
+}
+
+/* Título do Capítulo */
+.cap-title {
+    font-family: 'EB Garamond', serif;
+    color: #dddddd; /* Quase branco para leitura */
+    font-size: 1.2em;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.chapter-link:hover .cap-title {
+    color: #ffffff; /* Fica branco puro no hover */
+}
+
+/* --- 52. ESTILOS DOS CONTOS (Cards Individuais) --- */
+
+/* Grid para os Cards de Contos */
+.tales-grid {
+    display: grid;
+    /* Cards mais largos que os capítulos, para caber a sinopse */
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 30px;
+    padding: 0 20px;
+}
+
+/* O Card do Conto (Link) */
+.tale-card {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    position: relative;
+
+    /* Fundo gradiente sutil */
+    background: linear-gradient(180deg, rgba(176, 38, 255, 0.05) 0%, rgba(0,0,0,0.8) 100%);
+    border: 1px solid rgba(176, 38, 255, 0.2);
+    border-radius: 8px;
+    padding: 30px;
+    transition: all 0.4s ease;
+    overflow: hidden;
+}
+
+/* Efeito Hover no Card */
+.tale-card:hover {
+    border-color: var(--story-color);
+    box-shadow: 0 0 30px rgba(176, 38, 255, 0.15); /* Glow ambiente */
+    transform: translateY(-5px);
+    background: linear-gradient(180deg, rgba(176, 38, 255, 0.1) 0%, rgba(0,0,0,0.9) 100%);
+}
+
+/* Barra lateral decorativa (semelhante aos Atos) */
+.tale-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; width: 3px; height: 100%;
+    background: var(--story-color);
+    opacity: 0.5;
+    box-shadow: 0 0 10px var(--story-color);
+    transition: opacity 0.3s;
+}
+
+.tale-card:hover::before {
+    opacity: 1;
+    width: 5px; /* Engrossa levemente ao passar o mouse */
+}
+
+/* Título do Conto */
+.tale-title {
+    font-family: 'Cinzel', serif;
+    color: #ffffff;
+    font-size: 1.5em;
+    margin-top: 0;
+    margin-bottom: 15px;
+    text-shadow: 0 0 5px rgba(176, 38, 255, 0.5);
+    transition: text-shadow 0.3s;
+}
+
+.tale-card:hover .tale-title {
+    text-shadow: 0 0 15px var(--story-color);
+}
+
+/* Sinopse/Descrição */
+.tale-desc {
+    font-family: 'EB Garamond', serif;
+    color: #cccccc;
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin-bottom: 25px;
+    flex-grow: 1; /* Empurra o botão "Ler" para o fundo */
+    text-align: justify;
+}
+
+/* Botão/Link "Ler Conto" simulado */
+.tale-read {
+    font-family: 'Cinzel', serif;
+    color: var(--story-color);
+    font-size: 0.9em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+    align-self: flex-end; /* Alinha à direita */
+    opacity: 0.8;
+    transition: all 0.3s;
+}
+
+.tale-card:hover .tale-read {
+    opacity: 1;
+    color: #fff;
+    text-shadow: 0 0 10px var(--story-color);
+    transform: translateX(5px);
+}
+
+/* Estilo para card "Em Breve" (não interativo) */
+.tale-card.coming-soon {
+    opacity: 0.6;
+    cursor: default;
+    border-color: #444;
+}
+.tale-card.coming-soon:hover {
+    transform: none;
+    box-shadow: none;
+    border-color: #444;
+}
+.tale-card.coming-soon::before {
+    background: #555;
+    box-shadow: none;
+}
+.tale-card.coming-soon .tale-title {
+    color: #888;
+    text-shadow: none;
+}
+
+/* --- 53. ESTILOS DOS FRAGMENTOS (Layout Mosaico) --- */
+
+/* Container Mosaico (Pinterest Style) */
+.fragments-masonry {
+    column-count: 3; /* 3 Colunas em telas grandes */
+    column-gap: 20px;
+    padding: 0 20px;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 900px) {
+    .fragments-masonry { column-count: 2; }
+}
+@media (max-width: 600px) {
+    .fragments-masonry { column-count: 1; }
+}
+
+/* O Card do Fragmento */
+.fragment-card {
+    background: rgba(20, 20, 20, 0.6); /* Fundo bem escuro */
+    border: 1px solid rgba(176, 38, 255, 0.3); /* Borda roxa discreta */
+    border-radius: 4px;
+    margin-bottom: 20px; /* Espaço inferior para o próximo item */
+    padding: 20px;
+
+    /* Importante para o Mosaico não quebrar o card no meio */
+    break-inside: avoid;
+    display: inline-block;
+    width: 100%;
+
+    text-decoration: none;
+    transition: all 0.3s ease;
+    position: relative;
+    box-sizing: border-box;
+}
+
+/* Efeito Hover */
+.fragment-card:hover {
+    background: rgba(176, 38, 255, 0.1);
+    border-color: var(--story-color);
+    box-shadow: 0 0 15px rgba(176, 38, 255, 0.2);
+    transform: translateY(-3px);
+}
+
+/* Conteúdo interno */
+.fragment-content {
+    margin-bottom: 15px;
+}
+
+.fragment-title {
+    font-family: 'Cinzel', serif;
+    color: #fff;
+    font-size: 1.1em;
+    margin-top: 0;
+    border-bottom: 1px dashed rgba(176, 38, 255, 0.3);
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+.fragment-text {
+    font-family: 'EB Garamond', serif;
+    font-style: italic; /* Texto em itálico para parecer manuscrito */
+    color: #ddd;
+    font-size: 1.1em;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* Rodapé do Card (Tipo e Ícone) */
+.fragment-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.8em;
+    color: var(--story-color);
+    text-transform: uppercase;
+    font-weight: bold;
+    opacity: 0.7;
+}
+
+.fragment-card:hover .fragment-footer {
+    opacity: 1;
+}
+
+/* Ícone da seta ao passar o mouse (opcional, igual aos contos) */
+.fragment-card:hover .fragment-icon::after {
+    content: ' ↗';
+}
