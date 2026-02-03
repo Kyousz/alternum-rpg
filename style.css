@@ -3229,3 +3229,195 @@ h2.titulo-entidades {
 @media (max-width: 700px) {
     .modal-image-container { border-right: none; border-bottom: 1px solid #333; }
 }
+
+/* --- 55. ESTILOS DOS ARTEFATOS MÁGICOS (Azul Mana) --- */
+
+:root {
+    /* MUDANÇA: De Ciano (#00d2d3) para Azul Azure (#0097e6) */
+    --artifact-color: #0097e6;
+}
+
+/* Header e Busca */
+.artifact-header {
+    color: #ffffff;
+    text-align: center;
+    font-family: 'Cinzel', serif;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid var(--artifact-color);
+
+    /* Glow Azul Puro */
+    text-shadow:
+            0 0 10px var(--artifact-color),
+            0 0 20px var(--artifact-color),
+            0 0 40px rgba(0, 151, 230, 0.6);
+
+    box-shadow: 0 15px 15px -10px rgba(0, 151, 230, 0.2);
+}
+
+.artifact-search {
+    width: 100%;
+    padding: 15px 20px;
+    background: rgba(0, 0, 0, 0.5);
+    border: 1px solid #444;
+    border-radius: 30px;
+    color: #fff;
+    font-family: 'Cinzel', serif;
+    font-size: 1em;
+    outline: none;
+    transition: 0.3s;
+}
+
+.artifact-search:focus {
+    border-color: var(--artifact-color);
+    box-shadow: 0 0 15px rgba(0, 151, 230, 0.3);
+}
+
+/* Categorias */
+.artifact-category-title {
+    color: var(--artifact-color);
+    font-family: 'Cinzel', serif;
+    font-size: 1.8em;
+    margin: 40px 0 20px 0;
+    padding-left: 10px;
+    border-left: 4px solid var(--artifact-color);
+    text-transform: uppercase;
+    text-shadow: 0 0 10px rgba(0, 151, 230, 0.3);
+    background: linear-gradient(90deg, rgba(0, 151, 230, 0.1) 0%, transparent 100%);
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+/* Grid */
+.artifact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 20px;
+}
+
+/* CARD DO ARTEFATO */
+.artifact-card {
+    background: linear-gradient(135deg, #1e1e1e 0%, #111 100%);
+    border: 1px solid #333;
+    border-radius: 8px;
+    padding: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 200px;
+    position: relative;
+    overflow: hidden;
+}
+
+.artifact-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+    border-color: #fff; /* Borda branca no hover para destacar */
+}
+
+/* Topo do Card */
+.artifact-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.magic-tag {
+    color: var(--artifact-color);
+    font-family: 'Cinzel', serif;
+    font-size: 0.8em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.intelligent-icon {
+    font-size: 1.2em;
+    filter: drop-shadow(0 0 5px var(--artifact-color));
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { opacity: 0.7; }
+    50% { opacity: 1; text-shadow: 0 0 10px #fff; }
+    100% { opacity: 0.7; }
+}
+
+/* Conteúdo */
+.artifact-name {
+    color: #fff;
+    font-family: 'Cinzel', serif;
+    font-size: 1.1em;
+    margin: 5px 0;
+}
+
+.artifact-type-text {
+    color: #888;
+    font-size: 0.9em;
+    font-style: italic;
+}
+
+/* Footer (Raridade) */
+.artifact-footer {
+    margin-top: 15px;
+    text-align: right;
+}
+
+.rarity-tag {
+    font-family: 'Cinzel', serif;
+    font-size: 0.8em;
+    padding: 3px 8px;
+    border-radius: 10px;
+    color: #000;
+    font-weight: bold;
+    text-transform: uppercase;
+    display: inline-block;
+}
+
+/* CORES DAS RARIDADES */
+.tag-comum { background-color: #bdc3c7; box-shadow: 0 0 5px #bdc3c7; }
+.tag-incomum { background-color: #55efc4; box-shadow: 0 0 5px #55efc4; }
+.tag-raro { background-color: #74b9ff; box-shadow: 0 0 5px #74b9ff; }
+.tag-mitico { background-color: #ffeaa7; box-shadow: 0 0 5px #ffeaa7; }
+.tag-epico { background-color: #d980fa; box-shadow: 0 0 5px #d980fa; }
+.tag-lendario { background-color: #ffca28; box-shadow: 0 0 5px #ffca28; }
+.tag-reliquia { background-color: #fd79a8; box-shadow: 0 0 5px #fd79a8; }
+.tag-amaldicoado { background-color: #ff7675; box-shadow: 0 0 5px #ff7675; }
+.tag-tecno { background-color: #81ecec; box-shadow: 0 0 5px #81ecec; }
+
+/* Bordas coloridas no card baseadas na raridade */
+.artifact-card.rarity-epico:hover { border-color: #d980fa; box-shadow: 0 0 15px rgba(217, 128, 250, 0.3); }
+.artifact-card.rarity-lendario:hover { border-color: #ffca28; box-shadow: 0 0 15px rgba(255, 202, 40, 0.3); }
+.artifact-card.rarity-amaldicoado:hover { border-color: #ff7675; box-shadow: 0 0 15px rgba(255, 118, 117, 0.3); }
+
+/* --- MODAL --- */
+.magic-tag-large {
+    color: var(--artifact-color);
+    font-family: 'Cinzel', serif;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.modal-subtitle { color: #aaa; font-style: italic; margin-top: -10px; margin-bottom: 20px; }
+
+.intelligent-badge {
+    background: rgba(0, 151, 230, 0.2);
+    border: 1px solid var(--artifact-color);
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 0.9em;
+    margin-left: 10px;
+    display: none;
+}
+
+.rarity-badge-large {
+    font-size: 1em; padding: 5px 15px; border-radius: 20px; font-weight: bold;
+    text-transform: uppercase; color: #000; float: right; margin-top: 10px;
+}

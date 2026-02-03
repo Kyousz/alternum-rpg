@@ -3,13 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Alternum - Artefatos Mágicos</title>
-
     <base href="../">
-
     <link rel="stylesheet" href="style.css">
-
     <link rel="icon" type="image/png" href="imagens/favicon.png">
 </head>
 <body>
@@ -24,16 +20,260 @@
 <div id="nav-placeholder"></div>
 
 <main>
-    <section class="pagina-em-construcao">
-        <h2>Artefatos Mágicos</h2>
-        <p>Este conteúdo ainda está sendo forjado em Alternum. Volte em breve!</p>
+    <section>
+        <h2 class="artifact-header">Artefatos Mágicos</h2>
+        <p style="text-align: center; color: #ccc; margin-bottom: 30px;">
+            Relíquias perdidas, armas forjadas em éter e tecnologias esquecidas.
+        </p>
+
+        <div class="search-container">
+            <input type="text" id="searchInput" class="artifact-search" placeholder="Buscar artefato..." onkeyup="filterArtifacts()">
+            <span class="search-icon">🔍</span>
+        </div>
+
+        <div class="artifact-section">
+            <h3 class="artifact-category-title">Armaduras & Vestes</h3>
+            <div class="artifact-grid">
+
+                <div class="artifact-card rarity-epico"
+                     data-name="Botas do Gigante de Gelo Remft"
+                     data-type="Armadura (Botas)"
+                     data-magic="Glacies"
+                     data-rarity="Épico"
+                     data-intelligent="false"
+                     data-image="imagens/itens/botas_gelo.jpg"
+                     data-desc="Estas botas permitem que o portador não seja afetado por terreno difícil de gelo. Cada passo transforma uma área de até 1,5 metro de raio em gelo. Todos os terrenos gélidos criados num raio de 3 metros se mantêm congelados. Com uma ação bônus, o portador pode dar um pisão que cria espinhos de gelo em toda a área congelada nesse raio, causando 4d6 de dano a todas as criaturas na área que não passarem em um Teste de Resistência de Destreza (CD 15). Se forem bem-sucedidas, recebem metade do dano.">
+
+                    <div class="artifact-top">
+                        <span class="magic-tag">Glacies</span>
+                    </div>
+                    <div class="artifact-content">
+                        <h4 class="artifact-name">Botas do Gigante de Gelo Remft</h4>
+                        <span class="artifact-type-text">Armadura (Pesada)</span>
+                    </div>
+                    <div class="artifact-footer">
+                        <span class="rarity-tag tag-epico">Épico</span>
+                    </div>
+                </div>
+
+                <div class="artifact-card rarity-lendario"
+                     data-name="Peitoral da Fênix"
+                     data-type="Armadura (Peitoral)"
+                     data-magic="Ignis"
+                     data-rarity="Lendário"
+                     data-intelligent="true"
+                     data-image="imagens/itens/peitoral_fenix.jpg"
+                     data-desc="Uma armadura forjada nas chamas eternas. Se o usuário cair a 0 pontos de vida, a armadura explode em chamas curando o usuário em 50 PV e causando dano de fogo em área. A armadura conversa com o usuário, incentivando atos de bravura imprudente.">
+
+                    <div class="artifact-top">
+                        <span class="magic-tag">Ignis</span>
+                        <span class="intelligent-icon" title="Item Inteligente">👁️‍🗨️</span>
+                    </div>
+                    <div class="artifact-content">
+                        <h4 class="artifact-name">Peitoral da Fênix</h4>
+                        <span class="artifact-type-text">Armadura (Média)</span>
+                    </div>
+                    <div class="artifact-footer">
+                        <span class="rarity-tag tag-lendario">Lendário</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="artifact-section">
+            <h3 class="artifact-category-title">Armas</h3>
+            <div class="artifact-grid">
+
+                <div class="artifact-card rarity-amaldicoado"
+                     data-name="Lâmina do Sussurro"
+                     data-type="Arma (Adaga)"
+                     data-magic="Umbra"
+                     data-rarity="Amaldiçoado"
+                     data-intelligent="true"
+                     data-image="imagens/itens/adaga_sussurro.jpg"
+                     data-desc="Uma adaga que causa dano necrótico extra. Porém, a cada abate, o usuário ouve vozes pedindo mais sangue. Se não matar ninguém em 24h, a adaga drena 1d6 de vida do usuário.">
+
+                    <div class="artifact-top">
+                        <span class="magic-tag">Umbra</span>
+                        <span class="intelligent-icon" title="Item Inteligente">👁️‍🗨️</span>
+                    </div>
+                    <div class="artifact-content">
+                        <h4 class="artifact-name">Lâmina do Sussurro</h4>
+                        <span class="artifact-type-text">Arma (Leve)</span>
+                    </div>
+                    <div class="artifact-footer">
+                        <span class="rarity-tag tag-amaldicoado">Amaldiçoado</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="artifact-section">
+            <h3 class="artifact-category-title">Acessórios</h3>
+            <div class="artifact-grid">
+
+                <div class="artifact-card rarity-incomum"
+                     data-name="Anel da Maré"
+                     data-type="Acessório (Anel)"
+                     data-magic="Aqua"
+                     data-rarity="Incomum"
+                     data-intelligent="false"
+                     data-image="imagens/itens/anel_mare.jpg"
+                     data-desc="Permite respirar debaixo d'água por 1 hora por dia.">
+
+                    <div class="artifact-top">
+                        <span class="magic-tag">Aqua</span>
+                    </div>
+                    <div class="artifact-content">
+                        <h4 class="artifact-name">Anel da Maré</h4>
+                        <span class="artifact-type-text">Acessório</span>
+                    </div>
+                    <div class="artifact-footer">
+                        <span class="rarity-tag tag-incomum">Incomum</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="artifact-section">
+            <h3 class="artifact-category-title">Outros</h3>
+            <div class="artifact-grid">
+
+                <div class="artifact-card rarity-comum"
+                     data-name="Poção de Cura Menor"
+                     data-type="Consumível"
+                     data-magic="Vitae"
+                     data-rarity="Comum"
+                     data-intelligent="false"
+                     data-image="imagens/itens/pocao_cura.jpg"
+                     data-desc="Um frasco contendo um líquido vermelho brilhante. Ao ser bebido, cura 2d4 + 2 pontos de vida.">
+
+                    <div class="artifact-top">
+                        <span class="magic-tag">Vitae</span>
+                    </div>
+                    <div class="artifact-content">
+                        <h4 class="artifact-name">Poção de Cura Menor</h4>
+                        <span class="artifact-type-text">Consumível</span>
+                    </div>
+                    <div class="artifact-footer">
+                        <span class="rarity-tag tag-comum">Comum</span>
+                    </div>
+                </div>
+
+                <div class="artifact-card rarity-raro"
+                     data-name="Bolsa do Espaço Infinito"
+                     data-type="Item Maravilhoso"
+                     data-magic="Spatium"
+                     data-rarity="Raro"
+                     data-intelligent="false"
+                     data-image="imagens/itens/bolsa_infinita.jpg"
+                     data-desc="Uma bolsa de couro que parece pequena por fora, mas contém um espaço extradimensional capaz de guardar até 250kg de itens sem alterar seu peso externo.">
+
+                    <div class="artifact-top">
+                        <span class="magic-tag">Spatium</span>
+                    </div>
+                    <div class="artifact-content">
+                        <h4 class="artifact-name">Bolsa do Espaço Infinito</h4>
+                        <span class="artifact-type-text">Item Maravilhoso</span>
+                    </div>
+                    <div class="artifact-footer">
+                        <span class="rarity-tag tag-raro">Raro</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
     </section>
 </main>
 
-<footer>
-    <p>&copy; 2026 Kyous. Todos os direitos reservados.</p>
-</footer>
+<div id="artifactModal" class="modal-overlay">
+    <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <div class="modal-body">
 
+            <div class="modal-image-container">
+                <img id="modalImg" src="" alt="Imagem do Artefato" onerror="this.src='https://via.placeholder.com/400x400?text=Artefato'">
+            </div>
+
+            <div class="modal-text">
+                <div class="modal-top-info">
+                    <span id="modalMagic" class="magic-tag-large">MAGIC</span>
+                    <span id="modalIntelligent" class="intelligent-badge">👁️‍🗨️ Inteligente</span>
+                </div>
+
+                <h3 id="modalTitle">Nome do Artefato</h3>
+                <p id="modalType" class="modal-subtitle">Tipo do Item</p>
+
+                <hr class="modal-divider">
+
+                <p id="modalDesc">Descrição...</p>
+
+                <div class="modal-footer-info">
+                    <span id="modalRarity" class="rarity-badge-large">Raridade</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer><p>&copy; 2026 Kyous. Todos os direitos reservados.</p></footer>
 <script src="main.js"></script>
+
+<script>
+    // --- LÓGICA DO MODAL ---
+    const modal = document.getElementById("artifactModal");
+    const closeBtn = document.querySelector(".close-btn");
+
+    const mTitle = document.getElementById("modalTitle");
+    const mType = document.getElementById("modalType");
+    const mMagic = document.getElementById("modalMagic");
+    const mRarity = document.getElementById("modalRarity");
+    const mDesc = document.getElementById("modalDesc");
+    const mImg = document.getElementById("modalImg");
+    const mIntelligent = document.getElementById("modalIntelligent");
+
+    document.querySelectorAll('.artifact-card').forEach(card => {
+        card.addEventListener('click', () => {
+            mTitle.innerText = card.getAttribute('data-name');
+            mType.innerText = card.getAttribute('data-type');
+            mMagic.innerText = card.getAttribute('data-magic');
+            mDesc.innerText = card.getAttribute('data-desc');
+            mImg.src = card.getAttribute('data-image');
+
+            const rarity = card.getAttribute('data-rarity');
+            mRarity.innerText = rarity;
+            mRarity.className = 'rarity-badge-large ' + 'tag-' + rarity.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+
+            if(card.getAttribute('data-intelligent') === 'true') {
+                mIntelligent.style.display = 'inline-block';
+            } else {
+                mIntelligent.style.display = 'none';
+            }
+
+            modal.style.display = "flex";
+        });
+    });
+
+    closeBtn.onclick = function() { modal.style.display = "none"; }
+    window.onclick = function(event) { if (event.target == modal) { modal.style.display = "none"; } }
+
+    function filterArtifacts() {
+        let input = document.getElementById('searchInput').value.toUpperCase();
+        let cards = document.getElementsByClassName('artifact-card');
+        for (let i = 0; i < cards.length; i++) {
+            let name = cards[i].getAttribute('data-name');
+            if (name.toUpperCase().indexOf(input) > -1) {
+                cards[i].style.display = "";
+            } else {
+                cards[i].style.display = "none";
+            }
+        }
+    }
+</script>
+
 </body>
 </html>
