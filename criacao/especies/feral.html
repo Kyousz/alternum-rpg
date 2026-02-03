@@ -9,6 +9,12 @@
 
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" href="imagens/favicon.png">
+
+    <style>
+        :root {
+            --species-color: #a0522d;
+        }
+    </style>
 </head>
 <body>
 
@@ -22,14 +28,138 @@
 <div id="nav-placeholder"></div>
 
 <main>
-    <section class="pagina-em-construcao">
-        <h2>Feral</h2>
-        <p>Este conteúdo ainda está sendo forjado em Alternum. Volte em breve!</p>
+    <section>
+        <h2 class="species-header">Feral</h2>
+
+        <p>Animais humanoides que possuem mais domínios em Ellinie, mas há várias espécies pelo continente, é uma espécie bem diversificada pelas características animalescas.</p>
+
+        <hr class="species-divider">
+
+        <div class="species-box">
+            <h4>Características Raciais</h4>
+            <ul class="species-list">
+                <li>
+                    <strong>Tempo de Vida:</strong> 200 anos em média.
+                </li>
+                <li>
+                    <strong>Tamanho:</strong> Pequeno (Cerca de 90 centímetros a 1,20 metros de altura) ou Médio (Cerca de 1,20 a 2,10 metros de altura).
+                </li>
+                <li>
+                    <strong>Deslocamento:</strong> 9 metros (6 quadrados).
+                </li>
+            </ul>
+        </div>
+
+        <h3 class="species-subheader">Habilidades da Espécie</h3>
+
+        <div class="species-box">
+            <ul class="species-list">
+                <li>
+                    <strong>Instinto Animal:</strong> Pode utilizar sua Reação para dar um contra ataque, desviar ou correr metade do seu deslocamento. Além de possuir Proficiência e vantagem em Testes de Percepção e Sobrevivência.
+                </li>
+                <li>
+                    <strong>Caminho Animal:</strong> Possui uma Habilidade Única relacionada ao animal escolhido.
+                </li>
+                <li>
+                    <strong>Arma Natural:</strong> Possui armas naturais relacionadas ao animal escolhido, podendo usar Força ou Destreza com elas.
+                </li>
+                <li>
+                    <strong>Legado:</strong> Você possui uma linhagem que lhe concede alguns benefícios. Selecione uma linhagem animal.
+                </li>
+            </ul>
+        </div>
+
+        <h3 class="species-subheader">Legados dos Ferais</h3>
+
+        <div class="legacy-nav">
+            <a href="criacao/especies/feral.html#aereo" class="legacy-link">Aéreo</a>
+            <a href="criacao/especies/feral.html#aquatico" class="legacy-link">Aquático</a>
+            <a href="criacao/especies/feral.html#terrestre" class="legacy-link">Terrestre</a>
+        </div>
+
+        <div id="aereo" class="legacy-box">
+            <div class="legacy-header">
+                <h4>Aéreo</h4>
+                <span class="legacy-tag">Opção de Legado</span>
+            </div>
+            <div class="legacy-content">
+                <p style="color: #ccc; font-style: italic; margin-bottom: 20px;">
+                    Os Ferais Aéreos são criaturas ágeis e graciosas, adaptadas para voar nas alturas de Ellinie. Com suas asas poderosas, são capazes de explorar montanhas e céus com facilidade, usando sua visão panorâmica para localizar presas e perigos.
+                </p>
+                <ul class="species-list">
+                    <li>
+                        <strong>Vôo:</strong> Você tem um deslocamento de voo de 12 metros. Você também está acostumado a grandes altitudes, incluindo elevações acima de 6.000 metros.
+                    </li>
+                    <li>
+                        <strong>Ventania Cortante:</strong> Como uma Ação, pode criar uma rajada de vento afiado em linha reta até 12 metros de distância. Todas as criaturas na linha devem realizar um Teste de Resistência de Destreza. Criaturas que falharem sofrem dano cortante igual a 2d8 + Modificador de Destreza. Você pode usar essa habilidade um número de vezes igual ao seu bônus de Proficiência por Descanso.
+                    </li>
+                    <li>
+                        <strong>Visão Além das Nuvens:</strong> Como uma Ação, consegue enxergar através de névoas densas, nuvens ou outros obstáculos visuais até uma distância de 60 metros como se fossem transparentes por 1 minuto. Você pode usar essa habilidade um número de vezes igual ao seu bônus de Proficiência por Descanso.
+                    </li>
+                    <li>
+                        <strong>Melodia Hipnótica:</strong> Como uma Ação, pode emitir uma melodia envolvente que concede vantagem em Testes de Carisma para persuadir, enganar ou intimidar criaturas que possam ouvir. Duração de 1 minuto. Você pode usar essa habilidade um número de vezes igual ao seu bônus de Proficiência por Descanso.
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="aquatico" class="legacy-box">
+            <div class="legacy-header">
+                <h4>Aquático</h4>
+                <span class="legacy-tag">Opção de Legado</span>
+            </div>
+            <div class="legacy-content">
+                <p style="color: #ccc; font-style: italic; margin-bottom: 20px;">
+                    Os Ferais Aquáticos são mestres da água, com corpos esguios e habilidades mentais desenvolvidas para navegar em rios, lagos e mares de Ellinie. Utilizam ecolocalização para detectar presas e manipulam as marés, adaptando-se perfeitamente aos ambientes aquáticos.
+                </p>
+                <ul class="species-list">
+                    <li>
+                        <strong>Imersão:</strong> Pode respirar embaixo d’água. Você tem um deslocamento de natação igual ao terrestre.
+                    </li>
+                    <li>
+                        <strong>Lança Marinha:</strong> Pode conjurar uma lança de água pressurizada e lançá-la contra um alvo a até 18 metros de distância. Causa dano de concussão igual a 2d10 + modificador de Força. Pode ser usada um número de vezes igual ao seu bônus de Proficiência por descanso.
+                    </li>
+                    <li>
+                        <strong>Chamado das Profundezas:</strong> Como uma Ação, pode usar sua ecolocalização para enviar um chamado sônico que desorienta criaturas hostis em um raio de 9 metros. Criaturas afetadas devem realizar um Teste de Resistência de Sabedoria ou ficar amedrontadas por 1 minuto. Você pode usar essa habilidade um número de vezes igual ao seu bônus de Proficiência por Descanso.
+                    </li>
+                    <li>
+                        <strong>Manto Aquático:</strong> Como uma Ação, cria um escudo de água ao redor do seu corpo que aumenta a CA em +2 por 1 minuto. Você pode usar essa habilidade um número de vezes igual ao seu bônus de Proficiência por Descanso.
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="terrestre" class="legacy-box">
+            <div class="legacy-header">
+                <h4>Terrestre</h4>
+                <span class="legacy-tag">Opção de Legado</span>
+            </div>
+            <div class="legacy-content">
+                <p style="color: #ccc; font-style: italic; margin-bottom: 20px;">
+                    Os Ferais Terrestres são robustos e adaptados aos diversos terrenos de Ellinie, desde florestas densas até planícies abertas. Com garras afiadas e uma resistência natural, são excelentes rastreadores e caçadores, capazes de defender seu território com ferocidade.
+                </p>
+                <ul class="species-list">
+                    <li>
+                        <strong>Caminhante:</strong> Seu deslocamento é de 12 metros e tem um deslocamento de escalada igual ao terrestre.
+                    </li>
+                    <li>
+                        <strong>Investida Selvagem:</strong> Como uma Ação, pode realizar uma investida selvagem em linha reta até 12 metros. Causa dano igual a 2d6 + Modificador de Força. Você pode usar essa habilidade um número de vezes igual ao seu bônus de Proficiência por Descanso.
+                    </li>
+                    <li>
+                        <strong>Escudo de Terra:</strong> Como uma Ação, invoca um escudo de terra que concede resistência a dano de concussão, cortante e perfurante por 1 minuto. Você pode usar essa habilidade um número de vezes igual ao seu bônus de Proficiência por Descanso.
+                    </li>
+                    <li>
+                        <strong>Rugido Primeval:</strong> Como uma Ação, pode soltar um rugido primal que causa medo em criaturas dentro de um cone de 9 metros. Criaturas afetadas devem realizar um Teste de Resistência de Sabedoria ou ficar amedrontadas por 1 minuto. Você pode usar essa habilidade um número de vezes igual ao seu bônus de Proficiência por Descanso.
+                    </li>
+                </ul>
+            </div>
+        </div>
+
     </section>
 </main>
 
 <footer>
-    <p>&copy; 2025 Kyous. Todos os direitos reservados.</p>
+    <p>&copy; 2026 Kyous. Todos os direitos reservados.</p>
 </footer>
 
 <script src="main.js"></script>

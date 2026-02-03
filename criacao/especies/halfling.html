@@ -9,6 +9,12 @@
 
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" href="imagens/favicon.png">
+
+    <style>
+        :root {
+            --species-color: #f39c12;
+        }
+    </style>
 </head>
 <body>
 
@@ -22,14 +28,108 @@
 <div id="nav-placeholder"></div>
 
 <main>
-    <section class="pagina-em-construcao">
-        <h2>Halfling</h2>
-        <p>Este conteúdo ainda está sendo forjado em Alternum. Volte em breve!</p>
+    <section>
+        <h2 class="species-header">Halfling</h2>
+
+        <p>Uma espécie que passa quase que despercebida pelos olhos dos outros, criaturinhas rápidas e traiçoeiras, a grande maioria costuma roubar, muitos aventureiros costumam contratá-los para saquear tesouros. Para eles, aventurar-se não é apenas uma carreira, é mais uma oportunidade ou às vezes uma necessidade.</p>
+
+        <hr class="species-divider">
+
+        <div class="species-box">
+            <h4>Características Raciais</h4>
+            <ul class="species-list">
+                <li>
+                    <strong>Tempo de Vida:</strong> 150 anos em média.
+                </li>
+                <li>
+                    <strong>Tamanho:</strong> Pequeno (Cerca de 60 a 90 centímetros de altura).
+                </li>
+                <li>
+                    <strong>Deslocamento:</strong> 9 metros (6 quadrados).
+                </li>
+            </ul>
+        </div>
+
+        <h3 class="species-subheader">Habilidades da Espécie</h3>
+
+        <div class="species-box">
+            <ul class="species-list">
+                <li>
+                    <strong>Agilidade Halfling:</strong> Pode mover-se através do espaço de qualquer criatura que for de um tamanho maior que o seu.
+                </li>
+                <li>
+                    <strong>Sortudo:</strong> Quando você obtiver um 1 natural em um Teste de Habilidade, ataque ou Teste de Resistência, você pode jogar novamente o dado e deve utilizar o novo resultado. Além disso, uma vez por Descanso, você pode adicionar 1d4 a qualquer Teste de Habilidade, ataque ou Teste de Resistência após ver o resultado, mas antes de saber se teve sucesso ou falhou.
+                </li>
+                <li>
+                    <strong>Corajoso:</strong> Você tem vantagem em Testes de Resistência contra ficar Amedrontado e Encantado. Além disso, quando você é alvo de um efeito que causa medo, você pode usar sua Reação para ganhar resistência a todos os danos até o início do seu próximo turno.
+                </li>
+                <li>
+                    <strong>Furtividade Natural:</strong> Você pode tentar se esconder quando estiver obscuro por uma criatura que for no mínimo um tamanho maior que o seu. Além disso, você tem proficiência em Furtividade.
+                </li>
+                <li>
+                    <strong>Legado:</strong> Você possui uma linhagem que lhe concede alguns benefícios. Selecione uma linhagem halfling.
+                </li>
+            </ul>
+        </div>
+
+        <h3 class="species-subheader">Legados dos Halflings</h3>
+
+        <div class="legacy-nav">
+            <a href="criacao/especies/halfling.html#comum" class="legacy-link">Comum</a>
+            <a href="criacao/especies/halfling.html#fantasma" class="legacy-link">Fantasma</a>
+        </div>
+
+        <div id="comum" class="legacy-box">
+            <div class="legacy-header">
+                <h4>Comum</h4>
+                <span class="legacy-tag">Opção de Legado</span>
+            </div>
+            <div class="legacy-content">
+                <p style="color: #ccc; font-style: italic; margin-bottom: 20px;">
+                    São a maioria entre os Halflings de Alternum. Conhecidos por sua natureza amigável e hospitalidade, eles são mestres em criar laços e se adaptar a diversas situações.
+                </p>
+                <ul class="species-list">
+                    <li>
+                        <strong>Hospitalidade Reconfortante:</strong> Durante um Descanso, você pode fornecer a todos os aliados que participaram do Descanso um bônus de 1d4 em seu próximo Teste de Habilidade ou Teste de Resistência.
+                    </li>
+                    <li>
+                        <strong>Comunidade Unida:</strong> Quando você e um aliado estiverem a 3 metros um do outro, ambos recebem um bônus de +1 em Testes de Resistência. Além disso, você pode usar uma Ação Bônus para conceder vantagem em um Teste de Habilidade a um aliado a 3 metros de você uma vez por Descanso.
+                    </li>
+                    <li>
+                        <strong>Fuga Ágil:</strong> Quando você for alvo de um ataque de oportunidade, você pode usar sua Reação para impor desvantagem ao ataque.
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="fantasma" class="legacy-box">
+            <div class="legacy-header">
+                <h4>Fantasma</h4>
+                <span class="legacy-tag">Opção de Legado</span>
+            </div>
+            <div class="legacy-content">
+                <p style="color: #ccc; font-style: italic; margin-bottom: 20px;">
+                    Esses Halflings são peritos em apagar a própria existência, chegam a forjar a própria morte para tirar a atenção dos seus inimigos, há quem diga que são mais pálidos e magros que os outros.
+                </p>
+                <ul class="species-list">
+                    <li>
+                        <strong>Sussurros das Sombras:</strong> Você pode se comunicar telepaticamente com qualquer criatura que esteja na sombra ou escuridão a até 18 metros de você.
+                    </li>
+                    <li>
+                        <strong>Presença Etérea:</strong> Você pode usar uma Ação Bônus para ficar invisível até o início do seu próximo turno. Você pode usar essa habilidade novamente após um Descanso.
+                    </li>
+                    <li>
+                        <strong>Aura de Silêncio:</strong> Uma vez por Descanso, você pode criar uma zona de silêncio de 4,5 metros de raio ao seu redor que dura por 10 minutos. Dentro dessa zona, todas as criaturas são surdas, e nenhum som pode ser criado ou ouvido.
+                    </li>
+                </ul>
+            </div>
+        </div>
+
     </section>
 </main>
 
 <footer>
-    <p>&copy; 2025 Kyous. Todos os direitos reservados.</p>
+    <p>&copy; 2026 Kyous. Todos os direitos reservados.</p>
 </footer>
 
 <script src="main.js"></script>

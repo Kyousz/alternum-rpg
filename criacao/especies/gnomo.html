@@ -9,6 +9,12 @@
 
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" href="imagens/favicon.png">
+
+    <style>
+        :root {
+            --species-color: #fbc531;
+        }
+    </style>
 </head>
 <body>
 
@@ -22,14 +28,108 @@
 <div id="nav-placeholder"></div>
 
 <main>
-    <section class="pagina-em-construcao">
-        <h2>Gnomo</h2>
-        <p>Este conteúdo ainda está sendo forjado em Alternum. Volte em breve!</p>
+    <section>
+        <h2 class="species-header">Gnomo</h2>
+
+        <p>É raro para um gnomo ser hostil ou malicioso, a não ser que ele tenha sofrido algum tipo de ofensa grave. Os gnomos sabem que a maioria das espécies não compartilham do seu senso de humor, mas eles apreciam a companhia de qualquer um, assim como eles apreciam tudo que que eles se propõem a fazer.</p>
+
+        <hr class="species-divider">
+
+        <div class="species-box">
+            <h4>Características Raciais</h4>
+            <ul class="species-list">
+                <li>
+                    <strong>Tempo de Vida:</strong> 425 anos em média.
+                </li>
+                <li>
+                    <strong>Tamanho:</strong> Pequeno (Cerca de 90 centímetros a 1,20 metros de altura).
+                </li>
+                <li>
+                    <strong>Deslocamento:</strong> 9 metros (6 quadrados).
+                </li>
+            </ul>
+        </div>
+
+        <h3 class="species-subheader">Habilidades da Espécie</h3>
+
+        <div class="species-box">
+            <ul class="species-list">
+                <li>
+                    <strong>Visão no Escuro:</strong> Possui a capacidade de enxergar no escuro com alcance de 18 metros.
+                </li>
+                <li>
+                    <strong>Resiliência Gnômica:</strong> Você tem vantagem em Testes de resistência contra magias.
+                </li>
+                <li>
+                    <strong>Adaptabilidade:</strong> Uma vez por Descanso, você pode substituir um Teste de Habilidade que falhou por um Teste bem-sucedido.
+                </li>
+                <li>
+                    <strong>Mente Brilhante:</strong> Você pode adicionar metade do seu bônus de Proficiência (arredondado para baixo) em qualquer Teste de Inteligência que não inclua seu bônus de Proficiência.
+                </li>
+                <li>
+                    <strong>Legado:</strong> Você possui uma linhagem que lhe concede alguns benefícios. Selecione uma linhagem gnômica.
+                </li>
+            </ul>
+        </div>
+
+        <h3 class="species-subheader">Legados dos Gnomos</h3>
+
+        <div class="legacy-nav">
+            <a href="criacao/especies/gnomo.html#comum" class="legacy-link">Comum</a>
+            <a href="criacao/especies/gnomo.html#mecano" class="legacy-link">Mecano</a>
+        </div>
+
+        <div id="comum" class="legacy-box">
+            <div class="legacy-header">
+                <h4>Comum</h4>
+                <span class="legacy-tag">Opção de Legado</span>
+            </div>
+            <div class="legacy-content">
+                <p style="color: #ccc; font-style: italic; margin-bottom: 20px;">
+                    São curiosos e alegres, conhecidos por sua adaptabilidade e engenhosidade. Eles apreciam a companhia de outras espécies e adoram aprender e contar histórias.
+                </p>
+                <ul class="species-list">
+                    <li>
+                        <strong>Coração Generoso:</strong> Uma vez por Descanso, você pode usar uma Ação para inspirar um aliado dentro de 9 metros. O aliado ganha Pontos de Vida Temporários igual ao seu Modificador de Carisma + Nível.
+                    </li>
+                    <li>
+                        <strong>Presença Reconfortante:</strong> Você pode usar uma Ação Bônus para conceder vantagem em Testes de Resistência contra medo a todos os aliados em um raio de 9 metros por 1 minuto. Você pode usar essa habilidade um número de vezes igual ao seu bônus de Proficiência por Descanso.
+                    </li>
+                    <li>
+                        <strong>Amigo dos Animais:</strong> Você pode comunicar-se telepaticamente com pequenos animais em um raio de 9 metros. Esses animais são amigáveis a você e podem realizar pequenas tarefas ou entregar mensagens.
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="mecano" class="legacy-box">
+            <div class="legacy-header">
+                <h4>Mecano</h4>
+                <span class="legacy-tag">Opção de Legado</span>
+            </div>
+            <div class="legacy-content">
+                <p style="color: #ccc; font-style: italic; margin-bottom: 20px;">
+                    São inventores brilhantes, combinando magia e tecnologia. Suas comunidades são repletas de dispositivos mecânicos, refletindo sua paixão por engenharia e inovação.
+                </p>
+                <ul class="species-list">
+                    <li>
+                        <strong>Companheiro Mecânico:</strong> Você pode criar um autômato pequeno que pode realizar tarefas simples, como entregar mensagens, carregar objetos leves e realizar pequenas reparações.
+                    </li>
+                    <li>
+                        <strong>Dispositivo de Fuga:</strong> Uma vez por Descanso, você pode ativar seu dispositivo de fuga para se teleportar para um ponto que você possa ver dentro de 18 metros.
+                    </li>
+                    <li>
+                        <strong>Explosivo Improvisado:</strong> Você pode usar uma Ação para lançar uma pequena bomba que explode em um raio de 3 metros. Inimigos na área devem fazer um Teste de resistência de Destreza ou sofrer 3d6 de dano de fogo. Você pode usar essa habilidade um número de vezes igual ao seu bônus de Proficiência por Descanso.
+                    </li>
+                </ul>
+            </div>
+        </div>
+
     </section>
 </main>
 
 <footer>
-    <p>&copy; 2025 Kyous. Todos os direitos reservados.</p>
+    <p>&copy; 2026 Kyous. Todos os direitos reservados.</p>
 </footer>
 
 <script src="main.js"></script>

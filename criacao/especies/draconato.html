@@ -9,6 +9,12 @@
 
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" href="imagens/favicon.png">
+
+    <style>
+        :root {
+            --species-color: #d35400;
+        }
+    </style>
 </head>
 <body>
 
@@ -22,14 +28,126 @@
 <div id="nav-placeholder"></div>
 
 <main>
-    <section class="pagina-em-construcao">
-        <h2>Draconato</h2>
-        <p>Este conteúdo ainda está sendo forjado em Alternum. Volte em breve!</p>
+    <section>
+        <h2 class="species-header">Draconato</h2>
+
+        <p>Mais raros que os meio-dragões, os draconatos nascem de ovos. Quando alguém encontra um dragão em forma humanóide em seu sonho e tem relações com ele, um ovo cresce magicamente na barriga do ser vivo independente do seu sexo, assim matando-o.</p>
+
+        <hr class="species-divider">
+
+        <div class="species-box">
+            <h4>Características Raciais</h4>
+            <ul class="species-list">
+                <li>
+                    <strong>Tempo de Vida:</strong> 180 anos em média.
+                </li>
+                <li>
+                    <strong>Tamanho:</strong> Médio (Cerca de 1,50 a 2,10 metros ou mais de altura).
+                </li>
+                <li>
+                    <strong>Deslocamento:</strong> 9 metros (6 quadrados).
+                </li>
+            </ul>
+        </div>
+
+        <h3 class="species-subheader">Habilidades da Espécie</h3>
+
+        <div class="species-box">
+            <ul class="species-list">
+                <li>
+                    <strong>Visão no Escuro:</strong> Possui a capacidade de enxergar no escuro com alcance de 18 metros.
+                </li>
+                <li>
+                    <strong>Sopro de Dragão:</strong> Pode usar a habilidade uma vez por Cena, o sopro vai depender da linhagem dracônica que escolher, a área é de 4,5 metros em cone, o dano é de 2d6 e aumenta em 2d6 nos níveis 5/10/15/20, pode ser usado como Ação Bônus. Toda criatura na área deve realizar um Teste de Resistência de Destreza, caso passe, irá receber metade do dano.
+                </li>
+                <li>
+                    <strong>Resistência Dracônica:</strong> Você possui imunidade ao tipo de dano associado a sua linhagem dracônica.
+                </li>
+                <li>
+                    <strong>Voo Ancestral:</strong> Você pode usar uma Ação Bônus para manifestar asas espectrais em seu corpo. Essas asas duram 1 minuto. Pela duração, você ganha um deslocamento de voo igual ao seu deslocamento terrestre. Depois de usar esta característica, você não pode fazê-lo novamente até terminar um Descanso.
+                </li>
+                <li>
+                    <strong>Linguagem Dracônica:</strong> Você sabe instintivamente a linguagem dos dragões. Você pode, portanto, falar, ler e escrever Dracônico.
+                </li>
+                <li>
+                    <strong>Legado:</strong> Você possui uma linhagem que lhe concede alguns benefícios. Selecione uma linhagem dracônica.
+                </li>
+            </ul>
+        </div>
+
+        <h3 class="species-subheader">Legados dos Draconatos</h3>
+
+        <div class="legacy-nav">
+            <a href="criacao/especies/draconato.html#cromatico" class="legacy-link">Cromático</a>
+            <a href="criacao/especies/draconato.html#gematico" class="legacy-link">Gemático</a>
+            <a href="criacao/especies/draconato.html#metalico" class="legacy-link">Metálico</a>
+        </div>
+
+        <div id="cromatico" class="legacy-box">
+            <div class="legacy-header">
+                <h4>Cromático</h4>
+                <span class="legacy-tag">Opção de Legado</span>
+            </div>
+            <div class="legacy-content">
+                <p style="color: #ccc; font-style: italic; margin-bottom: 20px;">
+                    São conhecidos por sua ferocidade e vínculo com os elementos. Seus corpos são adornados com escamas vibrantes que refletem a energia elemental de seus ancestrais dragônicos.
+                </p>
+                <ul class="species-list">
+                    <li>
+                        <strong>Fúria Elemental:</strong> Uma vez por Descanso, o Draconato Cromático pode canalizar a energia de uma forma de magia de sua linhagem para aumentar suas habilidades físicas e causar dano adicional de 1d4 em ataques corpo-a-corpo por 1 minuto.
+                    </li>
+                    <li>
+                        <strong>Coração de Dragão:</strong> O Draconato Cromático possui uma resistência inata aos efeitos negativos dos elementos. Uma vez por Descanso, ele pode ativar essa habilidade, ganhando vantagem em todos os Testes de Resistência contra condições que envolvem elementos por 1 minuto.
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="gematico" class="legacy-box">
+            <div class="legacy-header">
+                <h4>Gemático</h4>
+                <span class="legacy-tag">Opção de Legado</span>
+            </div>
+            <div class="legacy-content">
+                <p style="color: #ccc; font-style: italic; margin-bottom: 20px;">
+                    São raros e misteriosos, herdando a beleza e a resistência das gemas preciosas que os nomeiam.
+                </p>
+                <ul class="species-list">
+                    <li>
+                        <strong>Explosão de Energia:</strong> Uma vez por Descanso, o Draconato Gemático pode liberar uma explosão de energia de sua forma cristalina, causando o dano de 4d10 a todos os inimigos num raio de 6 metros. Toda criatura na área deve realizar um Teste de Resistência de Destreza, caso passe, irá receber metade do dano.
+                    </li>
+                    <li>
+                        <strong>Refração Luminosa:</strong> O Draconato Gemático pode manipular a luz ao seu redor, criando ilusões deslumbrantes. Uma vez por Descanso, ele pode usar uma Ação para criar um efeito de refração luminosa que cega temporariamente todos os inimigos num raio de 6 metros. Cada criatura afetada deve realizar um Teste de Resistência de Constituição, em caso de falha, ficará cega por 1 minuto.
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="metalico" class="legacy-box">
+            <div class="legacy-header">
+                <h4>Metálico</h4>
+                <span class="legacy-tag">Opção de Legado</span>
+            </div>
+            <div class="legacy-content">
+                <p style="color: #ccc; font-style: italic; margin-bottom: 20px;">
+                    São conhecidos por sua sabedoria e capacidade de proteção com escamas que brilham como metal polido.
+                </p>
+                <ul class="species-list">
+                    <li>
+                        <strong>Escudo de Aço:</strong> Uma vez por Descanso, o Draconato Metálico pode conjurar um escudo de energia metálica ao seu redor, aumentando sua CA em +2 por 1 minuto.
+                    </li>
+                    <li>
+                        <strong>Regeneração Metálica:</strong> O Draconato Metálico possui a capacidade de curar suas feridas ao manipular a energia metálica em seu corpo. Uma vez por Descanso, ele pode usar uma Ação para regenerar 2d8 + Modificador de Constituição de Pontos de Vida.
+                    </li>
+                </ul>
+            </div>
+        </div>
+
     </section>
 </main>
 
 <footer>
-    <p>&copy; 2025 Kyous. Todos os direitos reservados.</p>
+    <p>&copy; 2026 Kyous. Todos os direitos reservados.</p>
 </footer>
 
 <script src="main.js"></script>

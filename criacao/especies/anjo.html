@@ -4,34 +4,187 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alternum - Anjo</title>
-
     <base href="../../">
-
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" href="imagens/favicon.png">
+    <style>
+        :root { --species-color: #fff9c4; }
+    </style>
 </head>
 <body>
-
 <header>
     <a href="index.html" class="home-link">
         <h1>Alternum</h1>
         <p>Role-Playing Game</p>
     </a>
 </header>
-
 <div id="nav-placeholder"></div>
 
 <main>
-    <section class="pagina-em-construcao">
-        <h2>Anjo</h2>
-        <p>Este conteúdo ainda está sendo forjado em Alternum. Volte em breve!</p>
+    <section>
+        <h2 class="species-header">Anjo</h2>
+        <p>Esses seres alados vivem em um plano diferente do terreno, não é nada comum vê-los pairando sobre Altera. Diferente do plano deles, é como se estivessem mais enfraquecidos, mas tudo isso não passa de uma ideia passada entre a espécie, pois não aceitam ser iguais aos outros, apesar de bons, eles se acham superiores por viverem em um outro plano.</p>
+
+        <hr class="species-divider">
+
+        <div class="species-box">
+            <h4>Características Raciais</h4>
+            <ul class="species-list">
+                <li><strong>Tempo de Vida:</strong> 800 anos em média.</li>
+                <li><strong>Tamanho:</strong> Pequeno (Cerca de 90 centímetros a 1,20 metros de altura) ou Médio (Cerca de 1,20 a 2,10 metros de altura).</li>
+                <li><strong>Deslocamento:</strong> 9 metros (6 quadrados). Seu deslocamento aumenta ao utilizar suas asas, 12 metros (8 quadrados).</li>
+            </ul>
+        </div>
+
+        <h3 class="species-subheader">Habilidades da Espécie</h3>
+
+        <div class="species-box">
+            <ul class="species-list">
+                <li>
+                    <strong>Visão no Escuro:</strong> Possui a capacidade de enxergar no escuro com alcance de 18 metros.
+                </li>
+                <li>
+                    <strong>Resistência Celeste:</strong> Possui resistência contra danos de luz, morte e sombra. Além disso, tem vantagem em Testes de Resistência contra magias e efeitos que causem esses tipos de dano.
+                </li>
+                <li>
+                    <strong>Mãos que Curam:</strong> Pode curar um alvo que possa ver um número de dados (d8) igual ao seu nível, uma vez por dia. Essa habilidade pode ser usada como uma Ação Bônus e remove condições de envenenado e amedrontado.
+                </li>
+                <li>
+                    <strong>Asas Celestiais:</strong> Pode manifestar asas que permitem voar a uma velocidade de 12 metros. Enquanto as asas estão manifestadas, pode flutuar no ar, ganhando vantagem em ataques contra inimigos no solo.
+                </li>
+                <li>
+                    <strong>Legado:</strong> Você possui uma linhagem que lhe concede alguns benefícios. Selecione uma linhagem celestial.
+                </li>
+            </ul>
+        </div>
+
+        <h3 class="species-subheader">Legados dos Anjos</h3>
+
+        <div class="legacy-nav">
+            <a href="criacao/especies/anjo.html#comum" class="legacy-link">Comum</a>
+            <a href="criacao/especies/anjo.html#arcanjo" class="legacy-link">Arcanjo</a>
+            <a href="criacao/especies/anjo.html#caido" class="legacy-link">Caído</a>
+            <a href="criacao/especies/anjo.html#estelar" class="legacy-link">Estelar</a>
+            <a href="criacao/especies/anjo.html#guardiao" class="legacy-link">Guardião</a>
+        </div>
+
+        <div id="comum" class="legacy-box">
+            <div class="legacy-header">
+                <h4>Comum</h4>
+                <span class="legacy-tag">Opção de Legado</span>
+            </div>
+            <div class="legacy-content">
+                <p style="color: #ccc; font-style: italic; margin-bottom: 20px;">
+                    A maioria dos anjos existentes em Alternum são seres celestiais de beleza radiante, dotados de poderes divinos e um senso inabalável de justiça e bondade.
+                </p>
+                <ul class="species-list">
+                    <li>
+                        <strong>Aura da Ordem:</strong> Emite uma aura de 6 metros de raio que concede a aliados dentro da área um bônus de +1 em seus Testes de Resistência contra efeitos de medo e charme. Essa aura está sempre ativa.
+                    </li>
+                    <li>
+                        <strong>Intuitivo:</strong> Possui Proficiência em Intuição, além de vantagem nos Testes realizados com esta Perícia. Também pode re-rolar um Teste de Intuição fracassado uma vez por Descanso.
+                    </li>
+                    <li>
+                        <strong>Bênção da Serenidade:</strong> Pode tocar um aliado e conceder a ele um estado de serenidade que permite recuperar automaticamente 1d4 de pontos de vida ao final de cada um de seus turnos, por um minuto. Pode usar essa habilidade uma vez por Descanso.
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="arcanjo" class="legacy-box">
+            <div class="legacy-header">
+                <h4>Arcanjo</h4>
+                <span class="legacy-tag">Opção de Legado</span>
+            </div>
+            <div class="legacy-content">
+                <p style="color: #ccc; font-style: italic; margin-bottom: 20px;">
+                    A minoria do Plano Celeste, são aqueles que habitam o Céu e em sua maioria, são aqueles escolhidos para proteger os anjos comuns, aqueles que são um símbolo de heroísmo, respeito e poder.
+                </p>
+                <ul class="species-list">
+                    <li>
+                        <strong>Aura de Proteção:</strong> Emite uma aura de proteção que concede +1 na CA a todos os aliados a até 6 metros de você. Essa aura está sempre ativa.
+                    </li>
+                    <li>
+                        <strong>Asas da Soberania:</strong> Seu deslocamento aumenta ao utilizar suas asas, ficando com 18 metros (12 quadrados). Suas asas também lhe concedem um bônus de +2 na CA, mas não sendo possível utilizar armaduras pesadas.
+                    </li>
+                    <li>
+                        <strong>Bênção da Fortitude:</strong> Pode tocar um aliado e conceder a ele resistência a dano de um tipo à sua escolha por um minuto. Pode usar essa habilidade uma vez por Descanso.
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="caido" class="legacy-box">
+            <div class="legacy-header">
+                <h4>Caído</h4>
+                <span class="legacy-tag">Opção de Legado</span>
+            </div>
+            <div class="legacy-content">
+                <p style="color: #ccc; font-style: italic; margin-bottom: 20px;">
+                    Anjos que perderam seu direito celestial, renegados e rejeitados. Aqueles que optaram por viver sem regras, os que diferente dos outros exalam seu ódio, tanto contra anjos quanto para as demais espécies.
+                </p>
+                <ul class="species-list">
+                    <li>
+                        <strong>Aura Corruptora:</strong> Emite uma aura corruptora num raio de 6 metros, que causa vulnerabilidade a um tipo de dano à escolha do usuário (raio, fogo, luz ou sombra) em criaturas hostis dentro da área. A aura pode ser ativada uma vez por Descanso e requer Concentração.
+                    </li>
+                    <li>
+                        <strong>Consumo Radiante:</strong> Com uma Ação Bônus, aprimora sua arma momentaneamente adicionando uma energia celestial mágica que pode ser da forma: Fulgur, Ignis, Lux ou Umbra. O efeito dura 1 hora e o dano é de 1d8, aumentando em 1d8 nos níveis 6/12/18. Pode usar um número de vezes igual ao Modificador do Atributo de Conjuração ao dia.
+                    </li>
+                    <li>
+                        <strong>Punição:</strong> A depender da sua expulsão do Plano Celestial, possui vantagem em uma Perícia e desvantagem em outra. Além disso, pode usar uma Ação Bônus para detectar a presença de anjos num raio de 18 metros.
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="estelar" class="legacy-box">
+            <div class="legacy-header">
+                <h4>Estelar</h4>
+                <span class="legacy-tag">Opção de Legado</span>
+            </div>
+            <div class="legacy-content">
+                <p style="color: #ccc; font-style: italic; margin-bottom: 20px;">
+                    Anjos que iluminam as noites e vivem no Além Céu, são protegidos pelos anjos guardiões.
+                </p>
+                <ul class="species-list">
+                    <li>
+                        <strong>Aura Estelar:</strong> Emite uma aura estelar que concede +1 em Testes de Resistência contra magias a todos os aliados a até 6 metros de você. Essa aura está sempre ativa.
+                    </li>
+                    <li>
+                        <strong>Estrela Cadente:</strong> Imune a quedas. Causa um dano arcano de 1d6 para cada 3 metros de altura (máximo 10d6) em área num raio de 6 metros ao cair. O dano ignora resistências a dano arcano.
+                    </li>
+                    <li>
+                        <strong>Alma Radiante:</strong> Quando obtiver sucesso em um Teste de Resistência Contra a Morte, você pode optar por recuperar Pontos de Vida em um valor igual a 5 + Modificador do Atributo de Conjuração uma vez por dia. Caso falhe em todos os Testes, seu corpo explode em estrelas, causando um dano arcano de 6d8 em uma área de raio de 9 metros. As criaturas na área devem realizar um Teste de Resistência de Constituição para reduzir o dano pela metade caso obtenham sucesso.
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="guardiao" class="legacy-box">
+            <div class="legacy-header">
+                <h4>Guardião</h4>
+                <span class="legacy-tag">Opção de Legado</span>
+            </div>
+            <div class="legacy-content">
+                <p style="color: #ccc; font-style: italic; margin-bottom: 20px;">
+                    Aqueles que protegem o Além Céu dos perigos externos e de outros planos. Eles também são protetores das prisões e possuem o sistema mais rígido.
+                </p>
+                <ul class="species-list">
+                    <li>
+                        <strong>Aura da Vigilância:</strong> Emite uma aura de vigilância num raio de 6 metros, que permite aos aliados dentro da área terem vantagem em Testes de Percepção e em iniciativa. Esta aura está sempre ativa.
+                    </li>
+                    <li>
+                        <strong>Correntes Celestiais:</strong> Com uma Ação, pode conjurar correntes mágicas que prendem o alvo. Caso o alvo não passe no Teste de Resistência de Destreza, fica restringido por 2 rodadas.
+                    </li>
+                    <li>
+                        <strong>Correntes Punitivas:</strong> Com uma Ação, o Guardião pode conjurar correntes celestiais que se prendem ao alvo. O alvo deve realizar um Teste de Resistência de Sabedoria. Em caso de falha, o alvo sofre uma penalidade de -2 em Testes de Habilidade e ataques por 1 minuto.
+                    </li>
+                </ul>
+            </div>
+        </div>
     </section>
 </main>
-
-<footer>
-    <p>&copy; 2025 Kyous. Todos os direitos reservados.</p>
-</footer>
-
+<footer><p>&copy; 2026 Kyous. Todos os direitos reservados.</p></footer>
 <script src="main.js"></script>
 </body>
 </html>

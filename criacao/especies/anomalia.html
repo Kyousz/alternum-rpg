@@ -4,34 +4,74 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alternum - Anomalia</title>
-
     <base href="../../">
-
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" href="imagens/favicon.png">
+    <style>
+        :root { --species-color: #ff0088d8; }
+        .species-list ul li::before { content: none; }
+    </style>
 </head>
 <body>
-
 <header>
     <a href="index.html" class="home-link">
         <h1>Alternum</h1>
         <p>Role-Playing Game</p>
     </a>
 </header>
-
 <div id="nav-placeholder"></div>
 
 <main>
-    <section class="pagina-em-construcao">
-        <h2>Anomalia</h2>
-        <p>Este conteúdo ainda está sendo forjado em Alternum. Volte em breve!</p>
+    <section>
+        <h2 class="species-header">Anomalia</h2>
+        <p>As Anomalias não possuem um corpo orgânico no sentido tradicional; elas são manifestações físicas do vácuo contidas em uma forma humanoide instável. Sua superfície é composta por uma matéria densa, negra e levemente viscosa que não apenas bloqueia a luz, mas parece devorá-la. Ao redor de uma Anomalia, as cores tornam-se lavadas e as sombras dos objetos próximos parecem se inclinar em sua direção, como se fossem atraídas por uma gravidade silenciosa.</p>
+
+        <hr class="species-divider">
+
+        <div class="species-box">
+            <h4>Características Raciais</h4>
+            <ul class="species-list">
+                <li><strong>Tempo de Vida:</strong> 300 anos em média.</li>
+                <li><strong>Tamanho:</strong> Pequeno ou Médio.</li>
+                <li><strong>Deslocamento:</strong> 9 metros (6 quadrados).</li>
+            </ul>
+        </div>
+
+        <h3 class="species-subheader">Habilidades da Espécie</h3>
+
+        <div class="species-box">
+            <ul class="species-list">
+                <li>
+                    <strong>Visão no Escuro:</strong> Possui a capacidade de enxergar no escuro com alcance de 18 metros.
+                </li>
+                <li>
+                    <strong>Consciência Multifocal:</strong> Seus múltiplos olhos, que podem surgir em qualquer parte do corpo, garantem que você não possa ser surpreendido enquanto estiver consciente. Além disso, você possui Vantagem em todos os testes de Percepção baseados na visão.
+                </li>
+                <li>
+                    <strong>Fisiologia Abissal:</strong> Sua estrutura corporal é uma afronta às leis naturais, composta pela essência do Abismo.
+                    <ul style="margin-top: 5px; padding-left: 20px; list-style: none; color: #ccc;">
+                        <li style="margin-bottom: 5px;">↳ <strong>Sustento:</strong> Você não precisa respirar.</li>
+                        <li style="margin-bottom: 5px;">↳ <strong>Resistências:</strong> Você possui resistência a danos das formas Vacuum, Gravitas e Psychica.</li>
+                        <li style="margin-bottom: 5px;">↳ <strong>Mente Protegida:</strong> Você possui Vantagem em Testes de Resistência contra ser Enfeitiçado ou Amedrontado.</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Eco do Medo:</strong> Uma vez por Descanso, você pode projetar o horror do vazio através do seu olhar. Como uma Ação, escolha um alvo que você possa ver; ele sofre 2d8 de dano psíquico e deve ter sucesso em um Teste de Resistência de Sabedoria ou ficará sob a condição de Amedrontado até o fim do seu próximo turno.
+                </li>
+                <li>
+                    <strong>Mimetismo Incompleto:</strong> Como uma Ação Bônus, você pode alterar levemente sua pigmentação e a densidade da sua pele para se camuflar no ambiente. Você ganha vantagem em testes de Furtividade. No entanto, qualquer criatura que o observe de perto (menos de 3 metros) percebe que sua aparência é inatural se passar num teste de Percepção (CD 15).
+                </li>
+                <li>
+                    <strong>Ressonância Psíquica:</strong> Como uma criatura de consciência expandida, você pode se comunicar telepaticamente com qualquer criatura que possua um idioma e esteja a até 18 metros de você.
+                </li>
+                <li>
+                    <strong>Distorção Espacial:</strong> Como uma Reação ao ser alvo de um ataque, você distorce a gravidade e o espaço ao seu redor. O atacante deve realizar um Teste de Resistência de Inteligência. Em caso de falha, ele sofre uma penalidade de -4 na jogada de ataque, pois sua percepção falha em localizar seu corpo real. Você pode usar esta habilidade um número de vezes igual ao seu bônus de Proficiência por Descanso.
+                </li>
+            </ul>
+        </div>
     </section>
 </main>
-
-<footer>
-    <p>&copy; 2025 Kyous. Todos os direitos reservados.</p>
-</footer>
-
+<footer><p>&copy; 2026 Kyous. Todos os direitos reservados.</p></footer>
 <script src="main.js"></script>
 </body>
 </html>

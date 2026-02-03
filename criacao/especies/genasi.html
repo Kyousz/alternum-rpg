@@ -9,6 +9,12 @@
 
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" href="imagens/favicon.png">
+
+    <style>
+        :root {
+            --species-color: #1abc9c;
+        }
+    </style>
 </head>
 <body>
 
@@ -22,14 +28,160 @@
 <div id="nav-placeholder"></div>
 
 <main>
-    <section class="pagina-em-construcao">
-        <h2>Genasi</h2>
-        <p>Este conteúdo ainda está sendo forjado em Alternum. Volte em breve!</p>
+    <section>
+        <h2 class="species-header">Genasi</h2>
+
+        <p>Os primeiros genasis são originários de um relacionamento de elementais com uma espécie humanóide, depois eles foram se gerando ao relacionar entre si e ainda assim com outras espécies, o sangue elemental se sobrepõe na maioria das vezes, em alguns clãs, aqueles que nascem sem características em aparência são expulsos.</p>
+
+        <hr class="species-divider">
+
+        <div class="species-box">
+            <h4>Características Raciais</h4>
+            <ul class="species-list">
+                <li>
+                    <strong>Tempo de Vida:</strong> 120 anos em média.
+                </li>
+                <li>
+                    <strong>Tamanho:</strong> Médio (Cerca de 1,50 a 1,85 metros de altura).
+                </li>
+                <li>
+                    <strong>Deslocamento:</strong> 9 metros (6 quadrados).
+                </li>
+            </ul>
+        </div>
+
+        <h3 class="species-subheader">Habilidades da Espécie</h3>
+
+        <div class="species-box">
+            <ul class="species-list">
+                <li>
+                    <strong>Visão no Escuro:</strong> Possui a capacidade de enxergar no escuro com alcance de 18 metros.
+                </li>
+                <li>
+                    <strong>Proteção Elemental:</strong> Uma vez por Descanso, você pode usar uma Ação para conceder a si mesmo e a todos os aliados em um raio de 6 metros resistência a um tipo de dano elemental por 1 minuto. Durante este tempo, qualquer inimigo que cause dano desse tipo aos aliados afetados sofre 1d6 de dano do mesmo tipo como Reação.
+                </li>
+                <li>
+                    <strong>Surto Elemental:</strong> Uma vez por descanso longo, você pode liberar um surto de energia elemental em uma área de 6 metros ao seu redor. Escolha um dos seguintes efeitos:
+                    <ul style="margin-top: 5px; padding-left: 20px; list-style: none; color: #ccc;">
+                        <li style="margin-bottom: 5px;">↳ <strong>Aliados:</strong> Ganham um aumento temporário de 1d8 + Modificador de Constituição em pontos de vida temporários e têm vantagem em jogadas de ataque até o final do seu próximo turno.</li>
+                        <li style="margin-bottom: 5px;">↳ <strong>Inimigos:</strong> Devem fazer um Teste de Resistência de Constituição ou sofrer 2d8 de dano elemental e ficar atordoados até o final do próximo turno deles.</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Fúria Elemental:</strong> Sempre que você causar dano do tipo elemental ao qual está ligado, você adiciona um dado extra de dano do mesmo tipo. O dado extra é do mesmo tipo que o dano original do ataque (por exemplo, um ataque que causa 1d6 de dano de fogo agora causará 2d6 de dano de fogo). Além disso, uma vez por Descanso, você pode usar uma Ação Bônus para intensificar seu próximo ataque elemental, fazendo com que ele cause dano máximo em vez de rolar os dados.
+                </li>
+                <li>
+                    <strong>Legado:</strong> Você possui uma linhagem que lhe concede alguns benefícios. Selecione uma linhagem elemental.
+                </li>
+            </ul>
+        </div>
+
+        <h3 class="species-subheader">Legados dos Genasis</h3>
+
+        <div class="legacy-nav">
+            <a href="criacao/especies/genasi.html#aqua" class="legacy-link">Aqua</a>
+            <a href="criacao/especies/genasi.html#terram" class="legacy-link">Terram</a>
+            <a href="criacao/especies/genasi.html#ignis" class="legacy-link">Ignis</a>
+            <a href="criacao/especies/genasi.html#auran" class="legacy-link">Auran</a>
+        </div>
+
+        <div id="aqua" class="legacy-box">
+            <div class="legacy-header">
+                <h4>Aqua</h4>
+                <span class="legacy-tag">Opção de Legado</span>
+            </div>
+            <div class="legacy-content">
+                <p style="color: #ccc; font-style: italic; margin-bottom: 20px;">
+                    Genasis que vivem próximos de grandes quantidades de água, geralmente mais unidos e comprometidos em ajudar.
+                </p>
+                <ul class="species-list">
+                    <li>
+                        <strong>Imersão:</strong> Pode respirar embaixo d’água. Você tem um deslocamento de natação igual ao terrestre.
+                    </li>
+                    <li>
+                        <strong>Forma Líquida:</strong> Uma vez por Descanso, você pode transformar seu corpo em água por até 10 minutos. Enquanto estiver nesta forma, você pode passar por espaços apertados sem precisar de um Teste de Habilidade, é imune a dano físico não mágico e pode respirar normalmente.
+                    </li>
+                    <li>
+                        <strong>Curar com Água:</strong> Você pode usar uma Ação para curar uma criatura tocada em 1d8 + Modificador de Atributo de Conjuração. Você pode usar essa habilidade um número de vezes igual ao seu bônus de Proficiência por Descanso.
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="terram" class="legacy-box">
+            <div class="legacy-header">
+                <h4>Terram</h4>
+                <span class="legacy-tag">Opção de Legado</span>
+            </div>
+            <div class="legacy-content">
+                <p style="color: #ccc; font-style: italic; margin-bottom: 20px;">
+                    Genasis que vivem em terrenos montanhosos ou cavernosos, geralmente são individualistas e admiram a força.
+                </p>
+                <ul class="species-list">
+                    <li>
+                        <strong>Força de Pedra:</strong> Você pode adicionar seu Modificador de Constituição como bônus em Testes de Força e Atletismo.
+                    </li>
+                    <li>
+                        <strong>Pele Rochosa:</strong> Você pode usar uma Ação para endurecer sua pele, aumentando temporariamente sua CA em +2 por 1 minuto. Você pode usar essa habilidade um número de vezes igual ao seu bônus de Proficiência por Descanso.
+                    </li>
+                    <li>
+                        <strong>Domínio da Terra:</strong> Uma vez por Descanso, você pode mover a terra ou a rocha em um raio de 9 metros, criando e removendo obstáculos naturais.
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="ignis" class="legacy-box">
+            <div class="legacy-header">
+                <h4>Ignis</h4>
+                <span class="legacy-tag">Opção de Legado</span>
+            </div>
+            <div class="legacy-content">
+                <p style="color: #ccc; font-style: italic; margin-bottom: 20px;">
+                    Genasis que vivem em desertos e áreas abertas, geralmente são intensos e possuem um espírito aventureiro.
+                </p>
+                <ul class="species-list">
+                    <li>
+                        <strong>Coração Incandescente:</strong> Você é imune a condições de frio e tem resistência a dano de fogo.
+                    </li>
+                    <li>
+                        <strong>Chama Eterna:</strong> Você pode criar uma esfera de fogo com 30 centímetros de diâmetro em um ponto que você possa ver dentro de um raio de 9 metros. A esfera flutua no ar e emite luz em um raio de 6 metros, com penumbra em um raio adicional de 6 metros. Você pode controlar o movimento da esfera usando uma Ação Bônus, movendo-a até 9 metros em qualquer direção. A esfera de fogo não causa dano e pode ser usada para iluminar, aquecer ou incendiar objetos inflamáveis que não estejam sendo usados ou carregados. A esfera não pode ser apagada por condições climáticas naturais.
+                    </li>
+                    <li>
+                        <strong>Golpe Ígneo:</strong> Como uma Ação, você pode envolver sua arma em chamas, causando dano de fogo adicional igual ao seu Modificador de Atributo de Conjuração por 1 minuto. Você pode usar essa habilidade um número de vezes igual ao seu bônus de Proficiência por Descanso.
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="auran" class="legacy-box">
+            <div class="legacy-header">
+                <h4>Auran</h4>
+                <span class="legacy-tag">Opção de Legado</span>
+            </div>
+            <div class="legacy-content">
+                <p style="color: #ccc; font-style: italic; margin-bottom: 20px;">
+                    Genasis que vivem em florestas, colinas e lugares altos, geralmente sábios e pacientes.
+                </p>
+                <ul class="species-list">
+                    <li>
+                        <strong>Respiração Infinita:</strong> Você pode prender a respiração indefinidamente enquanto não estiver incapacitado.
+                    </li>
+                    <li>
+                        <strong>Voz do Vento:</strong> Você pode se comunicar telepaticamente à vontade com qualquer criatura que te compreenda e esteja dentro de 18 metros de você.
+                    </li>
+                    <li>
+                        <strong>Proteção Aérea:</strong> Como uma Ação, você pode conjurar uma barreira de vento ao seu redor, concedendo cobertura contra ataques à distância por 1 minuto. Você pode usar essa habilidade um número de vezes igual ao seu bônus de Proficiência por Descanso.
+                    </li>
+                </ul>
+            </div>
+        </div>
+
     </section>
 </main>
 
 <footer>
-    <p>&copy; 2025 Kyous. Todos os direitos reservados.</p>
+    <p>&copy; 2026 Kyous. Todos os direitos reservados.</p>
 </footer>
 
 <script src="main.js"></script>

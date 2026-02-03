@@ -9,6 +9,12 @@
 
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" href="imagens/favicon.png">
+
+    <style>
+        :root {
+            --species-color: #2ecc71;
+        }
+    </style>
 </head>
 <body>
 
@@ -22,14 +28,252 @@
 <div id="nav-placeholder"></div>
 
 <main>
-    <section class="pagina-em-construcao">
-        <h2>Elfo</h2>
-        <p>Este conteúdo ainda está sendo forjado em Alternum. Volte em breve!</p>
+    <section>
+        <h2 class="species-header">Elfo</h2>
+
+        <p>Os elfos geralmente moram em lugares com muita vegetação, mas é comum que haja também em outras partes do continente que não possuam essa característica, os elfos são misteriosos e possuem uma beleza única. Elfos amam a natureza e a magia, a arte e o estudo, a música e a poesia, e as coisas boas do mundo, mas há aqueles que são assassinos natos, ágeis e furtivos, esse tipo costuma possuir clãs isolados. Além disso, a política é dividida em quatro Cortes que representam as estações.</p>
+
+        <hr class="species-divider">
+
+        <div class="species-box">
+            <h4>Características Raciais</h4>
+            <ul class="species-list">
+                <li>
+                    <strong>Tempo de Vida:</strong> 750 anos em média.
+                </li>
+                <li>
+                    <strong>Tamanho:</strong> Médio (Cerca de 1,50 a 1,80 metros de altura).
+                </li>
+                <li>
+                    <strong>Deslocamento:</strong> 9 metros (6 quadrados).
+                </li>
+            </ul>
+        </div>
+
+        <h3 class="species-subheader">Habilidades da Espécie</h3>
+
+        <div class="species-box">
+            <ul class="species-list">
+                <li>
+                    <strong>Visão no Escuro:</strong> Possui a capacidade de enxergar no escuro com alcance de 18 metros.
+                </li>
+                <li>
+                    <strong>Proteção Ancestral:</strong> Possui vantagem nos Testes de Resistência contra ser Enfeitiçado e magia não pode colocá-lo para dormir.
+                </li>
+                <li>
+                    <strong>Máscara da Natureza:</strong> Você pode tentar se esconder mesmo quando você está apenas levemente obscurecido por folhagem, chuva forte, neve caindo, névoa ou outro fenômeno natural e possui vantagem em Testes de Furtividade.
+                </li>
+                <li>
+                    <strong>Passo Feérico:</strong> Uma vez por Descanso, você pode se teletransportar a até 9 metros com uma Ação Bônus. Opcionalmente, você pode tocar uma criatura voluntária a até 1,5 metro de você. Essa criatura então se teletransporta em vez de você, aparecendo em um espaço desocupado de sua escolha que você pode ver a até 9 metros de distância.
+                </li>
+                <li>
+                    <strong>Legado:</strong> Você possui uma linhagem que lhe concede alguns benefícios. Selecione uma linhagem élfica.
+                </li>
+            </ul>
+        </div>
+
+        <h3 class="species-subheader">Legados dos Elfos</h3>
+
+        <div class="legacy-nav">
+            <a href="criacao/especies/elfo.html#comum" class="legacy-link">Comum</a>
+            <a href="criacao/especies/elfo.html#primavera" class="legacy-link">Primavera</a>
+            <a href="criacao/especies/elfo.html#verao" class="legacy-link">Verão</a>
+            <a href="criacao/especies/elfo.html#outono" class="legacy-link">Outono</a>
+            <a href="criacao/especies/elfo.html#inverno" class="legacy-link">Inverno</a>
+            <a href="criacao/especies/elfo.html#solar" class="legacy-link">Solar</a>
+            <a href="criacao/especies/elfo.html#lunar" class="legacy-link">Lunar</a>
+            <a href="criacao/especies/elfo.html#drow" class="legacy-link">Drow</a>
+        </div>
+
+        <div id="comum" class="legacy-box">
+            <div class="legacy-header">
+                <h4>Comum</h4>
+                <span class="legacy-tag">Opção de Legado</span>
+            </div>
+            <div class="legacy-content">
+                <p style="color: #ccc; font-style: italic; margin-bottom: 20px;">
+                    São elfos que não possuem uma ligação direta com uma corte feérica específica. Os elfos comuns são seres graciosos e longevos, conhecidos por sua beleza, habilidades arcanas e conexão com a natureza.
+                </p>
+                <ul class="species-list">
+                    <li>
+                        <strong>Intuição Astuta:</strong> Sempre que você rolar um Teste de Furtividade ou um Teste de Percepção, jogue 1d4 adicional.
+                    </li>
+                    <li>
+                        <strong>Visão Aguçada:</strong> Como uma Ação, você pode focar sua visão e perceber detalhes ocultos. Por 1 minuto, você tem vantagem em Testes de Percepção e Investigação. Você pode usar essa habilidade um número de vezes igual ao seu bônus de Proficiência por Descanso.
+                    </li>
+                    <li>
+                        <strong>Detectar Magia:</strong> Você detecta a presença, quantidade e intensidade de auras mágicas na área, conforme a quantidade de tempo que gasta se concentrando. Na primeira rodada, você percebe a presença de auras mágicas; na segunda rodada, a quantidade de auras; por fim, na terceira rodada, você percebe a localização e intensidade de cada aura mágica.
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="primavera" class="legacy-box">
+            <div class="legacy-header">
+                <h4>Primavera</h4>
+                <span class="legacy-tag">Opção de Legado</span>
+            </div>
+            <div class="legacy-content">
+                <p style="color: #ccc; font-style: italic; margin-bottom: 20px;">
+                    Marcados pela alegria e celebração, gostam de festas, são energéticos e positivos. Os elfos da primavera possuem uma pele e cabelo que variam entre tons coloridos que lembram a estação. Pode possuir chifres e características no corpo ligadas a estação.
+                </p>
+                <ul class="species-list">
+                    <li>
+                        <strong>Aura da Primavera:</strong> Como uma Ação e uma vez por Cena, você pode ativar uma aura que emana a energia renovadora e a harmonia da primavera. Aliados amigáveis num raio de 6 metros recebem resistência a dano de vento e ganham +2 em jogadas de ataque à distância. Esta aura pode ser mantida ativa por até 1 minuto e pode ser desativada a qualquer momento (nenhuma Ação necessária).
+                    </li>
+                    <li>
+                        <strong>Floração da Vida:</strong> Como uma Ação, você pode invocar a energia da primavera para curar a si mesmo e a até dois aliados que você possa ver a até 6 metros. Cada alvo cura 1d8 + Modificador de Atributo de Conjuração em Pontos de Vida. Você pode usar essa habilidade um número de vezes igual ao seu bônus de Proficiência por Descanso.
+                    </li>
+                    <li>
+                        <strong>Crescimento Descontrolado:</strong> Como uma Ação, você faz com que plantas e raízes cresçam rapidamente ao redor de um alvo que você possa ver até 18 metros de distância. O alvo deve realizar um Teste de Resistência de Força. Em um falha, o alvo fica enraizado no local por 1 minuto ou até que consiga passar no Teste de Resistência no final de cada turno. Você pode usar essa habilidade um número de vezes igual ao seu bônus de Proficiência por Descanso.
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="verao" class="legacy-box">
+            <div class="legacy-header">
+                <h4>Verão</h4>
+                <span class="legacy-tag">Opção de Legado</span>
+            </div>
+            <div class="legacy-content">
+                <p style="color: #ccc; font-style: italic; margin-bottom: 20px;">
+                    Marcados pela ousadia e agressão, possuem uma energia irrestrita. Os elfos do verão possuem uma pele e cabelo que variam entre tons coloridos que lembram a estação. Pode possuir chifres e características no corpo ligadas a estação.
+                </p>
+                <ul class="species-list">
+                    <li>
+                        <strong>Aura do Verão:</strong> Como uma Ação e uma vez por Cena, você pode ativar uma aura que emana o calor e a vitalidade do verão. Aliados amigáveis num raio de 6 metros recebem resistência a dano de fogo e podem adicionar seu Modificador de Atributo de Conjuração ao dano de ataques corpo a corpo. Esta aura pode ser mantida ativa por até 1 minuto e pode ser desativada a qualquer momento (nenhuma Ação necessária).
+                    </li>
+                    <li>
+                        <strong>Onda de Calor:</strong> Como uma Ação, você pode liberar uma intensa onda de calor em um raio de 9 metros ao seu redor, que dura por 1 minuto. Inimigos dentro desta área têm desvantagem em Testes de Resistência devido ao calor extremo. Além disso, a área se torna terreno difícil para os inimigos. Você pode usar essa habilidade um número de vezes igual ao seu bônus de Proficiência por Descanso.
+                    </li>
+                    <li>
+                        <strong>Miragem Escaldante:</strong> Como uma Ação, você pode criar uma miragem de calor ao seu redor que distorce sua imagem e confunde os inimigos. Por 1 minuto, inimigos que tentarem atingi-lo com ataques à distância ou corpo a corpo têm desvantagem nas jogadas de ataque devido à distorção causada pelo calor. Você pode usar essa habilidade um número de vezes igual ao seu bônus de Proficiência por Descanso.
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="outono" class="legacy-box">
+            <div class="legacy-header">
+                <h4>Outono</h4>
+                <span class="legacy-tag">Opção de Legado</span>
+            </div>
+            <div class="legacy-content">
+                <p style="color: #ccc; font-style: italic; margin-bottom: 20px;">
+                    Marcados pela paz e boa vontade, gostam de compartilhar e relaxar. Os elfos do outono possuem uma pele e cabelo que variam entre tons coloridos que lembram a estação. Pode possuir chifres e características no corpo ligadas a estação.
+                </p>
+                <ul class="species-list">
+                    <li>
+                        <strong>Aura do Outono:</strong> Como uma Ação e uma vez por Cena, você pode ativar uma aura que emana a tranquilidade e a resistência do outono. Aliados amigáveis num raio de 6 metros recebem resistência a dano de terra e têm vantagem em Testes de Resistência contra efeitos de medo e encantamentos. Esta aura pode ser mantida ativa por até 1 minuto e pode ser desativada a qualquer momento (nenhuma Ação necessária).
+                    </li>
+                    <li>
+                        <strong>Proteção de Folhas:</strong> Como uma Ação, você invoca um escudo de folhas mágicas ao seu redor. Por 1 minuto, você tem +2 na Classe de Armadura. Sempre que um inimigo acerta um ataque corpo a corpo contra você enquanto o escudo está ativo, o inimigo sofre 1d6 de dano cortante. Você pode usar essa habilidade um número de vezes igual ao seu bônus de Proficiência por Descanso.
+                    </li>
+                    <li>
+                        <strong>Folhas Cortantes:</strong> Como uma Ação, você conjura uma rajada de folhas afiadas que cortam seus inimigos. Todas as criaturas em uma linha de 9 metros devem realizar um Teste de Resistência de Destreza. Uma criatura sofre 2d8 de dano cortante se falhar, ou a metade em um sucesso. Você pode usar essa habilidade um número de vezes igual ao seu bônus de Proficiência por Descanso.
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="inverno" class="legacy-box">
+            <div class="legacy-header">
+                <h4>Inverno</h4>
+                <span class="legacy-tag">Opção de Legado</span>
+            </div>
+            <div class="legacy-content">
+                <p style="color: #ccc; font-style: italic; margin-bottom: 20px;">
+                    Marcados pela dor e lamentações, contemplam a calmaria e apreciam os momentos. Os elfos do inverno possuem uma pele e cabelo que variam entre tons coloridos que lembram a estação. Pode possuir chifres e características no corpo ligadas a estação.
+                </p>
+                <ul class="species-list">
+                    <li>
+                        <strong>Aura do Inverno:</strong> Como uma Ação e uma vez por Cena, você pode ativar uma aura que emana o frio penetrante e a calma do inverno. Aliados amigáveis num raio de 6 metros recebem resistência a dano de gelo e podem usar uma Reação para reduzir pela metade o dano causado por um ataque que os atinja. Esta aura pode ser mantida ativa por até 1 minuto e pode ser desativada a qualquer momento (nenhuma Ação necessária).
+                    </li>
+                    <li>
+                        <strong>Névoa Gélida:</strong> Como uma Ação, você pode criar uma névoa gélida em um raio de 6 metros ao seu redor. Esta névoa dura por 1 minuto e obscurece a visão, concedendo meia cobertura para você e seus aliados dentro dela. Inimigos que tentarem atravessar a névoa devem realizar um Teste de Resistência de Constituição ou perderão metade do deslocamento até o final do próximo turno. Você pode usar essa habilidade um número de vezes igual ao seu bônus de Proficiência por Descanso.
+                    </li>
+                    <li>
+                        <strong>Frieza Restauradora:</strong> Como uma Ação, você pode canalizar a calma do inverno para restaurar a mente de um aliado. Um aliado que você possa ver até 9 metros de distância se cura de um efeito de medo ou encantamento e recupera 1d8 + Modificador de Atributo de Conjuração em Pontos de Vida. Você pode usar essa habilidade um número de vezes igual ao seu bônus de Proficiência por Descanso.
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="solar" class="legacy-box">
+            <div class="legacy-header">
+                <h4>Solar</h4>
+                <span class="legacy-tag">Opção de Legado</span>
+            </div>
+            <div class="legacy-content">
+                <p style="color: #ccc; font-style: italic; margin-bottom: 20px;">
+                    Altos elfos com grandes civilizações que endeusam o sol e acreditam ser criados por ele. Geralmente são centrados na fé e são ótimos guardiões, além de serem linhas de frente em combates.
+                </p>
+                <ul class="species-list">
+                    <li>
+                        <strong>Chama Radiante:</strong> Uma vez por Descanso, você lança uma esfera de chamas brilhantes em um alvo que você pode ver a até 36 metros de distância. Em um acerto, o alvo sofre 4d6 de dano de fogo e deve realizar um Teste de Resistência de Constituição. Em uma falha, o alvo fica cego até o final do seu próximo turno.
+                    </li>
+                    <li>
+                        <strong>Fúria do Sol:</strong> Como uma Ação, você pode canalizar a energia abrasadora do sol para aumentar a ferocidade dos ataques de seus aliados. Por 1 minuto, todos os aliados que você possa ver em um raio de 9 metros recebem um bônus de +2 em todas as jogadas de ataque e Testes de Resistência de magias ofensivas. Você pode usar essa habilidade um número de vezes igual ao seu bônus de Proficiência por Descanso.
+                    </li>
+                    <li>
+                        <strong>Resplendor Solar:</strong> Como uma Ação, você pode invocar um escudo de luz solar brilhante ao seu redor. Por 1 minuto, você emite uma luz intensa em um raio de 6 metros. Esta luz cega temporariamente qualquer inimigo que o ataque. Inimigos que realizarem um ataque contra você devem realizar um Teste de Resistência de Constituição. Em caso de falha, eles têm desvantagem nos ataques contra você até o início do próximo turno deles. Você pode usar essa habilidade um número de vezes igual ao seu bônus de Proficiência por Descanso.
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="lunar" class="legacy-box">
+            <div class="legacy-header">
+                <h4>Lunar</h4>
+                <span class="legacy-tag">Opção de Legado</span>
+            </div>
+            <div class="legacy-content">
+                <p style="color: #ccc; font-style: italic; margin-bottom: 20px;">
+                    Altos elfos, filhos da noite, a lua é o que os guia e o que os nomeia. Esses elfos são assassinos e rastreadores natos, possuem clãs reclusos e geralmente realizam serviços mercenários para outras espécies.
+                </p>
+                <ul class="species-list">
+                    <li>
+                        <strong>Esfera Lunar:</strong> Uma vez por Descanso, você lança uma esfera de chamas brilhantes em um alvo que você pode ver a até 36 metros de distância. Em um acerto, o alvo sofre 4d6 de dano de gelo e deve realizar um Teste de Resistência de Constituição. Em uma falha, o alvo tem sua velocidade reduzida pela metade até o final do seu próximo turno.
+                    </li>
+                    <li>
+                        <strong>Sombra da Noite:</strong> Como uma Ação, você invoca a escuridão da noite para ocultar seus movimentos. Você e até dois aliados que você possa ver a até 6 metros ganham invisibilidade até o início do seu próximo turno ou até realizarem um ataque ou conjurar um feitiço. Você pode usar essa habilidade um número de vezes igual ao seu bônus de Proficiência por Descanso.
+                    </li>
+                    <li>
+                        <strong>Eclipse:</strong> Como uma Ação e uma vez por Cena, você cria uma área de escuridão mágica em um raio de até 9 metros que você possa ver em até 18 metros de distância. A escuridão persiste por 1 minuto ou até você usar uma Ação para dissipá-la. Criaturas totalmente dentro da área são efetivamente cegas.
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="drow" class="legacy-box">
+            <div class="legacy-header">
+                <h4>Drow</h4>
+                <span class="legacy-tag">Opção de Legado</span>
+            </div>
+            <div class="legacy-content">
+                <p style="color: #ccc; font-style: italic; margin-bottom: 20px;">
+                    Elfos noturnos que costumam viver no submundo, cavernas e lugares escuros de Ellinie, costumam ser mais ativos durante a noite pois o dia faz mal a eles.
+                </p>
+                <ul class="species-list">
+                    <li>
+                        <strong>Toque Venenoso:</strong> Ao acertar um ataque com arma corpo a corpo, você pode optar por envenenar o alvo. O alvo sofre 1d6 de dano venenoso no início de cada um de seus turnos durante 1 minuto. Você pode usar essa habilidade um número de vezes igual ao seu bônus de Proficiência por Descanso.
+                    </li>
+                    <li>
+                        <strong>Visão Obscura:</strong> Conseguem ver no escuro como se estivesse tudo iluminado como o dia. No entanto, durante o dia, suas jogadas de ataque e Testes de Percepção sofrem desvantagem caso esteja diretamente sob a luz do sol. Adicionalmente, uma vez por Descanso, você pode usar uma Ação Bônus para enxergar através da escuridão mágica por 1 minuto.
+                    </li>
+                    <li>
+                        <strong>Evasão Sombria:</strong> Como uma Ação, você pode usar as sombras ao seu redor para aumentar sua capacidade de evitar ataques. Por 1 minuto, você ganha vantagem em Testes de Destreza para evitar ataques e efeitos que exijam um Teste de Resistência de Destreza. Além disso, você pode usar sua Reação para reduzir pela metade qualquer dano que venha de uma fonte que você possa ver. Você pode usar essa habilidade um número de vezes igual ao seu bônus de Proficiência por Descanso.
+                    </li>
+                </ul>
+            </div>
+        </div>
+
     </section>
 </main>
 
 <footer>
-    <p>&copy; 2025 Kyous. Todos os direitos reservados.</p>
+    <p>&copy; 2026 Kyous. Todos os direitos reservados.</p>
 </footer>
 
 <script src="main.js"></script>

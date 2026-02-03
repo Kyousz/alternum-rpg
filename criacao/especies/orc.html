@@ -9,6 +9,12 @@
 
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" href="imagens/favicon.png">
+
+    <style>
+        :root {
+            --species-color: #556b2f;
+        }
+    </style>
 </head>
 <body>
 
@@ -22,14 +28,132 @@
 <div id="nav-placeholder"></div>
 
 <main>
-    <section class="pagina-em-construcao">
-        <h2>Orc</h2>
-        <p>Este conteúdo ainda está sendo forjado em Alternum. Volte em breve!</p>
+    <section>
+        <h2 class="species-header">Orc</h2>
+
+        <p>Uma espécie que possui um grande destaque pela força, aparência intimidadora e pela vontade destrutiva, os orcs são conquistadores e amantes de boas brigas, muitos possuem marcas e cicatrizes pelo corpo, além disso é uma espécie onde possui uma divisão de clãs, seja pela cor, presas ou cultura.</p>
+
+        <hr class="species-divider">
+
+        <div class="species-box">
+            <h4>Características Raciais</h4>
+            <ul class="species-list">
+                <li>
+                    <strong>Tempo de Vida:</strong> 80 anos em média.
+                </li>
+                <li>
+                    <strong>Tamanho e Peso:</strong> Médio (Cerca de 1,80 a 2,20 metros de altura).
+                </li>
+                <li>
+                    <strong>Deslocamento:</strong> 9 metros (6 quadrados).
+                </li>
+            </ul>
+        </div>
+
+        <h3 class="species-subheader">Habilidades da Espécie</h3>
+
+        <div class="species-box">
+            <ul class="species-list">
+                <li>
+                    <strong>Calor da Batalha:</strong> Quando você receber dano que reduziria seus Pontos de Vida a 0, você pode optar por permanecer de pé com 1 ponto de vida restante por mais dois turnos. Durante esse tempo, se sofrer dano novamente que reduziria seus Pontos de Vida a 0, você cairá normalmente. Se você não sofrer mais dano durante esses dois turnos extras, cairá no final do segundo turno.
+                </li>
+                <li>
+                    <strong>Fúria Implacável:</strong> Quando você causar dano a um inimigo com um ataque corpo a corpo, pode usar sua Reação para realizar um ataque adicional contra o mesmo inimigo.
+                </li>
+                <li>
+                    <strong>Tolerância à Dor:</strong> Você ignora os efeitos de um ferimento até o final do seu próximo turno. Você pode usar essa habilidade um número de vezes igual ao seu bônus de Proficiência por Descanso.
+                </li>
+                <li>
+                    <strong>Grito de Guerra:</strong> Como uma Ação, você pode soltar um grito ensurdecedor que concede vantagem em ataques para você e seus aliados por 1 minuto. Você pode usar essa habilidade um número de vezes igual ao seu bônus de Proficiência por Descanso.
+                </li>
+                <li>
+                    <strong>Legado:</strong> Você possui uma linhagem que lhe concede alguns benefícios. Selecione uma linhagem orc.
+                </li>
+            </ul>
+        </div>
+
+        <h3 class="species-subheader">Legados dos Orcs</h3>
+
+        <div class="legacy-nav">
+            <a href="criacao/especies/orc.html#comum" class="legacy-link">Comum</a>
+            <a href="criacao/especies/orc.html#ossos" class="legacy-link">Ossos</a>
+            <a href="criacao/especies/orc.html#vermelho" class="legacy-link">Vermelho</a>
+        </div>
+
+        <div id="comum" class="legacy-box">
+            <div class="legacy-header">
+                <h4>Comum</h4>
+                <span class="legacy-tag">Opção de Legado</span>
+            </div>
+            <div class="legacy-content">
+                <p style="color: #ccc; font-style: italic; margin-bottom: 20px;">
+                    A maioria dos orcs existentes em Alternum, conhecidos por sua força bruta e desejo por batalhas. Eles são guerreiros ferozes que prosperam em combates corpo a corpo e possuem uma estrutura física intimidadora.
+                </p>
+                <ul class="species-list">
+                    <li>
+                        <strong>Ataques Selvagens:</strong> Quando você faz um ataque com uma arma corpo a corpo, você pode rolar novamente todos os dados de dano da arma e usar o resultado maior. Você pode usar essa habilidade um número de vezes igual ao seu bônus de Proficiência por Descanso.
+                    </li>
+                    <li>
+                        <strong>Resistência Implacável:</strong> Uma vez por Descanso, quando você sofrer dano, pode usar sua Reação para reduzir o dano em um valor igual ao seu Nível + Modificador de Constituição.
+                    </li>
+                    <li>
+                        <strong>Salto de Predador:</strong> Sua distância de salto é dobrada, tanto para saltos em altura quanto para saltos em distância. Além disso, você não sofre dano de queda de alturas de até 9 metros.
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="ossos" class="legacy-box">
+            <div class="legacy-header">
+                <h4>Ossos</h4>
+                <span class="legacy-tag">Opção de Legado</span>
+            </div>
+            <div class="legacy-content">
+                <p style="color: #ccc; font-style: italic; margin-bottom: 20px;">
+                    Esses orcs são mais tribais, cinzentos e possuem pinturas de ossos no corpo. Esses orcs são mais reclusos que os outros e possuem muito misticismo em seus estilos de vida.
+                </p>
+                <ul class="species-list">
+                    <li>
+                        <strong>Proteção dos Ancestrais (Vitalidade):</strong> Você pode dobrar o seu Modificador de Constituição aos seus Pontos de Vida máximos.
+                    </li>
+                    <li>
+                        <strong>Proteção dos Ancestrais (Espírito):</strong> Além disso, em Testes de Resistência Contra a Morte, possui vantagem nas rolagens.
+                    </li>
+                    <li>
+                        <strong>Visão Ancestral:</strong> Você pode usar uma Ação para receber visões do passado ou do futuro próximo. Isso pode ajudar a fornecer orientação ou prever eventos futuros. Role 5d20 e guarde os resultados para o dia atual; estes resultados serão aplicados às suas próximas rolagens. Você pode usar essa habilidade um número de vezes igual ao seu bônus de Proficiência por Descanso.
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="vermelho" class="legacy-box">
+            <div class="legacy-header">
+                <h4>Vermelho</h4>
+                <span class="legacy-tag">Opção de Legado</span>
+            </div>
+            <div class="legacy-content">
+                <p style="color: #ccc; font-style: italic; margin-bottom: 20px;">
+                    Esses orcs são mais controlados e de uma linhagem ancestral assim como os dos ossos. Os mais puros são minoria, mas os orcs vermelhos ainda possuem seu lugar de direito em algumas cidades. Suas tradições e heranças são sempre marcadas por sangue ou glória.
+                </p>
+                <ul class="species-list">
+                    <li>
+                        <strong>Força de Sangue:</strong> Quando você reduz uma criatura a 0 pontos de vida com um ataque corpo a corpo, você ganha Pontos de Vida temporários igual ao dano extra causado por esse ataque.
+                    </li>
+                    <li>
+                        <strong>Golpe Preciso:</strong> Como uma Ação Bônus, você pode escolher uma criatura que você possa ver. Todos os seus ataques corpo a corpo contra essa criatura são considerados acertos críticos se você rolar um 19 ou 20 no dado de ataque. Você pode usar essa habilidade um número de vezes igual ao seu bônus de Proficiência por Descanso.
+                    </li>
+                    <li>
+                        <strong>Frenesi de Batalha:</strong> Como uma Ação Bônus, você pode entrar em um estado de frenesi, concedendo 1d4 de dano extra em todos os seus ataques corpo a corpo, incluindo ataques desarmados, por 1 minuto. Você pode usar essa habilidade um número de vezes igual ao seu bônus de Proficiência por Descanso.
+                    </li>
+                </ul>
+            </div>
+        </div>
+
     </section>
 </main>
 
 <footer>
-    <p>&copy; 2025 Kyous. Todos os direitos reservados.</p>
+    <p>&copy; 2026 Kyous. Todos os direitos reservados.</p>
 </footer>
 
 <script src="main.js"></script>

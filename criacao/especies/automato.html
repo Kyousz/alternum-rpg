@@ -9,6 +9,12 @@
 
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" href="imagens/favicon.png">
+
+    <style>
+        :root {
+            --species-color: #78909c;
+        }
+    </style>
 </head>
 <body>
 
@@ -22,14 +28,161 @@
 <div id="nav-placeholder"></div>
 
 <main>
-    <section class="pagina-em-construcao">
-        <h2>Autômato</h2>
-        <p>Este conteúdo ainda está sendo forjado em Alternum. Volte em breve!</p>
+    <section>
+        <h2 class="species-header">Autômato</h2>
+
+        <p>Você é a criação de alguém, mas diferente de outros autômatos você possui uma essência que lhe dá vida, um núcleo que se assemelha a um coração. Mas isso não significa que seja imortal, seu núcleo tem um tempo de duração limitado. Para atingir a idade adulta mental seu cérebro se desenvolve por 10 anos. O Núcleo Lif concede algumas sensações e é composto por cristais de Arcanum. Possui uma energia mágica correndo nas veias permitindo também o uso de magias, basta conhecê-las.</p>
+
+        <hr class="species-divider">
+
+        <div class="species-box">
+            <h4>Características Raciais</h4>
+            <ul class="species-list">
+                <li>
+                    <strong>Tempo de Vida:</strong> 800 anos em média.
+                </li>
+                <li>
+                    <strong>Tamanho:</strong> Pequeno, Médio ou Grande.
+                </li>
+                <li>
+                    <strong>Deslocamento:</strong> 9 metros (6 quadrados).
+                </li>
+            </ul>
+        </div>
+
+        <h3 class="species-subheader">Habilidades da Espécie</h3>
+
+        <div class="species-box">
+            <ul class="species-list">
+                <li>
+                    <strong>Fortitude Mecânica:</strong> Você foi projetado com uma durabilidade excepcional. Como resultado, você é imune a doenças comuns e não precisa comer, beber ou respirar, permitindo-lhe operar de forma contínua e eficiente em praticamente qualquer ambiente.
+                </li>
+                <li>
+                    <strong>Descanso do Sentinela:</strong> Você não precisa dormir e não sofre os efeitos da exaustão devido à falta de sono. Além disso, a magia não pode lhe colocar para dormir. Quando você faz um Descanso, você precisa passar pelo menos seis horas em um estado inativo e imóvel. Nesse estado, você aparenta estar desligado, mas você não está inconsciente, e consegue ver e ouvir normalmente.
+                </li>
+                <li>
+                    <strong>Proteção Integrada:</strong> Seu corpo é composto por camadas de proteção que determinam sua Classe de Armadura (CA). Você não recebe benefícios ao usar outras armaduras, mas pode aplicar o bônus de um escudo normalmente. Escolha um dos seguintes graus de proteção:
+                    <ul style="margin-top: 5px; list-style: none; padding-left: 20px; color: #ccc;">
+                        <li style="margin-bottom: 5px;">↳ <strong>Grau 1:</strong> Sua CA é igual a 11 + seu Modificador de Destreza. Se você tiver Proficiência em armaduras leves, adicione seu bônus de Proficiência à CA.</li>
+                        <li style="margin-bottom: 5px;">↳ <strong>Grau 2:</strong> Se você tiver Proficiência em armaduras médias, sua CA é igual a 13 + seu Modificador de Destreza (máximo 2) + seu bônus de Proficiência.</li>
+                        <li style="margin-bottom: 5px;">↳ <strong>Grau 3:</strong> Se você tiver Proficiência em armaduras pesadas, sua CA é igual a 16 + seu bônus de Proficiência, mas você terá desvantagem em Testes de Furtividade.</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Sobrecarga de Núcleo:</strong> Como uma Ação Bônus, você pode sobrecarregar seu núcleo, concedendo a você um bônus de +2 em jogadas de ataque e Testes de Resistência contra magias por 1 minuto. Após o uso, você sofre um nível de exaustão. Você pode usar essa habilidade uma vez por Descanso.
+                </li>
+                <li>
+                    <strong>Legado:</strong> Você possui uma linhagem que lhe concede alguns benefícios. Selecione uma linhagem de máquina abaixo.
+                </li>
+            </ul>
+        </div>
+
+        <h3 class="species-subheader">Legados dos Autômatos</h3>
+
+        <div class="legacy-nav">
+            <a href="criacao/especies/automato.html#combate" class="legacy-link">Combate</a>
+            <a href="criacao/especies/automato.html#emissaria" class="legacy-link">Emissária</a>
+            <a href="criacao/especies/automato.html#defesa" class="legacy-link">Defesa</a>
+            <a href="criacao/especies/automato.html#infiltrador" class="legacy-link">Infiltrador</a>
+        </div>
+
+        <div id="combate" class="legacy-box">
+            <div class="legacy-header">
+                <h4>Máquina de Combate</h4>
+                <span class="legacy-tag">Opção de Legado</span>
+            </div>
+            <div class="legacy-content">
+                <p style="color: #ccc; font-style: italic; margin-bottom: 20px;">
+                    Você é uma imponente máquina de guerra construída para combate corpo a corpo e força bruta.
+                </p>
+                <ul class="species-list">
+                    <li>
+                        <strong>Punhos de Ferro:</strong> Quando você acerta um ataque desarmado, você causa 1d6 + Modificador de Força de dano por concussão, ao invés do dano normal para ataque desarmado.
+                    </li>
+                    <li>
+                        <strong>Forma Poderosa:</strong> Você conta como uma categoria de tamanho maior quando determina sua capacidade de carga e o peso que pode puxar, arrastar ou levantar. Além disso, você tem vantagem em Testes de Força relacionados a tarefas de força bruta.
+                    </li>
+                    <li>
+                        <strong>Impacto Devastador:</strong> Uma vez por turno, quando acerta um ataque corpo a corpo, você pode adicionar 1d8 de dano adicional ao dano causado pelo ataque.
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="emissaria" class="legacy-box">
+            <div class="legacy-header">
+                <h4>Máquina Emissária</h4>
+                <span class="legacy-tag">Opção de Legado</span>
+            </div>
+            <div class="legacy-content">
+                <p style="color: #ccc; font-style: italic; margin-bottom: 20px;">
+                    Criado com o propósito de liderar, negociar ou criar.
+                </p>
+                <ul class="species-list">
+                    <li>
+                        <strong>Mente Estratégica:</strong> Você ganha Proficiência em uma Perícia, uma Ferramenta e fluência em um Idioma, todos os três de sua escolha. Além disso, você pode re-rolar um Teste de Inteligência ou Carisma fracassado uma vez por Descanso.
+                    </li>
+                    <li>
+                        <strong>Ferramenta Integrada:</strong> Escolha uma Ferramenta que você seja proficiente. Esta Ferramenta é integrada ao seu corpo de uma maneira aprimorada, amplificando suas capacidades. Você pode dobrar o seu bônus de Proficiência em Testes de Atributo feitos com essa Ferramenta. Além disso, você pode usá-la mesmo quando suas mãos não estão livres.
+                    </li>
+                    <li>
+                        <strong>Comando Tático:</strong> Como uma Ação Bônus, você pode coordenar seus aliados em combate. Escolha até três criaturas aliadas dentro de 9 metros que possam ouvir e entender você. Essas criaturas podem usar sua Reação para fazer um ataque de oportunidade contra uma criatura que você designar até o início do seu próximo turno.
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="defesa" class="legacy-box">
+            <div class="legacy-header">
+                <h4>Máquina de Defesa</h4>
+                <span class="legacy-tag">Opção de Legado</span>
+            </div>
+            <div class="legacy-content">
+                <p style="color: #ccc; font-style: italic; margin-bottom: 20px;">
+                    Você foi construído para resistir a ataques e proteger seus aliados.
+                </p>
+                <ul class="species-list">
+                    <li>
+                        <strong>Campeão da Guarda:</strong> Você pode, como uma Ação Bônus, inspirar coragem e determinação em seus aliados. Todos os aliados que possam ver ou ouvir você dentro de 9 metros ganham um bônus de +1 em Testes de Resistência contra efeitos de medo e charme até o final do seu próximo turno.
+                    </li>
+                    <li>
+                        <strong>Resiliência Contínua:</strong> Ao final de cada um dos seus turnos, você ganha 1 Ponto de Vida Temporária. Esses pontos acumulam-se indefinidamente até o fim do combate.
+                    </li>
+                    <li>
+                        <strong>Blindagem Adaptativa:</strong> Com uma Ação, você pode adaptar sua resistência a um tipo de dano à sua escolha por um minuto. Pode usar essa habilidade uma vez por Descanso.
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="infiltrador" class="legacy-box">
+            <div class="legacy-header">
+                <h4>Máquina Infiltrador</h4>
+                <span class="legacy-tag">Opção de Legado</span>
+            </div>
+            <div class="legacy-content">
+                <p style="color: #ccc; font-style: italic; margin-bottom: 20px;">
+                    Você foi construído para operações secretas e espionagem.
+                </p>
+                <ul class="species-list">
+                    <li>
+                        <strong>Camuflagem Mecânica:</strong> Você pode gastar um ponto de Ação para se camuflar em seu ambiente, tornando-se invisível até o início do seu próximo turno ou até atacar ou lançar uma magia.
+                    </li>
+                    <li>
+                        <strong>Garras Silenciosas:</strong> Suas mãos são equipadas com garras afiadas que causam 1d6 + Modificador de Destreza de dano perfurante. Quando você ataca uma criatura surpresa, o dano é aumentado em +2d6.
+                    </li>
+                    <li>
+                        <strong>Sistema de Intrusão:</strong> Ao tocar em um item Tecno, você pode tentar manuseá-lo. Faça um Teste de Habilidade com um bônus igual ao seu Modificador de Inteligência. Em caso de sucesso, você manipula o item conforme desejado por 1 minuto.
+                    </li>
+                </ul>
+            </div>
+        </div>
+
     </section>
 </main>
 
 <footer>
-    <p>&copy; 2025 Kyous. Todos os direitos reservados.</p>
+    <p>&copy; 2026 Kyous. Todos os direitos reservados.</p>
 </footer>
 
 <script src="main.js"></script>

@@ -4,34 +4,133 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alternum - Anão</title>
-
     <base href="../../">
-
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" href="imagens/favicon.png">
+    <style>
+        :root { --species-color: #a67c52; }
+    </style>
 </head>
 <body>
-
 <header>
     <a href="index.html" class="home-link">
         <h1>Alternum</h1>
         <p>Role-Playing Game</p>
     </a>
 </header>
-
 <div id="nav-placeholder"></div>
 
 <main>
-    <section class="pagina-em-construcao">
-        <h2>Anão</h2>
-        <p>Este conteúdo ainda está sendo forjado em Alternum. Volte em breve!</p>
+    <section>
+        <h2 class="species-header">Anão</h2>
+        <p>Os anões possuem os conhecimentos mais antigos, é dito também que essa espécie encontrou o primeiro resquício de magia que pudesse ser manuseado pelos mortais. A grande maioria vive em Varya por ser uma das primeiras terras conhecidas e exploradas por eles, mas existem famílias espalhadas por todo o continente. Eles possuem respeito a sua linhagem e seguem tradições de herança.</p>
+
+        <hr class="species-divider">
+
+        <div class="species-box">
+            <h4>Características Raciais</h4>
+            <ul class="species-list">
+                <li><strong>Tempo de Vida:</strong> 350 anos em média.</li>
+                <li><strong>Tamanho:</strong> Médio (Cerca de 1,20 a 1,50 metros de altura).</li>
+                <li><strong>Deslocamento:</strong> 9 metros (6 quadrados). Seu deslocamento não é reduzido quando estiver usando armadura pesada.</li>
+            </ul>
+        </div>
+
+        <h3 class="species-subheader">Habilidades da Espécie</h3>
+
+        <div class="species-box">
+            <ul class="species-list">
+                <li>
+                    <strong>Estômago de Aço:</strong> Vantagem nos Testes de Resistência contra veneno, comidas estragadas e bebidas alcoólicas. Além de resistência contra dano de veneno.
+                </li>
+                <li>
+                    <strong>Resistência Anã:</strong> Seu Ponto de Vida máximo aumenta em 1 e aumenta em 1 novamente sempre que você ganha um nível.
+                </li>
+                <li>
+                    <strong>Mestre Artesão:</strong> Você possui um talento inato para trabalhar com ferramentas e criar obras-primas. Escolha duas ferramentas de sua preferência. Você ganha Proficiência nessas ferramentas escolhidas e, ao usá-las, pode adicionar o dobro do seu bônus de Proficiência em qualquer Teste de Habilidade que utilize essas ferramentas.
+                </li>
+                <li>
+                    <strong>Tenacidade Anã:</strong> Você possui uma resistência inata contra condições ambientais adversas. Você tem vantagem em Testes de Resistência contra condições climáticas extremas, como frio intenso ou calor escaldante, e contra efeitos que causem exaustão física.
+                </li>
+                <li>
+                    <strong>Runas Dorthok:</strong> Conhece o idioma antigo.
+                </li>
+                <li>
+                    <strong>Legado:</strong> Você possui uma linhagem que lhe concede alguns benefícios. Selecione uma linhagem anã abaixo.
+                </li>
+            </ul>
+        </div>
+
+        <h3 class="species-subheader">Legados dos Anões</h3>
+
+        <div class="legacy-nav">
+            <a href="criacao/especies/anao.html#comum" class="legacy-link">Comum</a>
+            <a href="criacao/especies/anao.html#rochanegra" class="legacy-link">Rocha Negra</a>
+            <a href="criacao/especies/anao.html#forjas" class="legacy-link">Forjas Vivas</a>
+        </div>
+
+        <div id="comum" class="legacy-box">
+            <div class="legacy-header">
+                <h4>Anão Comum</h4>
+                <span class="legacy-tag">Opção de Legado</span>
+            </div>
+            <div class="legacy-content">
+                <p style="color: #ccc; font-style: italic; margin-bottom: 20px;">
+                    Anões são robustos e trabalhadores, conhecidos por valorizar a lealdade, a honra e a tradição, defendendo suas terras com tenacidade e determinação contra qualquer ameaça que se apresente.
+                </p>
+                <ul class="species-list">
+                    <li>
+                        <strong>Firmar-se ao Solo:</strong> Quando um efeito obrigar um anão a se mover (por meio das manobras puxar, empurrar ou conduzir), ele pode se deslocar 1 quadrado a menos do que o valor indicado. Além disso, quando um ataque deixar o anão derrubado, ele pode realizar um Teste de Resistência imediatamente para não ficar derrubado. Se falhar, ainda pode gastar uma reação para se levantar imediatamente, sem custo de movimento.
+                    </li>
+                    <li>
+                        <strong>Manuseio de Runas:</strong> Possui um encantamento de Runas Dorthok em um item de sua escolha (arma, armadura ou outro objeto) que representa uma forma de magia relacionada à sua linhagem familiar.
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="rochanegra" class="legacy-box">
+            <div class="legacy-header">
+                <h4>Rocha Negra</h4>
+                <span class="legacy-tag">Opção de Legado</span>
+            </div>
+            <div class="legacy-content">
+                <p style="color: #ccc; font-style: italic; margin-bottom: 20px;">
+                    Anões que vivem mais no subsolo, sem iluminação, diferente dos anões que possuem suas cidades em montanhas, esses costumam ter seus lares em cavernas.
+                </p>
+                <ul class="species-list">
+                    <li>
+                        <strong>Resiliência da Rocha:</strong> Vantagem nos Testes de Resistência contra fogo, ilusões e contra ser Enfeitiçado ou Paralisado. Além disso, uma vez por dia, pode usar uma reação para ganhar resistência ao dano de um tipo à sua escolha por 1 minuto.
+                    </li>
+                    <li>
+                        <strong>Visão Obscura:</strong> Conseguem ver no escuro como se estivesse tudo iluminado como o dia. No entanto, durante o dia, suas jogadas de ataque e Testes de Percepção sofrem desvantagem caso esteja diretamente sob a luz do sol. Adicionalmente, uma vez por Descanso, você pode usar uma Ação Bônus para enxergar através da escuridão mágica por 1 minuto.
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="forjas" class="legacy-box">
+            <div class="legacy-header">
+                <h4>Forjas Vivas</h4>
+                <span class="legacy-tag">Opção de Legado</span>
+            </div>
+            <div class="legacy-content">
+                <p style="color: #ccc; font-style: italic; margin-bottom: 20px;">
+                    Anões que vivem próximos a forjas vulcânicas e fornalhas eternas, conhecidos por sua habilidade em moldar metal e criar artefatos poderosos.
+                </p>
+                <ul class="species-list">
+                    <li>
+                        <strong>Coração de Magma:</strong> Sempre que um ataque corpo a corpo atinge o anão, o atacante sofre 1d4 de dano de fogo. Além disso, uma vez por Descanso, o anão pode usar uma Ação para liberar uma onda de calor, causando 2d6 de dano de fogo a todas as criaturas em um raio de 3 metros (CD de Destreza para metade do dano).
+                    </li>
+                    <li>
+                        <strong>Forjador de Magma:</strong> Imunidade a dano de fogo e magma. Proficiência em ferramentas de ferreiro. Pode criar ou consertar itens duas vezes mais rápido que o normal. Uma vez por dia, pode imbuir uma arma com um efeito de magma, causando 1d6 de dano de magma adicional por 1 hora.
+                    </li>
+                </ul>
+            </div>
+        </div>
     </section>
 </main>
-
-<footer>
-    <p>&copy; 2025 Kyous. Todos os direitos reservados.</p>
-</footer>
-
+<footer><p>&copy; 2026 Kyous. Todos os direitos reservados.</p></footer>
 <script src="main.js"></script>
 </body>
 </html>

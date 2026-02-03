@@ -2503,3 +2503,203 @@ h2.titulo-entidades {
     color: #cda4ff;
     margin-right: 10px;
 }
+
+/* --- 50. ESTILOS DE ESPÉCIES (Anão, Elfo, etc) --- */
+
+:root {
+    --species-color: #ffffff;
+}
+
+/* Cabeçalho específico da Espécie */
+.species-header {
+    color: var(--species-color);
+    border-bottom: 2px solid var(--species-color);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    font-size: 2em;
+    text-transform: uppercase;
+    font-family: 'Cinzel', serif;
+    font-weight: 700;
+    text-shadow: 0 0 10px color-mix(in srgb, var(--species-color), transparent 60%);
+}
+
+/* Card de Informação Padrão (Características e Habilidades Base) */
+.species-box {
+    border-left: 5px solid var(--species-color);
+    padding: 15px 20px;
+    margin-bottom: 20px;
+    border-radius: 0 5px 5px 0;
+    background-color: color-mix(in srgb, var(--species-color), transparent 95%);
+    border-top: 1px solid color-mix(in srgb, var(--species-color), transparent 90%);
+    border-right: 1px solid color-mix(in srgb, var(--species-color), transparent 90%);
+    border-bottom: 1px solid color-mix(in srgb, var(--species-color), transparent 90%);
+}
+
+.species-box h4 {
+    margin-top: 0;
+    color: var(--species-color);
+    font-family: 'Cinzel', serif;
+    font-size: 1.3em;
+    font-weight: 700;
+    border-bottom: 1px dashed color-mix(in srgb, var(--species-color), transparent 70%);
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+/* LISTA MELHORADA (O Segredo para o Bloco Único ficar bonito) */
+.species-list {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.species-list li {
+    position: relative;
+    padding-left: 20px;
+    color: #e0e0e0;
+    font-family: 'EB Garamond', serif;
+    font-size: 1.0em;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px dashed color-mix(in srgb, var(--species-color), transparent 85%);
+    text-align: justify;
+    hyphens: auto;
+}
+
+.legacy-content p {
+    text-align: justify;
+    hyphens: auto;
+}
+
+/* Remove a borda do último item */
+.species-list li:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.species-list li strong {
+    color: var(--species-color);
+    font-weight: bold;
+    font-family: 'Cinzel', serif; /* Destaque na fonte do nome da habilidade */
+}
+
+.species-list li::before {
+    content: "•";
+    color: var(--species-color);
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+    font-size: 1.2em;
+    line-height: 1.2;
+}
+
+/* Correção para Sub-listas (ex: Anomalia) */
+.species-list ul li {
+    border-bottom: none;
+    margin-bottom: 5px;
+    padding-bottom: 0;
+}
+.species-list ul li::before {
+    content: none; /* Remove bolinha dupla */
+}
+
+/* Divisória colorida */
+.species-divider {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), var(--species-color), rgba(0, 0, 0, 0));
+    margin: 30px 0;
+    opacity: 0.6;
+}
+
+/* Subtítulos */
+.species-subheader {
+    color: var(--species-color);
+    font-family: 'Cinzel', serif;
+    font-size: 1.6em;
+    font-weight: 700;
+    margin-top: 40px;
+    margin-bottom: 15px;
+    border-bottom: none;
+    padding-bottom: 0;
+    text-shadow: none;
+}
+
+/* --- ESTILOS ESPECIAIS PARA LEGADOS (O Diferencial) --- */
+
+/* Navegação (Botões) */
+.legacy-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 25px;
+    justify-content: center;
+}
+
+.legacy-link {
+    text-decoration: none;
+    color: #e0e0e0;
+    border: 1px solid var(--species-color);
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-family: 'Cinzel', serif;
+    font-size: 0.9em;
+    transition: all 0.3s;
+    background: rgba(0,0,0,0.3);
+}
+
+.legacy-link:hover {
+    background: var(--species-color);
+    color: #0a0014;
+    font-weight: bold;
+    box-shadow: 0 0 10px var(--species-color);
+}
+
+/* Caixa de Legado (Visualmente distinta da Species Box) */
+.legacy-box {
+    border: 1px solid var(--species-color);
+    /* Gradiente sutil para dar ar de importância */
+    background: linear-gradient(135deg, color-mix(in srgb, var(--species-color), transparent 95%) 0%, rgba(0,0,0,0.6) 100%);
+    margin-bottom: 40px;
+    padding: 0;
+    overflow: hidden;
+    border-radius: 8px;
+    scroll-margin-top: 100px;
+}
+
+/* Cabeçalho do Legado */
+.legacy-header {
+    background-color: color-mix(in srgb, var(--species-color), transparent 80%);
+    padding: 10px 20px;
+    border-bottom: 1px solid var(--species-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.legacy-header h4 {
+    margin: 0;
+    border: none; /* Remove o pontilhado padrão */
+    color: #fff;
+    font-family: 'Cinzel', serif;
+    font-size: 1.3em;
+    text-shadow: 0 0 5px var(--species-color);
+    padding: 0;
+}
+
+.legacy-tag {
+    font-size: 0.7em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 3px 10px;
+    border-radius: 12px;
+    opacity: 0.8;
+}
+
+.legacy-content {
+    padding: 20px;
+}

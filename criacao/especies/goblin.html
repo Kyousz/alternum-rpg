@@ -9,6 +9,12 @@
 
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" href="imagens/favicon.png">
+
+    <style>
+        :root {
+            --species-color: #7cb342;
+        }
+    </style>
 </head>
 <body>
 
@@ -22,14 +28,108 @@
 <div id="nav-placeholder"></div>
 
 <main>
-    <section class="pagina-em-construcao">
-        <h2>Goblin</h2>
-        <p>Este conteúdo ainda está sendo forjado em Alternum. Volte em breve!</p>
+    <section>
+        <h2 class="species-header">Goblin</h2>
+
+        <p>Uma espécie que vive em tribos e situações precárias, a grande maioria serve sempre um que acaba sendo mais esperto que os demais ou simplesmente servem a uma espécie superior, na qual julgam mais forte. Goblins servem por medo. Poucos goblins conseguem viver fora de seu meio animalesco, mas mesmo assim sofrem nas mãos do mundo, pois a fama de ser um goblin não é algo bom, o preconceito e o ódio pelos goblins é comum dentre muitos outros povos.</p>
+
+        <hr class="species-divider">
+
+        <div class="species-box">
+            <h4>Características Raciais</h4>
+            <ul class="species-list">
+                <li>
+                    <strong>Tempo de Vida:</strong> 60 anos em média.
+                </li>
+                <li>
+                    <strong>Tamanho:</strong> Pequeno (Cerca de 90 centímetros a 1,20 metros de altura).
+                </li>
+                <li>
+                    <strong>Deslocamento:</strong> 9 metros (6 quadrados).
+                </li>
+            </ul>
+        </div>
+
+        <h3 class="species-subheader">Habilidades da Espécie</h3>
+
+        <div class="species-box">
+            <ul class="species-list">
+                <li>
+                    <strong>Visão no Escuro:</strong> Possui a capacidade de enxergar no escuro com alcance de 18 metros.
+                </li>
+                <li>
+                    <strong>Fúria do Pequeno:</strong> Quando causar dano a uma criatura com um ataque ou magia e o tamanho da criatura é maior que o seu, você pode causar dano extra igual ao seu Nível. Pode usar essa habilidade novamente depois de um Descanso.
+                </li>
+                <li>
+                    <strong>Veneno Natural:</strong> Você tem resistência a dano de veneno e vantagem em Testes de Resistência contra ser envenenado. Além disso, uma vez por Descanso, você pode aplicar veneno a uma arma, que causa 1d4 de dano de veneno adicional em um acerto.
+                </li>
+                <li>
+                    <strong>Engenhosidade Goblin:</strong> Você tem proficiência com ferramentas de sua escolha e pode criar armadilhas simples usando materiais disponíveis em seu ambiente. Essas armadilhas podem causar 1d6 de dano em uma área de 1,5 metros quando ativadas.
+                </li>
+                <li>
+                    <strong>Legado:</strong> Você possui uma linhagem que lhe concede alguns benefícios. Selecione uma linhagem goblin.
+                </li>
+            </ul>
+        </div>
+
+        <h3 class="species-subheader">Legados dos Goblins</h3>
+
+        <div class="legacy-nav">
+            <a href="criacao/especies/goblin.html#comum" class="legacy-link">Comum</a>
+            <a href="criacao/especies/goblin.html#gilblin" class="legacy-link">Gilblin</a>
+        </div>
+
+        <div id="comum" class="legacy-box">
+            <div class="legacy-header">
+                <h4>Comum</h4>
+                <span class="legacy-tag">Opção de Legado</span>
+            </div>
+            <div class="legacy-content">
+                <p style="color: #ccc; font-style: italic; margin-bottom: 20px;">
+                    A maioria dos goblins existentes em Alternum é composta por pequenos seres goblinóides, frequentemente encontrados em tribos e comunidades dispersas.
+                </p>
+                <ul class="species-list">
+                    <li>
+                        <strong>Mente Afiada:</strong> Você tem proficiência em uma Perícia à sua escolha: Enganação, Intimidação ou Persuasão.
+                    </li>
+                    <li>
+                        <strong>Ataque Surpresa:</strong> Se você atacar uma criatura que não tenha tomado uma Ação ainda no combate, você causa um dano extra de 2d6 no primeiro ataque bem-sucedido.
+                    </li>
+                    <li>
+                        <strong>Fuga Desesperada:</strong> Quando você for atingido por um ataque, você pode usar sua Reação para se mover até metade do seu deslocamento sem provocar ataques de oportunidade. Você pode usar essa habilidade novamente após um Descanso.
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="gilblin" class="legacy-box">
+            <div class="legacy-header">
+                <h4>Gilblin</h4>
+                <span class="legacy-tag">Opção de Legado</span>
+            </div>
+            <div class="legacy-content">
+                <p style="color: #ccc; font-style: italic; margin-bottom: 20px;">
+                    Os Gilblins vivem em ambientes úmidos ou submersos por água, suas sociedades se assemelham às de goblins mais conscientes, mas não quer dizer que não existam gilblins mais selvagens.
+                </p>
+                <ul class="species-list">
+                    <li>
+                        <strong>Imersão:</strong> Pode respirar embaixo d’água. Você tem um deslocamento de natação igual ao terrestre.
+                    </li>
+                    <li>
+                        <strong>Escorregadio:</strong> Suas escamas estão constantemente cobertas por uma fina camada de umidade. Criaturas possuem desvantagem em Testes para agarrá-lo e você tem vantagem em Testes de Destreza para escapar de agarramentos e restrições não mágicas.
+                    </li>
+                    <li>
+                        <strong>Pele de Escamas:</strong> Você tem um bônus de +1 na sua Classe de Armadura (CA) devido à resistência natural das suas escamas.
+                    </li>
+                </ul>
+            </div>
+        </div>
+
     </section>
 </main>
 
 <footer>
-    <p>&copy; 2025 Kyous. Todos os direitos reservados.</p>
+    <p>&copy; 2026 Kyous. Todos os direitos reservados.</p>
 </footer>
 
 <script src="main.js"></script>

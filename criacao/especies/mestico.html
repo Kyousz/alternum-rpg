@@ -9,6 +9,12 @@
 
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" href="imagens/favicon.png">
+
+    <style>
+        :root {
+            --species-color: #a93226;
+        }
+    </style>
 </head>
 <body>
 
@@ -22,14 +28,106 @@
 <div id="nav-placeholder"></div>
 
 <main>
-    <section class="pagina-em-construcao">
-        <h2>Mestiço</h2>
-        <p>Este conteúdo ainda está sendo forjado em Alternum. Volte em breve!</p>
+    <section>
+        <h2 class="species-header">Mestiço</h2>
+
+        <p>Híbridos de espécies distintas que podem ser nascidos ou forjados. Os nascidos possuem um nome autoexplicativo, enquanto que os forjados podem ser frutos de rituais, pactos, alquimias ou bênçãos e maldições.</p>
+
+        <hr class="species-divider">
+
+        <div class="species-box">
+            <h4>Características Raciais</h4>
+            <ul class="species-list">
+                <li>
+                    <strong>Tempo de Vida:</strong> A média entre as duas espécies.
+                </li>
+                <li>
+                    <strong>Tamanho:</strong> Pequeno (Cerca de 60 centímetros a 1,20 metros de altura) ou Médio (Cerca de 1,20 a 2,10 metros de altura).
+                </li>
+                <li>
+                    <strong>Deslocamento:</strong> 9 metros (6 quadrados).
+                </li>
+            </ul>
+        </div>
+
+        <h3 class="species-subheader">Habilidades da Espécie</h3>
+
+        <div class="species-box">
+            <ul class="species-list">
+                <li>
+                    <strong>Vigilância Instintiva:</strong> Você possui um instinto aguçado para a sobrevivência, ganhando proficiência nas habilidades de perícia de Sobrevivência e Percepção. Além disso, recebe um bônus de +2 em Testes de Sabedoria relacionados à percepção ambiental e rastreamento, refletindo sua habilidade natural de estar sempre alerta e detectar sutilezas ao seu redor.
+                </li>
+                <li>
+                    <strong>Adaptabilidade Genética:</strong> Você possui um bônus de +1 em todos os Testes de Resistência. Isso reflete sua natureza híbrida e a adaptabilidade genética que lhes confere uma resistência natural a uma variedade de ameaças e condições adversas.
+                </li>
+                <li>
+                    <strong>Herança Ocular:</strong> Dependendo dos seus pais, sua visão se adapta:
+                    <ul style="margin-top: 5px; list-style: none; padding-left: 20px; color: #ccc;">
+                        <li style="margin-bottom: 5px;">↳ <strong>Se uma das espécies parentais possuir Visão no Escuro:</strong> O mestiço ganha vantagem em Testes de Percepção que envolvam visão em condições de pouca luz ou escuridão.</li>
+                        <li style="margin-bottom: 5px;">↳ <strong>Se nenhuma das espécies parentais possuir Visão no Escuro:</strong> O mestiço ganha vantagem em Testes de Percepção relacionados a ouvir sons baixos ou detectar presenças sutis.</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Sangue Misturado:</strong> Você possui uma linhagem que lhe concede alguns benefícios. Selecione uma linhagem híbrida.
+                </li>
+            </ul>
+        </div>
+
+        <h3 class="species-subheader">Legados dos Mestiços</h3>
+
+        <div class="legacy-nav">
+            <a href="criacao/especies/mestico.html#nascido" class="legacy-link">Nascido</a>
+            <a href="criacao/especies/mestico.html#forjado" class="legacy-link">Forjado</a>
+        </div>
+
+        <div id="nascido" class="legacy-box">
+            <div class="legacy-header">
+                <h4>Nascido</h4>
+                <span class="legacy-tag">Opção de Legado</span>
+            </div>
+            <div class="legacy-content">
+                <p style="color: #ccc; font-style: italic; margin-bottom: 20px;">
+                    Híbridos naturais de duas espécies distintas, conhecidos por sua versatilidade e habilidade natural de adaptar-se às habilidades de suas origens.
+                </p>
+                <ul class="species-list">
+                    <li>
+                        <strong>Domínio Poliglota:</strong> O mestiço é fluente na língua comum e mais duas línguas adicionais, uma proveniente de cada uma das espécies parentais.
+                    </li>
+                    <li>
+                        <strong>Expertise Cultural:</strong> Ganha proficiência em uma ferramenta à sua escolha, refletindo habilidades aprendidas através da mistura de culturas das espécies parentais.
+                    </li>
+                    <li>
+                        <strong>Herança Combinada:</strong> O mestiço seleciona uma habilidade de cada uma das espécies parentais. Ele pode usar cada uma dessas habilidades uma vez por Descanso. Após completar um Descanso, pode trocar uma dessas habilidades por outra do mesmo lado parental, refletindo sua capacidade de adaptar suas habilidades ancestrais às necessidades do momento. Se as habilidades escolhidas forem passivas, elas se tornam ativas com duração de 1 minuto.
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="forjado" class="legacy-box">
+            <div class="legacy-header">
+                <h4>Forjado</h4>
+                <span class="legacy-tag">Opção de Legado</span>
+            </div>
+            <div class="legacy-content">
+                <p style="color: #ccc; font-style: italic; margin-bottom: 20px;">
+                    Híbridos criados por meios não naturais, com características dominantes de uma das espécies parentais, destacando-se pela especialização em habilidades específicas e pela força singular de sua criação.
+                </p>
+                <ul class="species-list">
+                    <li>
+                        <strong>Cura Adaptativa:</strong> Uma vez por Descanso, o mestiço pode recuperar 1d4 Pontos de Vida no início de cada um de seus turnos durante um combate. Isso reflete sua capacidade única de se regenerar rapidamente, adaptando-se às adversidades e se mantendo resiliente em batalha.
+                    </li>
+                    <li>
+                        <strong>Forjado pela Dualidade:</strong> O mestiço seleciona duas habilidades de uma das linhagens, as quais são modificadas e aprimoradas para refletir a fusão de suas origens. Além disso, escolhe uma habilidade da outra linhagem. Ele pode usar cada uma dessas habilidades uma vez por Descanso. Se as habilidades escolhidas forem passivas, elas se tornam ativas com duração de 1 minuto.
+                    </li>
+                </ul>
+            </div>
+        </div>
+
     </section>
 </main>
 
 <footer>
-    <p>&copy; 2025 Kyous. Todos os direitos reservados.</p>
+    <p>&copy; 2026 Kyous. Todos os direitos reservados.</p>
 </footer>
 
 <script src="main.js"></script>

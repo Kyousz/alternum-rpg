@@ -9,6 +9,12 @@
 
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" href="imagens/favicon.png">
+
+    <style>
+        :root {
+            --species-color: #bf00ff;
+        }
+    </style>
 </head>
 <body>
 
@@ -22,14 +28,132 @@
 <div id="nav-placeholder"></div>
 
 <main>
-    <section class="pagina-em-construcao">
-        <h2>Fada</h2>
-        <p>Este conteúdo ainda está sendo forjado em Alternum. Volte em breve!</p>
+    <section>
+        <h2 class="species-header">Fada</h2>
+
+        <p>As fadas são seres profundamente ligados às plantas, conhecidas por sua natureza divertida e carismática. Embora muitas evitem conflitos por diversão, sua falta de consciência sobre o impacto de suas travessuras pode inadvertidamente prejudicar outros, refletindo sua natureza impulsiva e inclinação para seguir seus próprios desejos.</p>
+
+        <hr class="species-divider">
+
+        <div class="species-box">
+            <h4>Características Raciais</h4>
+            <ul class="species-list">
+                <li>
+                    <strong>Tempo de Vida:</strong> 100 anos em média.
+                </li>
+                <li>
+                    <strong>Tamanho:</strong> Pequeno (Cerca de 90 centímetros a 1,30 metros de altura).
+                </li>
+                <li>
+                    <strong>Deslocamento:</strong> 9 metros (6 quadrados). O deslocamento é o mesmo ao utilizar as asas.
+                </li>
+            </ul>
+        </div>
+
+        <h3 class="species-subheader">Habilidades da Espécie</h3>
+
+        <div class="species-box">
+            <ul class="species-list">
+                <li>
+                    <strong>Encolhimento:</strong> Com uma Ação, pode diminuir de tamanho para miúdo por 1d4 de horas obtendo vantagem em Testes contra Agarrar e não pode ser esmagada, seus equipamentos acompanham o seu tamanho, armas podem reduzir drasticamente o dano quando diminuídas. Mesmo sem diminuir de tamanho pode mover-se através do espaço de qualquer criatura que for de tamanho maior que o seu.
+                </li>
+                <li>
+                    <strong>Caminho Silencioso:</strong> Você pode se mover silenciosamente mesmo em terrenos difíceis. Enquanto estiver se movendo furtivamente, não deixa pegadas ou faz barulhos audíveis, tornando-se extremamente difícil de detectar.
+                </li>
+                <li>
+                    <strong>Magia das Fadas:</strong> Usando uma Ação, cada objeto num cubo de 6 metros dentro do alcance fica delineado com luz azul, verde ou violeta. Qualquer criatura na área, quando a magia é conjurada, também fica delineada com luz, se falhar num Teste de Resistência de Destreza. Pela duração de 1 minuto, os objetos e criaturas afetadas emitem penumbra num raio de 3 metros. Qualquer jogada de ataque contra uma criatura afetada ou objeto tem vantagem, se o atacante puder ver o alvo e, a criatura afetada ou objeto não recebe benefício por estar invisível. Essa habilidade pode ser utilizada 1 + Modificador de Atributo de Conjuração por Descanso.
+                </li>
+                <li>
+                    <strong>Compreensão das Fadas:</strong> Você tem vantagem nos Testes de Resistência contra ser Enfeitiçado e magias não podem colocá-lo para dormir. Além disso, você possui Proficiência em uma das seguintes Perícias de sua escolha: Lidar com Animais, Percepção, Intimidação, Persuasão, Enganação ou Sobrevivência.
+                </li>
+                <li>
+                    <strong>Legado:</strong> Você possui uma linhagem que lhe concede alguns benefícios. Selecione uma linhagem feérica.
+                </li>
+            </ul>
+        </div>
+
+        <h3 class="species-subheader">Legados das Fadas</h3>
+
+        <div class="legacy-nav">
+            <a href="criacao/especies/fada.html#comum" class="legacy-link">Comum</a>
+            <a href="criacao/especies/fada.html#elemental" class="legacy-link">Elemental</a>
+            <a href="criacao/especies/fada.html#espiritualista" class="legacy-link">Espiritualista</a>
+        </div>
+
+        <div id="comum" class="legacy-box">
+            <div class="legacy-header">
+                <h4>Comum</h4>
+                <span class="legacy-tag">Opção de Legado</span>
+            </div>
+            <div class="legacy-content">
+                <p style="color: #ccc; font-style: italic; margin-bottom: 20px;">
+                    A maioria das fadas existentes em Alternum são criaturas mágicas, vivazes e profundamente ligadas à natureza e aos elementos.
+                </p>
+                <ul class="species-list">
+                    <li>
+                        <strong>Impulso:</strong> Com uma Ação Bônus, poderá se mover metade do seu deslocamento em um impulso rápido numa só direção, não lhe permitindo receber um ataque de oportunidade.
+                    </li>
+                    <li>
+                        <strong>Pó de Pirlimpimpim:</strong> Pode conceder voo por 10 minutos para um alvo que você permaneça tocando. Pode ser usada uma vez por Descanso.
+                    </li>
+                    <li>
+                        <strong>Ilusão Feérica:</strong> Você pode criar uma ilusão menor que ocupe um espaço de 3 metros cúbicos. A ilusão pode ser visual ou sonora e dura até 1 hora ou até você se concentrar nela (como uma Concentração). Pode ser usada uma vez por Descanso.
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="elemental" class="legacy-box">
+            <div class="legacy-header">
+                <h4>Elemental</h4>
+                <span class="legacy-tag">Opção de Legado</span>
+            </div>
+            <div class="legacy-content">
+                <p style="color: #ccc; font-style: italic; margin-bottom: 20px;">
+                    As fadas são ligadas aos elementos da trama mágica e adquirem algumas afinidade com os mesmos.
+                </p>
+                <ul class="species-list">
+                    <li>
+                        <strong>Elemento Mãe:</strong> Você escolhe um elemento primário. Esta escolha reflete sua afinidade elemental profunda. Quando você conjura uma magia que cause dano do seu elemento, você pode rolar um dado adicional de dano para essa magia.
+                    </li>
+                    <li>
+                        <strong>Aura Elemental:</strong> Você emite uma aura de 3 metros de raio ao seu redor que reflete seu elemento escolhido. Criaturas aliadas dentro da aura ganham resistência ao dano do seu elemento.
+                    </li>
+                    <li>
+                        <strong>Domínio Elemental:</strong> Uma vez por Descanso, você pode transmitir a essência do seu elemento, aumentando sua velocidade de voo em 9 metros e concedendo um bônus de +2 nas rolagens de acerto, no CD dos Testes de Resistência e nas rolagens de dano de magias do seu elemento.
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="espiritualista" class="legacy-box">
+            <div class="legacy-header">
+                <h4>Espiritualista</h4>
+                <span class="legacy-tag">Opção de Legado</span>
+            </div>
+            <div class="legacy-content">
+                <p style="color: #ccc; font-style: italic; margin-bottom: 20px;">
+                    As fadas são ligadas aos espíritos feéricos animais da floresta e por isso podem adquirir alguns traços e costumes devido a vivência e a conexão.
+                </p>
+                <ul class="species-list">
+                    <li>
+                        <strong>Chamado Feérico:</strong> Você pode convocar um espírito feérico animal menor para ajudá-lo por 1 hora. O espírito pode realizar tarefas simples, como procurar por algo ou distrair um inimigo. Você pode usar essa habilidade um número de vezes igual ao seu bônus de Proficiência por Descanso.
+                    </li>
+                    <li>
+                        <strong>Sentido Espiritual:</strong> Você tem a capacidade de se comunicar de maneira limitada com espíritos da natureza, plantas e animais. Eles podem entender o significado de suas palavras, embora você não tenha nenhuma habilidade especial para entendê-los em troca, eles podem transmitir impressões simples ou emoções para você. Você tem vantagem em todos os Testes de Carisma que fizer para influenciá-los.
+                    </li>
+                    <li>
+                        <strong>Transcendência Espiritual:</strong> Com uma Ação, você pode deixar seu corpo físico para entrar no Plano Espiritual por até 10 minutos. Você pode usar esta habilidade uma vez por Descanso.
+                    </li>
+                </ul>
+            </div>
+        </div>
+
     </section>
 </main>
 
 <footer>
-    <p>&copy; 2025 Kyous. Todos os direitos reservados.</p>
+    <p>&copy; 2026 Kyous. Todos os direitos reservados.</p>
 </footer>
 
 <script src="main.js"></script>

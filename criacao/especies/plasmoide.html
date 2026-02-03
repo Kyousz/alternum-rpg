@@ -9,6 +9,12 @@
 
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" href="imagens/favicon.png">
+
+    <style>
+        :root {
+            --species-color: #a2d149;
+        }
+    </style>
 </head>
 <body>
 
@@ -22,14 +28,68 @@
 <div id="nav-placeholder"></div>
 
 <main>
-    <section class="pagina-em-construcao">
-        <h2>Plasmóide</h2>
-        <p>Este conteúdo ainda está sendo forjado em Alternum. Volte em breve!</p>
+    <section>
+        <h2 class="species-header">Plasmóide</h2>
+
+        <p>Criaturas mágicas com uma densa camada de gosma, geralmente vivem isoladas e não compreendem regras, costumam ser bem invasivas e consequentemente perigosas.</p>
+
+        <hr class="species-divider">
+
+        <div class="species-box">
+            <h4>Características Raciais</h4>
+            <ul class="species-list">
+                <li>
+                    <strong>Tempo de Vida:</strong> 700 anos em média.
+                </li>
+                <li>
+                    <strong>Tamanho:</strong> Pequeno ou Médio.
+                </li>
+                <li>
+                    <strong>Deslocamento:</strong> 9 metros (6 quadrados).
+                </li>
+            </ul>
+        </div>
+
+        <h3 class="species-subheader">Habilidades da Espécie</h3>
+
+        <div class="species-box">
+            <ul class="species-list">
+                <li>
+                    <strong>Visão no Escuro:</strong> Possui a capacidade de enxergar no escuro com alcance de 18 metros.
+                </li>
+                <li>
+                    <strong>Elasticidade:</strong> Você pode esticar seu corpo até o dobro de seu comprimento normal, permitindo alcançar objetos ou alvos que estão a até 3 metros de distância. Isso não altera seu deslocamento ou tamanho.
+                </li>
+                <li>
+                    <strong>Amorfo:</strong> Você pode se tornar líquido, permitindo que você passe por brechas e fendas tão pequenas quanto 1 centímetro de largura. Durante esse tempo, você pode se mover através de espaços apertados sem precisar fazer Testes e não pode ser restringido. Você não pode atacar, conjurar magias ou manipular objetos enquanto estiver nesta forma. Esta habilidade pode ser usada uma vez por Descanso.
+                </li>
+                <li>
+                    <strong>Toque Corrosivo:</strong> Você pode infundir seu corpo com propriedades corrosivas durante 1 minuto. Quando você agarra uma criatura ou atinge uma criatura com um ataque corpo a corpo, você pode escolher causar dano adicional do tipo ácido igual ao seu modificador de Constituição. Se uma criatura terminar seu turno agarrada por você ou dentro de você, ela sofre 1d6 de dano ácido adicional. Você pode usar essa habilidade um número de vezes igual ao seu bônus de Proficiência por Descanso.
+                </li>
+                <li>
+                    <strong>Resiliência Natural:</strong> Você tem resistência a dano de ácido e veneno, e você tem vantagem em Testes de Resistência contra sendo envenenado e doenças. Além disso, você se recupera de condições envenenadas ou doentes no início do seu turno se tiver sucesso em um Teste de Resistência.
+                </li>
+                <li>
+                    <strong>Mudar-se:</strong> Com uma Ação, você pode alterar a forma do seu corpo para ganhar vantagens específicas por 1 minuto. Escolha uma das seguintes formas:
+                    <ul style="margin-top: 5px; padding-left: 20px; list-style: none; color: #ccc;">
+                        <li style="margin-bottom: 5px;">↳ <strong>Forma de Defesa:</strong> Ganhe um bônus de +2 na CA.</li>
+                        <li style="margin-bottom: 5px;">↳ <strong>Forma de Ataque:</strong> Seus ataques corpo a corpo causam 1d6 de dano adicional do tipo ácido.</li>
+                        <li style="margin-bottom: 5px;">↳ <strong>Forma de Mobilidade:</strong> Seu deslocamento aumenta em 3 metros e você ganha vantagem em Testes de Resistência de Destreza e Destreza que envolvam mobilidade.</li>
+                        <li style="margin-bottom: 5px;">↳ <strong>Forma de Resistência:</strong> Ganhe Pontos de Vida Temporários igual ao seu Nível + Modificador de Constituição.</li>
+                    </ul>
+                    Você pode usar essa habilidade um número de vezes igual ao seu bônus de Proficiência por Descanso.
+                </li>
+                <li>
+                    <strong>Corpo Separado:</strong> Você pode usar uma Ação para se dividir em dois corpos menores de tamanho pequeno. Cada corpo tem metade de seus pontos de vida e pode agir independentemente, mas compartilha as ações. Você pode recombinar os corpos em uma única entidade usando outra Ação. Qualquer dano sofrido por um dos corpos é transferido para o corpo principal após a recombinação.
+                </li>
+            </ul>
+        </div>
+
     </section>
 </main>
 
 <footer>
-    <p>&copy; 2025 Kyous. Todos os direitos reservados.</p>
+    <p>&copy; 2026 Kyous. Todos os direitos reservados.</p>
 </footer>
 
 <script src="main.js"></script>
