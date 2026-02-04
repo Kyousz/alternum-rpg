@@ -4,9 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alternum - Artefatos Mágicos</title>
+
     <base href="../">
+
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" href="imagens/favicon.png">
+
+    <style>
+        /* Ajuste para o card ter a imagem de fundo */
+        .artifact-card {
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            /* Sombra interna forte para o texto branco ficar legível */
+            box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.75);
+            transition: all 0.3s ease;
+        }
+
+        .artifact-card:hover {
+            transform: translateY(-5px);
+            /* Clareia levemente ao passar o mouse */
+            box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.6), 0 5px 20px rgba(0, 151, 230, 0.3);
+            border-color: var(--artifact-color);
+        }
+
+        /* Estilo do texto narrativo no Modal */
+        .flavor-text {
+            font-style: italic;
+            color: #aaa;
+            margin-bottom: 15px;
+            display: block;
+            border-left: 2px solid var(--artifact-color);
+            padding-left: 10px;
+        }
+    </style>
 </head>
 <body>
 
@@ -27,8 +58,22 @@
         </p>
 
         <div class="search-container">
-            <input type="text" id="searchInput" class="artifact-search" placeholder="Buscar artefato..." onkeyup="filterArtifacts()">
+            <input type="text" id="searchInput" class="artifact-search" placeholder="Buscar artefato por nome..." onkeyup="filterArtifacts()">
             <span class="search-icon">🔍</span>
+        </div>
+
+        <div class="rarity-filter-container">
+            <button class="filter-btn active" onclick="filterRarity('all', this)">Todos</button>
+            <button class="filter-btn btn-comum" onclick="filterRarity('Comum', this)">Comum</button>
+            <button class="filter-btn btn-incomum" onclick="filterRarity('Incomum', this)">Incomum</button>
+            <button class="filter-btn btn-raro" onclick="filterRarity('Raro', this)">Raro</button>
+            <button class="filter-btn btn-mitico" onclick="filterRarity('Mítico', this)">Mítico</button>
+            <button class="filter-btn btn-epico" onclick="filterRarity('Épico', this)">Épico</button>
+            <button class="filter-btn btn-lendario" onclick="filterRarity('Lendário', this)">Lendário</button>
+            <button class="filter-btn btn-reliquia" onclick="filterRarity('Relíquia', this)">Relíquia</button>
+            <button class="filter-btn btn-amaldicoado" onclick="filterRarity('Amaldiçoado', this)">Amaldiçoado</button>
+            <button class="filter-btn btn-tecno" onclick="filterRarity('Tecno', this)">Tecno</button>
+            <button class="filter-btn btn-inteligente" onclick="filterRarity('intelligent', this)">Inteligente</button>
         </div>
 
         <div class="artifact-section">
@@ -36,46 +81,99 @@
             <div class="artifact-grid">
 
                 <div class="artifact-card rarity-epico"
+                     style="background-image: url('imagens/itens/armadura_01.png');"
                      data-name="Botas do Gigante de Gelo Remft"
                      data-type="Armadura (Botas)"
-                     data-magic="Glacies"
                      data-rarity="Épico"
                      data-intelligent="false"
-                     data-image="imagens/itens/botas_gelo.jpg"
-                     data-desc="Estas botas permitem que o portador não seja afetado por terreno difícil de gelo. Cada passo transforma uma área de até 1,5 metro de raio em gelo. Todos os terrenos gélidos criados num raio de 3 metros se mantêm congelados. Com uma ação bônus, o portador pode dar um pisão que cria espinhos de gelo em toda a área congelada nesse raio, causando 4d6 de dano a todas as criaturas na área que não passarem em um Teste de Resistência de Destreza (CD 15). Se forem bem-sucedidas, recebem metade do dano.">
-
-                    <div class="artifact-top">
-                        <span class="magic-tag">Glacies</span>
-                    </div>
+                     data-image="imagens/itens/armadura_01.png"
+                     data-desc="<span class='flavor-text'>Botas de metal escuro com detalhes de cristal de gelo, couro e pelos, estão sempre geladas.</span>Estas botas permitem que o portador não seja afetado por terreno difícil de gelo. Cada passo transforma uma área de até 1,5 metro de raio em gelo. Com uma ação bônus, cria espinhos de gelo (4d6 dano).">
+                    <div class="artifact-top"></div>
                     <div class="artifact-content">
                         <h4 class="artifact-name">Botas do Gigante de Gelo Remft</h4>
                         <span class="artifact-type-text">Armadura (Pesada)</span>
                     </div>
-                    <div class="artifact-footer">
-                        <span class="rarity-tag tag-epico">Épico</span>
-                    </div>
+                    <div class="artifact-footer"><span class="rarity-tag tag-epico">Épico</span></div>
                 </div>
 
                 <div class="artifact-card rarity-lendario"
+                     style="background-image: url('imagens/itens/armadura_02.png');"
                      data-name="Peitoral da Fênix"
                      data-type="Armadura (Peitoral)"
-                     data-magic="Ignis"
                      data-rarity="Lendário"
                      data-intelligent="true"
-                     data-image="imagens/itens/peitoral_fenix.jpg"
-                     data-desc="Uma armadura forjada nas chamas eternas. Se o usuário cair a 0 pontos de vida, a armadura explode em chamas curando o usuário em 50 PV e causando dano de fogo em área. A armadura conversa com o usuário, incentivando atos de bravura imprudente.">
-
-                    <div class="artifact-top">
-                        <span class="magic-tag">Ignis</span>
-                        <span class="intelligent-icon" title="Item Inteligente">👁️‍🗨️</span>
-                    </div>
+                     data-image="imagens/itens/armadura_02.png"
+                     data-desc="<span class='flavor-text'>Um peitoral dourado com o relevo de uma fênix. As penas parecem se mover e brilhar com calor interno.</span>Uma armadura que queima eternamente. Se o usuário cair a 0 PV, ela explode, curando 50 PV e causando dano em área. A armadura tem uma personalidade heroica e imprudente.">
+                    <div class="artifact-top"><span class="intelligent-icon" title="Item Inteligente">👁️‍🗨️</span></div>
                     <div class="artifact-content">
                         <h4 class="artifact-name">Peitoral da Fênix</h4>
                         <span class="artifact-type-text">Armadura (Média)</span>
                     </div>
-                    <div class="artifact-footer">
-                        <span class="rarity-tag tag-lendario">Lendário</span>
+                    <div class="artifact-footer"><span class="rarity-tag tag-lendario">Lendário</span></div>
+                </div>
+
+                <div class="artifact-card rarity-raro"
+                     style="background-image: url('imagens/itens/armadura_03.png');"
+                     data-name="Manto do Caminhante do Vazio"
+                     data-type="Armadura (Capa)"
+                     data-rarity="Raro"
+                     data-intelligent="false"
+                     data-image="imagens/itens/armadura_03.png"
+                     data-desc="<span class='flavor-text'>Um tecido tão negro que parece um buraco no espaço, absorvendo qualquer luz que o toque.</span>Concede vantagem em testes de Furtividade. Uma vez ao dia, permite usar a magia 'Passo Nebuloso' como reação ao receber dano.">
+                    <div class="artifact-top"></div>
+                    <div class="artifact-content">
+                        <h4 class="artifact-name">Manto do Caminhante do Vazio</h4>
+                        <span class="artifact-type-text">Veste</span>
                     </div>
+                    <div class="artifact-footer"><span class="rarity-tag tag-raro">Raro</span></div>
+                </div>
+
+                <div class="artifact-card rarity-incomum"
+                     style="background-image: url('imagens/itens/armadura_04.png');"
+                     data-name="Escudo Espelho de Prata"
+                     data-type="Armadura (Escudo)"
+                     data-rarity="Incomum"
+                     data-intelligent="false"
+                     data-image="imagens/itens/armadura_04.png"
+                     data-desc="<span class='flavor-text'>Um escudo redondo polido à perfeição, usado pela guarda real de antigas dinastias.</span>Concede +1 na CA contra ataques mágicos à distância. Se um raio de luz acertar o escudo, pode cegar o atacante momentaneamente.">
+                    <div class="artifact-top"></div>
+                    <div class="artifact-content">
+                        <h4 class="artifact-name">Escudo Espelho de Prata</h4>
+                        <span class="artifact-type-text">Escudo</span>
+                    </div>
+                    <div class="artifact-footer"><span class="rarity-tag tag-incomum">Incomum</span></div>
+                </div>
+
+                <div class="artifact-card rarity-tecno"
+                     style="background-image: url('imagens/itens/armadura_05.png');"
+                     data-name="Exoesqueleto Aquático Mk-II"
+                     data-type="Armadura (Tecnológica)"
+                     data-rarity="Tecno"
+                     data-intelligent="false"
+                     data-image="imagens/itens/armadura_05.png"
+                     data-desc="<span class='flavor-text'>Um traje de polímero reforçado com tubos de oxigênio e propulsores silenciosos.</span>Permite respirar embaixo d'água indefinidamente e concede deslocamento de natação de 9m. Possui lanternas acopladas nos ombros.">
+                    <div class="artifact-top"></div>
+                    <div class="artifact-content">
+                        <h4 class="artifact-name">Exoesqueleto Aquático Mk-II</h4>
+                        <span class="artifact-type-text">Armadura (Leve)</span>
+                    </div>
+                    <div class="artifact-footer"><span class="rarity-tag tag-tecno">Tecno</span></div>
+                </div>
+
+                <div class="artifact-card rarity-comum"
+                     style="background-image: url('imagens/itens/armadura_06.png');"
+                     data-name="Elmo de Ferro Batido"
+                     data-type="Armadura (Elmo)"
+                     data-rarity="Comum"
+                     data-intelligent="false"
+                     data-image="imagens/itens/armadura_06.png"
+                     data-desc="<span class='flavor-text'>Um elmo bruto, com marcas de martelo e ferrugem, cheirando a batalhas antigas.</span>Concede proteção básica contra golpes na cabeça, mas restringe levemente a visão periférica.">
+                    <div class="artifact-top"></div>
+                    <div class="artifact-content">
+                        <h4 class="artifact-name">Elmo de Ferro Batido</h4>
+                        <span class="artifact-type-text">Elmo</span>
+                    </div>
+                    <div class="artifact-footer"><span class="rarity-tag tag-comum">Comum</span></div>
                 </div>
 
             </div>
@@ -85,26 +183,100 @@
             <h3 class="artifact-category-title">Armas</h3>
             <div class="artifact-grid">
 
-                <div class="artifact-card rarity-amaldicoado"
-                     data-name="Lâmina do Sussurro"
-                     data-type="Arma (Adaga)"
-                     data-magic="Umbra"
-                     data-rarity="Amaldiçoado"
-                     data-intelligent="true"
-                     data-image="imagens/itens/adaga_sussurro.jpg"
-                     data-desc="Uma adaga que causa dano necrótico extra. Porém, a cada abate, o usuário ouve vozes pedindo mais sangue. Se não matar ninguém em 24h, a adaga drena 1d6 de vida do usuário.">
-
-                    <div class="artifact-top">
-                        <span class="magic-tag">Umbra</span>
-                        <span class="intelligent-icon" title="Item Inteligente">👁️‍🗨️</span>
-                    </div>
+                <div class="artifact-card rarity-raro"
+                     style="background-image: url('imagens/itens/arma_01.png');"
+                     data-name="Espada de Murh"
+                     data-type="Arma (Espada)"
+                     data-rarity="Raro"
+                     data-intelligent="false"
+                     data-image="imagens/itens/arma_01.png"
+                     data-desc="<span class='flavor-text'>Uma lâmina negra que parece sussurrar quando próxima da morte.</span>Indica a criatura com menos PV em 9m. Ataques contra ela têm vantagem e crítico triplicado. +1d10 dano de morte.">
+                    <div class="artifact-top"></div>
                     <div class="artifact-content">
-                        <h4 class="artifact-name">Lâmina do Sussurro</h4>
+                        <h4 class="artifact-name">Espada de Murh</h4>
+                        <span class="artifact-type-text">Arma (Marcial)</span>
+                    </div>
+                    <div class="artifact-footer"><span class="rarity-tag tag-raro">Raro</span></div>
+                </div>
+
+                <div class="artifact-card rarity-incomum"
+                     style="background-image: url('imagens/itens/arma_02.png');"
+                     data-name="Porrete Impacto-Gêiser"
+                     data-type="Arma (Maça)"
+                     data-rarity="Incomum"
+                     data-intelligent="false"
+                     data-image="imagens/itens/arma_02.png"
+                     data-desc="<span class='flavor-text'>Uma maça feita com os mais diversos corais.</span>Ao acertar, cria um gêiser que empurra o alvo 3m e causa 2d4 dano de água (Reflexos CD 13 reduz metade).">
+                    <div class="artifact-top"></div>
+                    <div class="artifact-content">
+                        <h4 class="artifact-name">Porrete Impacto-Gêiser</h4>
+                        <span class="artifact-type-text">Arma (Simples)</span>
+                    </div>
+                    <div class="artifact-footer"><span class="rarity-tag tag-incomum">Incomum</span></div>
+                </div>
+
+                <div class="artifact-card rarity-epico"
+                     style="background-image: url('imagens/itens/arma_03.png');"
+                     data-name="Espada dos 7 Ventos"
+                     data-type="Arma (Espada)"
+                     data-rarity="Épico"
+                     data-intelligent="false"
+                     data-image="imagens/itens/arma_03.png"
+                     data-desc="<span class='flavor-text'>Espada longa prateada com lâmina fina que se estende para o cabo sem uma divisão de empunhadura.</span>Libera rajadas de vento causando 6d8 de dano adicional a cada sétimo ataque realizado com a arma.">
+                    <div class="artifact-top"></div>
+                    <div class="artifact-content">
+                        <h4 class="artifact-name">Espada dos 7 Ventos</h4>
+                        <span class="artifact-type-text">Arma (Marcial)</span>
+                    </div>
+                    <div class="artifact-footer"><span class="rarity-tag tag-epico">Épico</span></div>
+                </div>
+
+                <div class="artifact-card rarity-amaldicoado"
+                     style="background-image: url('imagens/itens/arma_04.png');"
+                     data-name="Adaga da Lua de Sangue"
+                     data-type="Arma (Adaga)"
+                     data-rarity="Amaldiçoado"
+                     data-intelligent="false"
+                     data-image="imagens/itens/arma_04.png"
+                     data-desc="<span class='flavor-text'>Adaga com uma lâmina vermelha carmesim e cabo dourado com adornos negros.</span>Absorve 1d12 Mana e causa dano de sangue igual. Vínculo exige ritual doloroso de 12 horas.">
+                    <div class="artifact-top"></div>
+                    <div class="artifact-content">
+                        <h4 class="artifact-name">Adaga da Lua de Sangue</h4>
                         <span class="artifact-type-text">Arma (Leve)</span>
                     </div>
-                    <div class="artifact-footer">
-                        <span class="rarity-tag tag-amaldicoado">Amaldiçoado</span>
+                    <div class="artifact-footer"><span class="rarity-tag tag-amaldicoado">Amaldiçoado</span></div>
+                </div>
+
+                <div class="artifact-card rarity-raro"
+                     style="background-image: url('imagens/itens/arma_05.png');"
+                     data-name="Kesshō"
+                     data-type="Arma (Adaga)"
+                     data-rarity="Raro"
+                     data-intelligent="false"
+                     data-image="imagens/itens/arma_05.png"
+                     data-desc="<span class='flavor-text'>Adaga com lâmina de cristal polido roxa.</span>+2d4 dano de cristal. Cria cristais na ferida que reduzem movimento do alvo em 3m (acumula até 6m).">
+                    <div class="artifact-top"></div>
+                    <div class="artifact-content">
+                        <h4 class="artifact-name">Kesshō</h4>
+                        <span class="artifact-type-text">Arma (Exótica)</span>
                     </div>
+                    <div class="artifact-footer"><span class="rarity-tag tag-raro">Raro</span></div>
+                </div>
+
+                <div class="artifact-card rarity-tecno"
+                     style="background-image: url('imagens/itens/arma_06.png');"
+                     data-name="Rifle de Pulso Aether"
+                     data-type="Arma (Distância)"
+                     data-rarity="Tecno"
+                     data-intelligent="false"
+                     data-image="imagens/itens/arma_06.png"
+                     data-desc="<span class='flavor-text'>Arma elegante de cerâmica branca com luzes azuis pulsantes.</span>Dispara energia pura. Munição infinita, mas requer resfriamento após 5 tiros rápidos. Dano 1d12 Energia.">
+                    <div class="artifact-top"></div>
+                    <div class="artifact-content">
+                        <h4 class="artifact-name">Rifle de Pulso Aether</h4>
+                        <span class="artifact-type-text">Arma (Tecnológica)</span>
+                    </div>
+                    <div class="artifact-footer"><span class="rarity-tag tag-tecno">Tecno</span></div>
                 </div>
 
             </div>
@@ -114,25 +286,100 @@
             <h3 class="artifact-category-title">Acessórios</h3>
             <div class="artifact-grid">
 
+                <div class="artifact-card rarity-lendario"
+                     style="background-image: url('imagens/itens/acessorio_01.png');"
+                     data-name="Anéis Fundidos Divisores de Alma"
+                     data-type="Acessório (Anel)"
+                     data-rarity="Lendário"
+                     data-intelligent="false"
+                     data-image="imagens/itens/acessorio_01.png"
+                     data-desc="<span class='flavor-text'>Dois anéis de ouro que parecem vibrar quando afastados um do outro.</span>Divide o corpo do portador em duas versões com a mesma consciência. Se um morrer, volta a ser um com metade da vida. Limite 18m de distância.">
+                    <div class="artifact-top"></div>
+                    <div class="artifact-content">
+                        <h4 class="artifact-name">Anéis Fundidos Divisores</h4>
+                        <span class="artifact-type-text">Acessório</span>
+                    </div>
+                    <div class="artifact-footer"><span class="rarity-tag tag-lendario">Lendário</span></div>
+                </div>
+
+                <div class="artifact-card rarity-mitico"
+                     style="background-image: url('imagens/itens/acessorio_02.png');"
+                     data-name="Bracelete da Serpente de Fogo: Ashika"
+                     data-type="Acessório (Bracelete)"
+                     data-rarity="Mítico"
+                     data-intelligent="true"
+                     data-image="imagens/itens/acessorio_02.png"
+                     data-desc="<span class='flavor-text'>Um bracelete de obsidiana quente ao toque, com olhos de rubi.</span>Invoca um elemental serpente de fogo de 3º círculo que obedece ao portador. Ashika tem personalidade protetora.">
+                    <div class="artifact-top"><span class="intelligent-icon" title="Item Inteligente">👁️‍🗨️</span></div>
+                    <div class="artifact-content">
+                        <h4 class="artifact-name">Bracelete de Ashika</h4>
+                        <span class="artifact-type-text">Acessório</span>
+                    </div>
+                    <div class="artifact-footer"><span class="rarity-tag tag-mitico">Mítico</span></div>
+                </div>
+
                 <div class="artifact-card rarity-incomum"
+                     style="background-image: url('imagens/itens/acessorio_03.png');"
                      data-name="Anel da Maré"
                      data-type="Acessório (Anel)"
-                     data-magic="Aqua"
                      data-rarity="Incomum"
                      data-intelligent="false"
-                     data-image="imagens/itens/anel_mare.jpg"
-                     data-desc="Permite respirar debaixo d'água por 1 hora por dia.">
-
-                    <div class="artifact-top">
-                        <span class="magic-tag">Aqua</span>
-                    </div>
+                     data-image="imagens/itens/acessorio_03.png"
+                     data-desc="<span class='flavor-text'>Um anel com uma pérola azul incrustada que cheira a maresia.</span>Permite respirar debaixo d'água por 1 hora por dia. Recarrega ao amanhecer.">
+                    <div class="artifact-top"></div>
                     <div class="artifact-content">
                         <h4 class="artifact-name">Anel da Maré</h4>
                         <span class="artifact-type-text">Acessório</span>
                     </div>
-                    <div class="artifact-footer">
-                        <span class="rarity-tag tag-incomum">Incomum</span>
+                    <div class="artifact-footer"><span class="rarity-tag tag-incomum">Incomum</span></div>
+                </div>
+
+                <div class="artifact-card rarity-comum"
+                     style="background-image: url('imagens/itens/acessorio_04.png');"
+                     data-name="Colar da Vontade de Ferro"
+                     data-type="Acessório (Colar)"
+                     data-rarity="Comum"
+                     data-intelligent="false"
+                     data-image="imagens/itens/acessorio_04.png"
+                     data-desc="<span class='flavor-text'>Um colar simples de metal escuro, frio e pesado.</span>Concede +1 em testes de resistência contra medo.">
+                    <div class="artifact-top"></div>
+                    <div class="artifact-content">
+                        <h4 class="artifact-name">Colar da Vontade de Ferro</h4>
+                        <span class="artifact-type-text">Acessório</span>
                     </div>
+                    <div class="artifact-footer"><span class="rarity-tag tag-comum">Comum</span></div>
+                </div>
+
+                <div class="artifact-card rarity-tecno"
+                     style="background-image: url('imagens/itens/acessorio_05.png');"
+                     data-name="Monóculo Analítico v3.0"
+                     data-type="Acessório (Face)"
+                     data-rarity="Tecno"
+                     data-intelligent="false"
+                     data-image="imagens/itens/acessorio_05.png"
+                     data-desc="<span class='flavor-text'>Lente de vidro com um HUD digital verde projetado na retina.</span>Dispositivo que escaneia alvos. Revela a quantidade exata de PV de uma criatura e uma de suas resistências ou vulnerabilidades. Bateria dura 10 usos.">
+                    <div class="artifact-top"></div>
+                    <div class="artifact-content">
+                        <h4 class="artifact-name">Monóculo Analítico v3.0</h4>
+                        <span class="artifact-type-text">Acessório</span>
+                    </div>
+                    <div class="artifact-footer"><span class="rarity-tag tag-tecno">Tecno</span></div>
+                </div>
+
+                <div class="artifact-card rarity-amaldicoado"
+                     style="background-image: url('imagens/itens/acessorio_06.png');"
+                     data-name="Amuleto do Pacto Quebrado"
+                     data-type="Acessório (Amuleto)"
+                     data-rarity="Amaldiçoado"
+                     data-intelligent="true"
+                     data-image="imagens/itens/acessorio_06.png"
+                     data-desc="<span class='flavor-text'>Um amuleto em forma de mão fechada que aperta quando mentiras são ditas.</span>Dobra a eficácia de magias de cura recebidas, mas o portador não pode mentir. Se tentar mentir, o amuleto aperta seu pescoço causando 1d6 de dano e revelando a verdade aos gritos.">
+                    <div class="artifact-top"><span class="intelligent-icon" title="Item Inteligente">👁️‍🗨️</span></div>
+                    <div class="artifact-content">
+                        <h4 class="artifact-name">Amuleto do Pacto Quebrado</h4>
+                        <span class="artifact-type-text">Acessório</span>
+                    </div>
+                    <div class="artifact-footer"><span class="rarity-tag tag-amaldicoado">Amaldiçoado</span></div>
                 </div>
 
             </div>
@@ -142,46 +389,105 @@
             <h3 class="artifact-category-title">Outros</h3>
             <div class="artifact-grid">
 
+                <div class="artifact-card rarity-amaldicoado"
+                     style="background-image: url('imagens/itens/outro_01.png');"
+                     data-name="Olho do Demônio Syrak"
+                     data-type="Item Maravilhoso (Implante)"
+                     data-rarity="Amaldiçoado"
+                     data-intelligent="false"
+                     data-image="imagens/itens/outro_01.png"
+                     data-desc="<span class='flavor-text'>Um olho reptiliano com fenda vertical que se move sozinho.</span>Substitui o olho do portador. Concede visão verdadeira, magias de Venenum até 3º círculo e +1d6 dano de veneno em ataques físicos. Marca o rosto com símbolos.">
+                    <div class="artifact-top"></div>
+                    <div class="artifact-content">
+                        <h4 class="artifact-name">Olho do Demônio Syrak</h4>
+                        <span class="artifact-type-text">Item Maravilhoso</span>
+                    </div>
+                    <div class="artifact-footer"><span class="rarity-tag tag-amaldicoado">Amaldiçoado</span></div>
+                </div>
+
                 <div class="artifact-card rarity-comum"
+                     style="background-image: url('imagens/itens/outro_02.png');"
                      data-name="Poção de Cura Menor"
                      data-type="Consumível"
-                     data-magic="Vitae"
                      data-rarity="Comum"
                      data-intelligent="false"
-                     data-image="imagens/itens/pocao_cura.jpg"
-                     data-desc="Um frasco contendo um líquido vermelho brilhante. Ao ser bebido, cura 2d4 + 2 pontos de vida.">
-
-                    <div class="artifact-top">
-                        <span class="magic-tag">Vitae</span>
-                    </div>
+                     data-image="imagens/itens/outro_02.png"
+                     data-desc="<span class='flavor-text'>Líquido vermelho viscoso que brilha levemente no escuro.</span>Cura 2d4 + 2 pontos de vida instantaneamente. Sabor de morango com metal.">
+                    <div class="artifact-top"></div>
                     <div class="artifact-content">
                         <h4 class="artifact-name">Poção de Cura Menor</h4>
                         <span class="artifact-type-text">Consumível</span>
                     </div>
-                    <div class="artifact-footer">
-                        <span class="rarity-tag tag-comum">Comum</span>
-                    </div>
+                    <div class="artifact-footer"><span class="rarity-tag tag-comum">Comum</span></div>
                 </div>
 
                 <div class="artifact-card rarity-raro"
+                     style="background-image: url('imagens/itens/outro_03.png');"
                      data-name="Bolsa do Espaço Infinito"
                      data-type="Item Maravilhoso"
-                     data-magic="Spatium"
                      data-rarity="Raro"
                      data-intelligent="false"
-                     data-image="imagens/itens/bolsa_infinita.jpg"
-                     data-desc="Uma bolsa de couro que parece pequena por fora, mas contém um espaço extradimensional capaz de guardar até 250kg de itens sem alterar seu peso externo.">
-
-                    <div class="artifact-top">
-                        <span class="magic-tag">Spatium</span>
-                    </div>
+                     data-image="imagens/itens/outro_03.png"
+                     data-desc="<span class='flavor-text'>Uma bolsa de couro comum com um interior repleto de estrelas.</span>Guarda até 250kg de itens em um espaço extradimensional. O peso da bolsa é sempre 5kg, independente do conteúdo.">
+                    <div class="artifact-top"></div>
                     <div class="artifact-content">
                         <h4 class="artifact-name">Bolsa do Espaço Infinito</h4>
                         <span class="artifact-type-text">Item Maravilhoso</span>
                     </div>
-                    <div class="artifact-footer">
-                        <span class="rarity-tag tag-raro">Raro</span>
+                    <div class="artifact-footer"><span class="rarity-tag tag-raro">Raro</span></div>
+                </div>
+
+                <div class="artifact-card rarity-mitico"
+                     style="background-image: url('imagens/itens/outro_04.png');"
+                     data-name="Cubo de Transmutação de Horadrim"
+                     data-type="Item Maravilhoso"
+                     data-rarity="Mítico"
+                     data-intelligent="false"
+                     data-image="imagens/itens/outro_04.png"
+                     data-desc="<span class='flavor-text'>Um cubo de ouro ornamentado com runas que mudam de posição.</span>Um cubo antigo capaz de fundir gemas e itens mágicos menores para criar versões mais poderosas. Requer conhecimento arcano avançado para operar sem explodir.">
+                    <div class="artifact-top"></div>
+                    <div class="artifact-content">
+                        <h4 class="artifact-name">Cubo de Transmutação</h4>
+                        <span class="artifact-type-text">Artefato Arcano</span>
                     </div>
+                    <div class="artifact-footer"><span class="rarity-tag tag-mitico">Mítico</span></div>
+                </div>
+
+                <div class="artifact-card rarity-tecno"
+                     style="background-image: url('imagens/itens/outro_05.png');"
+                     data-name="Drone Espião 'Mosca-V'"
+                     data-type="Ferramenta (Tecnológica)"
+                     data-rarity="Tecno"
+                     data-intelligent="false"
+                     data-image="imagens/itens/outro_05.png"
+                     data-desc="<span class='flavor-text'>Inseto mecânico com lentes de câmera no lugar dos olhos compostos.</span>Um minúsculo autômato controlado remotamente por uma luva. Possui câmera e microfone, ideal para espionagem. Alcance de 500m.">
+                    <div class="artifact-top"></div>
+                    <div class="artifact-content">
+                        <h4 class="artifact-name">Drone Espião 'Mosca-V'</h4>
+                        <span class="artifact-type-text">Ferramenta</span>
+                    </div>
+                    <div class="artifact-footer"><span class="rarity-tag tag-tecno">Tecno</span></div>
+                </div>
+
+                <div class="artifact-card rarity-reliquia"
+                     style="background-image: url('imagens/itens/outro_06.png');"
+                     data-name="Prisma"
+                     data-type="Relíquia (Artefato)"
+                     data-rarity="Relíquia"
+                     data-intelligent="false"
+                     data-image="imagens/itens/outro_06.png"
+                     data-desc="<span class='flavor-text'>Um cristal multifacetado que refrata a luz em cores inexistentes.</span>O portador tem seus atributos e status dobrados e pode se dividir em 5 versões:<br><br>
+                     <b style='color:#555'>Versão Preta (Peito):</b> Absorve versões destruídas. Só morre após a destruição de todas as outras.<br>
+                     <b style='color:#0097e6'>Versão Azul (Testa):</b> Flutua, conjura magias espontâneas de até 5º círculo (Arcane), possui armadura arcana.<br>
+                     <b style='color:#ff4757'>Versão Vermelha (Barriga):</b> Manifesta arma mágica (triplo dano), rosto em chamas, controle à distância.<br>
+                     <b style='color:#2ed573'>Versão Verde (Ombro):</b> Recebe metade do dano, corpo protegido como golem.<br>
+                     <b style='color:#ffa502'>Versão Amarela (Costas):</b> Deslocamento triplicado, ataques múltiplos, atravessa espaços estreitos.">
+                    <div class="artifact-top"></div>
+                    <div class="artifact-content">
+                        <h4 class="artifact-name">Prisma</h4>
+                        <span class="artifact-type-text">Relíquia Antiga</span>
+                    </div>
+                    <div class="artifact-footer"><span class="rarity-tag tag-reliquia">Relíquia</span></div>
                 </div>
 
             </div>
@@ -201,8 +507,7 @@
 
             <div class="modal-text">
                 <div class="modal-top-info">
-                    <span id="modalMagic" class="magic-tag-large">MAGIC</span>
-                    <span id="modalIntelligent" class="intelligent-badge">👁️‍🗨️ Inteligente</span>
+                    <span id="modalIntelligent" class="intelligent-badge">👁️‍🗨️ Item Inteligente</span>
                 </div>
 
                 <h3 id="modalTitle">Nome do Artefato</h3>
@@ -220,28 +525,94 @@
     </div>
 </div>
 
-<footer><p>&copy; 2026 Kyous. Todos os direitos reservados.</p></footer>
+<footer>
+    <p>&copy; 2026 Kyous. Todos os direitos reservados.</p>
+</footer>
+
 <script src="main.js"></script>
 
 <script>
+    // --- VARIÁVEIS GLOBAIS DE FILTRO ---
+    let currentSearch = "";
+    let currentRarity = "all";
+
+    // 1. Função chamada ao digitar na busca
+    function filterArtifacts() {
+        currentSearch = document.getElementById('searchInput').value.toUpperCase();
+        applyFilters();
+    }
+
+    // 2. Função chamada ao clicar no botão de raridade
+    function filterRarity(rarity, btnElement) {
+        currentRarity = rarity;
+
+        // Atualiza visual dos botões
+        document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+        btnElement.classList.add('active');
+
+        applyFilters();
+    }
+
+    // 3. Função Mestra que aplica ambos os filtros
+    function applyFilters() {
+        let sections = document.getElementsByClassName('artifact-section');
+
+        for (let i = 0; i < sections.length; i++) {
+            let cards = sections[i].getElementsByClassName('artifact-card');
+            let hasVisibleCard = false;
+
+            for (let j = 0; j < cards.length; j++) {
+                let cardName = cards[j].getAttribute('data-name').toUpperCase();
+                let cardRarity = cards[j].getAttribute('data-rarity');
+                let cardIntelligent = cards[j].getAttribute('data-intelligent');
+
+                let matchSearch = cardName.indexOf(currentSearch) > -1;
+
+                let matchFilter = false;
+                if (currentRarity === "all") {
+                    matchFilter = true;
+                } else if (currentRarity === "intelligent") {
+                    matchFilter = (cardIntelligent === 'true');
+                } else {
+                    matchFilter = (cardRarity === currentRarity);
+                }
+
+                if (matchSearch && matchFilter) {
+                    cards[j].style.display = "flex";
+                    hasVisibleCard = true;
+                } else {
+                    cards[j].style.display = "none";
+                }
+            }
+
+            if (hasVisibleCard) {
+                sections[i].style.display = "block";
+            } else {
+                sections[i].style.display = "none";
+            }
+        }
+    }
+
     // --- LÓGICA DO MODAL ---
     const modal = document.getElementById("artifactModal");
     const closeBtn = document.querySelector(".close-btn");
 
     const mTitle = document.getElementById("modalTitle");
     const mType = document.getElementById("modalType");
-    const mMagic = document.getElementById("modalMagic");
     const mRarity = document.getElementById("modalRarity");
     const mDesc = document.getElementById("modalDesc");
     const mImg = document.getElementById("modalImg");
     const mIntelligent = document.getElementById("modalIntelligent");
 
+    // Adiciona evento de clique em todos os cards
     document.querySelectorAll('.artifact-card').forEach(card => {
         card.addEventListener('click', () => {
             mTitle.innerText = card.getAttribute('data-name');
             mType.innerText = card.getAttribute('data-type');
-            mMagic.innerText = card.getAttribute('data-magic');
-            mDesc.innerText = card.getAttribute('data-desc');
+
+            // IMPORTANTE: innerHTML permite a formatação HTML do Flavor Text e do Prisma
+            mDesc.innerHTML = card.getAttribute('data-desc');
+
             mImg.src = card.getAttribute('data-image');
 
             const rarity = card.getAttribute('data-rarity');
@@ -260,19 +631,6 @@
 
     closeBtn.onclick = function() { modal.style.display = "none"; }
     window.onclick = function(event) { if (event.target == modal) { modal.style.display = "none"; } }
-
-    function filterArtifacts() {
-        let input = document.getElementById('searchInput').value.toUpperCase();
-        let cards = document.getElementsByClassName('artifact-card');
-        for (let i = 0; i < cards.length; i++) {
-            let name = cards[i].getAttribute('data-name');
-            if (name.toUpperCase().indexOf(input) > -1) {
-                cards[i].style.display = "";
-            } else {
-                cards[i].style.display = "none";
-            }
-        }
-    }
 </script>
 
 </body>

@@ -1010,9 +1010,9 @@ main .pagina-em-construcao h2 {
 .rarity-comum { color: #aaa; }
 .rarity-incomum { color: #2ecc71; }
 .rarity-raro { color: #3498db; }
-.rarity-mitico { color: #9b59b6; }
-.rarity-epico { color: #e67e22; }
-.rarity-lendario { color: #f1c40f; }
+.rarity-mitico { color: #f1c40f; }
+.rarity-epico { color: #9b59b6; }
+.rarity-lendario { color: #e67e22; }
 .rarity-reliquia { color: #e91e63; }
 .rarity-amaldicoado { color: #c0392b; }
 .rarity-tecno { color: #1abc9c; }
@@ -3420,4 +3420,117 @@ h2.titulo-entidades {
 .rarity-badge-large {
     font-size: 1em; padding: 5px 15px; border-radius: 20px; font-weight: bold;
     text-transform: uppercase; color: #000; float: right; margin-top: 10px;
+}
+
+/* --- FILTRO DE RARIDADE (BOTÕES) --- */
+.rarity-filter-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    max-width: 900px;
+    margin: 0 auto 40px auto;
+}
+
+.filter-btn {
+    background: transparent;
+    border: 1px solid #444;
+    color: #888;
+    padding: 8px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-family: 'Cinzel', serif;
+    font-size: 0.85em;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+}
+
+.filter-btn:hover {
+    transform: translateY(-2px);
+}
+
+/* Estado "Todos" (Padrão) */
+.filter-btn.active {
+    background-color: #fff;
+    color: #000;
+    border-color: #fff;
+    box-shadow: 0 0 10px rgba(255,255,255,0.5);
+}
+
+/* --- Cores Específicas para cada Botão --- */
+
+/* Comum (Cinza) */
+.btn-comum { border-color: #bdc3c7; color: #bdc3c7; }
+.btn-comum:hover, .btn-comum.active { background-color: #bdc3c7; color: #000; box-shadow: 0 0 10px #bdc3c7; }
+
+/* Incomum (Verde) */
+.btn-incomum { border-color: #55efc4; color: #55efc4; }
+.btn-incomum:hover, .btn-incomum.active { background-color: #55efc4; color: #000; box-shadow: 0 0 10px #55efc4; }
+
+/* Raro (Azul) */
+.btn-raro { border-color: #74b9ff; color: #74b9ff; }
+.btn-raro:hover, .btn-raro.active { background-color: #74b9ff; color: #000; box-shadow: 0 0 10px #74b9ff; }
+
+/* Mítico (Amarelo Pálido) */
+.btn-mitico { border-color: #ffeaa7; color: #ffeaa7; }
+.btn-mitico:hover, .btn-mitico.active { background-color: #ffeaa7; color: #000; box-shadow: 0 0 10px #ffeaa7; }
+
+/* Épico (Roxo) */
+.btn-epico { border-color: #d980fa; color: #d980fa; }
+.btn-epico:hover, .btn-epico.active { background-color: #d980fa; color: #000; box-shadow: 0 0 10px #d980fa; }
+
+/* Lendário (Dourado) */
+.btn-lendario { border-color: #ffca28; color: #ffca28; }
+.btn-lendario:hover, .btn-lendario.active { background-color: #ffca28; color: #000; box-shadow: 0 0 10px #ffca28; }
+
+/* Relíquia (Rosa) */
+.btn-reliquia { border-color: #fd79a8; color: #fd79a8; }
+.btn-reliquia:hover, .btn-reliquia.active { background-color: #fd79a8; color: #000; box-shadow: 0 0 10px #fd79a8; }
+
+/* Amaldiçoado (Vermelho Claro) */
+.btn-amaldicoado { border-color: #ff7675; color: #ff7675; }
+.btn-amaldicoado:hover, .btn-amaldicoado.active { background-color: #ff7675; color: #000; box-shadow: 0 0 10px #ff7675; }
+
+/* Tecno (Azul Bebê) */
+.btn-tecno { border-color: #81ecec; color: #81ecec; }
+.btn-tecno:hover, .btn-tecno.active { background-color: #81ecec; color: #000; box-shadow: 0 0 10px #81ecec; }
+
+/* Botão Inteligente (Prata/Branco) */
+.btn-inteligente { border-color: #dfe6e9; color: #dfe6e9; }
+.btn-inteligente:hover, .btn-inteligente.active {
+    background-color: #dfe6e9;
+    color: #000;
+    box-shadow: 0 0 10px #dfe6e9;
+}
+
+/* --- AJUSTES DE COR DO MODAL DE ARTEFATOS (Mudar de Vermelho para Azul) --- */
+
+/* 1. A borda e o brilho externo da janela do modal */
+#artifactModal .modal-content {
+    border-color: var(--artifact-color); /* Usa o Azul Azure */
+    /* Glow azul (RGB do azul azure com transparência) */
+    box-shadow: 0 0 50px rgba(0, 151, 230, 0.3);
+}
+
+/* 2. O botão de fechar (X) quando passa o mouse */
+#artifactModal .close-btn:hover {
+    color: var(--artifact-color);
+}
+
+/* 3. A linha divisória interna */
+#artifactModal .modal-divider {
+    background: linear-gradient(to right, var(--artifact-color), transparent);
+}
+
+/* 4. O título do item dentro do modal */
+#artifactModal #modalTitle {
+    text-shadow: 0 0 10px var(--artifact-color);
+}
+
+.artifact-top {
+    display: flex;
+    justify-content: flex-end; /* Empurra o ícone para a direita */
+    align-items: center;
+    margin-bottom: 10px;
+    height: 20px; /* Mantém a altura fixa para não quebrar o layout se não tiver ícone */
 }
