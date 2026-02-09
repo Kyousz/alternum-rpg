@@ -3389,9 +3389,60 @@ h2.titulo-entidades {
 .tag-tecno { background-color: #81ecec; box-shadow: 0 0 5px #81ecec; }
 
 /* Bordas coloridas no card baseadas na raridade */
-.artifact-card.rarity-epico:hover { border-color: #d980fa; box-shadow: 0 0 15px rgba(217, 128, 250, 0.3); }
-.artifact-card.rarity-lendario:hover { border-color: #ffca28; box-shadow: 0 0 15px rgba(255, 202, 40, 0.3); }
-.artifact-card.rarity-amaldicoado:hover { border-color: #ff7675; box-shadow: 0 0 15px rgba(255, 118, 117, 0.3); }
+
+/* Comum (Cinza) */
+.artifact-card.rarity-comum:hover {
+    border-color: #bdc3c7;
+    box-shadow: 0 0 15px rgba(189, 195, 199, 0.3);
+}
+
+/* Incomum (Verde) */
+.artifact-card.rarity-incomum:hover {
+    border-color: #55efc4;
+    box-shadow: 0 0 15px rgba(85, 239, 196, 0.3);
+}
+
+/* Raro (Azul) */
+.artifact-card.rarity-raro:hover {
+    border-color: #74b9ff;
+    box-shadow: 0 0 15px rgba(116, 185, 255, 0.3);
+}
+
+/* Mítico (Amarelo Pálido) */
+.artifact-card.rarity-mitico:hover {
+    border-color: #ffeaa7;
+    box-shadow: 0 0 15px rgba(255, 234, 167, 0.3);
+}
+
+/* Épico (Roxo) */
+.artifact-card.rarity-epico:hover {
+    border-color: #d980fa;
+    box-shadow: 0 0 15px rgba(217, 128, 250, 0.3);
+}
+
+/* Lendário (Dourado) */
+.artifact-card.rarity-lendario:hover {
+    border-color: #ffca28;
+    box-shadow: 0 0 15px rgba(255, 202, 40, 0.3);
+}
+
+/* Relíquia (Rosa) */
+.artifact-card.rarity-reliquia:hover {
+    border-color: #fd79a8;
+    box-shadow: 0 0 15px rgba(253, 121, 168, 0.3);
+}
+
+/* Amaldiçoado (Vermelho Claro) */
+.artifact-card.rarity-amaldicoado:hover {
+    border-color: #ff7675;
+    box-shadow: 0 0 15px rgba(255, 118, 117, 0.3);
+}
+
+/* Tecno (Azul Bebê/Ciano) */
+.artifact-card.rarity-tecno:hover {
+    border-color: #81ecec;
+    box-shadow: 0 0 15px rgba(129, 236, 236, 0.3);
+}
 
 /* --- MODAL --- */
 .magic-tag-large {
@@ -3533,4 +3584,31 @@ h2.titulo-entidades {
     align-items: center;
     margin-bottom: 10px;
     height: 20px; /* Mantém a altura fixa para não quebrar o layout se não tiver ícone */
+}
+
+/* Ajuste para o card ter a imagem de fundo */
+.artifact-card {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* Sombra interna forte para o texto branco ficar legível */
+    box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.75);
+    transition: all 0.3s ease;
+}
+
+.artifact-card:hover {
+    transform: translateY(-5px);
+    /* Clareia levemente ao passar o mouse */
+    box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.6), 0 5px 20px rgba(0, 151, 230, 0.3);
+    border-color: var(--artifact-color);
+}
+
+/* Estilo do texto narrativo no Modal */
+.flavor-text {
+    font-style: italic;
+    color: #aaa;
+    margin-bottom: 15px;
+    display: block;
+    border-left: 2px solid var(--artifact-color);
+    padding-left: 10px;
 }
