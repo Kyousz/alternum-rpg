@@ -9,35 +9,6 @@
 
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" href="imagens/favicon.png">
-
-    <style>
-        /* Ajuste para o card ter a imagem de fundo */
-        .artifact-card {
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            /* Sombra interna forte para o texto branco ficar legível */
-            box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.75);
-            transition: all 0.3s ease;
-        }
-
-        .artifact-card:hover {
-            transform: translateY(-5px);
-            /* Clareia levemente ao passar o mouse */
-            box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.6), 0 5px 20px rgba(0, 151, 230, 0.3);
-            border-color: var(--artifact-color);
-        }
-
-        /* Estilo do texto narrativo no Modal */
-        .flavor-text {
-            font-style: italic;
-            color: #aaa;
-            margin-bottom: 15px;
-            display: block;
-            border-left: 2px solid var(--artifact-color);
-            padding-left: 10px;
-        }
-    </style>
 </head>
 <body>
 
@@ -77,13 +48,14 @@
         </div>
 
         <div class="artifact-section">
-            <h3 class="artifact-category-title">Armaduras & Vestes</h3>
+            <h3 class="artifact-category-title">Armaduras, Vestes & Escudos</h3>
             <div class="artifact-grid">
 
                 <div class="artifact-card rarity-epico"
                      style="background-image: url('imagens/itens/armadura_01.png');"
                      data-name="Botas do Gigante de Gelo Remft"
-                     data-type="Armadura (Botas)"
+                     data-type="Armadura Pesada"
+                     data-stat="CA 1"
                      data-rarity="Épico"
                      data-intelligent="false"
                      data-image="imagens/itens/armadura_01.png"
@@ -91,7 +63,7 @@
                     <div class="artifact-top"></div>
                     <div class="artifact-content">
                         <h4 class="artifact-name">Botas do Gigante de Gelo Remft</h4>
-                        <span class="artifact-type-text">Armadura (Pesada)</span>
+                        <span class="artifact-type-text">Armadura Pesada</span>
                     </div>
                     <div class="artifact-footer"><span class="rarity-tag tag-epico">Épico</span></div>
                 </div>
@@ -99,7 +71,8 @@
                 <div class="artifact-card rarity-lendario"
                      style="background-image: url('imagens/itens/armadura_02.png');"
                      data-name="Peitoral da Fênix"
-                     data-type="Armadura (Peitoral)"
+                     data-type="Armadura Média"
+                     data-stat="CA 14 + DES (Máx 2)"
                      data-rarity="Lendário"
                      data-intelligent="true"
                      data-image="imagens/itens/armadura_02.png"
@@ -107,7 +80,7 @@
                     <div class="artifact-top"><span class="intelligent-icon" title="Item Inteligente">👁️‍🗨️</span></div>
                     <div class="artifact-content">
                         <h4 class="artifact-name">Peitoral da Fênix</h4>
-                        <span class="artifact-type-text">Armadura (Média)</span>
+                        <span class="artifact-type-text">Armadura Média</span>
                     </div>
                     <div class="artifact-footer"><span class="rarity-tag tag-lendario">Lendário</span></div>
                 </div>
@@ -115,15 +88,15 @@
                 <div class="artifact-card rarity-raro"
                      style="background-image: url('imagens/itens/armadura_03.png');"
                      data-name="Manto do Caminhante do Vazio"
-                     data-type="Armadura (Capa)"
+                     data-type="Capa"
                      data-rarity="Raro"
                      data-intelligent="false"
                      data-image="imagens/itens/armadura_03.png"
-                     data-desc="<span class='flavor-text'>Um tecido tão negro que parece um buraco no espaço, absorvendo qualquer luz que o toque.</span>Concede vantagem em testes de Furtividade. Uma vez ao dia, permite usar a magia 'Passo Nebuloso' como reação ao receber dano.">
+                     data-desc="<span class='flavor-text'>Um tecido tão negro que parece um buraco no espaço, absorvendo qualquer luz que o toque.</span>Concede vantagem em testes de Furtividade. Uma vez ao dia, permite teletransportar a até 9 metros para um espaço desocupado que você possa ver como reação ao receber dano.">
                     <div class="artifact-top"></div>
                     <div class="artifact-content">
                         <h4 class="artifact-name">Manto do Caminhante do Vazio</h4>
-                        <span class="artifact-type-text">Veste</span>
+                        <span class="artifact-type-text">Capa</span>
                     </div>
                     <div class="artifact-footer"><span class="rarity-tag tag-raro">Raro</span></div>
                 </div>
@@ -131,7 +104,8 @@
                 <div class="artifact-card rarity-incomum"
                      style="background-image: url('imagens/itens/armadura_04.png');"
                      data-name="Escudo Espelho de Prata"
-                     data-type="Armadura (Escudo)"
+                     data-type="Escudo"
+                     data-stat="CA 2"
                      data-rarity="Incomum"
                      data-intelligent="false"
                      data-image="imagens/itens/armadura_04.png"
@@ -147,7 +121,8 @@
                 <div class="artifact-card rarity-tecno"
                      style="background-image: url('imagens/itens/armadura_05.png');"
                      data-name="Exoesqueleto Aquático Mk-II"
-                     data-type="Armadura (Tecnológica)"
+                     data-type="Armadura Leve"
+                     data-stat="CA 1 + DES"
                      data-rarity="Tecno"
                      data-intelligent="false"
                      data-image="imagens/itens/armadura_05.png"
@@ -155,7 +130,7 @@
                     <div class="artifact-top"></div>
                     <div class="artifact-content">
                         <h4 class="artifact-name">Exoesqueleto Aquático Mk-II</h4>
-                        <span class="artifact-type-text">Armadura (Leve)</span>
+                        <span class="artifact-type-text">Armadura Leve</span>
                     </div>
                     <div class="artifact-footer"><span class="rarity-tag tag-tecno">Tecno</span></div>
                 </div>
@@ -163,15 +138,16 @@
                 <div class="artifact-card rarity-comum"
                      style="background-image: url('imagens/itens/armadura_06.png');"
                      data-name="Elmo de Ferro Batido"
-                     data-type="Armadura (Elmo)"
+                     data-type="Armadura Média"
+                     data-stat="CA 1"
                      data-rarity="Comum"
                      data-intelligent="false"
                      data-image="imagens/itens/armadura_06.png"
-                     data-desc="<span class='flavor-text'>Um elmo bruto, com marcas de martelo e ferrugem, cheirando a batalhas antigas.</span>Concede proteção básica contra golpes na cabeça, mas restringe levemente a visão periférica.">
+                     data-desc="<span class='flavor-text'>Um elmo bruto, com marcas de martelo e ferrugem, cheirando a batalhas antigas.</span>Concede resistência contra ataques de Concussão.">
                     <div class="artifact-top"></div>
                     <div class="artifact-content">
                         <h4 class="artifact-name">Elmo de Ferro Batido</h4>
-                        <span class="artifact-type-text">Elmo</span>
+                        <span class="artifact-type-text">Armadura Média</span>
                     </div>
                     <div class="artifact-footer"><span class="rarity-tag tag-comum">Comum</span></div>
                 </div>
@@ -186,7 +162,8 @@
                 <div class="artifact-card rarity-raro"
                      style="background-image: url('imagens/itens/arma_01.png');"
                      data-name="Espada de Murh"
-                     data-type="Arma (Espada)"
+                     data-type="Arma Marcial Corpo a Corpo"
+                     data-stat="1d8 Cortante"
                      data-rarity="Raro"
                      data-intelligent="false"
                      data-image="imagens/itens/arma_01.png"
@@ -194,7 +171,7 @@
                     <div class="artifact-top"></div>
                     <div class="artifact-content">
                         <h4 class="artifact-name">Espada de Murh</h4>
-                        <span class="artifact-type-text">Arma (Marcial)</span>
+                        <span class="artifact-type-text">Arma Marcial Corpo a Corpo</span>
                     </div>
                     <div class="artifact-footer"><span class="rarity-tag tag-raro">Raro</span></div>
                 </div>
@@ -202,7 +179,8 @@
                 <div class="artifact-card rarity-incomum"
                      style="background-image: url('imagens/itens/arma_02.png');"
                      data-name="Porrete Impacto-Gêiser"
-                     data-type="Arma (Maça)"
+                     data-type="Arma Simples Corpo a Corpo"
+                     data-stat="1d6 Concussão"
                      data-rarity="Incomum"
                      data-intelligent="false"
                      data-image="imagens/itens/arma_02.png"
@@ -210,7 +188,7 @@
                     <div class="artifact-top"></div>
                     <div class="artifact-content">
                         <h4 class="artifact-name">Porrete Impacto-Gêiser</h4>
-                        <span class="artifact-type-text">Arma (Simples)</span>
+                        <span class="artifact-type-text">Arma Simples Corpo a Corpo</span>
                     </div>
                     <div class="artifact-footer"><span class="rarity-tag tag-incomum">Incomum</span></div>
                 </div>
@@ -218,7 +196,8 @@
                 <div class="artifact-card rarity-epico"
                      style="background-image: url('imagens/itens/arma_03.png');"
                      data-name="Espada dos 7 Ventos"
-                     data-type="Arma (Espada)"
+                     data-type="Arma Marcial Corpo a Corpo"
+                     data-stat="1d8 Cortante"
                      data-rarity="Épico"
                      data-intelligent="false"
                      data-image="imagens/itens/arma_03.png"
@@ -226,7 +205,7 @@
                     <div class="artifact-top"></div>
                     <div class="artifact-content">
                         <h4 class="artifact-name">Espada dos 7 Ventos</h4>
-                        <span class="artifact-type-text">Arma (Marcial)</span>
+                        <span class="artifact-type-text">Arma Marcial Corpo a Corpo</span>
                     </div>
                     <div class="artifact-footer"><span class="rarity-tag tag-epico">Épico</span></div>
                 </div>
@@ -234,7 +213,8 @@
                 <div class="artifact-card rarity-amaldicoado"
                      style="background-image: url('imagens/itens/arma_04.png');"
                      data-name="Adaga da Lua de Sangue"
-                     data-type="Arma (Adaga)"
+                     data-type="Arma Simples Corpo a Corpo"
+                     data-stat="1d4 Perfurante"
                      data-rarity="Amaldiçoado"
                      data-intelligent="false"
                      data-image="imagens/itens/arma_04.png"
@@ -242,7 +222,7 @@
                     <div class="artifact-top"></div>
                     <div class="artifact-content">
                         <h4 class="artifact-name">Adaga da Lua de Sangue</h4>
-                        <span class="artifact-type-text">Arma (Leve)</span>
+                        <span class="artifact-type-text">Arma Simples Corpo a Corpo</span>
                     </div>
                     <div class="artifact-footer"><span class="rarity-tag tag-amaldicoado">Amaldiçoado</span></div>
                 </div>
@@ -250,7 +230,8 @@
                 <div class="artifact-card rarity-raro"
                      style="background-image: url('imagens/itens/arma_05.png');"
                      data-name="Kesshō"
-                     data-type="Arma (Adaga)"
+                     data-type="Arma Simples Corpo a Corpo"
+                     data-stat="1d4 Perfurante"
                      data-rarity="Raro"
                      data-intelligent="false"
                      data-image="imagens/itens/arma_05.png"
@@ -258,7 +239,7 @@
                     <div class="artifact-top"></div>
                     <div class="artifact-content">
                         <h4 class="artifact-name">Kesshō</h4>
-                        <span class="artifact-type-text">Arma (Exótica)</span>
+                        <span class="artifact-type-text">Arma Simples Corpo a Corpo</span>
                     </div>
                     <div class="artifact-footer"><span class="rarity-tag tag-raro">Raro</span></div>
                 </div>
@@ -266,15 +247,16 @@
                 <div class="artifact-card rarity-tecno"
                      style="background-image: url('imagens/itens/arma_06.png');"
                      data-name="Rifle de Pulso Aether"
-                     data-type="Arma (Distância)"
+                     data-type="Arma Marcial à Distância"
+                     data-stat="1d12 Energia"
                      data-rarity="Tecno"
                      data-intelligent="false"
                      data-image="imagens/itens/arma_06.png"
-                     data-desc="<span class='flavor-text'>Arma elegante de cerâmica branca com luzes azuis pulsantes.</span>Dispara energia pura. Munição infinita, mas requer resfriamento após 5 tiros rápidos. Dano 1d12 Energia.">
+                     data-desc="<span class='flavor-text'>Arma elegante de cerâmica branca com luzes azuis pulsantes.</span>Dispara energia pura. Munição infinita, mas requer resfriamento após 5 tiros rápidos.">
                     <div class="artifact-top"></div>
                     <div class="artifact-content">
                         <h4 class="artifact-name">Rifle de Pulso Aether</h4>
-                        <span class="artifact-type-text">Arma (Tecnológica)</span>
+                        <span class="artifact-type-text">Arma Marcial à Distância</span>
                     </div>
                     <div class="artifact-footer"><span class="rarity-tag tag-tecno">Tecno</span></div>
                 </div>
@@ -289,7 +271,7 @@
                 <div class="artifact-card rarity-lendario"
                      style="background-image: url('imagens/itens/acessorio_01.png');"
                      data-name="Anéis Fundidos Divisores de Alma"
-                     data-type="Acessório (Anel)"
+                     data-type="Acessório"
                      data-rarity="Lendário"
                      data-intelligent="false"
                      data-image="imagens/itens/acessorio_01.png"
@@ -305,7 +287,7 @@
                 <div class="artifact-card rarity-mitico"
                      style="background-image: url('imagens/itens/acessorio_02.png');"
                      data-name="Bracelete da Serpente de Fogo: Ashika"
-                     data-type="Acessório (Bracelete)"
+                     data-type="Acessório"
                      data-rarity="Mítico"
                      data-intelligent="true"
                      data-image="imagens/itens/acessorio_02.png"
@@ -321,7 +303,7 @@
                 <div class="artifact-card rarity-incomum"
                      style="background-image: url('imagens/itens/acessorio_03.png');"
                      data-name="Anel da Maré"
-                     data-type="Acessório (Anel)"
+                     data-type="Acessório"
                      data-rarity="Incomum"
                      data-intelligent="false"
                      data-image="imagens/itens/acessorio_03.png"
@@ -337,7 +319,7 @@
                 <div class="artifact-card rarity-comum"
                      style="background-image: url('imagens/itens/acessorio_04.png');"
                      data-name="Colar da Vontade de Ferro"
-                     data-type="Acessório (Colar)"
+                     data-type="Acessório"
                      data-rarity="Comum"
                      data-intelligent="false"
                      data-image="imagens/itens/acessorio_04.png"
@@ -353,7 +335,7 @@
                 <div class="artifact-card rarity-tecno"
                      style="background-image: url('imagens/itens/acessorio_05.png');"
                      data-name="Monóculo Analítico v3.0"
-                     data-type="Acessório (Face)"
+                     data-type="Acessório"
                      data-rarity="Tecno"
                      data-intelligent="false"
                      data-image="imagens/itens/acessorio_05.png"
@@ -369,7 +351,7 @@
                 <div class="artifact-card rarity-amaldicoado"
                      style="background-image: url('imagens/itens/acessorio_06.png');"
                      data-name="Amuleto do Pacto Quebrado"
-                     data-type="Acessório (Amuleto)"
+                     data-type="Acessório"
                      data-rarity="Amaldiçoado"
                      data-intelligent="true"
                      data-image="imagens/itens/acessorio_06.png"
@@ -392,7 +374,7 @@
                 <div class="artifact-card rarity-amaldicoado"
                      style="background-image: url('imagens/itens/outro_01.png');"
                      data-name="Olho do Demônio Syrak"
-                     data-type="Item Maravilhoso (Implante)"
+                     data-type="Item Maravilhoso"
                      data-rarity="Amaldiçoado"
                      data-intelligent="false"
                      data-image="imagens/itens/outro_01.png"
@@ -448,7 +430,7 @@
                     <div class="artifact-top"></div>
                     <div class="artifact-content">
                         <h4 class="artifact-name">Ampulheta do Fluxo Reverso</h4>
-                        <span class="artifact-type-text">Artefato Temporal</span>
+                        <span class="artifact-type-text">Item Maravilhoso</span>
                     </div>
                     <div class="artifact-footer"><span class="rarity-tag tag-mitico">Mítico</span></div>
                 </div>
@@ -456,7 +438,7 @@
                 <div class="artifact-card rarity-tecno"
                      style="background-image: url('imagens/itens/outro_05.png'); background-position: center 30%;"
                      data-name="Drone Espião 'Mosca-V'"
-                     data-type="Ferramenta (Tecnológica)"
+                     data-type="Ferramenta"
                      data-rarity="Tecno"
                      data-intelligent="false"
                      data-image="imagens/itens/outro_05.png"
@@ -472,20 +454,20 @@
                 <div class="artifact-card rarity-reliquia"
                      style="background-image: url('imagens/itens/outro_06.png'); background-position: center 30%;"
                      data-name="Prisma"
-                     data-type="Relíquia (Artefato)"
+                     data-type="Item Maravilhoso"
                      data-rarity="Relíquia"
                      data-intelligent="false"
                      data-image="imagens/itens/outro_06.png"
                      data-desc="<span class='flavor-text'>Um cristal em forma de prisma pentagonal que irradia uma fusão de 5 cores.</span>O portador tem seus atributos e status dobrados e pode se dividir em 5 versões:<br><br>
                      <b style='color:#555'>Versão Preta (Peito):</b> Absorve versões destruídas. Só morre após a destruição de todas as outras.<br>
-                     <b style='color:#0097e6'>Versão Azul (Testa):</b> Flutua, conjura magias espontâneas de até 5º círculo (Arcane), possui armadura arcana.<br>
-                     <b style='color:#ff4757'>Versão Vermelha (Barriga):</b> Manifesta arma mágica (triplo dano), rosto em chamas, controle à distância.<br>
-                     <b style='color:#2ed573'>Versão Verde (Ombro):</b> Recebe metade do dano, corpo protegido como golem.<br>
-                     <b style='color:#ffa502'>Versão Amarela (Costas):</b> Deslocamento triplicado, ataques múltiplos, atravessa espaços estreitos.">
+                     <b style='color:#0097e6'>Versão Azul (Testa):</b> Flutua, conjura magias espontâneas de até 5º círculo (Arcane).<br>
+                     <b style='color:#ff4757'>Versão Vermelha (Barriga):</b> Manifesta arma mágica (4d8) e a controla à distância.<br>
+                     <b style='color:#2ed573'>Versão Verde (Ombro):</b> Recebe metade de qualquer fonte de dano.<br>
+                     <b style='color:#ffa502'>Versão Amarela (Costas):</b> Deslocamento triplicado, ataques múltiplos (3x), atravessa espaços estreitos.">
                     <div class="artifact-top"></div>
                     <div class="artifact-content">
                         <h4 class="artifact-name">Prisma</h4>
-                        <span class="artifact-type-text">Relíquia Antiga</span>
+                        <span class="artifact-type-text">Item Maravilhoso</span>
                     </div>
                     <div class="artifact-footer"><span class="rarity-tag tag-reliquia">Relíquia</span></div>
                 </div>
@@ -605,10 +587,24 @@
     const mIntelligent = document.getElementById("modalIntelligent");
 
     // Adiciona evento de clique em todos os cards
+    // Adiciona evento de clique em todos os cards
     document.querySelectorAll('.artifact-card').forEach(card => {
         card.addEventListener('click', () => {
             mTitle.innerText = card.getAttribute('data-name');
-            mType.innerText = card.getAttribute('data-type');
+
+            // --- AQUI ESTÁ A MÁGICA NOVA ---
+            // Pega o Tipo e o Stat separadamente
+            const type = card.getAttribute('data-type');
+            const stat = card.getAttribute('data-stat');
+
+            // Se tiver stat (dano ou CA), junta os dois com uma bolinha separadora
+            if (stat) {
+                mType.innerHTML = type + " <span style='color:var(--artifact-color); margin: 0 8px;'>•</span> <span style='color:#fff;'>" + stat + "</span>";
+            } else {
+                // Se não tiver (ex: poção), mostra só o tipo
+                mType.innerText = type;
+            }
+            // ---------------------------------
 
             // IMPORTANTE: innerHTML permite a formatação HTML do Flavor Text e do Prisma
             mDesc.innerHTML = card.getAttribute('data-desc');
