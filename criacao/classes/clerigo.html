@@ -49,7 +49,7 @@
             <h4 style="margin-top: 0; color: var(--class-color);">Pontos de Fé</h4>
             <p>Sua conexão divina concede uma reserva de energia sagrada.</p>
             <ul class="lista-custom">
-                <li><strong>Valor Máximo:</strong> Igual ao quádruplo do seu nível de Clérigo.</li>
+                <li><strong>Valor Máximo:</strong> O valor é zerado no início do dia e seu valor máximo é 20.</li>
             </ul>
         </div>
 
@@ -67,70 +67,80 @@
 
         <hr class="section-divider">
 
-        <hr class="section-divider">
-
         <h3>HABILIDADES DE CLASSE</h3>
 
         <div class="info-box" style="border-left-color: var(--class-color); background: rgba(241, 196, 15, 0.05);">
-            <h4 style="color: var(--class-color);">Voto Divino</h4>
-            <p>Sua fé define seu poder. No 1º nível, sua escolha de divindade concede afinidades com Formas de Magia.</p>
+            <h4 style="color: var(--class-color);">Voto da Ressonância Divina</h4>
+            <p>Sua fé não é apenas uma reserva, mas uma frequência que você emana. Você escolhe uma ou mais divindades que guiarão seu caminho e ganha as afinidades das Formas delas.</p>
             <ul class="lista-custom">
-                <li><strong>Único Deus:</strong> Ganha afinidade automática com as duas Formas de Magia dele.</li>
-                <li><strong>Panteão:</strong> Ganha acesso ao conjunto de todos os deuses, devendo escolher duas Formas de Magia desse conjunto.</li>
-                <li><strong>Conhecimento:</strong> Começa com duas magias e aprende uma nova a cada dois níveis.</li>
+                <li><strong>Conhecimento:</strong> Começa com duas magias divinas e aprende uma nova a cada dois níveis.</li>
+                <li><strong>Canalizar Fé:</strong> Você gera Pontos de Fé (PdF) igual a metade do Círculo da magia divina (mínimo 1) conjurada.
+                    <div style="margin-top: 5px; padding-left: 15px; border-left: 2px dashed rgba(241, 196, 15, 0.3);">
+                        ↳ <em>Críticos:</em> Se você rolar um 20 natural em um ataque mágico ou se o alvo falhar criticamente num Teste de Resistência, gera +1 PdF extra.
+                    </div>
+                </li>
             </ul>
-            <p class="nota-tabela" style="margin-top: 15px; border-top: 1px dashed rgba(241, 196, 15, 0.3); padding-top: 10px;">
-                ↳ <strong style="color: var(--class-color);">Canalizar Fé:</strong> Você é um canal divino. Sempre que usar uma magia divina para <strong>curar um aliado</strong> ou <strong>causar dano a um inimigo</strong>, você gera <span style="color: var(--class-color); font-weight: bold;">1 Ponto de Fé</span>.
-            </p>
+            <p style="margin-top: 15px;"><strong>Auras de Ressonância:</strong> Conforme acumula PdF, você emana uma aura passiva de 9 metros:</p>
+            <ul class="lista-custom" style="list-style-type: none; padding-left: 10px;">
+                <li><em>Fé Latente (1 a 5 PdF):</em> Você está carregando energia. Nenhum efeito extra.</li>
+                <li><em>Estado de Graça (6 a 15 PdF):</em> O brilho divino se intensifica. Você e aliados na aura recebem um Bônus de Graça relacionado à sua divindade.</li>
+                <li><em>Presença Avatar (16+ PdF):</em> Você se torna um pilar do deus. Inimigos na aura recebem -2 em ataques contra você e seus aliados, e suas magias possuem um dado extra no efeito.</li>
+            </ul>
         </div>
 
         <div class="info-box" style="border-left-color: var(--class-color); background: rgba(241, 196, 15, 0.05);">
-            <h4 style="color: var(--class-color);">Canalizar Milagre</h4>
-            <p>Com uma <strong>Ação</strong>, você pode gastar seus Pontos de Fé para manifestar um milagre de poder bruto. Escolha um dos efeitos:</p>
+            <h4 style="color: var(--class-color);">Manifestar Milagre</h4>
+            <p>Como uma <strong>Ação</strong>, você pode gastar seus Pontos de Fé para manifestar um milagre, um ato de poder divino bruto. Escolha um dos efeitos abaixo. O tipo de dano, ou o efeito visual do seu milagre, corresponde a uma das Formas de Magia concedidas por seus deuses.</p>
 
             <div style="display: flex; flex-direction: column; gap: 10px; margin-top: 10px;">
                 <div style="border: 1px dashed rgba(241, 196, 15, 0.4); padding: 8px; border-radius: 4px;">
-                    <strong style="color: var(--class-color);">Rajada Divina (Custo: 2 Fé):</strong> Cone de 9m. Criaturas fazem um Teste de Resistência de Destreza ou sofrem <strong>3d8</strong> de dano.
+                    <strong style="color: var(--class-color);">Rajada Divina (Custo: 3 PdF):</strong> Você libera uma onda de energia divina. Criaturas em um cone de 9 metros devem fazer um Teste de Resistência de Destreza. Se falharem, sofrem <strong>3d8</strong> de dano.
                 </div>
                 <div style="border: 1px dashed rgba(241, 196, 15, 0.4); padding: 8px; border-radius: 4px;">
-                    <strong style="color: var(--class-color);">Arma Abençoada (Custo: 1 Fé):</strong> Toque uma arma. Por 1 minuto, ela causa <strong>+1d8</strong> de dano adicional.
+                    <strong style="color: var(--class-color);">Arma Abençoada (Custo: 1 PdF):</strong> Você toca uma arma e a imbui com poder. Por 1 minuto, a arma causa <strong>1d10</strong> de dano adicional.
                 </div>
                 <div style="border: 1px dashed rgba(241, 196, 15, 0.4); padding: 8px; border-radius: 4px;">
-                    <strong style="color: var(--class-color);">Solo Sagrado (Custo: 2 Fé):</strong> Aura de 9m ao seu redor por 1 minuto. Aliados na área ganham <strong>+2 na CA</strong> e Vantagem em resistência contra magias.
+                    <strong style="color: var(--class-color);">Solo Sagrado (Custo: 5 PdF):</strong> Como uma <strong>Ação</strong>, você consagra o chão em uma área de 9 metros de raio ao seu redor por 1 minuto. O terreno brilha com o poder de sua divindade e aliados dentro desta área ganham <strong>+2 em sua Classe de Armadura</strong> e vantagem em Testes de Resistência contra magias.
                 </div>
                 <div style="border: 1px dashed rgba(241, 196, 15, 0.4); padding: 8px; border-radius: 4px;">
-                    <strong style="color: var(--class-color);">Cura Amplificada (Custo: 1+ Fé):</strong> Cura <strong>2d8</strong> PV ao toque. Para cada ponto extra gasto, cura +1d8 ou escolhe um novo alvo.
+                    <strong style="color: var(--class-color);">Cura Amplificada (Custo: 2+ PdF):</strong> Você toca uma criatura e a cura em <strong>2d8</strong> Pontos de Vida. Para cada Ponto de Fé adicional que gastar, você pode curar 1d8 a mais ou escolher um novo alvo para o efeito inicial.
                 </div>
             </div>
         </div>
 
         <div class="info-box" style="border-left-color: var(--class-color); background: rgba(241, 196, 15, 0.05);">
             <h4 style="color: var(--class-color);">Audiência Divina</h4>
-            <p>Uma vez por dia, faça uma oferenda e ore. Você sempre recebe <span style="color: var(--class-color); font-weight: bold;">1 Ponto de Fé</span> ao realizar esta audiência.</p>
+            <p>Uma vez por dia, você pode fazer uma oferenda para se comunicar com um dos deuses que segue. Ofereça algo simples, como uma moeda, e ore. Eles ouvem suas orações e suas contribuições podem ser recompensadas, dependendo de sua afinidade com o deus escolhido. Você sempre recebe <strong>1d4 Pontos de Fé</strong> ao realizar esta audiência.</p>
         </div>
 
         <div class="info-box" style="border-left-color: var(--class-color); background: rgba(241, 196, 15, 0.05);">
             <h4 style="color: var(--class-color);">Égide Divina</h4>
-            <p>A fé é sua armadura. Quando você ou um aliado a até 9m sofrer dano, use sua <strong>Reação</strong> e gaste <strong>1 Ponto de Fé</strong> para reduzir o dano em:</p>
+            <p>A fé é sua armadura e o escudo dos seus fiéis. Quando você ou um aliado que possa ver a até 9 metros sofrer dano, você pode usar sua <strong>Reação</strong> e gastar 1 Ponto de Fé para criar uma barreira divina, reduzindo o dano sofrido em:</p>
             <div style="text-align: center; padding: 10px; font-weight: bold; font-size: 1.1em; color: var(--class-color);">
-                1d10 + Modificador de Sabedoria
+                1d10 + Modificador de Sabedoria + seu Nível de Ressonância atual
             </div>
         </div>
 
         <div class="info-box" style="border-left-color: var(--class-color); background: rgba(241, 196, 15, 0.05);">
             <h4 style="color: var(--class-color);">Intervenção Divina</h4>
-            <p>Com uma <strong>Ação Completa</strong>, consuma <strong>todos</strong> os Pontos de Fé para fazer um pedido desesperado (Recarga: 3 dias). Role <strong>1d100</strong>:</p>
+            <p>Com uma <strong>Ação Completa</strong>, você faz um <strong>pedido específico</strong> à sua divindade, um ato desesperado de fé suprema. Você consome todos os seus Pontos de Fé atuais e só pode tentar usar esta habilidade novamente <strong>após completar 3 dias</strong>.</p>
+            <p>Role <strong>1d100</strong>. O resultado determina o grau de sucesso do seu pedido:</p>
 
-            <ul class="lista-custom" style="font-size: 0.9em;">
-                <li><strong>Sucesso (Rolagem ≤ Nível):</strong> Pedido atendido plenamente, talvez com bônus extra.</li>
-                <li><strong>Ajuda Parcial (Entre Nível e 75):</strong> O deus ouve, mas o efeito é pela metade ou traz uma consequência negativa/custo.</li>
-                <li><strong>Reação Divina (> 75):</strong> O pedido não é atendido como esperado; o deus envia uma ajuda diferente e inesperada.</li>
+            <ul class="lista-custom" style="font-size: 0.95em;">
+                <li><strong>Intervenção Completa (Rolagem ≤ seu Nível de Clérigo):</strong> Seu pedido é atendido plenamente, talvez até com um benefício extra, a critério do Mestre. Sua fé é recompensada com um verdadeiro milagre.</li>
+                <li><strong>Ajuda Parcial (Rolagem entre seu Nível e 75):</strong> Seu deus ouve, mas não pode (ou não quer) intervir completamente. O Mestre pode escolher uma das seguintes opções:
+                    <div style="margin-top: 5px; padding-left: 15px; border-left: 2px dashed rgba(241, 196, 15, 0.3);">
+                        ↳ Seu pedido é realizado pela metade (metade dos alvos são afetados, o efeito dura metade do tempo, etc.).<br>
+                        ↳ Seu pedido é realizado, mas com uma consequência negativa ou um custo inesperado.
+                    </div>
+                </li>
+                <li><strong>Reação Divina (Rolagem acima de 75):</strong> Seu pedido não é atendido da forma que você esperava. Em vez disso, seu deus responde de uma maneira inesperada, enviando uma forma de ajuda diferente que o Mestre julgar apropriada para a situação. O efeito não é o que você pediu, mas ainda é um ato divino.</li>
             </ul>
 
             <div style="margin-top: 15px; padding: 10px; background: rgba(0, 0, 0, 0.2); border-radius: 4px; font-size: 0.9em;">
-                <p style="margin: 0; margin-bottom: 5px;"><strong>🎲 Casos Extremos:</strong></p>
-                <p style="margin: 0;"><strong>• 1 (Crítico):</strong> Milagre espetacular e avassalador.</p>
-                <p style="margin: 0;"><strong>• 100 (Fracasso):</strong> Silêncio total. A habilidade fica bloqueada por tempo indeterminado até ser restaurada.</p>
+                <p style="margin: 0; margin-bottom: 5px; color: var(--class-color);"><strong>Casos Extremos:</strong></p>
+                <p style="margin: 0;"><strong>• 1 na rolagem:</strong> Um sucesso crítico. O milagre acontece de forma espetacular e avassaladora, superando as expectativas.</p>
+                <p style="margin: 0;"><strong>• 100 na rolagem:</strong> Um fracasso crítico. Os céus permanecem em silêncio, e sua conexão com o divino é abalada. Você não pode tentar usar esta habilidade novamente por <strong>tempo indeterminado</strong>. O contato com seu deus precisará ser restaurado através de um ato significativo de fé.</p>
             </div>
         </div>
 

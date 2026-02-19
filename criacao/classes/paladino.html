@@ -49,7 +49,7 @@
             <h4 style="margin-top: 0; color: var(--class-color);">Pontos de Fé</h4>
             <p>Seu juramento sagrado alimenta uma reserva de energia para milagres e proteção.</p>
             <ul class="lista-custom">
-                <li><strong>Valor Máximo:</strong> Igual ao dobro do seu Nível de Paladino.</li>
+                <li><strong>Valor Máximo:</strong> O valor é zerado no início do dia e seu valor máximo é 10.</li>
             </ul>
         </div>
 
@@ -70,62 +70,56 @@
         <h3>HABILIDADES DE CLASSE</h3>
 
         <div class="info-box" style="border-left-color: var(--class-color); background: rgba(212, 172, 13, 0.05);">
-            <h4 style="color: var(--class-color);">Juramento Sagrado</h4>
-            <p>Sua força emana de um juramento inabalável que define três mandamentos guias.</p>
+            <h4 style="color: var(--class-color);">Voto do Bastião Sagrado</h4>
+            <p>Sua força emana de um juramento inabalável, selado com uma divindade. Você define três mandamentos que guiam suas ações. Sua convicção em seguir esse código é o que alimenta seu poder.</p>
 
-            <div style="margin-top: 10px; padding: 10px; border-left: 3px solid var(--class-color); background: rgba(255, 255, 255, 0.05);">
-                <strong style="color: var(--class-color);">🛡️ Canalizar Vontade</strong>
-                <p style="font-size: 0.9em; margin: 5px 0;">Você gera <span style="color: var(--class-color); font-weight: bold;">1 Ponto de Fé</span> ao realizar um dos seguintes atos:</p>
-                <ul class="lista-custom" style="font-size: 0.9em;">
-                    <li>Cumprir um mandamento de forma exemplar (a critério do Mestre).</li>
-                    <li>Passar em um Teste de Resistência contra uma magia ou efeito hostil.</li>
-                    <li>Reduzir uma criatura a 0 Pontos de Vida com um <strong>acerto crítico</strong>.</li>
-                </ul>
+            <p style="margin-top: 15px;"><strong>Canalizar Fé:</strong> Sua fé é forjada no sacrifício e na linha de frente.</p>
+            <ul class="lista-custom" style="list-style-type: none; padding-left: 10px;">
+                <li>↳ <em>Punição:</em> Ganha 1 PdF ao desferir um golpe fatal em um inimigo ou ao acertar um Crítico.</li>
+                <li>↳ <em>Martírio:</em> Ganha 1 PdF sempre que sofrer dano de um inimigo (máximo 1x por rodada).</li>
+            </ul>
+
+            <p style="margin-top: 10px;"><strong>Zelo Marcial:</strong> Enquanto tiver 5 ou mais PdF, sua armadura brilha e você recebe <strong>+2 na CA</strong> e seu <strong>Modificador de Carisma em dano extra</strong> em ataques corpo a corpo.</p>
+        </div>
+
+        <div class="info-box" style="border-left-color: var(--class-color); background: rgba(212, 172, 13, 0.05);">
+            <h4 style="color: var(--class-color);">Manifestar Selo</h4>
+            <p>Com uma <strong>Ação Bônus</strong>, você gasta sua Fé para "marcar" o campo de batalha. Um Selo dura 1 minuto ou até ser consumido.</p>
+
+            <div style="display: flex; flex-direction: column; gap: 10px; margin-top: 10px;">
+                <div style="border: 1px dashed rgba(212, 172, 13, 0.4); padding: 8px; border-radius: 4px;">
+                    <strong style="color: var(--class-color);">Selo de Punição (1 PdF):</strong> Colocado em um inimigo. O próximo ataque do Paladino contra este alvo causa <strong>+1d12 de dano</strong>. Se o Paladino usar uma magia divina contra um alvo com este selo, ele ativa o Aprimoramento Divino da magia gratuitamente.
+                </div>
+                <div style="border: 1px dashed rgba(212, 172, 13, 0.4); padding: 8px; border-radius: 4px;">
+                    <strong style="color: var(--class-color);">Selo de Proteção (2 PdF):</strong> Colocado em um aliado. Enquanto o selo estiver ativo, o aliado recebe os benefícios do seu Zelo Marcial <strong>(+2 CA)</strong>.
+                </div>
+                <div style="border: 1px dashed rgba(212, 172, 13, 0.4); padding: 8px; border-radius: 4px;">
+                    <strong style="color: var(--class-color);">Selo de Retribuição (2 PdF):</strong> Colocado em si mesmo. Quando você sofre dano de um ataque, o selo é consumido para criar uma explosão de energia reativa. Você <strong>reduz o dano recebido pela metade</strong> e o atacante recebe essa mesma quantia (a metade reduzida) como dano divino.
+                </div>
             </div>
         </div>
 
         <div class="info-box" style="border-left-color: var(--class-color); background: rgba(212, 172, 13, 0.05);">
             <h4 style="color: var(--class-color);">Punição Divina</h4>
-            <p>Ao acertar um ataque corpo a corpo, você pode imbuir seu golpe com poder divino.</p>
+            <p>Você manifesta a vontade do deus através de um golpe físico devastador. Você desfere um golpe que ignora resistências.</p>
             <ul class="lista-custom">
-                <li><strong>Custo Base:</strong> Gaste <strong>1 Ponto de Fé</strong> para causar <span style="color: var(--class-color); font-weight: bold;">2d8 de dano radiante</span> adicional.</li>
-                <li><strong>Potencialização:</strong> Você pode gastar pontos adicionais. Cada ponto extra adiciona <strong>+1d8</strong> de dano.</li>
-                <li><strong>Limite:</strong> O dano máximo desta habilidade é <strong>8d8</strong>.</li>
+                <li>Causa o dano da arma <strong>+ 1d10 por PdF gasto</strong>.</li>
+                <li>Se o alvo for um morto-vivo ou criatura profana, <strong>o dano é dobrado</strong>.</li>
+                <li>Caso erre o golpe, o alvo recebe o dano da arma como dano de resíduo e fica vulnerável ao próximo ataque.</li>
             </ul>
         </div>
 
         <div class="info-box" style="border-left-color: var(--class-color); background: rgba(212, 172, 13, 0.05);">
             <h4 style="color: var(--class-color);">Toque Restaurador</h4>
-            <p>Sua fé é um bálsamo. Com uma <strong>Ação</strong>, toque uma criatura e gaste qualquer quantidade de Pontos de Fé.</p>
-            <p class="nota-tabela">↳ <strong>Cura:</strong> Para cada ponto gasto, o alvo recupera <strong>1d8 + Modificador de Carisma</strong> PV.</p>
-            <p style="font-size: 0.8em; color: #aaa; margin-top: 5px;">*Não afeta mortos-vivos ou construtos.</p>
+            <p>Sua fé é um bálsamo contra ferimentos. Como uma <strong>Ação</strong>, você pode tocar uma criatura e gastar qualquer quantidade de Pontos de Fé.</p>
+            <p class="nota-tabela">↳ Para cada Ponto de Fé gasto, a criatura recupera <strong>1d6 + seu Modificador de Carisma</strong> em Pontos de Vida.</p>
+            <p style="font-size: 0.8em; color: #aaa; margin-top: 5px;">*Esta habilidade não tem efeito em mortos-vivos ou construtos.</p>
         </div>
 
         <div class="info-box" style="border-left-color: var(--class-color); background: rgba(212, 172, 13, 0.05);">
-            <h4 style="color: var(--class-color);">Mandato Celestial</h4>
-            <p>Você é um instrumento escolhido, garantindo favores constantes.</p>
-
-            <div style="margin-top: 10px; display: flex; flex-direction: column; gap: 10px;">
-                <div style="border: 1px dashed rgba(212, 172, 13, 0.4); padding: 8px; border-radius: 4px;">
-                    <strong style="color: var(--class-color);">Favor Latente</strong>
-                    <p style="font-size: 0.9em; margin: 5px 0;"><strong>Vantagem</strong> em Sabedoria (Intuição) para discernir intenções e Inteligência (Investigação) para localizar objetos/locais sagrados.</p>
-                </div>
-
-                <div style="border: 1px dashed rgba(212, 172, 13, 0.4); padding: 8px; border-radius: 4px;">
-                    <strong style="color: var(--class-color);">Favor Manifesto</strong>
-                    <p style="font-size: 0.9em; margin: 5px 0;">Ao completar uma tarefa divina direta, você entra em <em>estado de graça</em> por <strong>3 dias</strong>:</p>
-                    <ul style="margin: 0; padding-left: 20px; font-size: 0.9em; color: #eee;">
-                        <li>Seu máximo de Pontos de Fé aumenta em <strong>+2</strong>.</li>
-                        <li>Uma vez por dia, pode <strong>rolar novamente</strong> um Ataque ou Teste de Resistência falho.</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <div class="info-box" style="border-left-color: var(--class-color); background: rgba(212, 172, 13, 0.05);">
-            <h4 style="color: var(--class-color);">Presença Inabalável</h4>
-            <p>Sua convicção é um farol contra a escuridão. Você e aliados a até <strong>3 metros</strong> de você possuem:</p>
-            <p class="nota-tabela">↳ <span style="color: var(--class-color); font-weight: bold;">Vantagem</span> em Testes de Resistência contra efeitos de <strong>Medo</strong> e <strong>Charme</strong>.</p>
+            <h4 style="color: var(--class-color);">Vigilância Devota</h4>
+            <p>Durante um Descanso, você realiza um ritual de manutenção de seu equipamento. Você recebe <strong>1d4 Pontos de Fé</strong> iniciais.</p>
+            <p>Além disso, você escolhe uma magia divina que você conhece; até o próximo Descanso, o custo para "forçar" o aprimoramento dessa magia específica é <strong>reduzido na metade</strong> arredondada para baixo (mínimo 1).</p>
         </div>
 
     </section>
